@@ -11,7 +11,7 @@ Password protect feature branches that are not ready to be accessed publicly.
 
 #. In the list of your connected branches, choose **Manage access** in the top-right corner.
 
-   .. image:: /images/accesscontrol1.png
+   .. image:: images/accesscontrol1.png
 
 #. Do one of the following:
 
@@ -19,4 +19,4 @@ Password protect feature branches that are not ready to be accessed publicly.
 
    * You can set a password at the branch level. 
 
-   .. image:: /images/accesscontrol2.png
+   .. image:: images/accesscontrol2.png
