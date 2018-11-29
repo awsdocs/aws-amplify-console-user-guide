@@ -8,7 +8,7 @@ In this walkthrough, you learn how to continuously build, deploy, and host a mod
 
 To get started, log in to the `Amplify Console <https://console.aws.amazon.com/amplify/home>`__ and choose **Get Started** under **Deploy**.
 
-.. image:: /images/amplify-gettingstarted-1.png
+.. image:: images/amplify-gettingstarted-1.png
 
 
 Step 1: Connect Repository
@@ -16,11 +16,11 @@ Step 1: Connect Repository
 
 Connect your GitHub, Bitbucket, GitLab, or AWS CodeCommit repositories. After you authorize the Amplify Console, Amplify fetches an access token from the repository provider, but it *doesn't store the token* on the AWS servers. Amplify accesses your repository using deploy keys installed in a specific repository only. 
 
-.. image:: /images/amplify-gettingstarted-2.png
+.. image:: images/amplify-gettingstarted-2.png
 
 After you connect the repository service provider, choose a repository, and then choose a corresponding branch to build and deploy.
 
-.. image:: /images/amplify-gettingstarted-3.png
+.. image:: images/amplify-gettingstarted-3.png
 
 
 Step 2: Confirm Build Settings for the Front End
@@ -28,11 +28,11 @@ Step 2: Confirm Build Settings for the Front End
 
 For the selected branch, Amplify inspects your repository to automatically detect the sequence of build commands to be executed. 
 
-.. image:: /images/amplify-gettingstarted-4.png
+.. image:: images/amplify-gettingstarted-4.png
 
 **Important:** Verify that the build commands and build output directory (that is, artifacts\baseDirectory) is accurate. If you need to modify this information, choose **Edit** to open the YML editor. You can save your build settings on our servers, or you can download the YML and add it to the root of your repo (for monorepos, store the YML at the app's root directory).
 
-.. image:: /images/amplify-gettingstarted-5.png
+.. image:: images/amplify-gettingstarted-5.png
 
 For more information, see :ref:`YML structure <yml-specification-syntax>`.
  
@@ -42,7 +42,7 @@ Step 3: Confirm Build Settings for the Backend (beta)
 
 The Amplify Console detects apps that are using the Amplify Framework and can deploy backend resources in a single workflow with the front end build. This enables you to manage production and test environments with your Git workflow.
 
-.. image:: /images/amplify-gettingstarted-6.png
+.. image:: images/amplify-gettingstarted-6.png
 
 To deploy backend functionality using the Amplify CLI during your build, create or reuse an IAM service role. IAM roles are a secure way to grant the Amplify Console permissions to act on resources in your account. 
 
@@ -50,7 +50,7 @@ To deploy backend functionality using the Amplify CLI during your build, create 
 
 For more information, see :ref:`Deploy a serverless backend with the Amplify Console. <deploy-backend>`.
 
-.. image:: /images/amplify-gettingstarted-7.png
+.. image:: images/amplify-gettingstarted-7.png
 
 Step 4: Add Environment Variables (Optional)
 =================================================
@@ -73,7 +73,7 @@ Access the build logs screen by selecting a progress indicator on the branch til
 
 4. **Verify** - To verify that your app works correctly, Amplify renders screen shots of the index.html in multiple device resolutions using Headless Chrome.
 
-   .. image:: /images/amplify-gettingstarted-8.png
+   .. image:: images/amplify-gettingstarted-8.png
 
 
 Next Steps

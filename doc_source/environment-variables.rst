@@ -21,4 +21,4 @@ As a best practice, you can use environment variables to expose these configurat
 
 If you need to customize a variable specifically for a branch, you can add a branch override. To do this, choose **Actions** and then choose **Add variable override**. You now have a set of environment variables specific to your branch. 
 
-.. image:: /images/envvars.png
+.. image:: images/envvars.png

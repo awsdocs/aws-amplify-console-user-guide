@@ -10,7 +10,7 @@ Step 1: Create a Service Role
 ------------------------
 Right-click the following link and choose **Open link in new tab**. It opens the CloudFormation console with pre-selected defaults.
 
-.. image:: /images/amplify-cloudformation-launch-stack.png
+.. image:: images/amplify-cloudformation-launch-stack.png
    :target: /amplify/latest/userguide/launch-stack
 
 Step 2: Accept All Defaults in the AWS CloudFormation Console
@@ -24,6 +24,6 @@ Step 3: Return to the Amplify Console
 
 In the Amplify Console onboarding screen, choose **refresh**, and then pick the role you just created. It should look like **AmplifyConsoleServiceRole-AmplifyRole-XXXXXXXXXXX**.
 
-.. image:: /images/amplify-servicerole.png
+.. image:: images/amplify-servicerole.png
 
 The Amplify Console now has permissions to deploy backend resources.
