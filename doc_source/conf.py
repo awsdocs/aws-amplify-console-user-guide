@@ -41,4 +41,8 @@ feedback_name = u'Amplify'
 
 extra_navlinks = []
 
+# The link to the top of the doc source tree on GitHub. This allows generation
+# of per-page "Edit on GitHub" links.
+github_doc_url = 'https://github.com/awsdocs/aws-amplify-console-user-guide/tree/master/doc_source'
+
 # EXTRA_CONF_CONTENT -- don't change, move or remove this line!
