@@ -10,7 +10,7 @@ You can connect a custom domain purchased through domain registrars (for example
 
 	https://branch-name.d1m7bkiki6tdw1.amplifyapp.com
 
-When you use a custom domain, users see that your app is hosted from a URL, like the following:
+When you use a custom domain, users see that your app is hosted from a URL, such as the following:
 
 .. code-block:: none
 
