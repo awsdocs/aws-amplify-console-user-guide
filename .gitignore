@@ -1,6 +1,8 @@
-*.running.properties.txt
+README.html
+doc_build/
+doc_output/
+build_dependencies/
+*.swp
 *\~
-*.mobi
-/build
 *.DS_Store
 ._*
