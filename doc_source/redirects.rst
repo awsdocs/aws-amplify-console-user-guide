@@ -186,6 +186,7 @@ The following example uses a rewrite to proxy content from another location so t
        -
 
   :superscript:`JSON [{"source": "/<*>", "status": "200", "target": "/index.html", "condition": null}]`
+
 .. Pretty URLs
 .. ===========
 
