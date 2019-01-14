@@ -12,7 +12,7 @@ To get started, log in to the `Amplify Console <https://console.aws.amazon.com/a
 
 
 Step 1: Connect Repository
-================================
+==========================
 
 Connect your GitHub, Bitbucket, GitLab, or AWS CodeCommit repositories. After you authorize the Amplify Console, Amplify fetches an access token from the repository provider, but it *doesn't store the token* on the AWS servers. Amplify accesses your repository using deploy keys installed in a specific repository only. 
 
@@ -24,7 +24,7 @@ After you connect the repository service provider, choose a repository, and then
 
 
 Step 2: Confirm Build Settings for the Front End
-======================================
+================================================
 
 For the selected branch, Amplify inspects your repository to automatically detect the sequence of build commands to be executed. 
 
@@ -38,7 +38,7 @@ For more information, see :ref:`YML structure <yml-specification-syntax>`.
  
 
 Step 3: Confirm Build Settings for the Backend (beta)
-======================================
+=====================================================
 
 The Amplify Console detects apps that are using the Amplify Framework and can deploy backend resources in a single workflow with the front end build. This enables you to manage production and test environments with your Git workflow.
 
@@ -53,13 +53,13 @@ For more information, see :ref:`Deploy a serverless backend with the Amplify Con
 .. image:: images/amplify-gettingstarted-7.png
 
 Step 4: Add Environment Variables (Optional)
-=================================================
+============================================
 
 Almost every app needs to get configuration information at runtime. These configurations can be database connection details, API keys, or different parameters. Environment variables provide a means to expose these configurations at build time.
 
 
 Step 5: Save and Deploy
-=================================================
+=======================
 
 Review all of your settings to ensure everything is set up correctly. Choose **Save and deploy** to deploy your web app to a global content delivery network (CDN). Your front end build typically takes 1 to 2 minutes but can vary based on size of the app. 
 

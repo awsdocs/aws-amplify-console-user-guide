@@ -26,7 +26,7 @@ The Amplify Console issues an SSL certificate for all domains connected to your 
 .. _custom-domain-route53:
 
 Adding a Custom Domain Managed in Amazon Route 53
-====================================
+=================================================
 
 After you deploy your app, you can add a custom domain that you manage using Amazon Route 53. 
 
@@ -47,7 +47,7 @@ The Amplify Console automatically updates the DNS records for your root (`https:
 .. _custom-domain-third-party:
 
 Adding a Custom Domain Managed by a Third-Party DNS Provider
-====================================
+============================================================
 
 After you deploy your app, you can add a custom domain that you manage using a third-party DNS provider if you don't use Amazon Route 53. 
 
@@ -78,7 +78,7 @@ After you deploy your app, you can add a custom domain that you manage using a t
 .. _custom-domain-subdomains:
 
 Managing Subdomains
-==============================
+===================
 
 A subdomain is the part of your URL that appears before your domain name (for example, `www`.amazon.com or `aws`.amazon.com). For domains managed using Route 53, the Amplify Console automatically creates subdomains for all connected branches. For example, when you connect a `dev` branch, the Amplify Console creates a deployment at `https://dev.<app-id>.amplifyapp.com` without requiring any extra configuration. If you want the same functionality for third-party providers you must configure the DNS. If you want the same functionality for third-party providers, configure the DNS to give Amplify Console wildcard (*) access to all subdomains. 
 
@@ -87,7 +87,7 @@ A subdomain is the part of your URL that appears before your domain name (for ex
 .. _custom-domain-status:
 
 Associating a Domain
-========================
+====================
 
 When you are associating a domain with your Amplify app deployment, you see the following status messages:
 

@@ -5,7 +5,7 @@ Managing Multiple Environments and Team Workflows
 #################################################
 
 Using Branch-based Environmments
-========================
+================================
 The Amplify Console leverages Git branches to create new environments every time a developer connects a new branch in their repository. After connecting your first branch, you can create a new environment by adding a branch as follows:
 
 1. On the branch list page, choose **Connect branch**.
@@ -21,7 +21,7 @@ Your app now has two front end environments available at `https://master.appid.a
 .. image:: images/amplify-environments.png
 
 Using Team Workflows
-===========================
+====================
 
 For teams that are building serverless apps with the Amplify CLI, we recommend the following:
 
@@ -32,7 +32,7 @@ For teams that are building serverless apps with the Amplify CLI, we recommend t
 The Amplify Console is designed to work with all team workflows such as centralized, feature branch, and GitFlow workflows. 
 
 Using a Centralized Workflow
------------------------
+----------------------------
 Teams that transition from SVN to Git practice this workflow. With this workflow, every developer on the team commits code directly to the default branch called `master`. Each developer clones a local copy of the repository, works independently and then pushes code to merge it to the master branch. For example:
 
 1. Connect master to the Amplify Console for continuous deployment.
@@ -59,7 +59,7 @@ The following command line example and diagram capture the workflow.
 
 
 Using a Feature Branch Workflow
---------------------------
+-------------------------------
 The main idea behind the feature branch workflow is that feature work happens in a separate branch from the master branch. This enables developers to work on new features in isolation from what is production. When the feature is ready it's merged into the master branch. Similar to the steps in the centralized workflow, all team members work on the feature branch pushing updates to that branch until it's ready to be merged to the master branch. The feature branch is also connected to the Amplify Console (password protected) for continuous deployment so developers can share updates with other stakeholders.
 
 .. image:: images/amplify-env-feature-workflow.png

@@ -1,8 +1,8 @@
 .. _build-settings:
 
-###################
+##########################
 Configuring Build Settings
-###################
+##########################
 
 The Amplify Console automatically detects the front end framework and associated build settings by inspecting the package.json file in your repository. You have the following options:
 
@@ -15,7 +15,7 @@ You can edit these settings in the Amplify Console by choosing **App Settings>Bu
 .. _yml-specification-syntax: 
  
 YML Specification Syntax
-======================
+========================
 
 The build specification YML contains a collection of build commands and related settings that the Amplify Console uses to run your build. The YML is structured as follows:
 
@@ -69,12 +69,12 @@ The build specification YML contains a collection of build commands and related 
 * **artifacts>files** - Specify files from your artifact you want to deploy. `**/*` is to include all files.
 
 Build Scenarios
-======================
+===============
 
 The following scenarios describe how to write your build YML. 
 
 Using Branch-Specific Build Settings
----------------------------------
+------------------------------------
 To set branch-specific build settings, add the buildspec YML to the root of your repository. You can do this any of the following ways:
 
 * When connecting a new branch, choose **Edit**. Make your edits and then choose **Save and add to my repo**. The Amplify Console  automatically adds the YML to your repository when you deploy the branch. **Note:** If you do not want these settings to apply to all branches, make sure you don't merge this file into the other branches.
@@ -105,7 +105,7 @@ For monorepos, users want to be able to cd into a folder to run the build. After
 .. _frontend-with-backend:
 
 Deploying the Backend with Your Front End
--------------------------
+-----------------------------------------
 
 Use the Amplify CLI to deploy a backend with your front end. :ref:`Learn more <deploy-backend>` about how envCache and amplifyPush commands help you with backend deployments. The $AWS_BRANCH is a system defined environment variable that picks up the current branch. The build settings below will deploy a new backend environment linked to each feature branch.
 
@@ -141,7 +141,7 @@ The following build settings set the output directory to the public folder.
 
 
 Installing Packages as Part of Your Build
---------------------------------------------
+------------------------------------------
 You can use npm or yarn to install packages during the build.
 
 .. code-block:: yaml
@@ -157,7 +157,7 @@ You can use npm or yarn to install packages during the build.
         baseDirectory: public
 
 Using a Private npm Registry
---------------------------------------------
+----------------------------
 You can add references to a private registry in your build settings or add it as an environment variable.
 
 .. code-block:: yaml
@@ -173,7 +173,7 @@ You can add references to a private registry in your build settings or add it as
             - yarn install
  
 Installing OS packages
---------------------------------------------
+----------------------
 You can install OS packages for missing dependencies.
 
 .. code-block:: yaml

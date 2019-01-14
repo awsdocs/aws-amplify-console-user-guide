@@ -239,7 +239,7 @@ You can use the following example code to redirect paths in a folder structure t
 
 
 Query Strings and Path Parameters
-================================
+=================================
 
 You can use the following example code to redirect a path to a folder with a name that matches the value of a query string element in the original address:
 

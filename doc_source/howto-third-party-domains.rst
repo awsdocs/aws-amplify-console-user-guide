@@ -6,7 +6,7 @@ Connecting to Third-Party Custom Domains
 ########################################
 
 Connecting to a GoDaddy Domain
-==================
+==============================
 1. Follow the instructions to :ref:`add a domain <custom-domains>` for third-party providers.
 
 2. Log in to your account at GoDaddy and choose **DNS**.
@@ -24,7 +24,7 @@ GoDaddy doesn't support ANAME/ALIAS records. For DNS providers that don't have A
 .. image:: images/amplify-godaddy-5.png
 
 Connecting to a Google Domain
-==================
+=============================
 
 1. Follow the instructions to :ref:`add a domain <custom-domains>` for third-party providers.
 
