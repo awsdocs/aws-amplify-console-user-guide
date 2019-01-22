@@ -148,7 +148,7 @@ You can use the following example code to use a rewrite to change the subdomain 
        - :code:`rewrite (200)`
        -
 
-  :superscript:`JSON [{"source": "/<*>", "status": "200", "target": "/index.html", "condition": null}]`
+  :superscript:`JSON [{"source": "https://mydomain.com", "status": "200", "target": "https://www.mydomain.com", "condition": null}]`
 
 You can use the following example code to redirect paths under a folder that can't be found to a custom 404 page.
 
@@ -168,6 +168,27 @@ You can use the following example code to redirect paths under a folder that can
   :superscript:`JSON [{"source": "/<*>", "status": "404", "target": "/404.html", "condition": null}]`
 
 
+Redirects for Single Page Web Apps (SPA)
+========================================
+
+Most SPA frameworks support HTML5 history.pushState() to change browser location without triggering a server request. This works for users who begin their journey from the root (or `/index.html`), but fails for users who navigate directly to any other page. Using regular expressions, the following example sets up a 200 rewrite for all files to index.html except for the specific file extensions specified in the regular expression.
+
+  .. list-table::
+     :widths: 1, 1, 1, 1
+
+     * - Original address
+       - Destination Address
+       - Redirect Type
+       - Country Code
+
+     * - :code:`</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf)$)([^.]+$)/>`
+       - :code:`index.html`
+       - :code:`200`
+       -
+
+  :superscript:`JSON [{"source": "</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf)$)([^.]+$)/>", "status": "200", "target": "index.html", "condition": null}]`
+
+
 Reverse Proxy Rewrite
 =====================
 The following example uses a rewrite to proxy content from another location so that it appears to user that the domain hasn't changed:
@@ -185,7 +206,30 @@ The following example uses a rewrite to proxy content from another location so t
        - :code:`rewrite (200)`
        -
 
-  :superscript:`JSON [{"source": "/<*>", "status": "200", "target": "/index.html", "condition": null}]`
+  :superscript:`JSON [{"source": "/images", "status": "200", "target": "https://images.otherdomain.com", "condition": null}]`
+
+Trailing slashes and Clean URLs
+===================================
+To create clean URL structures like `about` instead of `about.html`, static site generators such as Hugo generate directories for pages with an index.html (`/about/index.html`). The Amplify Console automatically creates clean URLs by adding a trailing slash when required. The table below highlights different scenarios:
+
+  .. list-table::
+     :widths: 1, 1, 1
+
+     * - User inputs in browser
+       - URL in the address bar
+       - Document served
+
+     * - :code:`/about`
+       - :code:`/about`
+       - :code:`/about.html`
+
+     * - :code:`/about (when about.html returns 404)`
+       - :code:`/about/`
+       - :code:`/about/index.html`
+    
+     * - :code:`/about/`
+       - :code:`/about/`
+       - :code:`/about/index.html`
 
 .. Pretty URLs
 .. ===========
@@ -278,26 +322,6 @@ You can use the following example code to redirect all paths that can't be found
   :superscript:`JSON [{"source": "/documents/<x>/<y>/<z>", "status": "404", "target": "/documents/index.html", "condition": null}]`
 
 
-Redirects for Single Page Web Apps (SPA)
-========================================
-
-Most SPA frameworks support HTML5 history.pushState() to change browser location without triggering a server request. This works for users who begin their journey from the root (or `/index.html`), but fails for users who navigate directly to any other page. To solve this we set up a 200 rewrite to allow the SPA router to handle the routing of the URL.
-
-  .. list-table::
-     :widths: 1, 1, 1, 1
-
-     * - Original address
-       - Destination Address
-       - Redirect Type
-       - Country Code
-
-     * - :code:`/<*>`
-       - :code:`index.html`
-       - :code:`200`
-       -
-
-  :superscript:`JSON [{"source": "<*>", "status": "404", "target": "/documents/index.html", "condition": null}]`
-
 
 Region-based Redirects
 ======================
@@ -315,7 +339,7 @@ You can use the following example code to redirect requests based on region.
      * - :code:`/documents`
        - :code:`/documents/us/`
        - :code:`302`
-       -
+       - :code:`<US>`
 
   :superscript:`JSON [{"source": "/documents", "status": "302", "target": "/documents/us/", "condition": "<US>"}]`
 

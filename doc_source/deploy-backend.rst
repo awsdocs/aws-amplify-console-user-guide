@@ -8,7 +8,7 @@ Deploying Serverless Backends with Your Front End (Beta)
 
 .. code-block:: none
 
-	npm install -g @aws-amplify/cli@multienv.
+	npm install -g @aws-amplify/cli@multienv
 
 The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and front end on every code commit. With the Amplify Console you can deploy serverless backends with GraphQL APIs, authentication, analytics, and storage created by the Amplify CLI.
 
