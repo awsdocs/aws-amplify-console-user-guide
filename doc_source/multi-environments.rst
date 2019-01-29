@@ -48,7 +48,7 @@ The following command line example and diagram capture the workflow.
 	> git fetch && git checkout master
 	> amplify init
 		? Do you want to use an existing environment? false
-		? Enter a name for the environment kita-sandbox
+		? Enter a name for the environment kitalocal
 		// Provide AWS Profile info
 	// Test feature locally
 	> npm run start
