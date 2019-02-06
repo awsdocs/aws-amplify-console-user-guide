@@ -5,7 +5,10 @@
 Restricting access
 ##################
 
-Password protect feature branches that are not ready to be accessed publicly.
+Working on unreleased features? Password protect feature branches that are not ready to be accessed publicly.
+
+.. image:: images/password.gif
+
 
 #. Choose **App settings** and then choose **Access control**. 
 
