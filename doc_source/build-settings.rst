@@ -80,8 +80,8 @@ You can use bash shell scripting to set branch-specific build settings. For exam
       phases:
         build:
           commands:
-            - if [ "${AWS_BRANCH}" = "master" ]; then echo "master branch" fi
-            - if [ "${AWS_BRANCH}" = "dev" ]; then echo "dev branch" fi
+            - if [ "${AWS_BRANCH}" = "master" ]; then echo "master branch"; fi
+            - if [ "${AWS_BRANCH}" = "dev" ]; then echo "dev branch"; fi
 
 
 Navigating to a Subfolder
