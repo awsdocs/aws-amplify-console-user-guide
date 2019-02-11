@@ -21,7 +21,6 @@ AWS Amplify Console User Guide
    What is the AWS Amplify Console? <welcome>
    Getting Started <getting-started>
    Setting Up Custom Domains <custom-domains>
-   Deploying Serverless Backends <deploy-backend>
    Managing Multiple Environments <multi-environments>
    Using Redirects <redirects>
    Restricting Access <access-control>
@@ -30,3 +29,4 @@ AWS Amplify Console User Guide
    Connecting to Third-Party Custom Domains  <howto-third-party-domains>
    Creating a Service Role  <how-to-service-role-amplify-console>
    Managing Your App's Performance <ttl>
+   Tutorial: Deploying Backend with your Frontend <deploy-backend>

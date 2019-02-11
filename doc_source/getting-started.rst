@@ -30,17 +30,17 @@ For the selected branch, Amplify inspects your repository to automatically detec
 
 .. image:: images/amplify-gettingstarted-4.png
 
-**Important:** Verify that the build commands and build output directory (that is, artifacts\baseDirectory) is accurate. If you need to modify this information, choose **Edit** to open the YML editor. You can save your build settings on our servers, or you can download the YML and add it to the root of your repo (for monorepos, store the YML at the app's root directory).
+**Important:** Verify that the build commands and build output directory (that is, artifacts > baseDirectory) is accurate. If you need to modify this information, choose **Edit** to open the YML editor. You can save your build settings on our servers, or you can download the YML and add it to the root of your repo (for monorepos, store the YML at the app's root directory).
 
 .. image:: images/amplify-gettingstarted-5.png
 
 For more information, see :ref:`YML structure <yml-specification-syntax>`.
  
 
-Step 3: Confirm Build Settings for the Backend (beta)
+Step 3: Confirm Build Settings for the Backend
 =====================================================
 
-The Amplify Console detects apps that are using the Amplify Framework and can deploy backend resources in a single workflow with the front end build. This enables you to manage production and test environments with your Git workflow.
+If you connected a repository provisioned by the Amplify CLI v1.0+ (Run `amplify -v` to find out your CLI version), the Amplify Console will deploy or automatically update backend resources (any resource provisioned by the Amplify CLI) in a single workflow with the frontend build. You can choose to connect an existing backend environment, or create a completely new one.
 
 .. image:: images/amplify-gettingstarted-6.png
 
@@ -48,7 +48,7 @@ To deploy backend functionality using the Amplify CLI during your build, create 
 
 **Note:** The Amplify CLI won't run without an IAM service role enabled. 
 
-For more information, see :ref:`Deploy a serverless backend with the Amplify Console. <deploy-backend>`.
+For a tutorial, see :ref:`Deploying Backend with your Frontend. <deploy-backend>`.
 
 .. image:: images/amplify-gettingstarted-7.png
 

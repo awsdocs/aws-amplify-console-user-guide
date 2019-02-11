@@ -189,3 +189,16 @@ You can install OS packages for missing dependencies.
         preBuild:
           commands:
             - yum install -y <package>
+        
+
+Key-value storage for every build
+====================================
+
+The **envCache** provides key-value storage at build time. The envCache can only be modified during a build and can be re-used at the next build. Using the envCache, we can store information on the deployed environment and make it available to the build container in successive builds. Environment variables in comparison, cannot be modified during a build.
+
+    Example usage: 
+
+    .. code-block:: bash
+      
+      envCache --set <key> <value>
+      envCache --get <key> <value>
