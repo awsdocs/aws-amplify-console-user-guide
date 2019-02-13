@@ -22,7 +22,7 @@ AWS Amplify Console User Guide
    Getting Started <getting-started>
    Setting Up Custom Domains <custom-domains>
    Tutorial: Deploying Serverless Web Apps <deploy-backend>
-   Managing Multiple Environments <multi-environments>
+   Feature Branch Deployments <multi-environments>
    Using Redirects <redirects>
    Restricting Access <access-control>
    Configuring Build Settings <build-settings>

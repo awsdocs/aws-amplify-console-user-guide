@@ -1,72 +1,164 @@
 .. _multi-environments:
 
 #################################################
-Managing Multiple Environments and Team Workflows
+Feature branch deployments and team workflows
 #################################################
 
-Using Branch-based Environmments
-================================
-The Amplify Console leverages Git branches to create new environments every time a developer connects a new branch in their repository. After connecting your first branch, you can create a new environment by adding a branch as follows:
+The Amplify Console leverages Git branches to create new deployments every time a developer connects a new branch in their repository. After connecting your first branch, you can create a new environment by adding a branch as follows:
 
 1. On the branch list page, choose **Connect branch**.
 
 2. Choose a branch from your repository.
 
-3. Accept the autodetected build settings or modify them according to your app requirements.
+3. Save and then deploy your app.
 
-4. Save and then deploy your app.
+Your app now has two deployments available at `https://master.appid.amplifyapp.com` and `https://dev.appid.amplifyapp.com`.
 
-Your app now has two front end environments available at `https://master.appid.amplifyapp.com` and `https://dev.appid.amplifyapp.com`. If your app has a backend provisioned with the Amplify CLI (beta), the Amplify Console deploys separate backends per branch. Connecting a branch creates front end and backend environments, which enables developers to work in sandbox environments and use Git as a mechanism to merge code and resolve conflicts.
+.. image:: images/amplify-environments-1.png
+   :align: center
 
-.. image:: images/amplify-environments.png
+A feature branch deployment can consist of a **frontend** and (optionally) a **backend**. The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
 
-Using Team Workflows
+Recommended Team Workflow
 ====================
 
-For teams that are building serverless apps with the Amplify CLI, we recommend the following:
+The Amplify Console is designed to work with feature branch and GitFlow workflows. GitFlow simplifies parallel development by isolating new development from completed work. The following workflow works well with the Amplify Console:
 
-* That each developer in a team creates a sandbox environment in the cloud that is separate from their local computer. This allows developers to work in isolation from each other without overwriting other team members' changes.
+* The **master branch** tracks release code and is your production branch. 
+* The **develop branch** is used as an integration branch to test new features with production.
+* New development (such as features and non-emergency bug fixes) is done in **feature branches**.
+* When the developer is satisfied that the code is ready for release, the feature branch is merged back into the integration develop branch. 
+* The only commits to the master branch are merges from release branches and hotfix branches (to fix emergency bugs).
 
-* That your team connects production, test, and feature branches to the Amplify Console. This ensures that the Amplify Console uses the Git repository as a single source of truth from which to deploy changes, rather than relying on developers on the team to manually push their backend or front end to production from their local computers.
+This way beta testers can test unreleased features on the develop branch deployment, without affecting any of the production end users on the master branch deployment.
 
-The Amplify Console is designed to work with all team workflows such as centralized, feature branch, and GitFlow workflows. 
+.. image:: images/amplify-environments.png
+   :align: center
+   :width: 300px
 
-Using a Centralized Workflow
-----------------------------
-Teams that transition from SVN to Git practice this workflow. With this workflow, every developer on the team commits code directly to the default branch called `master`. Each developer clones a local copy of the repository, works independently and then pushes code to merge it to the master branch. For example:
+Feature branch deployments with Amplify CLI environments
+===============================
 
-1. Connect master to the Amplify Console for continuous deployment.
+You can use the Amplify Console to continuously deploy backend resources such as GraphQL APIs and Lambda functions with your feature branch deployment. You can use the following models to deploy your backend and frontend with the Amplify Console:
 
-2. Both Kita and Cody check out the master branch locally and then run the **amplify init** command to set up a cloud backend to make changes to the front end and backend from their local computers. 
+.. contents::
+   :local:
+   :depth: 1
 
-3. After the code has been tested locally, Kita pushes the code to the master branch. This kicks off a build in the Amplify Console that updates any front end or backend content that has changed. 
+.. _standard:
 
-The following command line example and diagram capture the workflow.
+Standard - prod, test, and dev backends
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
+* Create **prod**, **test**, and **dev** backend environments with the Amplify CLI.
+* Map **prod** and **test** to **master** and **develop** branches.
+* Teammates can use the **dev** backend environment to test against from `localhost`.
 
-	> git fetch && git checkout master
-	> amplify init
-		? Do you want to use an existing environment? false
-		? Enter a name for the environment kitalocal
-		// Provide AWS Profile info
-	// Test feature locally
-	> npm run start
-	> git commit -m "New feature" && git push origin master
+.. image:: images/amplify-environments-2.png
+   :align: center
+   :width: 500px
 
+1. Install the Amplify CLI to initialize a new Amplify project.
 
-.. image:: images/amplify-env-central-workflow.png
+    .. code-block:: none
 
+        npm install -g @aws-amplify/cli
 
-Using a Feature Branch Workflow
--------------------------------
-The main idea behind the feature branch workflow is that feature work happens in a separate branch from the master branch. This enables developers to work on new features in isolation from what is production. When the feature is ready it's merged into the master branch. Similar to the steps in the centralized workflow, all team members work on the feature branch pushing updates to that branch until it's ready to be merged to the master branch. The feature branch is also connected to the Amplify Console (password protected) for continuous deployment so developers can share updates with other stakeholders.
+2. Initialize a `dev` backend environment for your project. If you don't have a project, create one using bootstrap tools like create-react-app or Gatsby.
 
-.. image:: images/amplify-env-feature-workflow.png
+    .. code-block:: none
 
+        cd next-unicorn
+        amplify init
+         ? Do you want to use an existing environment? (Y/n): n 
+         ? Enter a name for the environment: dev
+        ...
+        amplify push
 
-Using the GitFlow Workflow
---------------------------
-GitFlow uses two branches to record the history of the project. The master branch tracks release code only, and the `develop` branch is used as an integration branch for new features. GitFlow simplifies parallel development by isolating new development from completed work. New development (such as features and non-emergency bug fixes) is done in feature branches. When the developer is satisfied that the code is ready for release, the feature branch is merged back into the integration develop branch. The only commits to the master branch are merges from release branches and hotfix branches (to fix emergency bugs). The diagram below shows which branches are typically connected to the Amplify Console in this model.
+3. Add `test` and `prod` backend environments.
+
+    .. code-block:: none
+
+        amplify env add
+         ? Do you want to use an existing environment? (Y/n): n 
+         ? Enter a name for the environment: test
+        ...
+        amplify push
+
+        amplify env add
+         ? Do you want to use an existing environment? (Y/n): n 
+         ? Enter a name for the environment: prod
+        ...
+        amplify push
+
+4. Push code to a Git repository of your choice (in this example we'll assume you pushed to master).
+
+    .. code-block:: none
+
+        git commit -am 'Added dev, test, and prod environments'
+        git push origin master
+
+5. Connect your repo > `master` to the Amplify Console.
+
+6. The Amplify Console will detect backend environments created by the Amplify CLI. Choose `prod` from the dropdown and grant the service role to Amplify Console. Choose **Save and deploy**. After the build completes you will get a master branch deployment available at `https://master.appid.amplifyapp.com`.
+
+7. Connect `develop` branch in Amplify Console (assume `develop` and `master` brach are the same at this point). As soon as you connect the branch, go to `App settings > Environment variables` and add a branch override for USER_ENV as shown below.
+
+8. The Amplify Console is now setup. You can start working on new features in a feature branch. Add backend functionality by using the `dev` backend environment from your local workstation.
+
+    .. code-block:: none
+
+    	git checkout -b newinternet
+        amplify env checkout dev
+        amplify add api
+        ...
+
+9. After you finish working on the feature, commit your code, create a pull request to review internally, and if everything looks good merge the PR to dev.
+
+    .. code-block:: none
+
+    	git commit -am 'Decentralized internet v0.1'
+        git push origin newinternet
+
+10. This will kickoff a build in the Amplify Console with a branch deployment at `https://dev.appid.amplifyapp.com`. You can share this link with internal stakeholders so they can review your app.
+
+.. _sandbox:
+
+Per-developer sandbox
+~~~~~~~~~~~~~~~~~~~~~~
+
+* Each developer in a team creates a sandbox environment in the cloud that is separate from their local computer. This allows developers to work in isolation from each other without overwriting other team members' changes.
+* Each branch in the Amplify Console has its own backend. This ensures that the Amplify Console uses the Git repository as a single source of truth from which to deploy changes, rather than relying on developers on the team to manually push their backend or front end to production from their local computers.
 
 .. image:: images/amplify-env-gitflow-workflow.png
+   :align: center
+
+1. Install the Amplify CLI to initialize a new Amplify project.
+
+    .. code-block:: none
+
+        npm install -g @aws-amplify/cli
+
+2. Initialize a `nikhil` backend environment for your project. If you don't have a project, create one using bootstrap tools like create-react-app or Gatsby.
+
+    .. code-block:: none
+
+        cd next-unicorn
+        amplify init
+         ? Do you want to use an existing environment? (Y/n): n 
+         ? Enter a name for the environment: nikhil
+        ...
+        amplify push
+
+4. Push code to a Git repository of your choice (in this example we'll assume you pushed to master).
+
+    .. code-block:: none
+
+        git commit -am 'Added nikihl sandbox'
+        git push origin master
+
+5. Connect your repo > `master` to the Amplify Console.
+
+6. The Amplify Console will detect backend environments created by the Amplify CLI. Choose `Create new environment` from the dropdown and grant the service role to Amplify Console. Choose **Save and deploy**. After the build completes you will get a master branch deployment available at `https://master.appid.amplifyapp.com` with a new backend environment that is linked to the branch.
+   
+7. Connect `develop` branch in Amplify Console (assume `develop` and `master` brach are the same at this point). After the build completes you will get a develop branch deployment available at `https://develop.appid.amplifyapp.com` with a new backend environment that is linked to the branch.
