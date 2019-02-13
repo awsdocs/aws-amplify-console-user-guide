@@ -4,7 +4,7 @@
 Serverless Tutorial: Deploying Backend with your Frontend
 ########################################################
 
-The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit. With the Amplify Console you can deploy serverless backends with GraphQL APIs, authentication, analytics, and storage created by the Amplify CLI. **Note: This feature only works with the Amplify CLI v1.0+**.
+The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI. **Note: This feature only works with the Amplify CLI v1.0+**.
 
 In this tutorial, we are going to create and deploy a React app which implements a basic authentication flow for signing up/signing in users as well as protected client side routing using AWS Amplify. 
 
@@ -45,7 +45,7 @@ In this tutorial, we are going to create and deploy a React app which implements
  
 6. Log in to the `Amplify Console <https://console.aws.amazon.com/amplify/home>`__ and choose **Get Started** under **Deploy**. Connect your Git provider, repository and branch and then choose **Next**. 
    
-7. The Amplify Console automatically detects that your repository has an Amplify backend. From the dropdown, choose `dev` (the environment you just created with the CLI). This will update the `backend` phase of the build settings to automatically update the `dev` backend anytime you commit changes to your repository.
+7. The Amplify Console automatically detects that your repository has an Amplify backend. From the dropdown, choose `prod` (the environment you just created with the CLI). This will update the `backend` phase of the build settings to automatically update the `prod` backend anytime you commit changes to your repository.
 
     .. code-block:: yaml
 
@@ -53,7 +53,8 @@ In this tutorial, we are going to create and deploy a React app which implements
                   
     **amplifyPush** - The `amplifyPush script <https://gist.github.com/swaminator/7408de774e24ecf031d0d9928f1fbae5>`__ is a helper script that enables users to specify an environment name as an input and runs the Amplify CLI to create or update an environment.
 
+    .. image:: images/reuse-backend.png
+
 8. Choose **Next** and **Save and deploy**. Your app build will start by deploying the backend followed by the frontend. Click on your branch name to see the running build. When your build succeeds, you should be able to access your app.
 
 .. image:: images/amplify-backend-frontend.png
-   :width: 600 px

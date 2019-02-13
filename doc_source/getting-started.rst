@@ -40,17 +40,16 @@ For more information, see :ref:`YML structure <yml-specification-syntax>`.
 Step 3: Confirm Build Settings for the Backend
 =====================================================
 
-If you connected a repository provisioned by the Amplify CLI v1.0+ (Run `amplify -v` to find out your CLI version), the Amplify Console will deploy or automatically update backend resources (any resource provisioned by the Amplify CLI) in a single workflow with the frontend build. You can choose to connect an existing backend environment, or create a completely new one.
+If you connected a repository provisioned by the Amplify CLI v1.0+ (run `amplify -v` to find CLI version), the Amplify Console will deploy or automatically update backend resources (any resource provisioned by the Amplify CLI) in a single workflow with the frontend build. You can choose to point an existing backend environment to your branch, or create a completely new environment. For a step-by-step tutorial, see :ref:`Deploying a Backend with your Frontend <deploy-backend>`.
 
-.. image:: images/amplify-gettingstarted-6.png
+.. image:: images/reuse-backend.png
 
 To deploy backend functionality using the Amplify CLI during your build, create or reuse an IAM service role. IAM roles are a secure way to grant the Amplify Console permissions to act on resources in your account. 
 
-**Note:** The Amplify CLI won't run without an IAM service role enabled. 
-
-For a tutorial, see :ref:`Deploying Backend with your Frontend. <deploy-backend>`.
+**Note:** The Amplify CLI won't run without an IAM service role enabled.
 
 .. image:: images/amplify-gettingstarted-7.png
+
 
 Step 4: Add Environment Variables (Optional)
 ============================================
@@ -73,7 +72,7 @@ Access the build logs screen by selecting a progress indicator on the branch til
 
 4. **Verify** - To verify that your app works correctly, Amplify renders screen shots of the index.html in multiple device resolutions using Headless Chrome.
 
-   .. image:: images/amplify-gettingstarted-8.png
+   .. image:: images/amplify-backend-frontend.png
 
 
 Next Steps

@@ -34,15 +34,15 @@ After you deploy your app, you can add a custom domain that you manage using Ama
 
    .. image:: images/amplify-customdomain-1.png
 
-2. In **Enter your root domain**, enter your root domain (`https://awesomedomain.com`). As you start typing, root domains that you manage in Amazon Route 53 appear in the list (`https://awesomedomain.com`).
-
-3. Select the domain you want to use and then choose **Find Domain** and **Save**. 
+2. In **Enter your root domain**, enter your root domain (`https://awesomedomain.com`). As you start typing, root domains that you manage in Amazon Route 53 appear in the list (`https://awesomedomain.com`). Select the domain you want to use and then choose **Configure Domain**. 
 
    .. image:: images/amplify-customdomain-2.png
 
-The Amplify Console automatically updates the DNS records for your root (`https://awesomedomain.com`) and www subdomain (`https://www.awesomedomain.com`) in Amazon Route 53. We also set up a redirect for `https://www.awesomedomain.com` to point to `https://awesomedomain.com` (you can change this by choosing **Rewrites and redirects** from the left menu).
-     
-**Note**  It typically takes 10 to 30 minutes for DNS to propagate and issue the SSL certificate, but it can take up to 24 hours. For more information about the status messages, see :ref:`Associating a Domain <custom-domain-status>`.
+3. By default, the Amplify Console automatically adds two entries for `https://www.myroute53domain.com` and `https://myroute53domain.com` with a redirect set up from the `www` subdomain to the root domain (you can change this by choosing **Rewrites and redirects** from the left menu). You can modify the default configuration if you want to add subdomains only, see: :ref:`Connecting subdomains <custom-domain-subdomains>`. Choose **Save** after configuring your domain. 
+ 
+   .. image:: images/amplify-customdomain-configure.png  
+
+**Note:** It can take up to 24 hours for the DNS to propagate and to issue the SSL certificate. For more information about the status messages, see :ref:`Associating a Domain <custom-domain-status>`.
 
 .. _custom-domain-third-party:
 
@@ -53,23 +53,23 @@ After you deploy your app, you can add a custom domain that you manage using a t
 
 1. On the left navigation pane, choose **App Settings**, **Domain management**, and then choose **Add domain**.
 
-2. In **Enter your root domain**, enter your root domain (`https://awesomedomain.com`) and then choose **Find domain**. If the domain is registered, a green alert notifies you to proceed as long you are the owner of the domain. If the domain is available, purchase a domain at `Amazon Route 53 <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html>`__.
+2. In **Enter your root domain**, enter your root domain (`https://awesomedomain.com`) and then choose **Configure domain**. If the domain is registered, a green alert notifies you to proceed as long you are the owner of the domain. If the domain is available, purchase a domain at `Amazon Route 53 <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html>`__.
 
    .. image:: images/amplify-customdomain-3.png
 
-3. Choose **Save**. The Amplify Console adds two entries for `https://www.awesomedomain.com` and `https://awesomedomain.com` with a redirect set up from the `www` subdomain to the root domain. Because the domain is managed externally you must manual configure your DNS provider (for example, GoDaddy or Google domains). 
- 
-4. To assign a domain to your app deployment, choose **View DNS records** in the alert banner. 
+3. By default, the Amplify Console adds two entries for `https://www.awesomedomain.com` and `https://awesomedomain.com` with a redirect set up from the `www` subdomain to the root domain. You can modify the default configuration if you want to add subdomains only, see: :ref:`Connecting subdomains <custom-domain-subdomains>`. Choose **Save** after configuring your domain. 
+
+4. Because the domain is managed externally you must manually configure your DNS provider (for example, GoDaddy or Google domains). Choose **View DNS records** in the alert banner. 
 
    .. image:: images/amplify-customdomain-4.png
 
 5. Update your DNS providers' CNAME and ALIAS records as follows. For GoDaddy and Google Domains, see the step-by-step instructions in :ref:`Connecting to Third-Party Custom Domains <howto-third-party-domains>`.
 
-   1. Configure CNAME record to point all subdomains (`https://*.awesomedomain.com`) to the amplifyapp domain.  
+   1. To generate a SSL certificate for your domain, Amazon Certificate Manager (ACM) needs to verify ownership. Configure a CNAME to point to ACM's validation server. Once ACM validates ownership of your domain, all traffic will be served using HTTPS/2. 
 
-   2. Configure ANAME/ALIAS record to point the root domain (`https://awesomedomain.com`) to your amplifyapp domain. ANAME records enable you to point the root of your domain to a hostname. For DNS providers that do not have ANAME/ALIAS support, we strongly recommend `migrating your DNS to Amazon Route 53 <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html>`__.
+   2. Configure CNAME record to point your subdomains (`https://*.awesomedomain.com`) to the amplifyapp domain. **NOTE: If you have production traffic it is recommended you update your CNAME record after your domain status shows AVAILABLE.*
 
-   3. To generate a SSL certificate for your domain, Amazon Certificate Manager (ACM) needs to verify ownership. Configure a CNAME to point to ACM's validation server. Once ACM validates ownership of your domain, all traffic will be served using HTTPS/2. 
+   3. Configure ANAME/ALIAS record to point the root domain (`https://awesomedomain.com`) to your amplifyapp domain. ANAME records enable you to point the root of your domain to a hostname. For DNS providers that do not have ANAME/ALIAS support, we strongly recommend `migrating your DNS to Amazon Route 53 <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html>`__. **NOTE: If you have production traffic it is recommended you update your ANAME record after your domain status shows AVAILABLE.*
 
       .. image:: images/amplify-customdomain-5.png
 
@@ -77,16 +77,26 @@ After you deploy your app, you can add a custom domain that you manage using a t
 
 .. _custom-domain-subdomains:
 
-Managing Subdomains
+Adding Subdomains
 ===================
 
-A subdomain is the part of your URL that appears before your domain name (for example, `www`.amazon.com or `aws`.amazon.com). For domains managed using Route 53, the Amplify Console automatically creates subdomains for all connected branches. For example, when you connect a `dev` branch, the Amplify Console creates a deployment at `https://dev.<app-id>.amplifyapp.com` without requiring any extra configuration. If you want the same functionality for third-party providers you must configure the DNS. If you want the same functionality for third-party providers, configure the DNS to give Amplify Console wildcard (*) access to all subdomains. 
+A subdomain is the part of your URL that appears before your domain name (for example, `www`.amazon.com or `aws`.amazon.com). 
 
-.. image:: images/amplify-customdomain-6.png
+1. **Add a subdomain only**: If you already have a production website, you might only want to connect a subdomain (eg `https://alpha.mydomain.com`). You can do this by choosing **Exclude root** and modifying the subdomain to `alpha` as shown below. 
+
+   .. image:: images/amplify-customdomain-configure-2.png 
+
+2. **Add a multi-level subdomain**: You might want to connect a multi-level subdomain (eg `https://beta.alpha.mydomain.com`). You can do this by entering `alpha.mydomain.com` in the domain search bar, choosing **Exclude root**, and modifying the subdomain to `beta` as shown below. 
+
+   .. image:: images/amplify-customdomain-configure-3.png
+
+3. **Manage subdomains** After adding your domain, you might want to add more subdomains. Choose **Manage subdomains** from the Domain management screen and edit your subdomains.
+
+   .. image:: images/amplify-customdomain-6.png
 
 .. _custom-domain-status:
 
-Associating a Domain
+Custom Domain status
 ====================
 
 When you are associating a domain with your Amplify app deployment, you see the following status messages:
