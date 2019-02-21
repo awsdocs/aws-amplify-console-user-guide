@@ -29,5 +29,6 @@ In the Amplify Console onboarding screen, choose **refresh**, and then pick the 
 If you already have an existing app, you can find the service role setting in **App settings > General** and then choose **Edit** from the top right corner of the box. Pick the service role you just created from the dropdown and choose **Save**.
 
 .. image:: images/amplify-servicerole2.png
+   :width: 500px
 
 The Amplify Console now has permissions to deploy backend resources.

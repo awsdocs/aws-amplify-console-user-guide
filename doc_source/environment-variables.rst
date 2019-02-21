@@ -24,9 +24,14 @@ Setting Environment Variables
 
 #. Choose **Save**.
 
-If you need to customize a variable specifically for a branch, you can add a branch override. To do this, choose **Actions** and then choose **Add variable override**. You now have a set of environment variables specific to your branch. 
 
 .. image:: images/envvars.png
+   :width: 600px
+
+If you need to customize a variable specifically for a branch, you can add a branch override. To do this, choose **Actions** and then choose **Add variable override**. You now have a set of environment variables specific to your branch. 
+
+.. image:: images/reuse-backend.gif
+   :width: 600px
 
 .. _access_env_vars: 
 
