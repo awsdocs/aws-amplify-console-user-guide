@@ -101,10 +101,12 @@ Custom Domain status
 
 When you are associating a domain with your Amplify app deployment, you see the following status messages:
 
-1. **In Progress** - First attempt at updating your DNS record. This indicates that Amplify is able to update records managed in Route 53, but unable to do so for third-party DNS providers.
+1. **Creating** - AWS Amplify Console is creating required resources for setting up the custom domain.
 
-2. **Pending verification** - Before issuing an SSL certificate, Amazon Certificate Manager (ACM) must verify that you are the owner of the domain. Domains managed outside Amazon Route 53 usually take the longest time to verify.
+2. **Requesting certificiate** - AWS Amplify Console is requesting a SSL certificate from Amazon Certificate Manager for your site.
+
+2. **Pending verification** - Before issuing an SSL certificate, Amazon Certificate Manager (ACM) must verify that you are the owner of the domain. For domains managed by Route53, we will automatic update the DNS verification record. For domains managed outside of Route53, you will need to manually add the displayed DNS verification record into your domain’s DNS provider. `Learn more <https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html>`__.
 
 3. **Pending deployment** - After domain verification, the DNS is propagated globally to all 144 points of presence of our CDN.
 
-4. **Available** - The domain is successfully associated with your app.
+4. **Available** - The domain is successfully associated with your app. For domains managed outside of Route53, you will need to manually add the DNS records provided in the console into your domain's DNS provider.
