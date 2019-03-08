@@ -1,15 +1,13 @@
 .. _ttl:
 
 ###############################
-Managing Your App's Performance
+Instant Cache Invalidations
 ###############################
 
-You can control how long your objects stay in a CDN cache before the CDN forwards another request to your origin. Reducing the duration enables you to serve dynamic content. Increasing the duration means your users get better performance because your objects are more likely to be served directly from the edge cache. A longer duration also reduces the load on your origin.
+The Amplify Console supports instant cache invalidation of the CDN on every code commit. This enables you to deploy updates to your single page or static app instantly — without giving up the performance benefits of content delivery network (CDN) caching.
 
-You can set the default TTL for your web app in the console:
+`Learn more <https://aws.amazon.com/blogs/mobile/aws-amplify-console-supports-instant-cache-invalidation-and-delta-deployments/>`__ about how the Amplify Console handles cache invalidations.
 
-1. In the console, choose **App settings** and then choose **General**. 
+.. image:: images/instant-cache-invalidation.png
 
-2. From the list of branches, choose a branch, choose **Action**, and then choose **Adjust TTL**. 
 
-The longer you set the TTL, the better your performance. The shorter you set the TTL, the faster you can deploy. During development, we recommend setting a default TTL of 5 seconds for your branch. After your app is in production, you can increase the TTL based on your preference. We recommend that you set it to anything about 60 seconds for production traffic.
