@@ -2,7 +2,7 @@
 
 The open source version of the AWS Amplify Console User Guide. 
 
-## How to submit PRs
+## How to contribute
 
 1. Fork Repo
 
@@ -21,7 +21,7 @@ pip install -U Sphinx
 python build_docs.py
 ```
 
-5. Commit code to your repo and submit PR.
+5. Commit code to your repo and submit pull request.
 
 ## License Summary
 
