@@ -21,7 +21,7 @@ Your app now has two deployments available at `https://master.appid.amplifyapp.c
 Team workflows with Amplify CLI backend environments
 ===============================
 
-A feature branch deployment can consist of a **frontend** and (optionally) a **backend**. The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
+A feature branch deployment can consist of a **frontend** and [(optionally) a **backend**](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-backend.html). The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
 You can use the Amplify Console to continuously deploy backend resources such as GraphQL APIs and Lambda functions with your feature branch deployment. You can use the following models to deploy your backend and frontend with the Amplify Console:
 
 .. contents::
