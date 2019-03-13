@@ -110,7 +110,7 @@ For monorepos, users want to be able to cd into a folder to run the build. After
 Deploying the Backend with Your Front End
 =======================================
 
-Use the Amplify CLI to deploy a backend with your front end. :ref:`Learn more <deploy-backend>` about how envCache and amplifyPush commands help you with backend deployments. The $AWS_BRANCH is a system defined environment variable that picks up the current branch. The build settings below will deploy a new backend environment linked to each feature branch.
+Use the Amplify CLI to deploy a backend with your front end. :ref:`Learn more <deploy-backend>` about how envCache and amplifyPush commands help you with backend deployments. The $AWS_BRANCH is a system defined environment variable that picks up the current branch. The build settings below automatically determine the correct backend environment to deploy for the current branch.
 
 .. code-block:: yaml
 
@@ -122,9 +122,7 @@ Use the Amplify CLI to deploy a backend with your front end. :ref:`Learn more <d
       phases:
         build:
           commands:
-            - export STACKINFO="$(envCache --get stackInfo)"
-            - amplifyPush --environment $AWS_BRANCH
-            - envCache --set stackInfo "$(amplify env get --json --name $AWS_BRANCH)"
+            - amplifyPush --simple
      
 
 Setting the Output Folder

@@ -45,13 +45,7 @@ In this tutorial, we are going to create and deploy a React app which implements
  
 6. Log in to the `Amplify Console <https://console.aws.amazon.com/amplify/home>`__ and choose **Get Started** under **Deploy**. Connect your Git provider, repository and branch and then choose **Next**. 
    
-7. The Amplify Console automatically detects that your repository has an Amplify backend. From the dropdown, choose `prod` (the environment you just created with the CLI). This will update the `backend` phase of the build settings to automatically update the `prod` backend anytime you commit changes to your repository.
-
-    .. code-block:: yaml
-
-        amplifyPush --environment $MY_ENV
-                  
-    **amplifyPush** - The `amplifyPush script <https://gist.github.com/swaminator/7408de774e24ecf031d0d9928f1fbae5>`__ is a helper script that enables users to specify an environment name as an input and runs the Amplify CLI to create or update an environment.
+7. The Amplify Console automatically detects that your repository has an Amplify backend. From the dropdown, choose `prod` (the environment you just created with the CLI). This will cause the Console to automatically update the `prod` backend anytime you commit changes to your repository.
 
     .. image:: images/reuse-backend.png
 

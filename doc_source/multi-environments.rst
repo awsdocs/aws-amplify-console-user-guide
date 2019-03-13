@@ -88,9 +88,9 @@ Feature branch workflow
 
 	.. image:: images/reuse-backend-2.png
 
-7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point). As soon as you connect the branch, go to `App settings > Environment variables` and add a branch override for USER_BRANCH as shown below.
+7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point).
 
-	.. image:: images/reuse-backend.gif
+	.. image:: images/reuse-backend-4.png
 
 8. The Amplify Console is now setup. You can start working on new features in a feature branch. Add backend functionality by using the `dev` backend environment from your local workstation.
 
