@@ -88,7 +88,7 @@ Feature branch workflow
 
 	.. image:: images/reuse-backend-2.png
 
-7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point).
+7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point). Choose the `test` backend environment.
 
 	.. image:: images/reuse-backend-4.png
 
