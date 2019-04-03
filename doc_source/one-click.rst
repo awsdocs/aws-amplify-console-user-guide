@@ -1,4 +1,4 @@
-.. _deploy-button:
+.. _one-click:
 
 ###################################
 Deploy to Amplify Console Button
