@@ -4,13 +4,12 @@
 Deploy to Amplify Console Button
 ###################################
 
-The **Deploy to Amplify Console** button enables you to share GitHub projects publicly or within your team. For example, clicking the button below will fork and deploy a create-react-app GitHub repository that implements a basic authentication flow for signing up/signing in users.
+The **Deploy to Amplify Console** button enables you to share GitHub projects publicly or within your team. The button looks like:
 
 .. image:: images/button.png
-   :target: https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/aws-samples/create-react-app-auth-amplify
 
 
-Add 'Deploy to Amplify Console' button to your site
+Add 'Deploy to Amplify Console' button to your repository or blog
 ========================
 
 Add this button to your GitHub README.md file, blog post, or any other markup page that renders HTML. The button has two components:
