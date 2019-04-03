@@ -21,12 +21,13 @@ AWS Amplify Console User Guide
    What is the AWS Amplify Console? <welcome>
    Getting Started <getting-started>
    Setting Up Custom Domains <custom-domains>
-   Tutorial: Deploying Serverless Web Apps <deploy-backend>
+   Connecting to Third-Party Custom Domains  <howto-third-party-domains>
+   Configuring Build Settings <build-settings>
+   Deploying Fullstack Serverless Web Apps <deploy-backend>
    Feature Branch Deployments <multi-environments>
+   One-click Deploy Button <one-click>
    Using Redirects <redirects>
    Restricting Access <access-control>
-   Configuring Build Settings <build-settings>
    Environment Variables <environment-variables>
-   Connecting to Third-Party Custom Domains  <howto-third-party-domains>
    Creating a Service Role  <how-to-service-role-amplify-console>
    Managing Your App's Performance <ttl>
