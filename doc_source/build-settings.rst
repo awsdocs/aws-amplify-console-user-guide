@@ -55,6 +55,13 @@ The build specification YML contains a collection of build commands and related 
         paths:
             - path
             - path
+      customHeaders:
+       - pattern: 'file-pattern'
+         headers:
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
 
 
 * **version** - Represents the Amplify Console YML version number.
@@ -67,7 +74,7 @@ The build specification YML contains a collection of build commands and related 
     * **postBuild** - The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 * **artifacts>base-directory** - The directory in which your build artifacts exist.
 * **artifacts>files** - Specify files from your artifact you want to deploy. `**/*` is to include all files.
-
+* **customHeaders** - Custom header rules set on deployed files. See :ref:`custom headers <custom-headers>`.
 
 Branch-Specific Build Settings
 =====================================

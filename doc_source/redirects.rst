@@ -126,7 +126,7 @@ You can use the following example code to redirect all traffic to index.html as 
        - Country Code
 
      * - :code:`<*>`
-       - :code:`index.html`
+       - :code:`/index.html`
        - :code:`rewrite (200)`
        -
 
@@ -182,7 +182,7 @@ Most SPA frameworks support HTML5 history.pushState() to change browser location
        - Country Code
 
      * - :code:`</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf)$)([^.]+$)/>`
-       - :code:`index.html`
+       - :code:`/index.html`
        - :code:`200`
        -
 
