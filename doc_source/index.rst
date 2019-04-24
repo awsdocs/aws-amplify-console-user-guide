@@ -29,5 +29,6 @@ AWS Amplify Console User Guide
    Using Redirects <redirects>
    Restricting Access <access-control>
    Environment Variables <environment-variables>
+   Custom Headers <custom-headers>
    Creating a Service Role  <how-to-service-role-amplify-console>
    Managing Your App's Performance <ttl>
