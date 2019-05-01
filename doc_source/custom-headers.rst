@@ -33,8 +33,7 @@ Custom HTTP headers allow you to specify headers for every HTTP response. Respon
 
 * **pattern** - Headers applied to all URL file paths that match the pattern.
 * **headers** - Define headers that match the file pattern. The **key** is the custom header name and the **value** is the custom header value.
-
-To learn more about HTTP headers, please see Mozilla's `documentation for a list of HTTP headers <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers>`__.
+* To learn more about HTTP headers, please see Mozilla's `documentation for a list of HTTP headers <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers>`__.
 
 3. Choose **Save**. Your custom header settings will now be applied to your app.
 
@@ -47,14 +46,14 @@ The following security headers enable enforcing HTTPS, preventing XSS attacks, a
 
 	customHeaders:
 		- pattern: '**/*'
-		 headers:
-		 - key: 'Strict-Transport-Security'
-		   value: 'max-age=31536000; includeSubDomains'
-		 - key: 'X-Frame-Options'
-		   value: 'X-Frame-Options: SAMEORIGIN'
-		 - key: 'X-XSS-Protection'
-		   value: 'X-XSS-Protection: 1; mode=block'
-		 - key: 'X-Content-Type-Options'
-		   value: 'X-Content-Type-Options: nosniff'
-		 - key: 'Content-Security-Policy'
-		   value: "default-src 'self'"
+		  headers:
+			- key: 'Strict-Transport-Security'
+				value: 'max-age=31536000; includeSubDomains'
+			- key: 'X-Frame-Options'
+				value: 'X-Frame-Options: SAMEORIGIN'
+			- key: 'X-XSS-Protection'
+				value: 'X-XSS-Protection: 1; mode=block'
+			- key: 'X-Content-Type-Options'
+				value: 'X-Content-Type-Options: nosniff'
+			- key: 'Content-Security-Policy'
+				value: "default-src 'self'"
