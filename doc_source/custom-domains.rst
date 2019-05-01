@@ -189,16 +189,16 @@ The Amplify Console uses a CNAME record to verify that you own your custom domai
 
    Once your app is created in the Amplify Console, your CNAME records are  checked every few minutes to determine if it resolves. If it doesn't resolve after an hour, the check is made every few hours which can lead to a delay in your domain being ready to use.
 
-   Lastly, if you have confirmed that the CNAME records exists, then there might ban issue with your DNS prover. You can either contact the DNS provider to diagnose whey the DNS verification CNAME is not resolving or move to Route53 HostedZone. See: `docs.aws.amazon.com <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html>`__.
+   Lastly, if you have confirmed that the CNAME records exists, then there might be an issue with your DNS provider. You can either contact the DNS provider to diagnose why the DNS verification CNAME is not resolving or `migrate your DNS to Route53  <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html>`__.
 
 3. **My domain hosted with AWS Route53 is stuck in Pending Verification state**
 
-   If you transferred your domain to AWS Route53 then it's possible that your domain has different nameservers then that issued by the Amplify Console when your app was created.
-
-   .. image:: images/1555952748759-607.png
-
-   You can find your hosted zone nameservers in Route53 by selecting the hosted zone
+   If you transferred your domain to AWS Route53 then it's possible that your domain has different nameservers then those issued by the Amplify Console when your app was created. Login to the `Route53 console <https://console.aws.amazon.com/route53/home>`__, choose **Hosted Zones** from the left navigation, and pick the domain you are connecting. Record the nameserver values.
 
    .. image:: images/1555952748759-111.png
 
-   If this did not resolve the issue, then you can delete the stuck domain in the amplify console and re-created a new one.
+   Next, choose **Registered domains** from the left navigation. Ensure the nameservers on the registered domain screen match what you copied from the Hosted Zone.
+
+   .. image:: images/1555952748759-607.png
+
+   If this did not resolve the issue, please email aws-amplify-customer@amazon.com.
