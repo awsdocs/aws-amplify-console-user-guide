@@ -12,8 +12,8 @@ The Amplify Console automatically detects the front end framework and associated
 
 You can edit these settings in the Amplify Console by choosing **App Settings>Build settings**. These build settings are applied to all the branches in your app, except for the branches that have a YML file saved in the repository.
 
-.. _yml-specification-syntax: 
- 
+.. _yml-specification-syntax:
+
 YML Specification Syntax
 ========================
 
@@ -79,7 +79,7 @@ The build specification YML contains a collection of build commands and related 
 Branch-Specific Build Settings
 =====================================
 
-You can use bash shell scripting to set branch-specific build settings. For example, the following script uses the system environment variable `$AWS_BRANCH` to execute one set of commands if the branch name is `master` and a different set of commands if the branch name is `dev`. 
+You can use bash shell scripting to set branch-specific build settings. For example, the following script uses the system environment variable `$AWS_BRANCH` to execute one set of commands if the branch name is `master` and a different set of commands if the branch name is `dev`.
 
 .. code-block:: yaml
 
@@ -130,7 +130,7 @@ The amplifyPush is a helper script that helps you with backend deployments. The 
         build:
           commands:
             - amplifyPush --simple
-     
+
 
 Setting the Output Folder
 ===========================
@@ -181,7 +181,7 @@ You can add references to a private registry in your build settings or add it as
             - npm config set always-auth true
             - npm config set email hello@amplifyapp.com
             - yarn install
- 
+
 Installing OS packages
 ===========================
 
@@ -194,16 +194,36 @@ You can install OS packages for missing dependencies.
         preBuild:
           commands:
             - yum install -y <package>
-        
+
 
 Key-value storage for every build
 ====================================
 
 The **envCache** provides key-value storage at build time. Values stored in the envCache can only be modified during a build and can be re-used at the next build. Using the envCache, we can store information on the deployed environment and make it available to the build container in successive builds. Unlike values stored in the envCache, changes to environment variables during a build are not persisted to future builds.
 
-    Example usage: 
+    Example usage:
 
     .. code-block:: bash
-      
+
       envCache --set <key> <value>
       envCache --get <key>
+
+Setting Node Version
+====================================
+
+Use NVM_ to manage nodejs versions. You can check available versions installed for you by default by adding a command to your build file.
+
+.. _NVM: https://github.com/nvm-sh/nvm
+
+.. code-block:: yaml
+
+    - nvm ls
+
+
+You can set the version during the build to any of the available versions or an alias. You can define a command to utilize the latest stable version of nodejs.
+
+.. code-block:: yaml
+
+    - nvm use stable
+
+
