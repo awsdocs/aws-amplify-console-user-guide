@@ -181,12 +181,12 @@ Most SPA frameworks support HTML5 history.pushState() to change browser location
        - Redirect Type
        - Country Code
 
-     * - :code:`</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf)$)([^.]+$)/>`
+     * - :code:`</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>`
        - :code:`/index.html`
        - :code:`200`
        -
 
-  :superscript:`JSON [{"source": "</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf)$)([^.]+$)/>", "status": "200", "target": "index.html", "condition": null}]`
+  :superscript:`JSON [{"source": "</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>", "status": "200", "target": "index.html", "condition": null}]`
 
 
 Reverse Proxy Rewrite
