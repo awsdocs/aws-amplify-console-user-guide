@@ -94,23 +94,6 @@ A subdomain is the part of your URL that appears before your domain name (for ex
 
    .. image:: images/amplify-customdomain-6.png
 
-.. _custom-domain-status:
-
-Custom Domain status
-====================
-
-When you are associating a domain with your Amplify app deployment, you see the following status messages:
-
-1. **Creating** - AWS Amplify Console is creating required resources for setting up the custom domain.
-
-2. **Requesting certificate** - AWS Amplify Console is requesting a SSL certificate from Amazon Certificate Manager for your site.
-
-2. **Pending verification** - Before issuing an SSL certificate, Amplify Console must verify that you are the owner of the domain. For domains managed by Route53, we will automatic update the DNS verification record. For domains managed outside of Route53, you will need to manually add the displayed DNS verification record into your domain’s DNS provider. `Learn more <https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html>`__.
-
-3. **Pending deployment** - After domain verification, the DNS is propagated globally to all 144 points of presence of our CDN.
-
-4. **Available** - The domain is successfully associated with your app. For domains managed outside of Route53, you will need to manually add the DNS records provided in the console into your domain's DNS provider.
-
 .. _custom-domain-troubleshoot-guide:
 
 Troubleshooting Guide
@@ -118,7 +101,14 @@ Troubleshooting Guide
 
 This guide will help you troubleshoot issues regarding the setup of a custom domain in the AWS Amplify Console.
 
-**Technical Terms**
+.. contents::
+   :local:
+   :depth: 1
+
+.. _standard:
+
+Technical Terminology 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **CNAME** - A CNAME (Canonical Record Name) is a type of DNS record which allows you to mask the domain for a set of webpages and make them appear as though they are located elsewhere. CNAMES point a subdomain to a Fully Qualified Domain name (FQDN). For example, we can create a new CNAME record to map the subdomain **www**.myawesomesite.com to the FQDN domain **branch-name.d1m7bkiki6tdw1.amplifyapp.com** assigned to our App.
 
@@ -128,19 +118,17 @@ This guide will help you troubleshoot issues regarding the setup of a custom dom
 
    .. image:: images/1555951526863-979.png
 
-**Setting up Custom Domains in AWS Amplify Console**
+**Custom Domain Setup in AWS Amplify Console**
 
 When you create a new domain on the Amplify Console, there are a number of steps which need to happen before you can view your app via your custom domain.
 
    .. image:: images/1555951758569-803.png
 
-1. **Creating** - AWS Amplify Console is creating required resources for setting up the custom domain.
+1. **SSL Create** - AWS Amplify Console is issuing an SSL certificate for setting up a secure custom domain.
 
-2. **Requesting certificate** - AWS Amplify Console is requesting a SSL certificate from Amazon Certificate Manager for your site.
+2. **SSL Configuration/Verification** - Before issuing an SSL certificate, Amplify Console must verify that you are the owner of the domain. For domains managed by Route53, we will automatic update the DNS verification record. For domains managed outside of Route53, you will need to manually add the displayed DNS verification record into your domain’s DNS provider.
 
-3. **Pending Verification** - Before issuing an SSL certificate, Amplify Console must verify that you are the owner of the domain. For domains managed by Route53, we will automatic update the DNS verification record. For domains managed outside of Route53, you will need to manually add the displayed DNS verification record into your domain’s DNS provider.
-
-4. **Available** - The domain is successfully associated with your app. For domains managed outside of Route53, you will need to manually add the DNS records provided in the console into your domain's DNS provider.
+3. **Domain activation** - The domain is successfully verified. For domains managed outside of Route53, you will need to manually add the CNAME records provided in the console into your domain's DNS provider.
 
 **Understanding DNS Verification**
 
@@ -160,25 +148,24 @@ There are a number of free services on the internet you can use to verify your D
 
 The Amplify Console uses a CNAME record to verify that you own your custom domain. If you host your domain with AWS Route53, verification is done on your behalf. However, if you host your domain with a Third party, you'll have to manually go into your DNS settings and add a new CNAME record.
 
-**FAQ**
 
-1. **How do I verify if my CNAME resolves?** - You can use a tool like `dig <https://en.wikipedia.org/wiki/Dig_(command)>`__ or a free website like `whatsmydns.net <https://www.whatsmydns.net/>`__ to verify that your CNAME records are resolving.
+How do I verify that my CNAME resolves?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Let's say you were shown this screen after you created your custom domain.
-
-   .. image:: images/1555952430323-185.png
-
-   The documentation provided here `docs.aws.amazon.com <https://docs.aws.amazon.com/amplify/latest/userguide/custom-domains.html#custom-domain-third-party>`__ will show you how to update your DNS records. You can then verify these records at `whatsmydns.net <https://www.whatsmydns.net/>`__.
+After your DNS update, you can use a tool like `dig <https://en.wikipedia.org/wiki/Dig_(command)>`__ or a free website like `whatsmydns.net <https://www.whatsmydns.net/>`__ to verify that your CNAME records are resolving.
 
    .. image:: images/1555952586288-584.png
 
-   When you click search, you should that the results show that your CNAME is resolving correctly.
+When you click search, you should that the results show that your CNAME is resolving correctly.
 
    .. image:: images/1555952626363-494.png
 
    You can similarly check the other DNS records.
 
-2. **My domain hosted with a third party is stuck in Pending Verification state** - The first thing you'll want to do is to verify if your CNAME records are resolving. See previous step for instructions. If you CNAME records are not resolving, then you should confirm that the CNAME entry exists in the your DNS Provider.
+My domain hosted with a third party is stuck in Pending Verification state
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The first thing you'll want to do is to verify if your CNAME records are resolving. See previous step for instructions. If you CNAME records are not resolving, then you should confirm that the CNAME entry exists in the your DNS Provider.
 
    .. code-block:: none
 
@@ -187,18 +174,35 @@ The Amplify Console uses a CNAME record to verify that you own your custom domai
       the pending verification state. It is important that you update your
       CNAME records as soon as you create your custom domain.
 
-   Once your app is created in the Amplify Console, your CNAME records are  checked every few minutes to determine if it resolves. If it doesn't resolve after an hour, the check is made every few hours which can lead to a delay in your domain being ready to use.
+   Once your app is created in the Amplify Console, your CNAME records are checked every few minutes to determine if it resolves. If it doesn't resolve after an hour, the check is made every few hours which can lead to a delay in your domain being ready to use.
 
    Lastly, if you have confirmed that the CNAME records exists, then there might be an issue with your DNS provider. You can either contact the DNS provider to diagnose why the DNS verification CNAME is not resolving or `migrate your DNS to Route53  <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html>`__.
 
-3. **My domain hosted with AWS Route53 is stuck in Pending Verification state**
+My domain hosted with AWS Route53 is stuck in Pending Verification state
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   If you transferred your domain to AWS Route53 then it's possible that your domain has different nameservers then those issued by the Amplify Console when your app was created. Login to the `Route53 console <https://console.aws.amazon.com/route53/home>`__, choose **Hosted Zones** from the left navigation, and pick the domain you are connecting. Record the nameserver values.
+If you transferred your domain to AWS Route53 then it's possible that your domain has different nameservers then those issued by the Amplify Console when your app was created. Login to the `Route53 console <https://console.aws.amazon.com/route53/home>`__, choose **Hosted Zones** from the left navigation, and pick the domain you are connecting. Record the nameserver values.
 
    .. image:: images/1555952748759-111.png
 
-   Next, choose **Registered domains** from the left navigation. Ensure the nameservers on the registered domain screen match what you copied from the Hosted Zone.
+Next, choose **Registered domains** from the left navigation. Ensure the nameservers on the registered domain screen match what you copied from the Hosted Zone.
 
    .. image:: images/1555952748759-607.png
 
-   If this did not resolve the issue, please email aws-amplify-customer@amazon.com.
+If this did not resolve the issue, please email aws-amplify-customer@amazon.com.
+
+CNAMEAlreadyExistsException Error
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This means that one of the hostnames you tried to connect (could be a subdomain, or the apex domain) is already deployed to another AWS CloudFront distribution. Here's how you can diagnose the issue:
+
+1. Check the `WS CloudFront Console <https://console.aws.amazon.com/cloudfront/home?#>`__ to see if you have this domain deployed to any other distribution. At a time, you can only have a single CNAME record attached to a one CloudFront distribution. 
+
+2. Is this domain connected to a different Amplify App that you own? If so, make sure you are not trying to reuse one of the hostnames. If you are using `www.domain.com` on the other app, you cannot use `www.domain.com` with this app
+You can use other subdomains such as `blog.domain.com`.
+
+3. If you had this domain successfully connected to another app and then recently (within the last hour) deleted it, please wait and try again after some time. If you still see this exception after 6 hours, please contact us at aws-amplify-customer@amazon.com.
+
+
+
+
