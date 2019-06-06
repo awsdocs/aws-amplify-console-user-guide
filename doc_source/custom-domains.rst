@@ -196,10 +196,9 @@ CNAMEAlreadyExistsException Error
 
 This means that one of the hostnames you tried to connect (could be a subdomain, or the apex domain) is already deployed to another AWS CloudFront distribution. Here's how you can diagnose the issue:
 
-1. Check the `WS CloudFront Console <https://console.aws.amazon.com/cloudfront/home?#>`__ to see if you have this domain deployed to any other distribution. At a time, you can only have a single CNAME record attached to a one CloudFront distribution. 
+1. Check the `AWS CloudFront Console <https://console.aws.amazon.com/cloudfront/home?#>`__ to see if you have this domain deployed to any other distribution. At a time, you can only have a single CNAME record attached to a one CloudFront distribution.
 
-2. Is this domain connected to a different Amplify App that you own? If so, make sure you are not trying to reuse one of the hostnames. If you are using `www.domain.com` on the other app, you cannot use `www.domain.com` with this app
-You can use other subdomains such as `blog.domain.com`.
+2. Is this domain connected to a different Amplify App that you own? If so, make sure you are not trying to reuse one of the hostnames. If you are using `www.domain.com` on the other app, you cannot use `www.domain.com` with this appYou can use other subdomains such as `blog.domain.com`.
 
 3. If you had this domain successfully connected to another app and then recently (within the last hour) deleted it, please wait and try again after some time. If you still see this exception after 6 hours, please contact us at aws-amplify-customer@amazon.com.
 
