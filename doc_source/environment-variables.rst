@@ -49,3 +49,39 @@ To access an environment variable during a build, edit your build settings to in
 	    build:
 	      commands:
 	        - npm run build:$BUILD_ENV
+
+Amplify Console Environment Variables
+======================================
+
+You can use environment variables that are accessible by default within the Amplify Console.
+
+  .. list-table::
+     :widths: 1, 1, 1
+
+     * - Variable name
+       - Description
+       - Example
+
+     * - AWS_APP_ID
+       - The app ID of the current build
+       - abcd123
+
+     * - AWS_BRANCH
+       - The branch name of the current build
+       - master
+
+     * - AWS_BRANCH_ARN
+       - The branch ARN of the current build
+       - arn:aws:amplify:us-west-2:0123456789:apps/abcd123/branches/master
+
+     * - AWS_CLONE_URL
+       - The clone URL used to fetch the git repository contents
+       - git@github.com:<user-name>/<repo-name>.git
+
+     * - AWS_COMMIT_ID
+       - The commit ID of the current build. "HEAD" for rebuilds
+       - b41849e9cfc6447b0833a58e5c76fe2ce57094fb
+
+     * - AWS_JOB_ID
+       - The job ID of the current build. This includes some padding of '0' so it always has the same length.
+       - 0000000001
