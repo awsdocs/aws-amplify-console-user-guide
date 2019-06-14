@@ -80,7 +80,7 @@ You can use environment variables that are accessible by default within the Ampl
 
      * - AWS_COMMIT_ID
        - The commit ID of the current build. "HEAD" for rebuilds
-       - b41849e9cfc6447b0833a58e5c76fe2ce57094fb
+       - xxxxxxxxxxxxxxxxxx
 
      * - AWS_JOB_ID
        - The job ID of the current build. This includes some padding of '0' so it always has the same length.
