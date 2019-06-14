@@ -72,7 +72,7 @@ You can use environment variables that are accessible by default within the Ampl
 
      * - AWS_BRANCH_ARN
        - The branch ARN of the current build
-       - arn:aws:amplify:us-west-2:0123456789:apps/abcd123/branches/master
+       - arn:xxxxx/xxxx/xxxxx
 
      * - AWS_CLONE_URL
        - The clone URL used to fetch the git repository contents
