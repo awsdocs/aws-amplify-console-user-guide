@@ -31,5 +31,6 @@ AWS Amplify Console User Guide
    Environment Variables <environment-variables>
    Custom Headers <custom-headers>
    Incoming Webhooks <webhooks>
+   CloudFormation Support  <cloudformation>
    Creating a Service Role  <how-to-service-role-amplify-console>
    Managing Your App's Performance <ttl>
