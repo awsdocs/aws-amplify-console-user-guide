@@ -6,3 +6,4 @@ build_dependencies/
 *\~
 *.DS_Store
 ._*
+.vscode/
