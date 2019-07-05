@@ -25,6 +25,7 @@ AWS Amplify Console User Guide
    Configuring Build Settings <build-settings>
    Deploying Fullstack Serverless Web Apps <deploy-backend>
    Feature Branch Deployments <multi-environments>
+   Manual Deploys <manual-deploys>
    One-click Deploy Button <one-click>
    Using Redirects <redirects>
    Restricting Access <access-control>

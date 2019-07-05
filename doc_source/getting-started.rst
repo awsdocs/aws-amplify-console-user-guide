@@ -14,7 +14,7 @@ To get started, log in to the `Amplify Console <https://console.aws.amazon.com/a
 Step 1: Connect Repository
 ==========================
 
-Connect your GitHub, Bitbucket, GitLab, or AWS CodeCommit repositories. After you authorize the Amplify Console, Amplify fetches an access token from the repository provider, but it *doesn't store the token* on the AWS servers. Amplify accesses your repository using deploy keys installed in a specific repository only. 
+Connect your GitHub, Bitbucket, GitLab, or AWS CodeCommit repositories. You also have the option of manually uploading your build artifacts without connecting a Git repository (see :ref:`Manual Deploys <manual-deploys>`). After you authorize the Amplify Console, Amplify fetches an access token from the repository provider, but it *doesn't store the token* on the AWS servers. Amplify accesses your repository using deploy keys installed in a specific repository only. 
 
 .. image:: images/amplify-gettingstarted-2.png
 
