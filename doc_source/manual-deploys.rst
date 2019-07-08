@@ -18,7 +18,7 @@ Amazon S3 or any URL
 
 Reference assets that are uploaded to an Amazon S3 bucket, or provide a public URL to files stored elswhere. 
 
-For Amazon S3, choose the bucket and zip file to deploy your site. You can also set up AWS Lambda triggers so your site is updated everytime new assets are uploaded. `This blog post <https://aws.amazon.com/blogs/mobile/deploy-files-stored-on-amazon-simple-storage-service-amazon-s3-dropbox-or-your-desktop-to-host-a-static-web-app-in-seconds-on-the-aws-amplify-console/>`__ walks through setting up a Lambda trigger to automatically deploy changes to Amplify on any updates to a bucket.
+For Amazon S3, choose the bucket and zip file to deploy your site. You can also set up AWS Lambda triggers so your site is updated everytime new assets are uploaded. `This blog post <https://aws.amazon.com/blogs/mobile/deploy-files-s3-dropbox-amplify-console/>`__ walks through setting up a Lambda trigger to automatically deploy changes to Amplify on any updates to a bucket.
 
 .. image:: images/manual-deploys-s3.png
 
