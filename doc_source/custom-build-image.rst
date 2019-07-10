@@ -58,8 +58,8 @@ Configuring Live Updates
 
 3. Select a package you’d like to change from the **Add package version override** list.
 
-   .. image:: images/live-updates1.png
+   .. image:: images/live-updates-1.png
 
 4. Input either a specific version of this dependency, or keep the default (**latest**). If **latest** is used, the dependency will always be upgraded to the latest version available. Choose **Save** to apply the settings.
 
-   .. image:: images/live-updates2.png
+   .. image:: images/live-updates-2.png
