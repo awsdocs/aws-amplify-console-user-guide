@@ -207,3 +207,10 @@ The **envCache** provides key-value storage at build time. Values stored in the 
       
       envCache --set <key> <value>
       envCache --get <key>
+
+Disable Automatic builds 
+=====================================
+
+You can configure Amplify Console to disable automatic builds on every code commit. To set up, choose **App settings > General** and then scroll to the section with all the connected branches. Select a branch, and then choose **Action > Disable auto build**. Further commits to that branch will no longer trigger a new build.
+
+.. image:: images/autobuild.png
