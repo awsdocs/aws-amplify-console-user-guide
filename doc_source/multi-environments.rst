@@ -198,7 +198,7 @@ Per-developer sandbox
 Pattern-based branch feature branch deployments
 ===============================
 
-Pattern-based branch deployments allow you to automatically deploy branches that match a specific pattern to the Amplify Console. Product teams using feature branch or GitFlow workflows for their releases, can now define patterns such as 'release**' to automatically deploy Git branches that begin with ‘release’ to a shareable URL. `This blog post https://dev.to/kkemple/branch-based-deployment-strategies-with-aws-amplify-console-3j0p`__  describes using this feature with different team workflows.
+Pattern-based branch deployments allow you to automatically deploy branches that match a specific pattern to the Amplify Console. Product teams using feature branch or GitFlow workflows for their releases, can now define patterns such as 'release**' to automatically deploy Git branches that begin with ‘release’ to a shareable URL. `This blog post <https://dev.to/kkemple/branch-based-deployment-strategies-with-aws-amplify-console-3j0p>`__  describes using this feature with different team workflows.
 
 1. Choose **App settings > General > Edit**.
 
