@@ -195,7 +195,7 @@ Per-developer sandbox
 7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point) and choose `Create new environment`. After the build completes you will get a develop branch deployment available at `https://develop.appid.amplifyapp.com` with a new backend environment that is linked to the branch.
 
 
-Pattern-based branch feature branch deployments
+Pattern-based feature branch deployments
 ===============================
 
 Pattern-based branch deployments allow you to automatically deploy branches that match a specific pattern to the Amplify Console. Product teams using feature branch or GitFlow workflows for their releases, can now define patterns such as 'release**' to automatically deploy Git branches that begin with ‘release’ to a shareable URL. `This blog post <https://dev.to/kkemple/branch-based-deployment-strategies-with-aws-amplify-console-3j0p>`__  describes using this feature with different team workflows.
