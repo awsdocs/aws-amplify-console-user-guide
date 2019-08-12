@@ -14,6 +14,10 @@
 AWS Amplify Console User Guide
 ##############################
 
+.. meta::
+    :description: The Amplify Console provides a continuous delivery and hosting service for cloud-powered mobile and web  applications.
+    :keywords: amplify, mobile sdk, android, ios, aws
+
 .. toctree::
    :maxdepth: 1
    :titlesonly:
