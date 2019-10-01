@@ -62,13 +62,31 @@ The build specification YML contains a collection of build commands and related 
            value: 'custom-header-value'
          - key: 'custom-header-name'
            value: 'custom-header-value'
+    test:
+      phases:
+        preTest:
+          commands:
+            - *enter command*
+        test:
+          commands:
+            - *enter command*
+        postTest:
+          commands:
+            - *enter command*
+      artifacts:
+        files:
+            - location
+            - location
+        configFilePath: *location*
+        baseDirectory: *location*
 
 
 * **version** - Represents the Amplify Console YML version number.
 * **env** - Add environment variables to this section. You can also add environment variables using the console.
 * **backend** - Run Amplify CLI commands to provision a backend, update Lambda functions, or  GraphQL schemas as part of continuous deployment. Learn how to :ref:`deploy a backend with your frontend <deploy-backend>`.
 * **frontend** - Run frontend build commands.
-* Both the frontend and backend have three **phases** that represent the commands run during each sequence of the build.
+* **test** - Run commands during a test phase. Learn how to :ref:`add tests to your app <running-tests>`.
+* The frontend, backend, and test have three **phases** that represent the commands run during each sequence of the build.
     * **preBuild** - The preBuild script runs before the actual build starts, but after we have installed dependencies.
     * **build** - Your build commands.
     * **postBuild** - The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
