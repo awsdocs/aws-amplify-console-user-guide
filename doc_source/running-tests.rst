@@ -46,3 +46,18 @@ You can use the test step to run any test commands at build time. For E2E tests,
 * **postTest** - The mochawesome report is generated from the output JSON.
 * **artifacts>baseDirectory** - The directory from which tests are run.
 * **artifacts>files** - The generated artifacts (screenshots and videos) available for download.
+
+Disabling tests
+==========================
+
+Once the "test" config has been added to your amplify.yml build settings, the test step will be executed for every build, on every branch. If you would like to globally disable tests from running, or you would only like tests to run for specific branches, you can use the "USER_DISABLE_TESTS" environment variable to do so without modifying your build settings.
+
+To **globally** disable tests for all branches, add the USER_DISABLE_TESTS environment variable with a value of true for all branches, as shown below:
+
+.. image:: images/disable-test-global.png  
+
+To disable tests for a **specific branch**, add the USER_DISABLE_TESTS environment variable with a value of false for all branches, and then add an override for each branch you would like to disable with a value of true. In the following example, tests are disabled on the "master" branch, and enabled for every other branch:
+
+.. image:: images/disable-test-branch.png  
+
+Disabling tests with this variable will cause the test step to be skipped altogether during a build. To re-enable tests,  set this value to *false*, or delete the environment variable.
