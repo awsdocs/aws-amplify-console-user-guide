@@ -17,11 +17,14 @@ Your app now has two deployments available at `https://master.appid.amplifyapp.c
 .. image:: images/amplify-environments-1.png
    :align: center
 
+.. contents::
+   :local:
+   :depth: 1
 
 Team workflows with Amplify CLI backend environments
 ===============================
 
-A feature branch deployment can consist of a **frontend** and [(optionally) a **backend**](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-backend.html). The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
+A feature branch deployment consists of a **frontend** and [(optionally) a **backend**](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-backend.html). The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
 You can use the Amplify Console to continuously deploy backend resources such as GraphQL APIs and Lambda functions with your feature branch deployment. You can use the following models to deploy your backend and frontend with the Amplify Console:
 
 .. contents::
@@ -88,7 +91,7 @@ Feature branch workflow
 
 	.. image:: images/reuse-backend-2.png
 
-7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point).
+7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point). Choose the `test` backend environment.
 
 	.. image:: images/reuse-backend-4.png
 
@@ -190,3 +193,28 @@ Per-developer sandbox
 	.. image:: images/reuse-backend-3.png
 
 7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point) and choose `Create new environment`. After the build completes you will get a develop branch deployment available at `https://develop.appid.amplifyapp.com` with a new backend environment that is linked to the branch.
+
+
+Pattern-based feature branch deployments
+===============================
+
+Pattern-based branch deployments allow you to automatically deploy branches that match a specific pattern to the Amplify Console. Product teams using feature branch or GitFlow workflows for their releases, can now define patterns such as 'release**' to automatically deploy Git branches that begin with ‘release’ to a shareable URL. `This blog post <https://dev.to/kkemple/branch-based-deployment-strategies-with-aws-amplify-console-3j0p>`__  describes using this feature with different team workflows.
+
+1. Choose **App settings > General > Edit**.
+
+2. Flip the branch autodetection switch to **Enabled**.
+
+.. image:: images/autobranch.png
+
+3. Define patterns for automatically deploying branches.
+
+    * '*' will deploy all branches in your repository.
+    * 'release*' will automatically deploy all branches that being with the word 'release.
+    * 'release*/**' will deploy all branches that match a 'release /' pattern.
+    * Specify multiple patterns comma-separated - e.g. 'release*', 'feature*'.
+
+4. Set up automatic password protection for all branches that are automatically created by setting **Branch autodetection - access control** to **Enabled**.
+
+5. For applications built with an Amplify backend, you can choose to create a new environment or point all branches to an existing backend.
+
+.. image:: images/autobranch.png

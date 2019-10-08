@@ -55,19 +55,44 @@ The build specification YML contains a collection of build commands and related 
         paths:
             - path
             - path
+      customHeaders:
+       - pattern: 'file-pattern'
+         headers:
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+    test:
+      phases:
+        preTest:
+          commands:
+            - *enter command*
+        test:
+          commands:
+            - *enter command*
+        postTest:
+          commands:
+            - *enter command*
+      artifacts:
+        files:
+            - location
+            - location
+        configFilePath: *location*
+        baseDirectory: *location*
 
 
 * **version** - Represents the Amplify Console YML version number.
 * **env** - Add environment variables to this section. You can also add environment variables using the console.
 * **backend** - Run Amplify CLI commands to provision a backend, update Lambda functions, or  GraphQL schemas as part of continuous deployment. Learn how to :ref:`deploy a backend with your frontend <deploy-backend>`.
 * **frontend** - Run frontend build commands.
-* Both the frontend and backend have three **phases** that represent the commands run during each sequence of the build.
+* **test** - Run commands during a test phase. Learn how to :ref:`add tests to your app <running-tests>`.
+* The frontend, backend, and test have three **phases** that represent the commands run during each sequence of the build.
     * **preBuild** - The preBuild script runs before the actual build starts, but after we have installed dependencies.
     * **build** - Your build commands.
     * **postBuild** - The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 * **artifacts>base-directory** - The directory in which your build artifacts exist.
 * **artifacts>files** - Specify files from your artifact you want to deploy. `**/*` is to include all files.
-
+* **customHeaders** - Custom header rules set on deployed files. See :ref:`custom headers <custom-headers>`.
 
 Branch-Specific Build Settings
 =====================================
@@ -192,11 +217,18 @@ You can install OS packages for missing dependencies.
 Key-value storage for every build
 ====================================
 
-The **envCache** provides key-value storage at build time. The envCache can only be modified during a build and can be re-used at the next build. Using the envCache, we can store information on the deployed environment and make it available to the build container in successive builds. Environment variables in comparison, cannot be modified during a build.
+The **envCache** provides key-value storage at build time. Values stored in the envCache can only be modified during a build and can be re-used at the next build. Using the envCache, we can store information on the deployed environment and make it available to the build container in successive builds. Unlike values stored in the envCache, changes to environment variables during a build are not persisted to future builds.
 
     Example usage: 
 
     .. code-block:: bash
       
       envCache --set <key> <value>
-      envCache --get <key> <value>
+      envCache --get <key>
+
+Disable Automatic builds 
+=====================================
+
+You can configure Amplify Console to disable automatic builds on every code commit. To set up, choose **App settings > General** and then scroll to the section with all the connected branches. Select a branch, and then choose **Action > Disable auto build**. Further commits to that branch will no longer trigger a new build.
+
+.. image:: images/autobuild.png

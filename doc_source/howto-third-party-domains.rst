@@ -13,7 +13,7 @@ Connecting to a GoDaddy Domain
 
    .. image:: images/amplify-godaddy-1.png
 
-3. Add CNAME records to to point all subdomains to the **amplifyapp** domain, and another CNAME record to point to Amazon Certificate Manager's validation server. A single validated ACM generates an SSL certificate for your domain. Make sure you only enter the subdomain (for example, *) in **Host** as shown below (don't enter yourdomainname.com).
+3. Add CNAME records to to point your subdomains to the Amplify domain, and another CNAME record to point to Amazon Certificate Manager's validation server. A single validated ACM generates an SSL certificate for your domain. Make sure you only enter the subdomain (for example, *) in **Host** as shown below (don't enter yourdomainname.com).
 
    .. image:: images/amplify-godaddy-2.png
    .. image:: images/amplify-godaddy-3.png
@@ -21,7 +21,6 @@ Connecting to a GoDaddy Domain
 GoDaddy doesn't support ANAME/ALIAS records. For DNS providers that don't have ANAME/ALIAS support, we strongly recommend `migrating your DNS to Amazon Route 53 <https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html>`__. If you want to keep your current provider and update the root domain, add **Forwarding** and set up a domain forward. In **Forward to**, enter the information as shown following:
 
 .. image:: images/amplify-godaddy-4.png
-.. image:: images/amplify-godaddy-5.png
 
 Connecting to a Google Domain
 =============================
