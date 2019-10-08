@@ -60,4 +60,4 @@ To disable tests for a **specific branch**, add the USER_DISABLE_TESTS environme
 
 .. image:: images/disable-test-branch.png  
 
-Disabling tests with this variable will cause the test step to be skipped altogether during a build, to re-enable tests, simple set this value "false", or delete the environment variable.
+Disabling tests with this variable will cause the test step to be skipped altogether during a build. To re-enable tests,  set this value to *false*, or delete the environment variable.
