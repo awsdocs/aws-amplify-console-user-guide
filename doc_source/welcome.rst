@@ -5,9 +5,11 @@
 What is the AWS Amplify Console?
 ################################
 
-The AWS Amplify Console is a continuous delivery and hosting service for modern web applications. The AWS Amplify Console simplifies the deployment of your application front end and backend. Connect to your code repository and your front end and backend are deployed in a single workflow, on every code commit. This ensures that your web application is only updated after the deployment is successfully completed, eliminating inconsistencies between your application front end and backend. AWS Amplify Console makes it easier for you to build, deploy, and host your mobile web applications, enabling you to quickly iterate on feedback and get new features to your users faster.
+The AWS Amplify Console provides a Git-based workflow for hosting fullstack serverless web apps with continuous deployment. A fullstack serverless app consists of a backend built with cloud resources such as GraphQL or REST APIs, file and data storage, and a frontend built with single page application frameworks such as React, Angular, Vue, or Gatsby.
 
-What are Modern Web Applications?
+The AWS Amplify Console simplifies the deployment of your application frontend and backend. Connect to your code repository and your frontend and backend are deployed in a single workflow, on every code commit. This ensures that your web application is only updated after the deployment is successfully completed, eliminating inconsistencies between your application front end and backend. AWS Amplify Console makes it easier for you to build, deploy, and host your mobile web applications, enabling you to quickly iterate on feedback and get new features to your users faster.
+
+Modern Web Applications
 ---------------------------------
 Modern web applications are constructed as single page web applications that package all application components into static files. Traditional client-server web architectures led to poor experiences--every button click or search required a round trip to the server, re-rendering the entire application. Modern web apps offer a native app-like user experience by serving the app front end, or user interface, efficiently to browsers as prebuilt HTML/JavaScript files that can then invoke backend functionality without reloading the page. 
 
