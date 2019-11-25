@@ -4,7 +4,7 @@
 Getting Started with Fullstack Continuous Deployments
 ########################################################
 
-The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI on the same commit as your frontend code. **Note: This feature only works with the Amplify CLI v1.0+**.
+The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI on the same commit as your frontend code. **Note: This feature only works with the Amplify CLI v4.0+**.
 
 In this tutorial, we are going to create and deploy a React app which implements a basic authentication flow for signing up/signing in users as well as protected client side routing using AWS Amplify. 
 
@@ -15,7 +15,7 @@ Log in to the `Amplify Console <https://console.aws.amazon.com/amplify/home>`__ 
 
 	.. image:: images/fullstack1.png
 
-Choose the **Authentication Starter** and **Deploy app**. You will be asked to connect your GitHub account. Connecting your GitHub acccount allows the Amplify Console to create a fork of the repository in your account, deploy the AWS backend services, and build and deploy the frontend. In order to deploy backend resources to AWS, you will need to :ref:`create a service role <how-to-service-role-amplify-console>`).
+Choose the **Authentication Starter** and **Deploy app**. You will be asked to connect your GitHub account. Connecting your GitHub acccount allows the Amplify Console to create a fork of the repository in your account, deploy the AWS backend services, and build and deploy the frontend. In order to deploy backend resources to AWS, you will need to :ref:`create a service role <how-to-service-role-amplify-console>`.
 
 	.. image:: images/fullstack2.gif
 
@@ -46,7 +46,8 @@ Step 3: Add a GraphQL backend
 
         amplify pull --appId XXXXXXXX --envName devw
 
-	.. image:: images/fullstack4.png
+	
+    .. image:: images/fullstack4.png
 
 3. Add the GraphQL API using the default todo example. Learn more about modeling your backend with the `GraphQL transform <https://aws-amplify.github.io/docs/cli-toolchain/graphql>`__.
 

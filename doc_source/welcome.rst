@@ -11,19 +11,17 @@ AWS Amplify Console supports common Single Page App (SPA) frameworks (e.g. React
 
 Get started
 ---------
-To get started with Amplify Console :ref:`connect your repository <getting-started>` to set up continuous deployment. Alternatively, start with one of our :ref:`fullstack samples <deploy-backend>`.
+To get started with Amplify Console :ref:`connect your repository <getting-started>` (GitHub, BitBucket, GitLab, and AWS CodeCommit) to set up continuous deployment. Alternatively, start with one of our :ref:`fullstack samples <deploy-backend>`. Amplify Console automatically detects the front end build settings along with any backend functionality provisioned with the Amplify CLI (command-line toolchain for creating serverless backends). 
 
 Amplify Console Features
 ------------------------
 With the Amplify Console, you can do the following: 
 
-* Connect your repository (GitHub, BitBucket, GitLab, and AWS CodeCommit), and the Amplify Console automatically detects the front end build settings along with any backend functionality provisioned with the Amplify CLI (command-line toolchain for creating serverless backends). 
-
 * Manage production and staging environments for your frontend and backend by connecting new branches. :ref:`See feature branch deployments <multi-environments>`. 
 
 * Connect your custom domain. If you manage your domain in Amazon Route 53, the Amplify Console automatically connects the root (yourdomain.com), www subdomains (www.yourdomain.com), and branch (https://dev.yourdomain.com) subdomains. :ref:`See custom domains <custom-domains>`.
 
-* Preview changes during code reviews by setting up :ref:`Pull-Request Previews <previews>`.
+* Preview changes during code reviews by setting up :ref:`Pull-Request Previews <pr-previews>`.
 
 * Improve your app quality with end to end tests. :ref:`See End-to-End Testing <running-tests>`.
 
