@@ -1,7 +1,7 @@
 .. _getting-started:
 
 ###############
-Getting Started
+Getting Started with Existing Code
 ###############
 
 In this walkthrough, you learn how to continuously build, deploy, and host a modern web app. Modern web apps include Single Page App (SPA) frameworks (for example, React, Angular, or Vue) and static-site generators (SSGs) (for example, Hugo, Jekyll, or Gatsby). 
@@ -40,7 +40,7 @@ For more information, see :ref:`YML structure <yml-specification-syntax>`.
 Step 3: Confirm Build Settings for the Backend
 =====================================================
 
-If you connected a repository provisioned by the Amplify CLI v1.0+ (run `amplify -v` to find CLI version), the Amplify Console will deploy or automatically update backend resources (any resource provisioned by the Amplify CLI) in a single workflow with the frontend build. You can choose to point an existing backend environment to your branch, or create a completely new environment. For a step-by-step tutorial, see :ref:`Deploying a Backend with your Frontend <deploy-backend>`.
+If you connected a repository provisioned by the Amplify CLI v1.0+ (run `amplify -v` to find CLI version), the Amplify Console will deploy or automatically update backend resources (any resource provisioned by the Amplify CLI) in a single workflow with the frontend build. You can choose to point an existing backend environment to your branch, or create a completely new environment. For a step-by-step tutorial, see :ref:`Deploying a fullstack app <deploy-backend>`.
 
 .. image:: images/reuse-backend.png
 
@@ -82,5 +82,5 @@ Next Steps
 
 * :ref:`Manage multiple environments <multi-environments>`
 
-* :ref:`Preview pull requests before merging <previews>`
+* :ref:`Preview pull requests before merging <pr-previews>`
    

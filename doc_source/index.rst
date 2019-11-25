@@ -24,10 +24,10 @@ AWS Amplify Console User Guide
    
    What is the AWS Amplify Console? <welcome>
    Getting Started <getting-started>
+   Getting Started with Fullstack Deployments <deploy-backend>
    Setting Up Custom Domains <custom-domains>
    Connecting to Third-Party Custom Domains  <howto-third-party-domains>
    Configuring Build Settings <build-settings>
-   Deploying Fullstack Serverless Web Apps <deploy-backend>
    Feature Branch Deployments <multi-environments>
    Manual Deploys <manual-deploys>
    One-click Deploy Button <one-click>

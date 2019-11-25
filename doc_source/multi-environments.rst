@@ -24,7 +24,8 @@ Your app now has two deployments available at `https://master.appid.amplifyapp.c
 Team workflows with Amplify CLI backend environments
 ===============================
 
-A feature branch deployment consists of a **frontend** and [(optionally) a **backend**](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-backend.html). The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
+A feature branch deployment consists of a **frontend** and `(optionally) a **backend environment* <https://docs.aws.amazon.com/amplify/latest/userguide/deploy-backend.html>`__. The frontend is built and deployed to a global CDN, while the backend is deployed by the Amplify CLI to AWS.
+
 You can use the Amplify Console to continuously deploy backend resources such as GraphQL APIs and Lambda functions with your feature branch deployment. You can use the following models to deploy your backend and frontend with the Amplify Console:
 
 .. contents::
@@ -85,17 +86,23 @@ Feature branch workflow
         git commit -am 'Added dev, test, and prod environments'
         git push origin master
 
-5. Connect your repo > branch `master` to the Amplify Console.
+5. Visit the Amplify Console in the AWS Console to see your current backend environment. Navigate a level up from the breadcrumb to view a list of all backend environments created in the **Backend environments** tab.
 
-6. The Amplify Console will detect backend environments created by the Amplify CLI. Choose `prod` from the dropdown and grant the service role to Amplify Console. Choose **Save and deploy**. After the build completes you will get a master branch deployment available at `https://master.appid.amplifyapp.com`.
+	.. image:: images/reuse-backend-5.png
+
+6. Switch to the **Frontend environments** tab and connect your repository provider and *master* branch. 
+
+	.. image:: images/reuse-backend-6.png
+
+7. In the build settings screen, pick an existing backend environment to set up continuous deployment with the master branch. Choose `prod` from the dropdown and grant the service role to Amplify Console. Choose **Save and deploy**. After the build completes you will get a master branch deployment available at `https://master.appid.amplifyapp.com`.
 
 	.. image:: images/reuse-backend-2.png
 
-7. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point). Choose the `test` backend environment.
+8. Connect `develop` branch in Amplify Console (assume `develop` and `master` branch are the same at this point). Choose the `test` backend environment.
 
 	.. image:: images/reuse-backend-4.png
 
-8. The Amplify Console is now setup. You can start working on new features in a feature branch. Add backend functionality by using the `dev` backend environment from your local workstation.
+9. The Amplify Console is now setup. You can start working on new features in a feature branch. Add backend functionality by using the `dev` backend environment from your local workstation.
 
     .. code-block:: none
 
@@ -198,7 +205,7 @@ Per-developer sandbox
 Pattern-based feature branch deployments
 ===============================
 
-Pattern-based branch deployments allow you to automatically deploy branches that match a specific pattern to the Amplify Console. Product teams using feature branch or GitFlow workflows for their releases, can now define patterns such as 'release**' to automatically deploy Git branches that begin with ‘release’ to a shareable URL. `This blog post <https://dev.to/kkemple/branch-based-deployment-strategies-with-aws-amplify-console-3j0p>`__  describes using this feature with different team workflows.
+Pattern-based branch deployments allow you to automatically deploy branches that match a specific pattern to the Amplify Console. Product teams using feature branch or GitFlow workflows for their releases, can now define patterns such as 'release**' to automatically deploy Git branches that begin with ‘release’ to a shareable URL. `This blog post <https://dev.to/kkemple/branch-based-deployment-strategies-with-aws-amplify-console-1n3c>`__  describes using this feature with different team workflows.
 
 1. Choose **App settings > General > Edit**.
 
