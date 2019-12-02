@@ -13,7 +13,7 @@ Connecting to a GoDaddy Domain
 
    .. image:: images/amplify-godaddy-1.png
 
-3. Add CNAME records to to point your subdomains to the Amplify domain, and another CNAME record to point to Amazon Certificate Manager's validation server. A single validated ACM generates an SSL certificate for your domain. Make sure you only enter the subdomain (for example, *) in **Host** as shown below (don't enter yourdomainname.com).
+3. Add CNAME records to to point your subdomains to the Amplify domain, and another CNAME record to point to Amazon Certificate Manager's validation server. A single validated ACM generates an SSL certificate for your domain. Make sure you only enter the subdomain in **Host** as shown below (don't enter yourdomainname.com).
 
    .. image:: images/amplify-godaddy-2.png
    .. image:: images/amplify-godaddy-3.png

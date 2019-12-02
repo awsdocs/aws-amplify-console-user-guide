@@ -46,7 +46,7 @@ The following security headers enable enforcing HTTPS, preventing XSS attacks, a
 
 	customHeaders:
 		- pattern: '**/*'
-		  headers:
+			headers:
 			- key: 'Strict-Transport-Security'
 				value: 'max-age=31536000; includeSubDomains'
 			- key: 'X-Frame-Options'

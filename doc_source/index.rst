@@ -31,7 +31,7 @@ AWS Amplify Console User Guide
    Feature Branch Deployments <multi-environments>
    Manual Deploys <manual-deploys>
    One-click Deploy Button <one-click>
-   Previews <previews>
+   Previews <pr-previews>
    End-to-End Testing <running-tests>
    Using Redirects <redirects>
    Restricting Access <access-control>
