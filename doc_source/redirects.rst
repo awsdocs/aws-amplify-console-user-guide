@@ -63,7 +63,7 @@ Redirects are executed from the top of the list down. Make sure that your orderi
 
 .. code-block:: none
 
-  /docs/specific-filename.html /documents/diferent-filename.html 301
+  /docs/specific-filename.html /documents/different-filename.html 301
   /docs/<*> /documents/<*>
 
 The following order of redirects ignores the redirection of `specific-filename.html` to `different-filename.html`:
@@ -71,7 +71,7 @@ The following order of redirects ignores the redirection of `specific-filename.h
 .. code-block:: none
 
   /docs/<*> /documents/<*>
-  /docs/specific-filename.html /documents/diferent-filename.html 301
+  /docs/specific-filename.html /documents/different-filename.html 301
 
 
 Simple Redirects and Rewrites
