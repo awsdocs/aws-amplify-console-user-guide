@@ -24,16 +24,16 @@ You can use the test step to run any test commands at build time. For E2E tests,
     phases:
       preTest:
         commands:
-          - npm install
+          - npm ci
           - npm install wait-on
-          - npm install  mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
+          - npm install mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
           - 'npm start & npx wait-on http://localhost:8080'
       test:
         commands:
           - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
       postTest:
         commands:
-          - npx mochawesome-merge --reportDir cypress/report/mochawesome-report > cypress/report/mochawesome.json
+          - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
     artifacts:
       baseDirectory: cypress
       configFilePath: '**/mochawesome.json'
