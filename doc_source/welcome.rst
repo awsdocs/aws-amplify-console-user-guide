@@ -7,7 +7,7 @@ Welcome to the AWS Amplify Console
 
 The AWS Amplify Console provides a Git-based workflow for hosting fullstack serverless web apps with continuous deployment. A fullstack serverless app consists of a backend built with cloud resources such as GraphQL or REST APIs, file and data storage, and a frontend built with single page application frameworks such as React, Angular, Vue, or Gatsby.
 
-AWS Amplify Console supports common Single Page App (SPA) frameworks (e.g. React Angular, Vue.js, Ionic, Ember), as well as static-site generators like Gatsby, Eleventy Hugo, VuePress, and Jekyll.
+AWS Amplify Console supports common Single Page App (SPA) frameworks (e.g. React Angular, Vue.js, Ionic, Ember), as well as static-site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll.
 
 Get started
 ---------
