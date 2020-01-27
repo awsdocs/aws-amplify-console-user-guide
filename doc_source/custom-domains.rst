@@ -189,7 +189,7 @@ Next, choose **Registered domains** from the left navigation. Ensure the nameser
 
    .. image:: images/1555952748759-607.png
 
-If this did not resolve the issue, please email aws-amplify-customer@amazon.com.
+If this did not resolve the issue, please check our `GitHub Issues <https://github.com/aws-amplify/amplify-console/issues>`__ and open a new issue if it doesn't already exist.
 
 CNAMEAlreadyExistsException Error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -200,7 +200,7 @@ This means that one of the hostnames you tried to connect (could be a subdomain,
 
 2. Is this domain connected to a different Amplify App that you own? If so, make sure you are not trying to reuse one of the hostnames. If you are using `www.domain.com` on the other app, you cannot use `www.domain.com` with this appYou can use other subdomains such as `blog.domain.com`.
 
-3. If you had this domain successfully connected to another app and then recently (within the last hour) deleted it, please wait and try again after some time. If you still see this exception after 6 hours, please contact us at aws-amplify-customer@amazon.com.
+3. If you had this domain successfully connected to another app and then recently (within the last hour) deleted it, please wait and try again after some time. If you still see this exception after 6 hours, please check our `GitHub Issues <https://github.com/aws-amplify/amplify-console/issues>`__ and open a new issue if it doesn't already exist.
 
 
 
