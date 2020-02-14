@@ -85,3 +85,7 @@ You can use environment variables that are accessible by default within the Ampl
      * - AWS_JOB_ID
        - The job ID of the current build. This includes some padding of '0' so it always has the same length.
        - 0000000001
+       
+     * - _LIVE_UPDATES
+       - The tool will be upgraded to the latest version.
+       - [{"name":"Amplify CLI","pkg":"@aws-amplify/cli","type":"npm","version":"latest"}]
