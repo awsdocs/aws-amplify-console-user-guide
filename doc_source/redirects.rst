@@ -186,7 +186,7 @@ Most SPA frameworks support HTML5 history.pushState() to change browser location
        - :code:`200`
        -
 
-  :superscript:`JSON [{"source": "</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>", "status": "200", "target": "index.html", "condition": null}]`
+  :superscript:`JSON [{"source": "</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>", "status": "200", "target": "/index.html", "condition": null}]`
 
 
 Reverse Proxy Rewrite
