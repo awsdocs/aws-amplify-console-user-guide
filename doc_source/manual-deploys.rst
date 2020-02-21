@@ -22,7 +22,7 @@ For Amazon S3, choose the bucket and zip file to deploy your site. You can also 
 
 .. image:: images/manual-deploys-s3.png
 
-**Note:** When you are uploading the zip folder make sure you **zip the contents of your bulid output and not the top level folder**.  For example **if your build output generates a folder named "build" or "public" first navigate into that folder, select all of the contents and zip it from there**.  If you do not do this then you will see an "Access Denied" error because the sites root directory will not be initialized properly.
+**Note:** When you are uploading the zip folder make sure you **zip the contents of your build output and not the top level folder**.  For example **if your build output generates a folder named "build" or "public" first navigate into that folder, select all of the contents and zip it from there**.  If you do not do this then you will see an "Access Denied" error because the sites root directory will not be initialized properly.
 
 .. image:: images/zipped-incorrectly-manual-deploy-access-denied.png
 
