@@ -47,7 +47,7 @@ Creating a New Environment with Auth Parameters
 
 .. image:: images/amplify-newenvironment-2.png
    :width: 600px
-   
+
 Accessing Environment Variables
 ========================
 
@@ -99,6 +99,26 @@ You can use environment variables that are accessible by default within the Ampl
        - The job ID of the current build. This includes some padding of '0' so it always has the same length.
        - 0000000001
        
-     * - _LIVE_UPDATES
-       - The tool will be upgraded to the latest version.
-       - [{"name":"Amplify CLI","pkg":"@aws-amplify/cli","type":"npm","version":"latest"}]
+     * - AMPLIFY_FACEBOOK_CLIENT_ID
+       - The Facebook client ID
+       - 123456
+    
+    * - AMPLIFY_FACEBOOK_CLIENT_SECRET
+       - The Facebook client secret
+       - example123456
+
+    * - AMPLIFY_GOOGLE_CLIENT_ID
+       - The Google client ID
+       - 123456
+    
+    * - AMPLIFY_GOOGLE_CLIENT_SECRET
+       - The Google client secret
+       - example123456
+
+    * - AMPLIFY_AMAZON_CLIENT_ID
+       - The Amazon client ID
+       - 123456
+    
+    * - AMPLIFY_AMAZON_CLIENT_SECRET
+       - The Amazon client secret
+       - example123456
