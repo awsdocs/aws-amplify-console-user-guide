@@ -98,11 +98,11 @@ You can use environment variables that are accessible by default within the Ampl
      * - AWS_JOB_ID
        - The job ID of the current build. This includes some padding of '0' so it always has the same length.
        - 0000000001
-       
+
      * - AMPLIFY_FACEBOOK_CLIENT_ID
        - The Facebook client ID
        - 123456
-    
+
     * - AMPLIFY_FACEBOOK_CLIENT_SECRET
        - The Facebook client secret
        - example123456
@@ -110,7 +110,7 @@ You can use environment variables that are accessible by default within the Ampl
     * - AMPLIFY_GOOGLE_CLIENT_ID
        - The Google client ID
        - 123456
-    
+
     * - AMPLIFY_GOOGLE_CLIENT_SECRET
        - The Google client secret
        - example123456
@@ -118,7 +118,7 @@ You can use environment variables that are accessible by default within the Ampl
     * - AMPLIFY_AMAZON_CLIENT_ID
        - The Amazon client ID
        - 123456
-    
+
     * - AMPLIFY_AMAZON_CLIENT_SECRET
        - The Amazon client secret
        - example123456
