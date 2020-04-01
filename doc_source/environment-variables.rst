@@ -38,12 +38,12 @@ If you need to customize a variable specifically for a branch, you can add a bra
 Creating a New Environment with Auth Parameters
 ========================
 
-#. When you connect your branch, in **Backend deployments**, choose **Create new environment**, and enter your backend name.
+1. When you connect your branch, in **Backend deployments**, choose **Create new environment**, and enter your backend name.
 
 .. image:: images/amplify-newenvironment-1.png
    :width: 600px
 
-#. In the **key** and **value** fields, enter your client id and client secret. Amplify Console supports configurating facebook, google and amazon account.
+2. In the **key** and **value** fields, enter your client id and client secret. Amplify Console supports configurating facebook, google and amazon account.
 
 .. image:: images/amplify-newenvironment-2.png
    :width: 600px
