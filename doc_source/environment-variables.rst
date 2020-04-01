@@ -38,7 +38,7 @@ If you need to customize a variable specifically for a branch, you can add a bra
 Creating a New Environment with Auth Parameters
 ========================
 
-#. When you connect your branch, in Backend deployments, choose **Create new environment**, and enter your backend name.
+#. When you connect your branch, in **Backend deployments**, choose **Create new environment**, and enter your backend name.
 
 .. image:: images/amplify-newenvironment-1.png
    :width: 600px
