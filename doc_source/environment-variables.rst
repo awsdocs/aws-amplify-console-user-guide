@@ -35,18 +35,6 @@ If you need to customize a variable specifically for a branch, you can add a bra
 
 .. _access_env_vars: 
 
-Creating a New Environment with Auth Parameters
-========================
-
-1. When you connect your branch, in **Backend deployments**, choose **Create new environment**, and enter your backend name.
-
-.. image:: images/amplify-newenvironment-1.png
-   :width: 600px
-
-2. In the **key** and **value** fields, enter your client id and client secret. Amplify Console supports configurating facebook, google and amazon account.
-
-.. image:: images/amplify-newenvironment-2.png
-   :width: 600px
    
 Accessing Environment Variables
 ========================
@@ -125,3 +113,16 @@ You can use environment variables that are accessible by default within the Ampl
      * - AMPLIFY_AMAZON_CLIENT_SECRET
        - The Amazon client secret
        - example123456
+
+Creating a New Amplify Backend Environment with Auth Parameters
+========================
+
+1. When connecting a branch, choose **Create new environment**, and enter your backend name.
+
+.. image:: images/amplify-newenvironment-1.png
+   :width: 600px
+
+2. In the **key** and **value** fields, enter your client id and client secret using the *AMPLIFY_* system environment variables as shown below
+
+.. image:: images/amplify-newenvironment-2.png
+   :width: 600px
