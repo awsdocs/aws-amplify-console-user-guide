@@ -216,7 +216,7 @@ Pattern-based branch deployments allow you to automatically deploy branches that
 3. Define patterns for automatically deploying branches.
 
     * '*' will deploy all branches in your repository.
-    * 'release*' will automatically deploy all branches that being with the word 'release.
+    * 'release*' will automatically deploy all branches that begin with the word 'release.
     * 'release*/**' will deploy all branches that match a 'release /' pattern.
     * Specify multiple patterns comma-separated - e.g. 'release*', 'feature*'.
 
