@@ -36,6 +36,19 @@ To access an environment variable during a build, edit your build settings to in
        - npm run build:$BUILD_ENV
    ```
 
+## Creating a new backend environment with authentication parameters<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
+
+**To create a new backend environment with authentication parameters**
+
+1. When connecting a branch, choose **Create new environment**, and enter the name of your backend environment\. The following screenshot shows the Backend deployments section of the Amplify console with *backend* entered for the backend environment name\.  
+![\[Screenshot of the Backend deployments section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-newenvironment-1.png)
+
+1. To set the environment variables for the new backend environment, choose **AppSettings**, **Environment variables** in the Navigation pane\. In the **Environment variables** section, choose **Manage variables**\.
+
+1. In the **Environment variables** section, choose **Manage variables**\.
+
+1. In the **Manage variables** section, for the **Variable** \(key\) field, enter your client id\. For the **Value** field, enter your client secret\. See the table in the next topic for the list of Amplify system environment variables that are available by default\. 
+
 ## Amplify Console Environment Variables<a name="amplify-console-environment-variables"></a>
 
 You can use environment variables that are accessible by default within the Amplify Console\.
@@ -43,7 +56,7 @@ You can use environment variables that are accessible by default within the Ampl
 
 ****  
 
-| Variable name | Description | Example | 
+| Variable name | Description | Example value | 
 | --- | --- | --- | 
 |  AWS\_APP\_ID  |  The app ID of the current build  |  abcd123  | 
 |  AWS\_BRANCH  |  The branch name of the current build  |  master  | 
@@ -52,3 +65,9 @@ You can use environment variables that are accessible by default within the Ampl
 |  AWS\_COMMIT\_ID  |  The commit ID of the current build\. “HEAD” for rebuilds  |  xxxxxxxxxxxxxxxxxx  | 
 |  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  0000000001  | 
 |  \_LIVE\_UPDATES  |  The tool will be upgraded to the latest version\.  |  \[\{“name”:”Amplify CLI”,”pkg”:”@aws\-amplify/cli”,”type”:”npm”,”version”:”latest”\}\]  | 
+|  AMPLIFY\_FACEBOOK\_CLIENT\_ID  |  The Facebook client ID\.  |  123456  | 
+|  AMPLIFY\_FACEBOOK\_CLIENT\_SECRET  |  The Facebook client secret\.  |  example123456  | 
+|  AMPLIFY\_GOOGLE\_CLIENT\_ID  |  The Google client ID\.  |  123456  | 
+|  AMPLIFY\_GOOGLE\_CLIENT\_SECRET  |  The Google client secret\.  |  example123456  | 
+|  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID\.  |  123456  | 
+|  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret\.  |  example123456  | 
