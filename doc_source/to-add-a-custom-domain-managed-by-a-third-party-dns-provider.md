@@ -27,4 +27,4 @@ If you are not using Amazon Route 53 to manage your domain, you can add a custo
 1. Configure the ANAME/ALIAS record to point to the root domain, for example *https://example\.com*, to your amplifyapp domain\. An ANAME record points the root of your domain to a hostname\. If you have production traffic, we recommended that you update your ANAME record after your domain status shows as AVAILABLE in the console\. For DNS providers that do not have ANAME/ALIAS support, we strongly recommend migrating your DNS to Route 53\. For more information, see [Configuring Amazon Route 53 as your DNS service](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html)\.
 
 **Note**  
- Verification of domain ownership and DNS propagation for third\-party domains can take up to 48 hours\. For help resolving errors that occur, see [Troubleshooting custom domains](troubleshooting-custom-domains.md)\. 
+ Verification of domain ownership and DNS propagation for third\-party domains can take up to 48 hours\. For help resolving errors that occur, see [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)\. 

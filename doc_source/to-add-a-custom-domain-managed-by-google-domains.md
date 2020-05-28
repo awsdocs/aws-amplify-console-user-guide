@@ -15,4 +15,4 @@
 ![\[Screenshot of the Synthetic records section on the Google Domains website.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-google-3Update.png)
 
 **Note**  
- Updates to your DNS settings for a Google domain can take up to 48 hours to take effect\. For help with resolving errors that occur, see [Troubleshooting custom domains](troubleshooting-custom-domains.md)\. 
+ Updates to your DNS settings for a Google domain can take up to 48 hours to take effect\. For help with resolving errors that occur, see [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)\. 

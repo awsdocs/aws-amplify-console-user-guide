@@ -18,7 +18,7 @@ The Amplify Console issues an SSL certificate for all domains connected to your 
 
 Prior to connecting an app to a custom domain, the app must be deployed in AWS Amplify\. For more information about completing this step, see [Getting started with existing code](getting-started.md)\.
 
-Connecting to a custom domain requires a basic knowledge of domains and DNS terminology\. For more information about domains and DNS, see [Troubleshooting custom domains](troubleshooting-custom-domains.md)\.
+Connecting to a custom domain requires a basic knowledge of domains and DNS terminology\. For more information about domains and DNS, see [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)\.
 
 This section includes the following procedures for adding custom domains\.
 +  [To add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md) 

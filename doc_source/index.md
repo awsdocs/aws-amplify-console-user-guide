@@ -23,7 +23,7 @@ Amazon's trademarks and trade dress may not be used in
    + [To add a custom domain managed by GoDaddy](to-add-a-custom-domain-managed-by-godaddy.md)
    + [To add a custom domain managed by Google Domains](to-add-a-custom-domain-managed-by-google-domains.md)
    + [To manage subdomains](to-manage-subdomains.md)
-   + [Troubleshooting custom domains](troubleshooting-custom-domains.md)
+   + [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)
 + [Configuring Build Settings](build-settings.md)
 + [Feature branch deployments and team workflows](multi-environments.md)
    + [Team workflows with Amplify CLI backend environments](team-workflows-with-amplify-cli-backend-environments.md)
