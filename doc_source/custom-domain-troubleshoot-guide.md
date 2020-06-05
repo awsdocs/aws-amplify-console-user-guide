@@ -86,7 +86,7 @@ If you transferred your domain to Amazon Route 53, it is possible that your dom
 
 If you get a *CNAMEAlreadyExistsException* error, this means that one of the host names that you tried to connect \(a subdomain, or the apex domain\) is already deployed to another Amazon CloudFront distribution\. Perform the following steps to diagnose the cause of the error\.
 
-1. Check the [Amazon CloudFront console](https://console.aws.amazon.com/cloudfront/home?#) to see if you have this domain deployed to any other distribution\. A single CNAME record can be attached to one CloudFront distribution at a time\.
+1. Check the [Amazon CloudFront console](https://console.aws.amazon.com/cloudfront/home?#) to see if you have this domain deployed to any other distribution\. A single CNAME record can be attached to one CloudFront distribution at a time\. If you have previously deployed the domain with Cloudfront, make sure to remove it from the **Alternate Domain Names (CNAMEs)** field under the **General** tab **in the Cloudfront console**.
 
 1. Check to see whether this domain is connected to a different Amplify app that you own\. If so, make sure you are not trying to reuse one of the hostnames\. If you are using *www\.example\.com* on another app, you cannot use *www\.example\.com* with the app that you are currently connecting\. You can use other subdomains, such as *blog\.example\.com*\.
 
