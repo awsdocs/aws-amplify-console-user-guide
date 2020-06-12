@@ -10,7 +10,7 @@ Access the [AWS CLI documentation](https://docs.aws.amazon.com/cli/latest/refere
 
 Use the AWS CLI to create Amplify Console apps programmatically from the command line.
 
-## Tagris support
+## Tagging support
 
 You can tag Amplify resources with tags [using the AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/amplify/tag-resource.html)
 
