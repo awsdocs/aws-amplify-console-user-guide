@@ -8,11 +8,14 @@ Environment variables are key\-value pairs that are available at build time\. Th
 
 As a best practice, you can use environment variables to expose these configurations\. All environment variables that you add are encrypted to prevent rogue access so you can use them to store secret information\.
 
-## Setting Environment Variables<a name="setting-env-vars"></a>
+**Note**  
+**Environment variables** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
-1. In the Amplify console, choose **App Settings** and then choose **Environment Variables**\.
+## Setting environment variables<a name="setting-env-vars"></a>
 
-1. In the **key** and **value** fields, enter all your app environment variables\. By default, the Amplify console applies the environment variables across all branches, so you don’t have to re\-enter variables when you connect a new branch\.
+1. Open the [Amplify Console](https://console.aws.amazon.com/amplify/) and choose **App settings**\. Then choose **Environment variables**\.
+
+1. In the **key** and **value** fields, enter all your app's environment variables\. By default, the Amplify Console applies the environment variables across all branches, so you don’t have to re\-enter variables when you connect a new branch\.
 
 1. Choose **Save**\.
 
@@ -22,11 +25,11 @@ If you need to customize a variable specifically for a branch, you can add a bra
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend.gif)
 
-## Accessing Environment Variables<a name="access-env-vars"></a>
+## Accessing environment variables<a name="access-env-vars"></a>
 
 To access an environment variable during a build, edit your build settings to include the environment variable in your build commands\.
 
-1. In the Amplify console, choose **App Settings**, choose **Build settings**, and then choose **Edit**\.
+1. In the Amplify Console, choose **App settings**, choose **Build settings**, and then choose **Edit**\.
 
 1. Add the environment variable to your build command\. You should now be able to access your environment variable during your next build\.
 
@@ -49,7 +52,7 @@ To access an environment variable during a build, edit your build settings to in
 
 1. In the **Manage variables** section, for the **Variable** \(key\) field, enter your client id\. For the **Value** field, enter your client secret\. See the table in the next topic for the list of Amplify system environment variables that are available by default\. 
 
-## Amplify Console Environment Variables<a name="amplify-console-environment-variables"></a>
+## Amplify Console environment variables<a name="amplify-console-environment-variables"></a>
 
 You can use environment variables that are accessible by default within the Amplify Console\.
 

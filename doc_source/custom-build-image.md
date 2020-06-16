@@ -6,11 +6,14 @@
 
 ## Custom Build Images<a name="setup"></a>
 
-Custom Build Images can be used to provide a customized build environment\. If you have specific dependencies that take a long time to install during a build using our default container, you can create your own Docker image and reference it during a build\. Images can be hosted on [Docker Hub](https://hub.docker.com/) or a public [Amazon Elastic Container Registry](https://aws.amazon.com/ecr/)\. The format expected here is the same as the format Docker pull command \(e\.g\. *node:latest*\)\. In case of a public ECR instance, you are required to provide the full URL \(e\.g\. *aws\_account\_id\.dkr\.ecr\.us\-west\-2\.amazonaws\.com/amazonlinux:latest*\)\.
+Custom Build Images can be used to provide a customized build environment\. If you have specific dependencies that take a long time to install during a build using our default container, you can create your own Docker image and reference it during a build\. Images can be hosted on [Docker Hub](https://hub.docker.com/)\. The format expected here is the same as the format Docker pull command \(e\.g\. *node:latest*\)\.
+
+**Note**  
+**Build settings** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
 ### Configuring a Custom Build Image<a name="configuring-a-custom-build-image"></a>
 
-1. From your App Detail page, choose **App Settings > Build Settings**\.
+1. From your App Detail page, choose **App settings > Build settings**\.
 
 1. From the **Build image settings** container, choose **Edit**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/custom-build-1.png)

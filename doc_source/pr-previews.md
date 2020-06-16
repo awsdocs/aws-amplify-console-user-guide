@@ -6,9 +6,12 @@ A web preview deploys every pull request made to your GitHub repository to a uni
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/previews1.png)
 
+**Note**  
+**Previews** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
+
 ## Enable web previews<a name="enable-web-previews"></a>
 
-1. Choose **App settings > Previews** and **Enable previews**\. For GitHub repositories only, you are required to install a GitHub app in your account to enable this feature\. You can give the Amplify Console permission to all repositories or only the current one\. **Note: For security purposes, Previews will only work with private repositories for fullstack apps using the Amplify CLI\.** 
+1. Choose **App setting**, **Previews** and then choose **Enable previews**\. For GitHub repositories only, you are required to install a GitHub app in your account to enable this feature\. You can give the Amplify Console permission to all repositories or only the current one\. **Note: For security purposes, Previews will only work with private repositories for fullstack apps using the Amplify CLI\.** 
 
 1. Once enabled, return to the Amplify Console to enable previews for specific branches\. Pick a branch from the list and choose **Manage**\. For fullstack applications, you will be able to choose to create a a new backend for every pull request, or point all pull requests to an existing backend environment\. Choosing the first option will allow you to test changes without impacting production\.
 
