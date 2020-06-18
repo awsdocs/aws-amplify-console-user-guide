@@ -98,34 +98,122 @@ Monorepos with multiple amplify applications are declared as a list of applicati
 ```
 version: 1
 applications:
-     -  appRoot: /react-app
-        env:
-            variables: []
-        frontend:
-            phases:
-                build:
-                  ...
-            artifacts:
-                files:
-                    - '**/*'
-                baseDirectory: /
-            cache:
-                paths:
-                    - node_modules
-     -  appRoot: /angular-app
-        env:
-            variables: []
-        frontend:
-            phases:
-                build:
-                    ...
-            artifacts:
-                files:
-                    - '**/*'
-                baseDirectory: /
-            cache:
-                paths:
-                    - node_modules
+  - appRoot: /react-app
+    env:
+    variables:
+        key: value
+    backend:
+      phases:
+        preBuild:
+          commands:
+            - *enter command*
+        build:
+          commands:
+            - *enter command*
+        postBuild:
+            commands:
+            - *enter command*
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - *enter command*
+            - *enter command*
+        build:
+          commands:
+            - *enter command*
+      artifacts:
+        files:
+            - location
+            - location
+        discard-paths: yes
+        baseDirectory: location
+      cache:
+        paths:
+            - path
+            - path
+      customHeaders:
+       - pattern: 'file-pattern'
+         headers:
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+    test:
+      phases:
+        preTest:
+          commands:
+            - *enter command*
+        test:
+          commands:
+            - *enter command*
+        postTest:
+          commands:
+            - *enter command*
+      artifacts:
+        files:
+            - location
+            - location
+        configFilePath: *location*
+        baseDirectory: *location*
+  - appRoot: /angular-app
+    env:
+    variables:
+        key: value
+    backend:
+      phases:
+        preBuild:
+          commands:
+            - *enter command*
+        build:
+          commands:
+            - *enter command*
+        postBuild:
+            commands:
+            - *enter command*
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - *enter command*
+            - *enter command*
+        build:
+          commands:
+            - *enter command*
+      artifacts:
+        files:
+            - location
+            - location
+        discard-paths: yes
+        baseDirectory: location
+      cache:
+        paths:
+            - path
+            - path
+      customHeaders:
+       - pattern: 'file-pattern'
+         headers:
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+         - key: 'custom-header-name'
+           value: 'custom-header-value'
+    test:
+      phases:
+        preTest:
+          commands:
+            - *enter command*
+        test:
+          commands:
+            - *enter command*
+        postTest:
+          commands:
+            - *enter command*
+      artifacts:
+        files:
+            - location
+            - location
+        configFilePath: *location*
+        baseDirectory: *location*
 ```
 
 You must provide the following additional information for each application you declare in your build configuration:
