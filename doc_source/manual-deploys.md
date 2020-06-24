@@ -16,6 +16,14 @@ For Amazon S3, choose the bucket and zip file to deploy your site\. You can also
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/manual-deploys-s3.png)
 
- **Note:** When you are uploading the zip folder make sure you **zip the contents of your build output and not the top level folder**\. For example **if your build output generates a folder named “build” or “public” first navigate into that folder, select all of the contents and zip it from there**\. If you do not do this then you will see an “Access Denied” error because the sites root directory will not be initialized properly\.
+**Note**  
+When you create the zip folder, make sure you zip the contents of your build output and not the top level folder\. For example, if your build output generates a folder named “build” or “public”, first navigate into that folder, select all of the contents, and zip it from there\. If you do not do this, you will see an “Access Denied” error because the site's root directory will not be initialized properly\.  
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/zipped-incorrectly-manual-deploy-access-denied.PNG)
+```
+<Error>
+  <Code>AccessDenied</Code>
+  <Message>Access Denied</Message>
+  <RequestId>4442587FB7D0A2F9</RequestId>
+  <HostId>...</HostId>
+</Error>
+```

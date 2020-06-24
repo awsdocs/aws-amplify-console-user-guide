@@ -12,7 +12,7 @@ To get started with Amplify Console [connect your repository](getting-started.md
 
 With the Amplify Console, you can do the following:
 + Manage production and staging environments for your frontend and backend by connecting new branches\. [See feature branch deployments](multi-environments.md)\.
-+ Connect your custom domain\. If you manage your domain in Amazon Route 53, the Amplify Console automatically connects the root \(yourdomain\.com\), www subdomains \(www\.yourdomain\.com\), and branch \([https://dev\.yourdomain\.com](https://dev.yourdomain.com)\) subdomains\. [See custom domains](custom-domains.md)\.
++ Connect your custom domain\. If you manage your domain in Amazon Route 53, the Amplify Console automatically connects the root domain \(yourdomain\.com\), www subdomains \(www\.yourdomain\.com\), and branch subdomains \(https://dev\.yourdomain\.com\)\. [See custom domains](custom-domains.md)\.
 + Preview changes during code reviews by setting up [Pull\-Request Previews](pr-previews.md)\.
 + Improve your app quality with end to end tests\. [See End\-to\-End Testing](running-tests.md)\.
 + Password protect your web app so you can work on new features without making them publicly accessible\. [See restricting access](access-control.md)\.

@@ -4,14 +4,17 @@ The Amplify Console automatically detects the front end framework and associated
 + Save the build settings in the Amplify Console \- The Amplify Console autodetects build settings and saves it so that they can be accessed via the Amplify Console\. These settings are applied to all of your branches unless there is a YML file found in your repository\.
 + Save the build settings in your repository \- Download the amplify\.yml file and add it to the root of your repository \(or root of the app folder for monorepos\)\.
 
-You can edit these settings in the Amplify Console by choosing **App Settings>Build settings**\. These build settings are applied to all the branches in your app, except for the branches that have a YML file saved in the repository\.
+You can edit these settings in the Amplify Console by choosing **App settings>Build settings**\. These build settings are applied to all the branches in your app, except for the branches that have a YML file saved in the repository\.
+
+**Note**  
+**Build settings** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
 ## YML Specification Syntax<a name="yml-specification-syntax"></a>
 
 The build specification YML contains a collection of build commands and related settings that the Amplify Console uses to run your build\. The YML is structured as follows:
 
 ```
-version: 1.0
+version: 1
 env:
   variables:
       key: value
@@ -71,6 +74,7 @@ test:
     baseDirectory: *location*
 ```
 +  **version** \- Represents the Amplify Console YML version number\.
++ **appRoot** \- The path within the repository that this application resides in\. *Ignored unless multiple applications are defined\.*
 +  **env** \- Add environment variables to this section\. You can also add environment variables using the console\.
 +  **backend** \- Run Amplify CLI commands to provision a backend, update Lambda functions, or GraphQL schemas as part of continuous deployment\. Learn how to [deploy a backend with your frontend](deploy-backend.md)\.
 +  **frontend** \- Run frontend build commands\.
@@ -84,6 +88,50 @@ test:
 +  **artifacts>files** \- Specify files from your artifact you want to deploy\. *\*\*/\** is to include all files\.
 +  **cache** \- The buildspec’s cache field is used to cache build\-time depedencies such as the *node\_modules* folder, and is automatically suggested based on the package manager and framework that the customer’s app is built in\. During the first build, any paths here are cached, and on subsequent builds we re\-inflate the cache and use those cached dependencies where possible to speed up build time\.
 +  **customHeaders** \- Custom header rules set on deployed files\. See [custom headers](custom-headers.md)\.
+
+## Monorepo settings<a name="monorepo-configuration"></a>
+
+If you keep multiple projects in a single repository, called a monorepo, you can deploy those applications using Amplify without the need for multiple build configurations or branch configurations\. 
+
+Monorepos with multiple amplify applications are declared as a list of applications:
+
+```
+version: 1
+applications:
+     -  appRoot: /react-app
+        env:
+            variables: []
+        frontend:
+            phases:
+                build:
+                  ...
+            artifacts:
+                files:
+                    - '**/*'
+                baseDirectory: /
+            cache:
+                paths:
+                    - node_modules
+     -  appRoot: /angular-app
+        env:
+            variables: []
+        frontend:
+            phases:
+                build:
+                    ...
+            artifacts:
+                files:
+                    - '**/*'
+                baseDirectory: /
+            cache:
+                paths:
+                    - node_modules
+```
+
+You must provide the following additional information for each application you declare in your build configuration:
+
+appRoot  
+The root, within the repository, that the application starts in\. This key must exist, but may have no value if the application can be automatically discovered\.
 
 ## Branch\-Specific Build Settings<a name="branch-specific-build-settings"></a>
 
@@ -103,7 +151,7 @@ frontend:
 For monorepos, users want to be able to cd into a folder to run the build\. After you run the cd command, it applies to all stages of your build so you don’t need to repeat the command in separate phases\.
 
 ```
-version: 1.0
+version: 1
 env:
   variables:
       key: value
@@ -123,7 +171,7 @@ frontend:
 The amplifyPush is a helper script that helps you with backend deployments\. The build settings below automatically determine the correct backend environment to deploy for the current branch\.
 
 ```
-version: 1.0
+version: 1
 env:
   variables:
       key: value

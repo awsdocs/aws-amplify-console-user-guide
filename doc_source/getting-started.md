@@ -16,7 +16,7 @@ After you connect the repository service provider, choose a repository, and then
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-gettingstarted-3.png)
 
-## Step 2: Confirm Build Settings for the Front End<a name="step-2-confirm-build-settings-for-the-front-end"></a>
+## Step 2a: Confirm Build Settings for the Front End<a name="step-2a-confirm-build-settings-for-the-front-end"></a>
 
 For the selected branch, Amplify inspects your repository to automatically detect the sequence of build commands to be executed\.
 
@@ -28,7 +28,7 @@ For the selected branch, Amplify inspects your repository to automatically detec
 
 For more information, see [YML structure](build-settings.md#yml-specification-syntax)\.
 
-## Step 3: Confirm Build Settings for the Backend<a name="step-3-confirm-build-settings-for-the-backend"></a>
+## Step 2b: Confirm Build Settings for the Backend<a name="step-2b-confirm-build-settings-for-the-backend"></a>
 
 If you connected a repository provisioned by the Amplify CLI v1\.0\+ \(run *amplify \-v* to find CLI version\), the Amplify Console will deploy or automatically update backend resources \(any resource provisioned by the Amplify CLI\) in a single workflow with the frontend build\. You can choose to point an existing backend environment to your branch, or create a completely new environment\. For a step\-by\-step tutorial, see [Deploying a fullstack app](deploy-backend.md)\.
 
@@ -40,11 +40,11 @@ To deploy backend functionality using the Amplify CLI during your build, create 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-gettingstarted-7.png)
 
-## Step 4: Add Environment Variables \(Optional\)<a name="step-4-add-environment-variables-optional"></a>
+## Step 2c: Add Environment Variables \(Optional\)<a name="step-2c-add-environment-variables-optional"></a>
 
 Almost every app needs to get configuration information at runtime\. These configurations can be database connection details, API keys, or different parameters\. Environment variables provide a means to expose these configurations at build time\.
 
-## Step 5: Save and Deploy<a name="step-5-save-and-deploy"></a>
+## Step 3: Save and Deploy<a name="step-3-save-and-deploy"></a>
 
 Review all of your settings to ensure everything is set up correctly\. Choose **Save and deploy** to deploy your web app to a global content delivery network \(CDN\)\. Your front end build typically takes 1 to 2 minutes but can vary based on size of the app\.
 
