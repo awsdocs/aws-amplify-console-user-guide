@@ -6,7 +6,7 @@ AWS Amplify Console supports common Single Page App \(SPA\) frameworks \(e\.g\. 
 
 ## Get started<a name="get-started"></a>
 
-To get started with Amplify Console [connect your repository](getting-started.md) \(GitHub, BitBucket, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, start with one of our [fullstack samples](deploy-backend.md)\. Amplify Console automatically detects the front end build settings along with any backend functionality provisioned with the Amplify CLI \(command\-line toolchain for creating serverless backends\)\.
+To get started with Amplify Console [connect your repository](getting-started.md) \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, start with one of our [fullstack samples](deploy-backend.md)\. Amplify Console automatically detects the front end build settings along with any backend functionality provisioned with the Amplify CLI \(command\-line toolchain for creating serverless backends\)\.
 
 ## Amplify Console Features<a name="amplify-console-features"></a>
 

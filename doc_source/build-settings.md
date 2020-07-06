@@ -93,12 +93,12 @@ test:
 
 If you keep multiple projects in a single repository, called a monorepo, you can deploy those applications using Amplify without the need for multiple build configurations or branch configurations\. 
 
-Monorepos with multiple amplify applications are declared as a list of applications:
+Monorepos with multiple Amplify applications are declared as a list of applications:
 
 ```
 version: 1
 applications:
-  - appRoot: /react-app
+     - appRoot: /react-app
     env:
     variables:
         key: value
