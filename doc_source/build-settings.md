@@ -2,7 +2,7 @@
 
 The Amplify Console automatically detects the front end framework and associated build settings by inspecting the package\.json file in your repository\. You have the following options:
 + Save the build settings in the Amplify Console \- The Amplify Console autodetects build settings and saves it so that they can be accessed via the Amplify Console\. These settings are applied to all of your branches unless there is a YML file found in your repository\.
-+ Save the build settings in your repository \- Download the amplify\.yml file and add it to the root of your repository \(or root of the app folder for monorepos\)\.
++ Save the build settings in your repository \- Download the amplify\.yml file and add it to the root of your repository\.
 
 You can edit these settings in the Amplify Console by choosing **App settings>Build settings**\. These build settings are applied to all the branches in your app, except for the branches that have a YML file saved in the repository\.
 
