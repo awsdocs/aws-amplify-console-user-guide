@@ -1,6 +1,9 @@
 # Getting Started with Fullstack Continuous Deployments<a name="deploy-backend"></a>
 
-The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit\. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI on the same commit as your frontend code\. **Note: This feature only works with the Amplify CLI v4\.0\+**\.
+The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit\. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI on the same commit as your frontend code\.
+
+**Important**  
+This feature only works with the Amplify CLI v4\.0\+
 
 In this tutorial, we are going to create and deploy a React app which implements a basic authentication flow for signing up/signing in users as well as protected client side routing using AWS Amplify\.
 
