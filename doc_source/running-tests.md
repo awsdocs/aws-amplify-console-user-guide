@@ -38,6 +38,7 @@ test:
 +  **test** \- Run cypress commands to execute tests using mochawesome\.
 +  **postTest** \- The mochawesome report is generated from the output JSON\.
 +  **artifacts>baseDirectory** \- The directory from which tests are run\.
++  **artifacts>configFilePath** \- The generated test report data\.
 +  **artifacts>files** \- The generated artifacts \(screenshots and videos\) available for download\.
 
 ## Disabling tests<a name="disabling-tests"></a>
