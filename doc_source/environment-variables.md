@@ -62,7 +62,7 @@ Sign in to the AWS Management Console and open the [Amplify Console](https://con
 1. When connecting a branch to a new app, in the **Configure build settings** step of the wizard, choose **Create new environment**, and enter the name of your backend environment\. The following screenshot shows the Backend deployments section of the Amplify console with **backend** entered for the backend environment name\. 
 ![\[Screenshot of the Backend deployments section in the Amplify Console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-newenvironment-1.png)
 
-1. To enable social sign-in, set environment variables for the new backend environment, expand the **Advanced settings** section in the build settings configuration wizard. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables) (For example, *AMPLIFY\_FACEBOOK\_CLIENT\_SECRET*) 
+1. Expand the **Advanced settings** section in the build settings configuration wizard and add environment variables for social sign-in keys. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables) (For example, *AMPLIFY\_FACEBOOK\_CLIENT\_SECRET*) 
 
 **Connecting a branch to an existing app**
 
