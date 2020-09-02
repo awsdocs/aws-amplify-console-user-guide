@@ -66,7 +66,7 @@ Sign in to the AWS Management Console and open the [Amplify Console](https://con
 
 **Connecting a branch to an existing app**
 
-1. If you are connecting a new branch to an existing app, first set the social sign-in environment variables in the navigation pane, choose **App Settings**, **Environment variables**. 
+1. If you are connecting a new branch to an existing app, set the social sign-in environment variables before connecting the branch. In the navigation pane, choose **App Settings**, **Environment variables**. 
 
 1. In the **Environment variables** section, choose **Manage variables**\.
 
