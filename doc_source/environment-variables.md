@@ -55,7 +55,7 @@ To access an environment variable during a build, edit your build settings to in
 
 ## Create a new backend environment with authentication parameters<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
 **Connecting a branch to a new app**
 
