@@ -53,7 +53,7 @@ To access an environment variable during a build, edit your build settings to in
        - npm run build:$BUILD_ENV
    ```
 
-## Create a new backend environment with authentication parameters<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
+## Create a new backend environment with authentication parameters for social sign-in<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
 
 Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
