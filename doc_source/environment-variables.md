@@ -53,24 +53,26 @@ To access an environment variable during a build, edit your build settings to in
        - npm run build:$BUILD_ENV
    ```
 
-## Create a new backend environment with authentication parameters for social sign-in<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
+## Create a new backend environment with authentication parameters for social sign\-in<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
 
-Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+**To connect a branch to an app**
 
-**Connecting a branch to a new app**
+1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
-1. When connecting a branch to a new app, in the **Configure build settings** step of the wizard, choose **Create new environment**, and enter the name of your backend environment\. The following screenshot shows the Backend deployments section of the Amplify console with **backend** entered for the backend environment name\. 
+1.  The procedure for connecting a branch to an app varies depending on whether you are connecting a branch to a new app or an existing app\.
+   + **Connecting a branch to a new app**
+
+     1. When connecting a branch to a new app, in the **Configure build settings** step of the wizard, choose **Create new environment**, and enter the name of your backend environment\. The following screenshot shows the **Backend deployments** section of the Amplify console with **backend** entered for the backend environment name\.  
 ![\[Screenshot of the Backend deployments section in the Amplify Console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-newenvironment-1.png)
 
-1. Expand the **Advanced settings** section in the build settings configuration wizard and add environment variables for social sign-in keys. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables) (For example, *AMPLIFY\_FACEBOOK\_CLIENT\_SECRET*) 
+     1. Expand the **Advanced settings** section in the build settings configuration wizard and add environment variables for social sign\-in keys\. For example, **AMPLIFY\_FACEBOOK\_CLIENT\_SECRET** is a valid environment variable\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables)\.
+   + **Connecting a branch to an existing app**
 
-**Connecting a branch to an existing app**
+     1. If you are connecting a new branch to an existing app, set the social sign\-in environment variables before connecting the branch\. In the navigation pane, choose **App Settings**, **Environment variables**\.
 
-1. If you are connecting a new branch to an existing app, set the social sign-in environment variables before connecting the branch. In the navigation pane, choose **App Settings**, **Environment variables**. 
+     1. In the **Environment variables** section, choose **Manage variables**\.
 
-1. In the **Environment variables** section, choose **Manage variables**\.
-
-1. In the **Manage variables** section, for **Variable** \(key\), enter your client ID\. For **Value**, enter your client secret\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables) \. 
+     1. In the **Manage variables** section, for **Variable** \(key\), enter your client ID\. For **Value**, enter your client secret\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables)\. 
 
 ## Amplify Console environment variables<a name="amplify-console-environment-variables"></a>
 

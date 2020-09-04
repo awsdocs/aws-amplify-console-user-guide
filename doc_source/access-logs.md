@@ -1,6 +1,6 @@
 # Access logs<a name="access-logs"></a>
 
-Access logs store information about all requests that are made to your Amplify hosted app\. All sites hosted on Amplify Console have logs retrievable for any two week window\. To view access logs choose **App settings > Access logs** from your app’s left navigation bar\. Choose **Edit time range** to choose the two week interval you wish to access\. The logs are availble to download in a CSV format\.
+Access logs store information about all requests that are made to your Amplify hosted app\. All sites hosted on Amplify Console have logs retrievable for any two week window\. To view access logs choose **App settings > Access logs** from your app’s left navigation bar\. Choose **Edit time range** to choose the two week interval you wish to access\. The logs are available to download in a CSV format\.
 
 ## Analyzing access logs<a name="analyzing-access-logs"></a>
 
