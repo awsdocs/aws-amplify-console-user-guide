@@ -84,7 +84,7 @@ You can use the following environment variables that are accessible by default w
 | Variable name | Description | Example value | 
 | --- | --- | --- | 
 |  AWS\_APP\_ID  |  The app ID of the current build  |  abcd123  | 
-|  AWS\_BRANCH  |  The branch name of the current build  |  master  | 
+|  AWS\_BRANCH  |  The branch name of the current build  |  main  | 
 |  AWS\_BRANCH\_ARN  |  The branch ARN of the current build  |  arn:xxxxx/xxxx/xxxxx  | 
 |  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   [git@github\.com](mailto:git@github.com):<user\-name>/<repo\-name>\.git  | 
 |  AWS\_COMMIT\_ID  |  The commit ID of the current build\. “HEAD” for rebuilds  |  xxxxxxxxxxxxxxxxxx  | 

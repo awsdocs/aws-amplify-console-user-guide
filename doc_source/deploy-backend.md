@@ -23,7 +23,7 @@ Your app build will start by deploying the backend followed by the frontend\. Cl
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-backend-frontend.png)
 
-At the end of the build, you will have one frontend environment \(the master branch deployed at *‘https://master\.appid\.amplifyapp\.com’*\) and one backend environment named devX\. To add a user to your app, you can either register a user through the deployed frontend, or choose the **Authentication** tab which links to the Amazon Cognito UserPool\. Create a user and try logging in to your app\.
+At the end of the build, you will have one frontend environment \(the main branch deployed at *‘https://main\.appid\.amplifyapp\.com’*\) and one backend environment named devX\. To add a user to your app, you can either register a user through the deployed frontend, or choose the **Authentication** tab which links to the Amazon Cognito UserPool\. Create a user and try logging in to your app\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/fullstack3.gif)
 

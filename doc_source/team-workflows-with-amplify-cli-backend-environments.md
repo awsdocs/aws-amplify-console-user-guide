@@ -11,7 +11,7 @@ You can use the Amplify Console to continuously deploy backend resources such as
 
 ## Feature branch workflow<a name="standard"></a>
 + Create **prod**, **test**, and **dev** backend environments with the Amplify CLI\.
-+ Map **prod** and **test** to **master** and **develop** branches\.
++ Map **prod** and **test** to **main** \(formerly referred to as master\) and **develop** branches\.
 + Teammates can use the **dev** backend environment to test against **feature** branches\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-environments-2.png)
@@ -50,23 +50,23 @@ You can use the Amplify Console to continuously deploy backend resources such as
    amplify push
    ```
 
-1. Push code to a Git repository of your choice \(in this example we’ll assume you pushed to master\)\.
+1. Push code to a Git repository of your choice \(in this example we’ll assume you pushed to main\)\.
 
    ```
    git commit -am 'Added dev, test, and prod environments'
-   git push origin master
+   git push origin main
    ```
 
 1. Visit the Amplify Console in the AWS Console to see your current backend environment\. Navigate a level up from the breadcrumb to view a list of all backend environments created in the **Backend environments** tab\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-5.png)
 
-1. Switch to the **Frontend environments** tab and connect your repository provider and *master* branch\.  
+1. Switch to the **Frontend environments** tab and connect your repository provider and *main* branch\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-6.png)
 
-1. In the build settings screen, pick an existing backend environment to set up continuous deployment with the master branch\. Choose *prod* from the dropdown and grant the service role to Amplify Console\. Choose **Save and deploy**\. After the build completes you will get a master branch deployment available at *https://master\.appid\.amplifyapp\.com*\.  
+1. In the build settings screen, pick an existing backend environment to set up continuous deployment with the main branch\. Choose *prod* from the dropdown and grant the service role to Amplify Console\. Choose **Save and deploy**\. After the build completes you will get a main branch deployment available at *https://main\.appid\.amplifyapp\.com*\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-2.png)
 
-1. Connect *develop* branch in Amplify Console \(assume *develop* and *master* branch are the same at this point\)\. Choose the *test* backend environment\.  
+1. Connect *develop* branch in Amplify Console \(assume *develop* and *main* branch are the same at this point\)\. Choose the *test* backend environment\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-4.png)
 
 1. The Amplify Console is now setup\. You can start working on new features in a feature branch\. Add backend functionality by using the *dev* backend environment from your local workstation\.
@@ -113,7 +113,7 @@ You can use the Amplify Console to continuously deploy backend resources such as
 
 ## GitFlow workflow<a name="gitflow"></a>
 
-GitFlow uses two branches to record the history of the project\. The *master* branch tracks release code only, and the *develop* branch is used as an integration branch for new features\. GitFlow simplifies parallel development by isolating new development from completed work\. New development \(such as features and non\-emergency bug fixes\) is done in *feature* branches\. When the developer is satisfied that the code is ready for release, the *feature* branch is merged back into the integration *develop* branch\. The only commits to the master branch are merges from *release* branches and *hotfix* branches \(to fix emergency bugs\)\.
+GitFlow uses two branches to record the history of the project\. The *main* branch \(formerly referred to as master branch\) tracks release code only, and the *develop* branch is used as an integration branch for new features\. GitFlow simplifies parallel development by isolating new development from completed work\. New development \(such as features and non\-emergency bug fixes\) is done in *feature* branches\. When the developer is satisfied that the code is ready for release, the *feature* branch is merged back into the integration *develop* branch\. The only commits to the main branch are merges from *release* branches and *hotfix* branches \(to fix emergency bugs\)\.
 
 The diagram below shows a recommended setup with GitFlow\. You can follow the same process as described in the feature branch workflow section above\.
 
@@ -142,16 +142,16 @@ The diagram below shows a recommended setup with GitFlow\. You can follow the sa
    amplify push
    ```
 
-1. Push code to a Git repository of your choice \(in this example we’ll assume you pushed to master\)\.
+1. Push code to a Git repository of your choice \(in this example we’ll assume you pushed to main \(formerly referred to as master\)\.
 
    ```
    git commit -am 'Added kita sandbox'
-   git push origin master
+   git push origin main
    ```
 
-1. Connect your repo > *master* to the Amplify Console\.
+1. Connect your repo > *main* to the Amplify Console\.
 
-1. The Amplify Console will detect backend environments created by the Amplify CLI\. Choose *Create new environment* from the dropdown and grant the service role to Amplify Console\. Choose **Save and deploy**\. After the build completes you will get a master branch deployment available at *https://master\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.  
+1. The Amplify Console will detect backend environments created by the Amplify CLI\. Choose *Create new environment* from the dropdown and grant the service role to Amplify Console\. Choose **Save and deploy**\. After the build completes you will get a main branch deployment available at *https://main\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-3.png)
 
-1. Connect *develop* branch in Amplify Console \(assume *develop* and *master* branch are the same at this point\) and choose *Create new environment*\. After the build completes you will get a develop branch deployment available at *https://develop\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.
+1. Connect *develop* branch in Amplify Console \(assume *develop* and *main* branch are the same at this point\) and choose *Create new environment*\. After the build completes you will get a develop branch deployment available at *https://develop\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.

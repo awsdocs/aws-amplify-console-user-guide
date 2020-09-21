@@ -223,14 +223,14 @@ The root, within the repository, that the application starts in\. This key must 
 
 ## Branch\-Specific Build Settings<a name="branch-specific-build-settings"></a>
 
-You can use bash shell scripting to set branch\-specific build settings\. For example, the following script uses the system environment variable *$AWS\_BRANCH* to execute one set of commands if the branch name is *master* and a different set of commands if the branch name is *dev*\.
+You can use bash shell scripting to set branch\-specific build settings\. For example, the following script uses the system environment variable *$AWS\_BRANCH* to execute one set of commands if the branch name is *main* and a different set of commands if the branch name is *dev*\.
 
 ```
 frontend:
   phases:
     build:
       commands:
-        - if [ "${AWS_BRANCH}" = "master" ]; then echo "master branch"; fi
+        - if [ "${AWS_BRANCH}" = "main" ]; then echo "main branch"; fi
         - if [ "${AWS_BRANCH}" = "dev" ]; then echo "dev branch"; fi
 ```
 
@@ -345,6 +345,4 @@ To skip an automatic build on a particular commit, include the text **\[skip\-cd
 
 ## Disable Automatic builds<a name="disable-automatic-builds"></a>
 
-You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings > General** and then scroll to the section with all the connected branches\. Select a branch, and then choose **Action > Disable auto build**\. Further commits to that branch will no longer trigger a new build\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/autobuild.png)
+You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings > General** and then scroll to the **Branches** section that lists all the connected branches\. Select a branch, and then choose **Action > Disable auto build**\. Further commits to that branch will no longer trigger a new build\.

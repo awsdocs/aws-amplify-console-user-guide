@@ -8,7 +8,7 @@ The Amplify Console is designed to work with feature branch and GitFlow workflow
 
 1. Save and then deploy your app\.
 
-Your app now has two deployments available at *https://master\.appid\.amplifyapp\.com* and *https://dev\.appid\.amplifyapp\.com*\. This may vary from team\-to\-team, but typically the **master branch** tracks release code and is your production branch\. The **develop branch** is used as an integration branch to test new features\. This way beta testers can test unreleased features on the develop branch deployment, without affecting any of the production end users on the master branch deployment\.
+Your app now has two deployments available at *https://main\.appid\.amplifyapp\.com* and *https://dev\.appid\.amplifyapp\.com*\. This may vary from team\-to\-team, but typically the **main branch** \(formerly referred to as the master branch\) tracks release code and is your production branch\. The **develop branch** is used as an integration branch to test new features\. This way beta testers can test unreleased features on the develop branch deployment, without affecting any of the production end users on the main branch deployment\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-environments-1.png)
 

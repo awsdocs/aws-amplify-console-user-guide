@@ -10,7 +10,7 @@ Add this button to your GitHub README\.md file, blog post, or any other markup p
 
 1. An SVG image: `https://oneclick.amplifyapp.com/button.svg` 
 
-1. The Amplify Console URL with a link to your GitHub repository\. Please copy your repo URL \(e\.g\. `https://github.com/username/repository`\) only or provide a deep link into a specific folder \(e\.g\. `https://github.com/username/repository/tree/master/folder`\)\. The Amplify Console will deploy the default branch in your repository\. Additional branches can be connected after the app is connected\.
+1. The Amplify Console URL with a link to your GitHub repository\. Please copy your repo URL \(e\.g\. `https://github.com/username/repository`\) only or provide a deep link into a specific folder \(e\.g\. `https://github.com/username/repository/tree/branchname/folder`\)\. The Amplify Console will deploy the default branch in your repository\. Additional branches can be connected after the app is connected\.
 
 1. Add the button to a markdown file \(e\.g\. your GitHub README\.md\)\. **Please replace https://github\.com/username/repository with your repository name**\.
 

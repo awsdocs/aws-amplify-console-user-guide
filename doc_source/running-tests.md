@@ -49,7 +49,7 @@ To **globally** disable tests for all branches, add the USER\_DISABLE\_TESTS env
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/disable-test-global.png)
 
-To disable tests for a **specific branch**, add the USER\_DISABLE\_TESTS environment variable with a value of false for all branches, and then add an override for each branch you would like to disable with a value of true\. In the following example, tests are disabled on the “master” branch, and enabled for every other branch:
+To disable tests for a **specific branch**, add the USER\_DISABLE\_TESTS environment variable with a value of false for all branches, and then add an override for each branch you would like to disable with a value of true\. In the following example, tests are disabled on the “main” branch, and enabled for every other branch:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/disable-test-branch.png)
 
