@@ -16,7 +16,7 @@
 
       If the Amplify Console displays the domain for your app as **xxxxxxxxxxxxxx\.cloudfront\.net**, enter **xxxxxxxxxxxxx\.cloudfront\.net** for **Data**\.
 
-1. Create the second CNAME record to point to the AWS Certificate Manager \(ACM\) validation server\. A single validated ACM generates an SSL certificate for your domain\. 
+1. Create the second CNAME record to point to the AWS Certificate Manager \(ACM\) validation server\. A single validated ACM generates an /TLS certificate for your domain\. 
 
    1. For **Name**, enter the subdomain\.
 

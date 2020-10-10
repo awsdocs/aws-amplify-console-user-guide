@@ -15,7 +15,7 @@
    1. For **Points to**, look at your DNS records in the Amplify Console and then enter the value\. If the Amplify Console displays the domain for your app as **xxxxxxxxxxxxxx\.cloudfront\.net**, enter **xxxxxxxxxxxxxx\.cloudfront\.net** for **Points to**\.   
 ![\[Screenshot of the section for creating a CNAME record on the GoDaddy website.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-godaddy-2Update.png)
 
-1. Create the second CNAME record to point to the AWS Certificate Manager \(ACM\) validation server\. A single validated ACM generates an SSL certificate for your domain\.
+1. Create the second CNAME record to point to the AWS Certificate Manager \(ACM\) validation server\. A single validated ACM generates an SSL/TLS certificate for your domain\.
 
    1. For **Host**, enter the subdomain\.
 

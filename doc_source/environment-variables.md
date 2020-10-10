@@ -45,13 +45,16 @@ To access an environment variable during a build, edit your build settings to in
 
 1. In the **App build specification** section, choose **Edit**\.
 
-1. Add the environment variable to your build command\. You should now be able to access your environment variable during your next build\.
+1. Add the environment variable to your build command\. You should now be able to access your environment variable during your next build\. This example changes the npm's behavior \(`BUILD_ENV`\) and adds an API token \(`TWITCH_CLIENT_ID`\) for an external service to an environment file for later use:
 
    ```
    build:
      commands:
        - npm run build:$BUILD_ENV
+       - echo "TWITCH_CLIENT_ID=$TWITCH_CLIENT_ID" >> backend/.env
    ```
+
+Each command in your build configuration is executed inside a Bash shell\. For more information on working with environment variables in Bash, see [Shell Expansions](https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html#Shell-Expansions) in the GNU Bash Manual\. 
 
 ## Create a new backend environment with authentication parameters for social sign\-in<a name="creating-a-new-backend-environment-with-authentication-parameters"></a>
 
@@ -84,8 +87,8 @@ You can use the following environment variables that are accessible by default w
 | Variable name | Description | Example value | 
 | --- | --- | --- | 
 |  AWS\_APP\_ID  |  The app ID of the current build  |  abcd123  | 
-|  AWS\_BRANCH  |  The branch name of the current build  |  main  | 
-|  AWS\_BRANCH\_ARN  |  The branch ARN of the current build  |  arn:xxxxx/xxxx/xxxxx  | 
+|  AWS\_BRANCH  |  The branch name of the current build  |  `main`, `develop`, `beta`, `v2.0`  | 
+|  AWS\_BRANCH\_ARN  |  The branch ARN of the current build  |  aws:arn:amplify:us\-west\-2:111122223333:appname/branch/\.\.\.  | 
 |  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   [git@github\.com](mailto:git@github.com):<user\-name>/<repo\-name>\.git  | 
 |  AWS\_COMMIT\_ID  |  The commit ID of the current build\. “HEAD” for rebuilds  |  xxxxxxxxxxxxxxxxxx  | 
 |  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  0000000001  | 
@@ -97,3 +100,6 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID\.  |  123456  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret\.  |  example123456  | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
+
+**Note**  
+The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 

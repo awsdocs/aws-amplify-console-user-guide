@@ -28,17 +28,17 @@ The Amplify Console uses a CNAME record to verify that you own your custom domai
 
 ## Amplify Console custom domain setup<a name="amplify-console-custom-domain-setup"></a>
 
-When you add a custom domain in the Amplify Console, there are a number of steps that need to completed before you can view your app using your custom domain\. The following grapic shows the order of the steps that the Amplify Console performs from SSl creation, to SSL configuration and verification, and finally, domain activation\.
+When you add a custom domain in the Amplify Console, there are a number of steps that need to completed before you can view your app using your custom domain\. The following grapic shows the order of the steps that the Amplify Console performs for SSL/TLS certificate creation, certificate configuration and verification, and domain activation\.
 
 ![\[Workflow diagram of the steps in the Amplify Console domain activation process.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/1555951758569-803.png)
 
 The following list describes each step in the domain set up process in detail\.
 
-**SSL create**  
-The AWS Amplify Console issues an SSL certificate for setting up a secure custom domain\.
+**SSL/TLS create**  
+The AWS Amplify Console issues an SSL/TLS certificate for setting up a secure custom domain\.
 
-**SSL configuration and verification**  
-Before issuing an SSL certificate, the Amplify Console verifies that you are the owner of the domain\. For domains managed by Amazon Route 53, Amplify automatically updates the DNS verification record\. For domains managed outside of Route 53, you need to manually add the DNS verification record displayed by the Amplify console into your domain with a third\-party DNS provider\.
+**SSL/TLS configuration and verification**  
+Before issuing a certificate, the Amplify Console verifies that you are the owner of the domain\. For domains managed by Amazon Route 53, Amplify automatically updates the DNS verification record\. For domains managed outside of Route 53, you need to manually add the DNS verification record displayed by the Amplify console into your domain with a third\-party DNS provider\.
 
 **Domain activation**  
 The domain is successfully verified\. For domains managed outside of Route 53, you need to manually add the CNAME records displayed by the Amplify console into your domain with a third\-party DNS provider\.

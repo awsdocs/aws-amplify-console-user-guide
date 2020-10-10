@@ -21,4 +21,4 @@
    \(Optional\) You can modify the default configuration if you want to add subdomains only\. To change the default configuration, choose **Rewrites and redirects** from the navigation pane, configure your domain, and then choose **Save**\.   
 ![\[Screenshot of the Add domain section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-configureUpdate.png)
 **Note**  
- It can take up to 24 hours for the DNS to propagate and to issue the SSL certificate\. For help with resolving errors that occur, see [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)\.
+ It can take up to 24 hours for the DNS to propagate and to issue the certificate\. For help with resolving errors that occur, see [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)\.

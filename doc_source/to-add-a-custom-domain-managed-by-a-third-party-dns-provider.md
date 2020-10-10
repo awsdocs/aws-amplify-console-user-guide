@@ -33,7 +33,7 @@ If you are using GoDaddy or Google Domains, see [Add a custom domain managed by 
 
 1. Go to your DNS provider's website, log in to your account, and locate the DNS management settings for your domain\.
 
-1. Configure a CNAME to point to the AWS validation server\. For example, if the validation server is **\_cjhwou20vhu2exampleuw20vuyb2ovb9\.j9s73ucn9vy\.acm\-validations\.aws**, enter **\_cjhwou20vhu2exampleuw20vuyb2ovb9\.j9s73ucn9vy\.acm\-validations\.aws**\. The Amplify Console uses this information to verify ownership of your domain and generate an SSL certificate for your domain\. Once the Amplify Console validates ownership of your domain, all traffic will be served using HTTPS/2\.
+1. Configure a CNAME to point to the AWS validation server\. For example, if the validation server is **\_cjhwou20vhu2exampleuw20vuyb2ovb9\.j9s73ucn9vy\.acm\-validations\.aws**, enter **\_cjhwou20vhu2exampleuw20vuyb2ovb9\.j9s73ucn9vy\.acm\-validations\.aws**\. The Amplify Console uses this information to verify ownership of your domain and generate an SSL/TLS certificate for your domain\. Once the Amplify Console validates ownership of your domain, all traffic will be served using HTTPS/2\.
 **Important**  
  It is important that you perform this step soon after adding your custom domain in the Amplify Console\. The AWS Certificate Manager \(ACM\) immediately starts attempting to verify ownership\. Over time, the checks become less frequent\. If you add or update your CNAME records a few hours after you create your app, this can cause your app to get stuck in the pending verification state\.
 
