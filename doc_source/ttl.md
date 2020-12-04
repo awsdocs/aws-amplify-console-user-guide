@@ -32,7 +32,7 @@ Performance mode is intended for advanced customers that require finer control o
 
 ### Using headers to control cache duration<a name="Using-headers-to-control-cache-duration"></a>
 
-HTTP `Cache-Control` header `max-age` and `s-maxage` directives affect the content caching duration for your app\. The `max-age` directive tells the browser how long \(in seconds\) that you want content to remain in the cache before it is refreshed from the origin server\. The `s-maxage` directive overrides `max-age` and lets you specify how long \(in seconds\) that you want content to remain at the CDN edge before it is refreshed from the origin server\.
+HTTP `Cache-Control` header `max-age` and `s-maxage` directives affect the content caching duration for your app\. The `max-age` directive tells the browser how long \(in seconds\) that you want content to remain in the cache before it is refreshed from the origin server\. The `s-maxage` directive overrides `max-age` and lets you specify how long \(in seconds\) that you want content to remain at the CDN edge before it is refreshed from the origin server\. Note that Amplify-hosted apps will honor and reuse `cache-control` request headers sent by clients, unless overridden by custom header configuration as described below\.
 
 You can manually adjust the `s-maxage` directive to have more control over the performance and deployment availability of your app\. For example, to increase the length of time that your content stays cached at the edge, you can manually increase the time to live \(TTL\) by updating `s-maxage` to a value longer than the default 600 seconds \(10 minutes\)\.
 
