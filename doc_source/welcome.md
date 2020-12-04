@@ -1,30 +1,44 @@
 # Welcome to the AWS Amplify Console<a name="welcome"></a>
 
-The AWS Amplify Console provides a Git\-based workflow for hosting fullstack serverless web apps with continuous deployment\. A fullstack serverless app consists of a backend built with cloud resources such as GraphQL or REST APIs, file and data storage, and a frontend built with single\-page application \(SPA\) frameworks such as React, Angular, Vue, or Gatsby\.
+The AWS Amplify Console is the control center for fullstack web and mobile application deployments in AWS\. Amplify Console provides two main services, hosting and the Admin UI\. Amplify Console hosting provides a git\-based workflow for hosting fullstack serverless web apps with continuous deployment\. The Admin UI is a visual interface for frontend web and mobile developers to create and manage app backends outside the AWS console\.
 
-AWS Amplify Console supports common SPA frameworks \(e\.g\. React, Angular, Vue\.js, Ionic, Ember\), as well as static\-site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll\.
+A fullstack serverless web app consists of a backend built with cloud resources such as GraphQL or REST APIs, file and data storage, and a frontend built with a single\-page application \(SPA\) framework such as React, Angular, Vue, or Gatsby\. AWS Amplify Console supports the common SPA frameworks \(e\.g\. React, Angular, Vue\.js, Ionic, Ember\), as well as static site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll\.
 
-## Get started<a name="get-started"></a>
+## Amplify Console features<a name="amplify-console-features"></a>
 
-To get started with Amplify Console [connect your repository](getting-started.md) \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, start with one of our [fullstack samples](deploy-backend.md)\. Amplify Console automatically detects the frontend build settings along with any backend functionality provisioned with the Amplify CLI \(command\-line toolchain for creating serverless backends\)\.
-
-## Amplify Console Features<a name="amplify-console-features"></a>
-
-With the Amplify Console, you can do the following:
+**Hosting features**
 + Manage production and staging environments for your frontend and backend by connecting new branches\. [See feature branch deployments](multi-environments.md)\.
-+ Connect your custom domain\. If you manage your domain in Amazon Route 53, the Amplify Console automatically connects the root domain \(yourdomain\.com\), www subdomains \(www\.yourdomain\.com\), and branch subdomains \(https://dev\.yourdomain\.com\)\. [See custom domains](custom-domains.md)\.
-+ Preview changes during code reviews by setting up [Pull\-Request Previews](pr-previews.md)\.
-+ Improve your app quality with end to end tests\. [See End\-to\-End Testing](running-tests.md)\.
-+ Password protect your web app so you can work on new features without making them publicly accessible\. [See restricting access](access-control.md)\.
-+ Set up rewrites and redirects to maintain SEO rankings and route traffic based on your client app requirements\. [See redirects](redirects.md)\.
++ Connect your application to a custom domain\. See [Set up custom domains](custom-domains.md)\.
++ Preview changes during code reviews by setting up [pull request previews](pr-previews.md)\.
++ Improve your app quality with end to end tests\. [See End\-to\-end testing](running-tests.md)\.
++ Password protect your web app so you can work on new features without making them publicly accessible\. See [Restricting access](access-control.md)\.
++ Set up rewrites and redirects to maintain SEO rankings and route traffic based on your client app requirements\. See [Using redirects](redirects.md)\.
++ Instant cache invalidations ensure your app is updated instantly on every code commit\.
++ Atomic deployments eliminate maintenance windows by ensuring that the web app is updated only after the entire deployment finishes\. This eliminates scenarios where files fail to upload properly\.
++ Get screen shots of your app rendered on different mobile devices to identify layout issues\.
 
-Also:
-+ Instant cache invalidations ensure your app is updated on every code commit instantly\.
-+ Atomic deployments eliminate maintenance windows by ensuring that the web app is only updated when the entire deployment has finished\. This eliminates scenarios where files fail to upload properly\.
-+ Get screen shots of your app rendered on different mobile devices to pinpoint layout issues\.
+**Admin UI features**
++ Visual data modeling enables you to focus on your domain\-specific objects instead of cloud infrastructure\.
++ Set up authentication for your app\.
++ Powerful and easy to understand authorization\.
++ Infrastructure\-as\-code configures all backend capabilities with AWS CloudFormation\.
++ Works with the Amplify Command Line Interface \(CLI\)\. All updates you make in the Admin UI can be pulled into the CLI\. 
++ Invite users via email to configure and manage the backend\. These users will also be able to log in to the Amplify CLI with their email\.
++ Content management with markdown support\.
++ Manage users and groups for your app\.
 
-## Modern Web Applications<a name="modern-web-applications"></a>
+## Getting started<a name="get-started"></a>
 
-Modern web applications are constructed as single\-page applications \(SPA\) that package all application components into static files\. Traditional client\-server web architectures led to poor experiences; every button click or search required a round trip to the server, re\-rendering the entire application\. Modern web apps offer a native app\-like user experience by serving the app frontend, or user interface, efficiently to browsers as prebuilt HTML/JavaScript files that can then invoke backend functionality without reloading the page\.
+### Getting started with hosting<a name="get-started-hosting"></a>
 
-Modern web applications functionality is often spread across multiple places, such as databases, authentication services, frontend code running in the browser, and backend business logic, or AWS Lambda functions, running in the cloud\. This makes application deployments complex and time\-consuming as developers need to carefully coordinate deployments across the frontend and backend to avoid partial or failed deployments\. The AWS Amplify Console simplifies deployment of the frontend and backend in a single workflow\.
+To get started with Amplify Console's hosting features, see the [Getting started with existing code](getting-started.md) tutorial\. You will be able to connect your git repository \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, you can get started with one of the [fullstack continuous deployment samples](deploy-backend.md)\.
+
+### Getting started with the Admin UI<a name="get-started-adminui"></a>
+
+You don't need an AWS account to get started using the Admin UI\. Without an AWS account, you can begin modeling data for your backend locally\. With an AWS account, an expanded set of features are available for managing your backend environment\. For more information, see [Getting started with Admin UI](https://docs.amplify.aws/console/adminui/start)\.
+
+## Modern SPA web applications<a name="modern-web-applications"></a>
+
+This user guide is intended for customers who have a basic understanding of modern single\-page web applications \(SPA\)\. Modern web applications are constructed as SPAs that package all application components into static files\. Traditional client\-server web architectures led to poor experiences; every button click or search required a round trip to the server, re\-rendering the entire application\. Modern web apps offer a native app\-like user experience by serving the app frontend, or user interface, efficiently to browsers as prebuilt HTML/JavaScript files that can then invoke backend functionality without reloading the page\.
+
+A modern web application's functionality is often spread across multiple places, such as databases, authentication services, frontend code running in the browser, and backend business logic, or AWS Lambda functions, running in the cloud\. This makes application deployments complex and time\-consuming as developers need to carefully coordinate deployments across the frontend and backend to avoid partial or failed deployments\. The AWS Amplify Console simplifies deployment of the frontend and backend in a single workflow\.

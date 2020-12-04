@@ -1,4 +1,4 @@
-# Adding a Service Role to the Amplify Console When You Connect an App<a name="how-to-service-role-amplify-console"></a>
+# Adding a service role to the Amplify Console when you connect an app<a name="how-to-service-role-amplify-console"></a>
 
 The Amplify Console requires permissions to deploy backend resources with your front end\. You use a service role to accomplish this\. A service role is the IAM role that Amplify Console assumes when calling other services on your behalf\. In this guide, you will create an Amplify service role that has full access to the account which is required to deploy any Amplify CLI resources\. [Learn more](https://aws-amplify.github.io/docs/cli/concept)\.
 

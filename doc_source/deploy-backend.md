@@ -1,4 +1,4 @@
-# Getting Started with Fullstack Continuous Deployments<a name="deploy-backend"></a>
+# Getting started with fullstack continuous deployments<a name="deploy-backend"></a>
 
 The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit\. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI on the same commit as your frontend code\.
 
@@ -17,7 +17,7 @@ Choose the **Authentication Starter** and **Deploy app**\. You will be asked to 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/fullstack2.gif)
 
-## Step 2: Explore the Fullstack App<a name="step-2-explore-the-fullstack-app"></a>
+## Step 2: Explore the fullstack app<a name="step-2-explore-the-fullstack-app"></a>
 
 Your app build will start by deploying the backend followed by the frontend\. Click on the branch name to see the running build\. When the build completes you will be able to see screenshots of your app on different devices\.
 

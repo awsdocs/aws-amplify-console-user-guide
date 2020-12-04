@@ -1,4 +1,4 @@
-# Configuring Build Settings<a name="build-settings"></a>
+# Configuring build settings<a name="build-settings"></a>
 
 The Amplify Console automatically detects the front end framework and associated build settings by inspecting the package\.json file in your repository\. You have the following options:
 + Save the build settings in the Amplify Console \- The Amplify Console autodetects build settings and saves it so that they can be accessed via the Amplify Console\. These settings are applied to all of your branches unless there is a YML file found in your repository\.
@@ -9,7 +9,7 @@ You can edit these settings in the Amplify Console by choosing **App settings>Bu
 **Note**  
 **Build settings** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
-## YML Specification Syntax<a name="yml-specification-syntax"></a>
+## YML specification syntax<a name="yml-specification-syntax"></a>
 
 The build specification YML contains a collection of build commands and related settings that the Amplify Console uses to run your build\. The YML is structured as follows:
 
@@ -48,13 +48,6 @@ frontend:
     paths:
         - path
         - path
-  customHeaders:
-   - pattern: 'file-pattern'
-     headers:
-     - key: 'custom-header-name'
-       value: 'custom-header-value'
-     - key: 'custom-header-name'
-       value: 'custom-header-value'
 test:
   phases:
     preTest:
@@ -87,7 +80,6 @@ test:
 +  **artifacts>base\-directory** \- The directory in which your build artifacts exist\.
 +  **artifacts>files** \- Specify files from your artifact you want to deploy\. *\*\*/\** is to include all files\.
 +  **cache** \- The buildspec’s cache field is used to cache build\-time depedencies such as the *node\_modules* folder, and is automatically suggested based on the package manager and framework that the customer’s app is built in\. During the first build, any paths here are cached, and on subsequent builds we re\-inflate the cache and use those cached dependencies where possible to speed up build time\.
-+  **customHeaders** \- Custom header rules set on deployed files\. See [custom headers](custom-headers.md)\.
 
 ## Monorepo settings<a name="monorepo-configuration"></a>
 
@@ -98,7 +90,7 @@ Monorepos with multiple Amplify applications are declared as a list of applicati
 ```
 version: 1
 applications:
-     - appRoot: /react-app
+  - appRoot: /react-app
     env:
     variables:
         key: value
@@ -132,13 +124,6 @@ applications:
         paths:
             - path
             - path
-      customHeaders:
-       - pattern: 'file-pattern'
-         headers:
-         - key: 'custom-header-name'
-           value: 'custom-header-value'
-         - key: 'custom-header-name'
-           value: 'custom-header-value'
     test:
       phases:
         preTest:
@@ -190,13 +175,6 @@ applications:
         paths:
             - path
             - path
-      customHeaders:
-       - pattern: 'file-pattern'
-         headers:
-         - key: 'custom-header-name'
-           value: 'custom-header-value'
-         - key: 'custom-header-name'
-           value: 'custom-header-value'
     test:
       phases:
         preTest:
@@ -221,7 +199,7 @@ You must provide the following additional information for each application you d
 appRoot  
 The root, within the repository, that the application starts in\. This key must exist, but may have no value if the application can be automatically discovered\.
 
-## Branch\-Specific Build Settings<a name="branch-specific-build-settings"></a>
+## Branch\-specific build settings<a name="branch-specific-build-settings"></a>
 
 You can use bash shell scripting to set branch\-specific build settings\. For example, the following script uses the system environment variable *$AWS\_BRANCH* to execute one set of commands if the branch name is *main* and a different set of commands if the branch name is *dev*\.
 
@@ -234,7 +212,7 @@ frontend:
         - if [ "${AWS_BRANCH}" = "dev" ]; then echo "dev branch"; fi
 ```
 
-## Navigating to a Subfolder<a name="navigating-to-a-subfolder"></a>
+## Navigating to a subfolder<a name="navigating-to-a-subfolder"></a>
 
 For monorepos, users want to be able to cd into a folder to run the build\. After you run the cd command, it applies to all stages of your build so you don’t need to repeat the command in separate phases\.
 
@@ -254,7 +232,7 @@ frontend:
         - npm run build
 ```
 
-## Deploying the Backend with Your Front End<a name="frontend-with-backend"></a>
+## Deploying the backend with the front end<a name="frontend-with-backend"></a>
 
 The amplifyPush is a helper script that helps you with backend deployments\. The build settings below automatically determine the correct backend environment to deploy for the current branch\.
 
@@ -270,7 +248,7 @@ backend:
         - amplifyPush --simple
 ```
 
-## Setting the Output Folder<a name="setting-the-output-folder"></a>
+## Setting the output folder<a name="setting-the-output-folder"></a>
 
 The following build settings set the output directory to the public folder\.
 
@@ -284,7 +262,7 @@ frontend:
     baseDirectory: public
 ```
 
-## Installing Packages as Part of Your Build<a name="installing-packages-as-part-of-your-build"></a>
+## Installing packages as part of a build<a name="installing-packages-as-part-of-your-build"></a>
 
 You can use npm or yarn to install packages during the build\.
 
@@ -300,7 +278,7 @@ frontend:
     baseDirectory: public
 ```
 
-## Using a Private npm Registry<a name="using-a-private-npm-registry"></a>
+## Using a private npm registry<a name="using-a-private-npm-registry"></a>
 
 You can add references to a private registry in your build settings or add it as an environment variable\.
 
@@ -339,10 +317,10 @@ envCache --set <key> <value>
 envCache --get <key>
 ```
 
-## Skip Build for a Commit<a name="skip-build-for-a-commit"></a>
+## Skip build for a commit<a name="skip-build-for-a-commit"></a>
 
 To skip an automatic build on a particular commit, include the text **\[skip\-cd\]** at the end of the commit message\.
 
-## Disable Automatic builds<a name="disable-automatic-builds"></a>
+## Disable automatic builds<a name="disable-automatic-builds"></a>
 
 You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings > General** and then scroll to the **Branches** section that lists all the connected branches\. Select a branch, and then choose **Action > Disable auto build**\. Further commits to that branch will no longer trigger a new build\.

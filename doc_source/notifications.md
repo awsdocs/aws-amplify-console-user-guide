@@ -2,7 +2,7 @@
 
 You can set up notifications for an Amplify app to alert stakeholders or team members when a build succeeds or fails\. Amplify Console creates an Amazon Simple Notification Service \(SNS\) topic in your account and uses it to configure email notifications\. This SNS topic can be used to send notifications to other tools such as Slack\. Notifications can be configured to apply to all branches or specific branches of an Amplify app\.
 
-## Email Notifications<a name="email-notifications"></a>
+## Email notifications<a name="email-notifications"></a>
 
 Use the following procedures to set up email notifications for all branches or specific branches of an Amplify app\.
 

@@ -1,4 +1,4 @@
-# Deploy to Amplify Console Button<a name="one-click"></a>
+# Deploy to Amplify Console button<a name="one-click"></a>
 
 The **Deploy to Amplify Console** button enables you to share GitHub projects publicly or within your team\. The button looks like:
 

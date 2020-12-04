@@ -1,4 +1,4 @@
-# Incoming Webhooks<a name="webhooks"></a>
+# Incoming webhooks<a name="webhooks"></a>
 
 Set up an incoming webhook in the Amplify Console to trigger a build without comitting code to your Git repository\. Webhook triggers can be used with headless CMS tools \(such as Contentful or GraphCMS\) to trigger builds on content changes, or to trigger daily builds using services such as Zapier\.
 

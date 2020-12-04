@@ -1,8 +1,8 @@
-# Using Redirects<a name="redirects"></a>
+# Using redirects<a name="redirects"></a>
 
-Redirects enable a web server to reroute navigation from one URL to another\. Common reasons for using redirects include: to customize the appearance of URL, to avoid broken links, to move the hosting location of an app or site without changing its address, and to change a requested URL to the form needed by a web app\.
+Redirects enable a web server to reroute navigation from one URL to another\. Common reasons for using redirects include: to customize the appearance of a URL, to avoid broken links, to move the hosting location of an app or site without changing its address, and to change a requested URL to the form needed by a web app\.
 
-## Types of Redirects<a name="types-of-redirects"></a>
+## Types of redirects<a name="types-of-redirects"></a>
 
 There are several types of redirects that support specific scenarios\.
 
@@ -30,7 +30,7 @@ There are several types of redirects that support specific scenarios\.
 + To avoid a broken link message when a user enters a bad URL\.
 + To point requests to nonexistent pages of a web app to its index\.html page for handling by a client\-side router function\.
 
-## Parts of a Redirect<a name="parts-of-a-redirect"></a>
+## Parts of a redirect<a name="parts-of-a-redirect"></a>
 
 Redirects consist of the following:
 + An original address \- The address the user requested\.
@@ -46,7 +46,7 @@ To bulk edit redirects in a JSON editor, choose **Open text editor**\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-console-redirects-edit.png)
 
-## Order of Redirects<a name="order-of-redirects"></a>
+## Order of redirects<a name="order-of-redirects"></a>
 
 Redirects are executed from the top of the list down\. Make sure that your ordering has the effect you intend\. For example, the following order of redirects causes all requests for a given path under */docs/* to redirect to the same path under */documents/*, except */docs/specific\-filename\.html* which redirects to */documents/different\-filename\.html*:
 
@@ -62,7 +62,7 @@ The following order of redirects ignores the redirection of *specific\-filename\
 /docs/specific-filename.html /documents/different-filename.html 301
 ```
 
-## Simple Redirects and Rewrites<a name="simple-redirects-and-rewrites"></a>
+## Simple redirects and rewrites<a name="simple-redirects-and-rewrites"></a>
 
 In this section we include example code for common redirect scenarios\.
 
@@ -121,7 +121,7 @@ You can use the following example code to redirect paths under a folder that can
 
  JSON \[\{“source”: “/<\*>”, “status”: “404”, “target”: “/404\.html”, “condition”: null\}\] 
 
-## Redirects for Single Page Web Apps \(SPA\)<a name="redirects-for-single-page-web-apps-spa"></a>
+## Redirects for single page web apps \(SPA\)<a name="redirects-for-single-page-web-apps-spa"></a>
 
 Most SPA frameworks support HTML5 history\.pushState\(\) to change browser location without triggering a server request\. This works for users who begin their journey from the root \(or */index\.html*\), but fails for users who navigate directly to any other page\. Using regular expressions, the following example sets up a 200 rewrite for all files to index\.html except for the specific file extensions specified in the regular expression\.
 
@@ -134,7 +134,7 @@ Most SPA frameworks support HTML5 history\.pushState\(\) to change browser locat
 
  JSON \[\{“source”: “</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|ttf\|map\|json\)$\)\(\[^\.\]\+$\)/>”, “status”: “200”, “target”: “index\.html”, “condition”: null\}\] 
 
-## Reverse Proxy Rewrite<a name="reverse-proxy-rewrite"></a>
+## Reverse proxy rewrite<a name="reverse-proxy-rewrite"></a>
 
 The following example uses a rewrite to proxy content from another location so that it appears to user that the domain hasn’t changed:
 
@@ -147,7 +147,7 @@ The following example uses a rewrite to proxy content from another location so t
 
  JSON \[\{“source”: “/images”, “status”: “200”, “target”: “https://images\.otherdomain\.com”, “condition”: null\}\] 
 
-## Trailing slashes and Clean URLs<a name="trailing-slashes-and-clean-urls"></a>
+## Trailing slashes and clean URLs<a name="trailing-slashes-and-clean-urls"></a>
 
 To create clean URL structures like *about* instead of *about\.html*, static site generators such as Hugo generate directories for pages with an index\.html \(*/about/index\.html*\)\. The Amplify Console automatically creates clean URLs by adding a trailing slash when required\. The table below highlights different scenarios:
 
@@ -173,7 +173,7 @@ You can use the following example code to redirect paths in a folder structure t
 
  JSON \[\{“source”: “/docs/<year>/<month>/<date>/<itemid>”, “status”: “301”, “target”: “/documents/<year>/<month>/<date>/<itemid>”, “condition”: null\}\] 
 
-## Query Strings and Path Parameters<a name="query-strings-and-path-parameters"></a>
+## Query strings and path parameters<a name="query-strings-and-path-parameters"></a>
 
 You can use the following example code to redirect a path to a folder with a name that matches the value of a query string element in the original address:
 
@@ -197,7 +197,7 @@ You can use the following example code to redirect all paths that can’t be fou
 
  JSON \[\{“source”: “/documents/<x>/<y>/<z>”, “status”: “404”, “target”: “/documents/index\.html”, “condition”: null\}\] 
 
-## Region\-based Redirects<a name="region-based-redirects"></a>
+## Region\-based redirects<a name="region-based-redirects"></a>
 
 You can use the following example code to redirect requests based on region\.
 

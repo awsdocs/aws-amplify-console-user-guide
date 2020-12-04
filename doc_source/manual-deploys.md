@@ -1,8 +1,8 @@
-# Manual Deploys<a name="manual-deploys"></a>
+# Manual deploys<a name="manual-deploys"></a>
 
 Manual deploys allows you to publish your web app to the Amplify Console without connecting a Git provider\. You can choose to drag and drop a folder from your desktop, or reference an Amazon S3 bucket or external URL\.
 
-## Drag and Drop<a name="drag-and-drop"></a>
+## Drag and drop<a name="drag-and-drop"></a>
 
 Drag and drop a folder from your desktop to host your site in seconds\. Log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home) and choose **Deploy without a Git provider**\. Give your app a name, and a name for the environment \(e\.g\. development or production\)\. Drag and drop files from your desktop to publish your web app\.
 
