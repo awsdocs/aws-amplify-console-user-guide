@@ -36,7 +36,7 @@ Redirects consist of the following:
 + An original address \- The address the user requested\.
 + A destination address \- The address that actually serves the content that the user sees\.
 + A redirect type \- Types include a permanent redirect \(301\), a temporary redirect \(302\), a rewrite \(200\), or not found \(404\)\.
-+ A two letter country code \(optional\) \- a value you can include to segment the user experience of your app by region
++ A two letter country code \(optional\) \- a value you can include to segment the user experience of your app by region\.
 
 To create and edit redirects, choose **Rewrites and redirects settings** in the left navigation pane\.
 
@@ -75,7 +75,7 @@ You can use the following example code to permanently redirect a specific page t
 | --- | --- | --- | --- | 
 |   `/original.html`   |   `/destination.html`   |   `permanent redirect (301)`   |  | 
 
- JSON: \[\{“source”: “/original\.html”, “status”: “301”, “target”: “/destination\.html”, “condition”: null\}\] 
+ JSON: \[\{"source": "/original\.html", "status": "301", "target": "/destination\.html", "condition": null\}\] 
 
 You can use the following example code to redirect any path under a folder to the same path under a different folder\.
 
@@ -86,7 +86,7 @@ You can use the following example code to redirect any path under a folder to th
 | --- | --- | --- | --- | 
 |   `docs/<*>`   |   `/documents/<*>`   |   `permanent redirect (301)`   |  | 
 
- JSON \[\{“source”: “/docs/<\*>”, “status”: “301”, “target”: “/documents/<\*>”, “condition”: null\}\] 
+ JSON \[\{"source": "/docs/<\*>", "status": "301", "target": "/documents/<\*>", "condition": null\}\] 
 
 You can use the following example code to redirect all traffic to index\.html as a rewrite\. In this scenario, the rewrite makes it appear to the user that they have arrived at the original address\.
 
@@ -97,7 +97,7 @@ You can use the following example code to redirect all traffic to index\.html as
 | --- | --- | --- | --- | 
 |   `<*>`   |   `/index.html`   |   `rewrite (200)`   |  | 
 
- JSON \[\{“source”: “/<\*>”, “status”: “200”, “target”: “/index\.html”, “condition”: null\}\] 
+ JSON \[\{"source": "/<\*>", "status": "200", "target": "/index\.html", "condition": null\}\] 
 
 You can use the following example code to use a rewrite to change the subdomain that appears to the user\.
 
@@ -108,7 +108,7 @@ You can use the following example code to use a rewrite to change the subdomain 
 | --- | --- | --- | --- | 
 |   `https://mydomain.com`   |   `https://www.mydomain.com`   |   `rewrite (200)`   |  | 
 
- JSON \[\{“source”: “https://mydomain\.com”, “status”: “200”, “target”: “https://www\.mydomain\.com”, “condition”: null\}\] 
+ JSON \[\{"source": "https://mydomain\.com", "status": "200", "target": "https://www\.mydomain\.com", "condition": null\}\] 
 
 You can use the following example code to redirect paths under a folder that can’t be found to a custom 404 page\.
 
@@ -119,7 +119,7 @@ You can use the following example code to redirect paths under a folder that can
 | --- | --- | --- | --- | 
 |   `/<*>`   |   `/404.html`   |   `not found (404)`   |  | 
 
- JSON \[\{“source”: “/<\*>”, “status”: “404”, “target”: “/404\.html”, “condition”: null\}\] 
+ JSON \[\{"source": "/<\*>", "status": "404", "target": "/404\.html", "condition": null\}\] 
 
 ## Redirects for single page web apps \(SPA\)<a name="redirects-for-single-page-web-apps-spa"></a>
 
@@ -132,7 +132,7 @@ Most SPA frameworks support HTML5 history\.pushState\(\) to change browser locat
 | --- | --- | --- | --- | 
 |   `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|ttf\|map\|json)$)([^.]+$)/>`   |   `/index.html`   |   `200`   |  | 
 
- JSON \[\{“source”: “</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|ttf\|map\|json\)$\)\(\[^\.\]\+$\)/>”, “status”: “200”, “target”: “index\.html”, “condition”: null\}\] 
+ JSON \[\{"source": "</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|ttf\|map\|json\)$\)\(\[^\.\]\+$\)/>", "status": "200", "target": "index\.html", "condition": null\}\] 
 
 ## Reverse proxy rewrite<a name="reverse-proxy-rewrite"></a>
 
@@ -145,7 +145,7 @@ The following example uses a rewrite to proxy content from another location so t
 | --- | --- | --- | --- | 
 |   `/images`   |   `https://images.otherdomain.com`   |   `rewrite (200)`   |  | 
 
- JSON \[\{“source”: “/images”, “status”: “200”, “target”: “https://images\.otherdomain\.com”, “condition”: null\}\] 
+ JSON \[\{"source": "/images", "status": "200", "target": "https://images\.otherdomain\.com", "condition": null\}\] 
 
 ## Trailing slashes and clean URLs<a name="trailing-slashes-and-clean-urls"></a>
 
@@ -171,7 +171,7 @@ You can use the following example code to redirect paths in a folder structure t
 | --- | --- | --- | --- | 
 |   `/docs/<year>/<month>/<date>/<itemid>`   |   `/documents/<year>/<month>/<date>/<itemid>`   |   `permanent redirect (301)`   |  | 
 
- JSON \[\{“source”: “/docs/<year>/<month>/<date>/<itemid>”, “status”: “301”, “target”: “/documents/<year>/<month>/<date>/<itemid>”, “condition”: null\}\] 
+ JSON \[\{"source": "/docs/<year>/<month>/<date>/<itemid>", "status": "301", "target": "/documents/<year>/<month>/<date>/<itemid>", "condition": null\}\] 
 
 ## Query strings and path parameters<a name="query-strings-and-path-parameters"></a>
 
@@ -184,7 +184,7 @@ You can use the following example code to redirect a path to a folder with a nam
 | --- | --- | --- | --- | 
 |   `/docs?id=<my-blog-id-value`   |   `/documents/<my-blog-post-id-value>`   |   `permanent redirect (301)`   |  | 
 
- JSON \[\{“source”: “/docs?id=<my\-blog\-id\-value”, “status”: “301”, “target”: “/documents/<my\-blog\-post\-id\-value>”, “condition”: null\}\] 
+ JSON \[\{"source": "/docs?id=<my\-blog\-id\-value", "status": "301", "target": "/documents/<my\-blog\-post\-id\-value>", "condition": null\}\] 
 
 You can use the following example code to redirect all paths that can’t be found at a given level of a folder structure to index\.html in a specified folder\.
 
@@ -195,7 +195,7 @@ You can use the following example code to redirect all paths that can’t be fou
 | --- | --- | --- | --- | 
 |   `/documents/<folder>/<child-folder>/<grand-child-folder>`   |   `/documents/index.html`   |   `404`   |  | 
 
- JSON \[\{“source”: “/documents/<x>/<y>/<z>”, “status”: “404”, “target”: “/documents/index\.html”, “condition”: null\}\] 
+ JSON \[\{"source": "/documents/<x>/<y>/<z>", "status": "404", "target": "/documents/index\.html", "condition": null\}\] 
 
 ## Region\-based redirects<a name="region-based-redirects"></a>
 
@@ -208,4 +208,4 @@ You can use the following example code to redirect requests based on region\.
 | --- | --- | --- | --- | 
 |   `/documents`   |   `/documents/us/`   |   `302`   |   `<US>`   | 
 
- JSON \[\{“source”: “/documents”, “status”: “302”, “target”: “/documents/us/”, “condition”: “<US>”\}\] 
+ JSON \[\{"source": "/documents", "status": "302", "target": "/documents/us/", "condition": "<US>"\}\] 
