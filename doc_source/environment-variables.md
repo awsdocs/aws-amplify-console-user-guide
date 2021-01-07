@@ -50,8 +50,8 @@ To access an environment variable during a build, edit your build settings to in
    ```
    build:
      commands:
-       - npm run build:$BUILD_ENV
        - echo "TWITCH_CLIENT_ID=$TWITCH_CLIENT_ID" >> backend/.env
+       - npm run build:$BUILD_ENV
    ```
 
 Each command in your build configuration is executed inside a Bash shell\. For more information on working with environment variables in Bash, see [Shell Expansions](https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html#Shell-Expansions) in the GNU Bash Manual\. 
