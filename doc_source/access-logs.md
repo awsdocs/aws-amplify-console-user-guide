@@ -113,7 +113,7 @@ Use the following procedure to retrieve access logs\.
 
 1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
-1. Choose the app that you want to set an alarm on\.
+1. Choose the app that you want to view access logs for\.
 
 1. In the navigation pane, choose **App Settings**, **Monitoring**\.
 
