@@ -2,9 +2,17 @@
 
 In this walkthrough, you learn how to continuously build, deploy, and host a modern web app\. Modern web apps include Single Page App \(SPA\) frameworks \(for example, React, Angular, or Vue\) and static\-site generators \(SSGs\) \(for example, Hugo, Jekyll, or Gatsby\)\.
 
-To get started, log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home) and choose **Get Started** under **Deploy**\.
+To get started, log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home)\. If you are starting from the **AWS Amplify** home page, choose **Get Started** at the top of the page\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-gettingstarted-1.png)
+![\[Screenshot of the AWS Amplify home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_1.png)
+
+Then choose **Get started** under **Deliver**\.
+
+![\[Screenshot of the Deliver section at the bottom of the AWS Amplify home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_2.png)
+
+If you are starting from the **All apps** page, choose **New app**, **Host web app** in the upper right corner\.
+
+![\[Screenshot of the All apps page in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_3.png)
 
 ## Step 1: Connect repository<a name="step-1-connect-repository"></a>
 

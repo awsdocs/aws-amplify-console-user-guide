@@ -1,12 +1,13 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Amplify\.
-+ **Latest documentation update: **February 2, 2021
++ **Latest documentation update: **March 12, 2021
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-| Updated monitoring topic | Updated the [Monitoring](access-logs.md#access-logs.title) topic to describe how to access CloudWatch metrics data and set alarms\. | February 2, 2021 | 
+| Updated Custom builds topic | Updated the [Custom build images and live package updates](custom-build-image.md#custom-build-image.title) topic to describe how to configure a custom build image hosted in Amazon Elastic Container Registry Public\. | March 12, 2021 | 
+| Updated Monitoring topic | Updated the [Monitoring](access-logs.md#access-logs.title) topic to describe how to access CloudWatch metrics data and set alarms\. | February 2, 2021 | 
 | New CloudTrail logging topic | Added the [Logging Amplify API calls using AWS CloudTrail](logging-using-cloudtrail.md#logging-using-cloudtrail.title) topic to describe how AWS CloudTrail captures and logs all of the API actions for the AWS Amplify Console API Reference and the AWS Amplify Admin UI API Reference\. | February 2, 2021 | 
 | New Admin UI feature launch | Updated the [Welcome to the AWS Amplify Console](welcome.md#welcome.title) topic to describe the new Admin UI that provides a visual interface for frontend web and mobile developers to create and manage app backends outside the AWS Management Console\. | December 1, 2020 | 
 | New performance mode feature launch | Updated the [Managing app performance](ttl.md#ttl.title) topic to describe how to enable performance mode to optimize for faster hosting performance\.  | November 4, 2020 | 

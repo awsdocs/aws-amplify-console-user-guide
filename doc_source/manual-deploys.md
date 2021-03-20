@@ -10,9 +10,15 @@ For Amazon S3, you can also set up AWS Lambda triggers to update your site each 
 
 1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
-1. At the top of the page, choose **Get started**\.
+1. How you get to the **Host your web app** page depends on whether you are starting from the Amplify home page or the **All apps** page\.
+   + From the Amplify home page
 
-1. In the **Deliver** section, choose **Get started**\.
+     1. Choose **Get started**\.
+
+     1. In the **Deliver** section, choose **Get started**\.
+   + From the **All apps** page
+
+     1. In the upper right corner, choose **New app**, **Host web app**
 
 1. On the **Host your web app** page, choose **Deploy without Git provider**\. Then, choose **Continue**\.
 
