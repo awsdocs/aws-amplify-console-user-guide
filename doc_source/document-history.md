@@ -1,11 +1,12 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Amplify\.
-+ **Latest documentation update: **March 12, 2021
++ **Latest documentation update: **March 26, 2021
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| New security chapter | Added the [Security in Amplify](security.md#security.title) chapter to describe how to apply the shared responsibility model when using AWS Amplify and how to configure Amplify to meet your security and compliance objectives\. | March 26, 2021 | 
 | Updated Custom builds topic | Updated the [Custom build images and live package updates](custom-build-image.md#custom-build-image.title) topic to describe how to configure a custom build image hosted in Amazon Elastic Container Registry Public\. | March 12, 2021 | 
 | Updated Monitoring topic | Updated the [Monitoring](access-logs.md#access-logs.title) topic to describe how to access CloudWatch metrics data and set alarms\. | February 2, 2021 | 
 | New CloudTrail logging topic | Added the [Logging Amplify API calls using AWS CloudTrail](logging-using-cloudtrail.md#logging-using-cloudtrail.title) topic to describe how AWS CloudTrail captures and logs all of the API actions for the AWS Amplify Console API Reference and the AWS Amplify Admin UI API Reference\. | February 2, 2021 | 
