@@ -17,7 +17,7 @@ A web preview deploys every pull request made to your GitHub repository to a uni
 **Important**  
 For security purposes, previews only work with private repositories for fullstack apps using the Amplify CLI\.
 
-1. After you enable previews, return to the Amplify Console to enable previews for specific branches\. Choose a branch from the list and choose **Manage**\. For fullstack applications, you can choose to create a a new backend for every pull request, or point all pull requests to an existing backend environment\. By choosing the first option, you can test changes without impacting production\.  
+1. After you enable previews, return to the Amplify Console to enable previews for specific branches\. Choose a branch from the list and choose **Manage**\. For fullstack applications, you can choose to create a new backend for every pull request, or point all pull requests to an existing backend environment\. By choosing the first option, you can test changes without impacting production\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/previews2.png)
 
 The next time you submit a pull request for the branch, the Amplify Console builds and deploys your PR to a preview URL\. For GitHub repositories only, you can view a preview of your URL directly from the pull request\.
