@@ -99,6 +99,8 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_GOOGLE\_CLIENT\_SECRET  |  The Google client secret\.  |  example123456  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID\.  |  123456  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret\.  |  example123456  | 
+|  AMPLIFY\_DIFF\_DEPLOY  |  Set to true to enable diff based frontend build, test, and deploy for your monorepo appRoot or "src" folder\.  |  true  | 
+|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  By default, the monorepo appRoot or the "src" folder is used for diff based deploy, you can specify a relative path override here\.  |  dist  | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
 
 **Note**  

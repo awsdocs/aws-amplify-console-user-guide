@@ -324,3 +324,7 @@ To skip an automatic build on a particular commit, include the text **\[skip\-cd
 ## Disable automatic builds<a name="disable-automatic-builds"></a>
 
 You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings > General** and then scroll to the **Branches** section that lists all the connected branches\. Select a branch, and then choose **Action > Disable auto build**\. Further commits to that branch will no longer trigger a new build\.
+
+## Enable or disable diff based frontend build & deploy<a name="enable-diff-deploy"></a>
+
+You can configure Amplify Console to enable or disable diff based frontend builds, this feature is opt-in and disabled by default\. To set up, choose **App settings > Environment variables** and then click **Manage variables**\. Add the **AMPLIFY_DIFF_DEPLOY** environment variable with a value of **true** to enable, and remove the environment variable or set a value of **false** to disable\. Once enabled, at the start of each build Amplify Console will attempt to run a diff on either your monorepo appRoot, or the "src" folder by default, if no differences are found, the frontend build, test (if configured), and deploy steps will be skipped and your hosted app will not be updated\. Optionally, you can set the **AMPLIFY_DIFF_DEPLOY_ROOT** environment variable to override your monorepo appRoot or the "src" folder with a path relative to the root of your repo, for example: **dist**
