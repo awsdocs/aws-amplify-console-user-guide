@@ -1,5 +1,0 @@
-.. Project-specific includes.
-
-.. |amplify-long| replace:: AWS Amplify
-.. |amplify| replace:: AWS Amplify
-.. |amplify-ug| replace:: |amplify| Console User Guide
