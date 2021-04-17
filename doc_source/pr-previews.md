@@ -26,7 +26,7 @@ The next time you submit a pull request for the branch, the Amplify Console buil
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/previews4.png)
 
-After the pull request is closed, the preview URL is deleted, and any ephemeral backend environment linked to the pull request is deleted\.
+After the pull request is closed, the preview URL is deleted, and any temporary backend environment linked to the pull request is deleted\.
 
 ## Web preview access with subdomains<a name="web-preview-access-on-subdomains"></a>
 
