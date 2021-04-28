@@ -132,7 +132,7 @@ Most SPA frameworks support HTML5 history\.pushState\(\) to change browser locat
 | --- | --- | --- | --- | 
 |   `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|ttf\|map\|json)$)([^.]+$)/>`   |   `/index.html`   |   `200`   |  | 
 
- JSON \[\{"source": "</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|ttf\|map\|json\)$\)\(\[^\.\]\+$\)/>", "status": "200", "target": "index\.html", "condition": null\}\] 
+ JSON \[\{"source": "</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|map\|json\)$\)\(\[^\.\]\+$\)/>", "status": "200", "target": "index\.html", "condition": null\}\] 
 
 ## Reverse proxy rewrite<a name="reverse-proxy-rewrite"></a>
 
