@@ -82,7 +82,7 @@ Each command in your build configuration is executed inside a Bash shell\. For m
 It is important to note that if your selected frontend framework allows for its own environment variables, that these **are not the same** as those you configure within the Amplify Console\. Frameworks like React (prefixed REACT_APP) and Gatsby (prefixed GATSBY) allow you to create runtime environment variables that will be ***automatically bundled into your frontend Production build by those frameworks.*** Please make sure that you understand the ramifications of using these variables to store values by thoroughly reading the available documentation from your frontend framework of choice\.
 
 **Note**  
-In general, it is a **best practice** and is **highly discouraged** to store sensitive values like API keys inside these frontend framework prefixed environment variables, see the section above on [accessing environment variables](https://docs.aws.amazon.com/amplify/latest/userguide/environment-variables.html#access-env-vars) for a simple example on how you might use Amplify Console's build time environment variables **without** any frontend framework prefixes for this purpose\.
+In general, it is both **not a best practice** and **highly discouraged** to store sensitive values like API keys inside these frontend framework prefixed environment variables, see the section above on [accessing environment variables](https://docs.aws.amazon.com/amplify/latest/userguide/environment-variables.html#access-env-vars) for a simple example on how you might use Amplify Console's build time environment variables **without** any frontend framework prefixes for this purpose\.
 
 ## Amplify Console environment variables<a name="amplify-console-environment-variables"></a>
 
