@@ -4,5 +4,5 @@ Use the topics in this section to find detailed reference material for AWS Ampli
 
 **Topics**
 + [AWS CloudFormation support](cloudformation-support-chapter.md)
-+ [AWS CLI support](aws-cli-support-chapter.md)
++ [AWS Command Line Interface support](aws-cli-support-chapter.md)
 + [Resource tagging support](resource-tagging-support-chapter.md)

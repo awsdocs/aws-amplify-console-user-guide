@@ -13,7 +13,7 @@ A web preview deploys every pull request made to your GitHub repository to a uni
 
 **To enable web previews for pull requests**
 
-1. Choose **App settings**, choose ** Previews** and then choose **Enable previews**\. For GitHub repositories only, you are required to install a GitHub app in your account to enable this feature\. You can give the Amplify Console permission to all repositories or the current repository only\. 
+1. Choose **App settings**, **Previews** and then choose **Enable previews**\. For GitHub repositories only, you are required to install a GitHub app in your account to enable this feature\. You can give the Amplify Console permission to all repositories or the current repository only\. 
 **Important**  
 For security purposes, previews only work with private repositories for fullstack apps using the Amplify CLI\.
 

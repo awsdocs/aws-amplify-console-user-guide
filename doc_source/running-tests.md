@@ -1,4 +1,4 @@
-# Add end\-to\-end tests to your app<a name="running-tests"></a>
+# Add end\-to\-end tests to your Amplify app<a name="running-tests"></a>
 
 You can run end\-to\-end \(E2E\) tests in the test phase of your Amplify app to catch regressions before pushing code to production\. The test phase can be configured in the build specification YML and can be used to run any testing framework of your choice during a build\.
 

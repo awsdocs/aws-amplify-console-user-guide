@@ -26,11 +26,11 @@ Performance mode is intended for advanced customers that require finer control o
 
 1. In the navigation pane, choose **App settings**, **General**\.
 
-1. In the **Branches** section, select the branch that you want to to enable performance mode for\.
-
-   
+1. In the **General** pane, scroll down to the **Branches** section\. Select the branch that you want to to enable performance mode for\.
 
 1. Choose **Action**, **Enable performance mode**\.
+
+1. In the **Enable performance mode** dialog box, choose **Enable performance mode**\.
 
 ### Using headers to control cache duration<a name="Using-headers-to-control-cache-duration"></a>
 

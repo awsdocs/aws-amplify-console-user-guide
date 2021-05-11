@@ -2,13 +2,13 @@
 
 In this walkthrough, you learn how to continuously build, deploy, and host a modern web app\. Modern web apps include Single Page App \(SPA\) frameworks \(for example, React, Angular, or Vue\) and static\-site generators \(SSGs\) \(for example, Hugo, Jekyll, or Gatsby\)\.
 
-To get started, log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home)\. If you are starting from the **AWS Amplify** home page, choose **Get Started** at the top of the page\.
+To get started, log in to the [AWS Amplify Amplify Console](https://console.aws.amazon.com/amplify/home)\. If you are starting from the **AWS Amplify** home page, choose **Get Started** at the top of the page\.
 
 ![\[Screenshot of the AWS Amplify home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_1.png)
 
 Then choose **Get started** under **Deliver**\.
 
-![\[Screenshot of the Deliver section at the bottom of the AWS Amplify home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_2.png)
+![\[Screenshot of the Deliver section at the bottom of the AWS Amplifyy home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_2.png)
 
 If you are starting from the **All apps** page, choose **New app**, **Host web app** in the upper right corner\.
 
@@ -42,7 +42,7 @@ If you connected a repository provisioned by the Amplify CLI v1\.0\+ \(run *ampl
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend.png)
 
-To deploy backend functionality using the Amplify CLI during your build, create or reuse an IAM service role\. IAM roles are a secure way to grant the Amplify Console permissions to act on resources in your account\.
+To deploy backend functionality using the Amplify CLI during your build, create or reuse an AWS Identity and Access Management \(IAM\) service role\. IAM roles are a secure way to grant the Amplify Console permissions to act on resources in your account\.
 
  **Note:** The Amplify CLI won’t run without an IAM service role enabled\.
 
