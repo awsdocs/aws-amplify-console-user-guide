@@ -10,9 +10,11 @@ After an app is connected to a custom domain in Route 53, Amplify Console enabl
 
 1. In the navigation pane, choose **App Settings**, and then choose **Domain management**\.
 
-1. On the **Domain management** page, choose **Edit domain**\.
+1. On the **Domain management** page, choose **Manage subdomains**\.
 
 1. Select the **Sub\-domain auto\-detection** check box on the bottom left side\.
+
+Note: This feature is only available for root domains (i.e. **example.com**). You will not see this check box if your domain is already a subdomain like **dev\.exampledomain\.com**. 
 
 ## Web previews with subdomains<a name="web-previews-on-subdomains"></a>
 
