@@ -4,6 +4,8 @@ Manual deploys allows you to publish your web app to the Amplify Console without
 
 For Amazon S3, you can also set up AWS Lambda triggers to update your site each time new assets are uploaded\. [This blog post](http://aws.amazon.com/blogs/mobile/deploy-files-s3-dropbox-amplify-console/) describes the process for setting up a Lambda trigger to automatically deploy changes to Amplify when updates are made to an Amazon S3 bucket\.
 
+Amplify does not support manual deploys for server\-side rendered \(SSR\) apps\. For more information, see [Deploy and host server\-side rendered apps with Amplify](server-side-rendering-amplify.md)\.
+
 ## Drag and drop<a name="drag-and-drop"></a>
 
 **To manually deploy an app using drag and drop**

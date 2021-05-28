@@ -2,13 +2,14 @@
 
 The AWS Amplify Console is the control center for fullstack web and mobile application deployments in AWS\. Amplify Console provides two main services, hosting and the Admin UI\. Amplify Console hosting provides a git\-based workflow for hosting fullstack serverless web apps with continuous deployment\. The Admin UI is a visual interface for frontend web and mobile developers to create and manage app backends outside the AWS Management Console\.
 
-A fullstack serverless web app consists of a backend built with cloud resources such as GraphQL or REST APIs, file and data storage, and a frontend built with a single\-page application \(SPA\) framework such as React, Angular, Vue, or Gatsby\. Amplify Console supports the common SPA frameworks \(e\.g\. React, Angular, Vue\.js, Ionic, Ember\), as well as static site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll\.
+A fullstack serverless web app consists of a backend built with cloud resources such as GraphQL or REST APIs, file and data storage, and a frontend built with a single\-page application \(SPA\) framework such as React, Angular, Vue, or Gatsby\. Amplify Console supports the common SPA frameworks, for example, React, Angular, Vue\.js, Ionic, and Ember, as well as static site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll\. Amplify supports applications that use server\-side rendering \(SSR\) that are created using the Next\.js framework\.
 
 ## Amplify Console features<a name="amplify-console-features"></a>
 
 **Hosting features**
 + Manage production and staging environments for your frontend and backend by connecting new branches\. [See feature branch deployments](multi-environments.md)\.
 + Connect your application to a custom domain\. See [Set up custom domains](custom-domains.md)\.
++ Deploy and host SSR web apps created using the Next\.js\. framework\.
 + Preview changes during code reviews by setting up [pull request previews](pr-previews.md)\.
 + Improve your app quality with end to end tests\. [See End\-to\-end testing](running-tests.md)\.
 + Password protect your web app so you can work on new features without making them publicly accessible\. See [Restricting access](access-control.md)\.
@@ -31,11 +32,11 @@ A fullstack serverless web app consists of a backend built with cloud resources 
 
 ### Getting started with hosting<a name="get-started-hosting"></a>
 
-To get started with Amplify Console's hosting features, see the [Getting started with existing code](getting-started.md) tutorial\. You will be able to connect your git repository \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, you can get started with one of the [fullstack continuous deployment samples](deploy-backend.md)\.
+To get started with Amplify Console's hosting features, see the [Getting started with existing code](getting-started.md) tutorial\. After completing the tutorial, you will be able to connect your git repository \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, you can get started with one of the [fullstack continuous deployment samples](deploy-backend.md)\.
 
 ### Getting started with the Admin UI<a name="get-started-adminui"></a>
 
-You don't need an AWS account to get started using the Admin UI\. Without an AWS account, you can begin modeling data for your backend locally\. With an AWS account, an expanded set of features are available for managing your backend environment\. For more information, see [Getting started with Admin UI](https://docs.amplify.aws/console/adminui/start)\.
+You don't need an AWS account to get started using the Admin UI\. Without an AWS account, you can begin modeling data for your backend locally\. With an AWS account, you have an expanded set of features for managing your backend environment\. For more information, see [Getting started with Admin UI](https://docs.amplify.aws/console/adminui/start)\.
 
 ## Modern SPA web applications<a name="modern-web-applications"></a>
 

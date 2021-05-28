@@ -14,8 +14,9 @@ After an app is connected to a custom domain in Route 53, Amplify Console enabl
 
 1. Select the **Sub\-domain auto\-detection** check box on the bottom left side\.
 
-Note: This feature is only available for root domains (i.e. **example.com**). You will not see this check box if your domain is already a subdomain like **dev\.exampledomain\.com**. 
+**Note**  
+This feature is available only for root domains, for example, **exampledomain\.com**\. The Amplify console doesn't display this check box if your domain is already a subdomain, such as ** dev\.exampledomain\.com**\.
 
 ## Web previews with subdomains<a name="web-previews-on-subdomains"></a>
 
-After you enable **Sub\-domain auto\-detection** using the preceding procedures, your app’s pull request web previews will also be accessible with automatically created subdomains\. When a pull request is closed, the associated branch and subdomain are automatically deleted\. For more information on setting up web previews for pull requests, see [Web previews](pr-previews.md)\.
+After you enable **Sub\-domain auto\-detection** using the preceding instructions, your app’s pull request web previews will also be accessible with automatically created subdomains\. When a pull request is closed, the associated branch and subdomain are automatically deleted\. For more information on setting up web previews for pull requests, see [Web previews](pr-previews.md)\.

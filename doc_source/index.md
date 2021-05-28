@@ -1,7 +1,7 @@
 # AWS Amplify Console User Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -17,6 +17,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Welcome to the AWS Amplify Console](welcome.md)
 + [Getting started with existing code](getting-started.md)
 + [Getting started with fullstack continuous deployments](deploy-backend.md)
++ [Deploy and host server-side rendered apps with Amplify](server-side-rendering-amplify.md)
 + [Set up custom domains](custom-domains.md)
    + [Understanding DNS terminology and concepts](understanding-dns-terminology-and-concepts.md)
    + [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)

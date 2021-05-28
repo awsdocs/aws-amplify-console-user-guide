@@ -1,14 +1,14 @@
 # Getting started with existing code<a name="getting-started"></a>
 
-In this walkthrough, you learn how to continuously build, deploy, and host a modern web app\. Modern web apps include Single Page App \(SPA\) frameworks \(for example, React, Angular, or Vue\) and static\-site generators \(SSGs\) \(for example, Hugo, Jekyll, or Gatsby\)\.
+In this walkthrough, you learn how to continuously build, deploy, and host a modern web app\. Modern web apps include single\-page application \(SPA\) frameworks \(for example, React, Angular, or Vue\) and static\-site generators \(SSGs\) \(for example, Hugo, Jekyll, or Gatsby\)\. Amplify also supports web apps that use server\-side rendering \(SSR\) and are created using Next\.js\.
 
-To get started, log in to the [AWS Amplify Amplify Console](https://console.aws.amazon.com/amplify/home)\. If you are starting from the **AWS Amplify** home page, choose **Get Started** at the top of the page\.
+To get started, log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home)\. If you are starting from the **AWS Amplify** home page, choose **Get Started** at the top of the page\.
 
 ![\[Screenshot of the AWS Amplify home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_1.png)
 
 Then choose **Get started** under **Deliver**\.
 
-![\[Screenshot of the Deliver section at the bottom of the AWS Amplifyy home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_2.png)
+![\[Screenshot of the Deliver section at the bottom of the AWS Amplify home page.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/Get_Started_2.png)
 
 If you are starting from the **All apps** page, choose **New app**, **Host web app** in the upper right corner\.
 
