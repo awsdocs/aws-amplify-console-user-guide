@@ -1,6 +1,6 @@
 # Getting started with existing code<a name="getting-started"></a>
 
-In this walkthrough, you learn how to continuously build, deploy, and host a modern web app\. Modern web apps include Single Page App \(SPA\) frameworks \(for example, React, Angular, or Vue\) and static\-site generators \(SSGs\) \(for example, Hugo, Jekyll, or Gatsby\)\.
+In this walkthrough, you learn how to continuously build, deploy, and host a modern web app\. Modern web apps include single\-page application \(SPA\) frameworks \(for example, React, Angular, or Vue\) and static\-site generators \(SSGs\) \(for example, Hugo, Jekyll, or Gatsby\)\. Amplify also supports web apps that use server\-side rendering \(SSR\) and are created using Next\.js\.
 
 To get started, log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home)\. If you are starting from the **AWS Amplify** home page, choose **Get Started** at the top of the page\.
 
@@ -42,7 +42,7 @@ If you connected a repository provisioned by the Amplify CLI v1\.0\+ \(run *ampl
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend.png)
 
-To deploy backend functionality using the Amplify CLI during your build, create or reuse an IAM service role\. IAM roles are a secure way to grant the Amplify Console permissions to act on resources in your account\.
+To deploy backend functionality using the Amplify CLI during your build, create or reuse an AWS Identity and Access Management \(IAM\) service role\. IAM roles are a secure way to grant the Amplify Console permissions to act on resources in your account\.
 
  **Note:** The Amplify CLI won’t run without an IAM service role enabled\.
 

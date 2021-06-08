@@ -1,7 +1,7 @@
 # AWS Amplify Console User Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -17,6 +17,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Welcome to the AWS Amplify Console](welcome.md)
 + [Getting started with existing code](getting-started.md)
 + [Getting started with fullstack continuous deployments](deploy-backend.md)
++ [Deploy and host server-side rendered apps with Amplify](server-side-rendering-amplify.md)
 + [Set up custom domains](custom-domains.md)
    + [Understanding DNS terminology and concepts](understanding-dns-terminology-and-concepts.md)
    + [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)
@@ -33,7 +34,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Manual deploys](manual-deploys.md)
 + [Deploy to Amplify Console button](one-click.md)
 + [Web previews](pr-previews.md)
-+ [Add end-to-end tests to your app](running-tests.md)
++ [Add end-to-end tests to your Amplify app](running-tests.md)
 + [Using redirects](redirects.md)
 + [Restricting access](access-control.md)
 + [Environment variables](environment-variables.md)
@@ -56,6 +57,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Infrastructure Security in AWS Amplify](infrastructure-security.md)
 + [AWS Amplify reference](aws-amplify-reference-chapter.md)
    + [AWS CloudFormation support](cloudformation-support-chapter.md)
-   + [AWS CLI support](aws-cli-support-chapter.md)
+   + [AWS Command Line Interface support](aws-cli-support-chapter.md)
    + [Resource tagging support](resource-tagging-support-chapter.md)
 + [Document history for AWS Amplify](document-history.md)

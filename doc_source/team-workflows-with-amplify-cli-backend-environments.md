@@ -57,7 +57,7 @@ You can use the Amplify Console to continuously deploy backend resources such as
    git push origin main
    ```
 
-1. Visit the Amplify Console in the AWS Console to see your current backend environment\. Navigate a level up from the breadcrumb to view a list of all backend environments created in the **Backend environments** tab\.  
+1. Visit the Amplify Console in the AWS Management Console to see your current backend environment\. Navigate a level up from the breadcrumb to view a list of all backend environments created in the **Backend environments** tab\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-5.png)
 
 1. Switch to the **Frontend environments** tab and connect your repository provider and *main* branch\.  

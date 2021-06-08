@@ -77,12 +77,11 @@ Each command in your build configuration is executed inside a Bash shell\. For m
 
      1. In the **Manage variables** section, for **Variable** \(key\), enter your client ID\. For **Value**, enter your client secret\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables)\. 
 
-## Frontend framework environment variables<a name="frontend-env-vars"></a>
+## Frontend framework environment variables<a name="frontend-framework-environment-variables"></a>
 
-It is important to note that if your selected frontend framework allows for its own environment variables, that these **are not the same** as those you configure within the Amplify Console\. Frameworks like React (prefixed REACT_APP) and Gatsby (prefixed GATSBY) allow you to create runtime environment variables that will be ***automatically bundled into your frontend Production build by those frameworks.*** Please make sure that you understand the ramifications of using these variables to store values by thoroughly reading the available documentation from your frontend framework of choice\.
+If you are developing your app with a frontend framework that supports its own environment variables, it is important to understand that these are not the same as the environment variables you configure in the Amplify Console\. For example, React \(prefixed REACT\_APP\) and Gatsby \(prefixed GATSBY\), enable you to create runtime environment variables that those frameworks automatically bundle into your frontend production build\. To understand the effects of using these environment variables to store values, refer to the documentation for the frontend framework you are using\.
 
-**Note**  
-In general, it is both **not a best practice** and **highly discouraged** to store sensitive values like API keys inside these frontend framework prefixed environment variables, see the section above on [accessing environment variables](https://docs.aws.amazon.com/amplify/latest/userguide/environment-variables.html#access-env-vars) for a simple example on how you might use Amplify Console's build time environment variables **without** any frontend framework prefixes for this purpose\.
+Storing sensitive values, such as API keys, inside these frontend framework prefixed environment variables is not a best practice and is highly discouraged\. For an example of using the Amplify Console's build time environment variables for this purpose, see [Access environment variables](#access-env-vars)\.
 
 ## Amplify Console environment variables<a name="amplify-console-environment-variables"></a>
 

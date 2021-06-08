@@ -1,8 +1,8 @@
 # Custom headers<a name="custom-headers"></a>
 
-Custom HTTP headers enable you to specify headers for every HTTP response\. Response headers can be used for debugging, security, and informational purposes\. You can specify headers in the AWS Management Console, or by downloading and editing an app’s `customHttp.yml` file and saving it in the project’s root directory\. For detailed procedures, see [Setting custom headers](#setting-custom-headers)\.
+Custom HTTP headers enable you to specify headers for every HTTP response\. Response headers can be used for debugging, security, and informational purposes\. You can specify headers in the AWS Management Console, or by downloading and editing an app's `customHttp.yml` file and saving it in the project's root directory\. For detailed procedures, see [Setting custom headers](#setting-custom-headers)\.
 
-Previously, custom HTTP headers were specified for an app either by editing the build specification \(buildspec\) in the AWS Management Console or by downloading and updating the `amplify.yml` file and saving it in the project’s root directory\. Custom headers specified in this way should be migrated out of the buildspec and the `amplify.yml` file\. For instructions, see [Migrating custom headers](#migrate-custom-headers)\.
+Previously, custom HTTP headers were specified for an app either by editing the build specification \(buildspec\) in the AWS Management Console or by downloading and updating the `amplify.yml` file and saving it in the project's root directory\. Custom headers specified in this way should be migrated out of the buildspec and the `amplify.yml` file\. For instructions, see [Migrating custom headers](#migrate-custom-headers)\.
 
 ## Custom header YAML format<a name="custom-header-YAML-format"></a>
 
@@ -58,7 +58,7 @@ To learn more about HTTP headers, see Mozilla's list of [HTTP Headers](https://d
 
 ## Setting custom headers<a name="setting-custom-headers"></a>
 
-There are two ways to specify custom HTTP headers for an AWS Amplify app\. You can specify headers in the AWS Management Console or you can specify headers by downloading and editing an app’s `customHttp.yml` file and saving it in your project’s root directory\. 
+There are two ways to specify custom HTTP headers for an AWS Amplify app\. You can specify headers in the AWS Management Console or you can specify headers by downloading and editing an app's `customHttp.yml` file and saving it in your project's root directory\.
 
 **To set custom headers for an app in the AWS Management Console**
 
@@ -80,7 +80,7 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
 
 1. Choose **Save**\.
 
-1. If you are working with an app in a monorepo, you must redeploy the app to apply the new custom headers\.
+1. If you're working with an app in a monorepo or an [app that uses server\-side rendering \(SSR\)](server-side-rendering-amplify.md), you must redeploy the app to apply the new custom headers\.
 
 **To set custom headers using the customHttp\.yml file**
 
@@ -107,11 +107,11 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
    + For a manual deploy app, deploy the app again in the Amplify Console and include the new `customHttp.yml` file with the artifacts that you upload\.
 
 **Note**  
-Custom headers set in the `customHttp.yml` file and deployed in the app’s root directory will override custom headers defined in the **Custom headers** section in the AWS Management Console\. 
+Custom headers set in the `customHttp.yml` file and deployed in the app's root directory will override custom headers defined in the **Custom headers** section in the AWS Management Console\.
 
 ## Migrating custom headers<a name="migrate-custom-headers"></a>
 
-Previously, custom HTTP headers were specified for an app either by editing the buildspec in the AWS Management Console or by downloading and updating the `amplify.yml` file and saving it in the project’s root directory\. It is strongly recommended that you migrate your custom headers out of the buildspec and the `amplify.yml` file\. 
+Previously, custom HTTP headers were specified for an app either by editing the buildspec in the AWS Management Console or by downloading and updating the `amplify.yml` file and saving it in the project's root directory\. It is strongly recommended that you migrate your custom headers out of the buildspec and the `amplify.yml` file\.
 
 Specify your custom headers in the **Custom headers** section of the AWS Management Console or by downloading and editing the `customHttp.yml` file\.
 
@@ -127,7 +127,7 @@ Specify your custom headers in the **Custom headers** section of the AWS Managem
 
 1. When the download is complete, choose **Edit**\.
 
-1. Take note of the custom header information in the file, as you will use it later in step 9\. In the **Edit** window, delete any custom headers from the file and choose **Save**\. 
+1. Take note of the custom header information in the file, as you will use it later in step 9\. In the **Edit** window, delete any custom headers from the file and choose **Save**\.
 
 1. In the navigation pane, choose **App settings**, **Custom headers**\.
 
@@ -145,7 +145,7 @@ Specify your custom headers in the **Custom headers** section of the AWS Managem
 
 1. Open `amplify.yml` in the code editor of your choice\.
 
-1. Take note of the custom header information in the file, as you will use it later in step 8\. Delete the custom headers in the file\. Save and close the file\. 
+1. Take note of the custom header information in the file, as you will use it later in step 8\. Delete the custom headers in the file\. Save and close the file\.
 
 1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
@@ -164,18 +164,18 @@ Specify your custom headers in the **Custom headers** section of the AWS Managem
    + For a manual deploy app, deploy the app again in the Amplify Console and include the new `customHttp.yml` file with artifacts that you upload\.
 
 **Note**  
-Custom headers set in the `customHttp.yml` file and deployed in the app’s root directory will override the custom headers defined in the **Custom headers** section of the AWS Management Console\. 
+Custom headers set in the `customHttp.yml` file and deployed in the app's root directory will override the custom headers defined in the **Custom headers** section of the AWS Management Console\.
 
 ## Monorepo custom headers<a name="monorepo-custom-headers"></a>
 
 When you specify custom headers for an app in a monorepo, be aware of the following set up requirements:
-+ There is a specific YAML format for a monorepo\. For the correct syntax, see [Custom header YAML format](#custom-header-YAML-format)\. 
++ There is a specific YAML format for a monorepo\. For the correct syntax, see [Custom header YAML format](#custom-header-YAML-format)\.
 + You can specify custom headers for an application in a monorepo using the **Custom headers** section of the AWS Management Console\. Note that you must redeploy your application to apply the new custom headers\.
 + As an alternative to using the console, you can specify custom headers for an app in a monorepo in a `customHttp.yml` file\. You must save the `customHttp.yml` file in the root of your repo and then redeploy the application to apply the new custom headers\. Custom headers specified in the `customHttp.yml` file will override any custom headers specified using the **Custom headers** section of the AWS Management Console\.
 
 ## Security headers example<a name="example-security-headers"></a>
 
-Custom security headers enable enforcing HTTPS, preventing XSS attacks, and defending your browser against clickjacking\. Use the following YAML syntax to apply custom security headers to your app\. 
+Custom security headers enable enforcing HTTPS, preventing XSS attacks, and defending your browser against clickjacking\. Use the following YAML syntax to apply custom security headers to your app\.
 
 ```
 customHeaders:
