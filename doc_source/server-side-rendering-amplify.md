@@ -188,7 +188,8 @@ If you experience unexpected issues when deploying an SSR app with Amplify, revi
 + [Your app is too large to deploy](#app-too-large-to-deploy)
 + [Your app stores static files in a folder with a reserved path](#amplify-reserved-path)
 + [Your app has reached a CloudFront limit](#cloudfront-distribution-limit)
-+ [Your app uses Next\.js version 10](#nextjs-version-support)
++ [Access control isn't available for your app](#access-control-unsupported)
++ [Your Next\.js app uses unsupported features](#nextjs-version-support)
 + [Unsupported Regions](#amplify-region-support)
 
 ### Your output directory is overridden<a name="output-directory-overridden"></a>
@@ -258,9 +259,13 @@ Next\.js can serve static files from a folder named `public` that's stored in th
 
 [CloudFront service quotas](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) limit your AWS account to 25 distributions with attached Lambda@Edge functions\. If you exceed this quota, you can either delete any unused CloudFront distributions from your account or request a quota increase\. For more information, see [Requesting a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) in the *Service Quotas User Guide*\. 
 
-### Your app uses Next\.js version 10<a name="nextjs-version-support"></a>
+### Access control isn't available for your app<a name="access-control-unsupported"></a>
 
-You can deploy an app created with Next\.js version 10\. However, Amplify currently supports the full feature set only through version 9\.0\.
+Currently, Amplify doesn't support access control for Next\.js apps that use SSR\. If you are working with an SSR app in the Amplify console, **Access control** isn't available in the **App settings** menu in the navigation pane\.
+
+### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
+
+You can deploy an app created with Next\.js version 10\. However, Amplify doesn't currently support the full feature set\. Amplify supports all features of Next\.js versions 9\.*x\.x*, except for Incremental Static Regeneration \(ISR\)\. 
 
 ### Unsupported Regions<a name="amplify-region-support"></a>
 

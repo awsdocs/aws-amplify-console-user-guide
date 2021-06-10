@@ -11,5 +11,6 @@ This documentation helps you understand how to apply the shared responsibility m
 **Topics**
 + [Identity and Access Management for Amplify](security-iam.md)
 + [Security event logging and monitoring in Amplify](monitoring-overview.md)
++ [Data Protection in Amplify](data-protection.md)
 + [Compliance Validation for AWS Amplify](Amplify-compliance.md)
 + [Infrastructure Security in AWS Amplify](infrastructure-security.md)
