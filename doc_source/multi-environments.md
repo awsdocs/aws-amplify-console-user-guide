@@ -15,3 +15,4 @@ Your app now has two deployments available at *https://main\.appid\.amplifyapp\.
 **Topics**
 + [Team workflows with Amplify CLI backend environments](team-workflows-with-amplify-cli-backend-environments.md)
 + [Pattern\-based feature branch deployments](pattern-based-feature-branch-deployments.md)
++ [Easily utilize existing Amplify backend environments across apps](reuse-backend-environments.md)

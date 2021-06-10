@@ -332,3 +332,9 @@ You can configure Amplify Console to use diff based frontend builds\. If enabled
 To set up, choose **App settings**, **Environment variables** and then select **Manage variables**\. Add the `AMPLIFY_DIFF_DEPLOY` environment variable with a value of `true` to enable this feature\. Remove the `AMPLIFY_DIFF_DEPLOY` environment variable or set a value of `false` to disable this behavior\.
 
 You can set the `AMPLIFY_DIFF_DEPLOY_ROOT` environment variable to override the default path with a path relative to the root of your repo, such as `dist`\. 
+
+## Enable or disable diff based backend build<a name="enable-diff-backend"></a>
+
+You can configure Amplify Console to use diff based backend builds\. If enabled, at the start of each build Amplify Console will attempt to run a diff on the `amplify` folder in your repository\. If no differences are found, the backend build step will be skipped and your backend resources will not be updated\. If you do not have an `amplify` folder checked in to your repository, this value is ignored.
+
+To set up, choose **App settings**, **Environment variables** and then select **Manage variables**\. Add the `AMPLIFY_DIFF_BACKEND` environment variable with a value of `true` to enable this feature\. Remove the `AMPLIFY_DIFF_BACKEND` environment variable or set a value of `false` to disable this behavior\.
