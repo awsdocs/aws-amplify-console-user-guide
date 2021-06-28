@@ -90,7 +90,7 @@ Monorepos with multiple Amplify applications are declared as a list of applicati
 ```
 version: 1
 applications:
-  - appRoot: /react-app
+  - appRoot: apps/react-app
     env:
     variables:
         key: value
@@ -141,7 +141,7 @@ applications:
             - location
         configFilePath: *location*
         baseDirectory: *location*
-  - appRoot: /angular-app
+  - appRoot: apps/angular-app
     env:
     variables:
         key: value
