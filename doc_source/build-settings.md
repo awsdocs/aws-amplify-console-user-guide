@@ -197,7 +197,7 @@ applications:
 You must provide the following additional information for each application you declare in your build configuration:
 
 appRoot  
-The root, within the repository, that the application starts in\. This key must exist, but may have no value if the application can be automatically discovered\.
+The root, within the repository, that the application starts in\. This key must exist, and value should be the same as `AMPLIFY_MONOREPO_APP_ROOT` environment variable\.
 
 ## Branch\-specific build settings<a name="branch-specific-build-settings"></a>
 
