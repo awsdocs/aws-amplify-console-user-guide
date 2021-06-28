@@ -184,7 +184,7 @@ You can use the following example code to redirect a path to a folder with a nam
 | --- | --- | --- | --- | 
 |   `/docs?id=<my-blog-id-value`   |   `/documents/<my-blog-post-id-value>`   |   `permanent redirect (301)`   |  | 
 
- JSON \[\{"source": "/docs?id=<my\-blog\-id\-value", "status": "301", "target": "/documents/<my\-blog\-post\-id\-value>", "condition": null\}\] 
+ JSON \[\{"source": "/docs?id=<my\-blog\-id\-value>", "status": "301", "target": "/documents/<my\-blog\-post\-id\-value>", "condition": null\}\] 
 
 You can use the following example code to redirect all paths that can’t be found at a given level of a folder structure to index\.html in a specified folder\.
 
