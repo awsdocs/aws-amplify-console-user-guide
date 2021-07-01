@@ -106,7 +106,10 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID\.  |  123456  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret\.  |  example123456  | 
 |  AMPLIFY\_DIFF\_DEPLOY  |   Enable or disable diff based frontend deployment\. See [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy) for more information\.   |  true  | 
-|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist | 
+|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist |
+|  AMPLIFY\_DIFF\_BACKEND  |   Enable or disable diff based backend build\. See [Enable or disable diff based backend build](build-settings.md#enable-diff-backend) for more information\.   |  true  | 
+|  AMPLIFY\_BACKEND\_PULL\_ONLY |   Managed by Amplify Console\. See [Enable or disable full-stack CI/CD](reuse-backend-environments.md#reuse-backends-edit-existing) for more information\.   |  true  | 
+|  AMPLIFY\_BACKEND\_APP\_ID  |   Managed by Amplify Console\. See [Utilize Amplify backends across multiple apps](reuse-backend-environments.md#reuse-backends-edit-existing) for more information\.   |  abcd123  | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
 
 **Note**  
