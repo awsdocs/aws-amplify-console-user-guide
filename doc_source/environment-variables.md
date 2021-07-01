@@ -105,11 +105,12 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_GOOGLE\_CLIENT\_SECRET  |  The Google client secret\.  |  example123456  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID\.  |  123456  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret\.  |  example123456  | 
-|  AMPLIFY\_DIFF\_DEPLOY  |   Enable or disable diff based frontend deployment\. See [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy) for more information\.   |  true  | 
-|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist |
-|  AMPLIFY\_DIFF\_BACKEND  |   Enable or disable diff based backend build\. See [Enable or disable diff based backend build](build-settings.md#enable-diff-backend) for more information\.   |  true  | 
-|  AMPLIFY\_BACKEND\_PULL\_ONLY |   Managed by Amplify Console\. See [Enable or disable full-stack CI/CD](reuse-backend-environments.md#reuse-backends-edit-existing) for more information\.   |  true  | 
-|  AMPLIFY\_BACKEND\_APP\_ID  |   Managed by Amplify Console\. See [Utilize Amplify backends across multiple apps](reuse-backend-environments.md#reuse-backends-edit-existing) for more information\.   |  abcd123  | 
+|  AMPLIFY\_DIFF\_DEPLOY  |   Enable or disable diff based frontend deployment\. For more information, see [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy)\.  |  true  | 
+|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist | 
+|  AMPLIFY\_DIFF\_BACKEND  |  Enable or disable diff based backend builds\. For more information, see [Enable or disable diff based backend builds](build-settings.md#enable-diff-backend)  | true | 
+|  AMPLIFY\_BACKEND\_PULL\_ONLY  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | true | 
+|  AMPLIFY\_BACKEND\_APP\_ID  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd123 | 
+|  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build spec and want to disable backend builds, set this environment variable to `true`\.  | true | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
 
 **Note**  

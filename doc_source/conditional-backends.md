@@ -1,0 +1,5 @@
+# Conditional backend builds<a name="conditional-backends"></a>
+
+Amplify now supports conditional backend builds on all branches in an app\. To configure conditional backend builds, set the `AMPLIFY_DIFF_BACKEND` environment variable to `true`\. Enabling conditional backend builds will help speed up builds where changes are made only to the frontend\.
+
+When you enable diff based backend builds, at the start of each build, Amplify attempts to run a diff on the `amplify` folder in your repository\. If Amplify doesn't find any differences, it skips the backend build step, and doesn't update your backend resources\. If your project doesn't have an `amplify` folder in your repository, Amplify ignores the value of the `AMPLIFY_DIFF_BACKEND` environment variable\. For instructions on setting the `AMPLIFY_DIFF_BACKEND` environment variable, see [Enable or disable diff based backend builds](build-settings.md#enable-diff-backend)\.

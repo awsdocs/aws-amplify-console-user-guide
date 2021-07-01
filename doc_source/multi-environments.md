@@ -13,6 +13,8 @@ Your app now has two deployments available at *https://main\.appid\.amplifyapp\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-environments-1.png)
 
 **Topics**
-+ [Team workflows with Amplify CLI backend environments](team-workflows-with-amplify-cli-backend-environments.md)
++ [Team workflows with Amplify backend environments](team-workflows-with-amplify-cli-backend-environments.md)
 + [Pattern\-based feature branch deployments](pattern-based-feature-branch-deployments.md)
-+ [Easily utilize existing Amplify backend environments across apps](reuse-backend-environments.md)
++ [Automatic build\-time generation of Amplify config](amplify-config-autogeneration.md)
++ [Conditional backend builds](conditional-backends.md)
++ [Use Amplify backends across apps](reuse-backends.md)

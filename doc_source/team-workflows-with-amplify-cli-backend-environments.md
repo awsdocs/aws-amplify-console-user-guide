@@ -1,9 +1,9 @@
-# Team workflows with Amplify CLI backend environments<a name="team-workflows-with-amplify-cli-backend-environments"></a>
+# Team workflows with Amplify backend environments<a name="team-workflows-with-amplify-cli-backend-environments"></a>
 
 A feature branch deployment consists of a **frontend**, and \(optionally\) a **backend** environment\. The frontend is built and deployed to a global content delivery network \(CDN\), while the backend is deployed by the Amplify CLI to AWS\. For more information about this deployment scenario, see [Getting started with fullstack continuous deployments](deploy-backend.md)\.
 
 **Note**  
-You can now easily reuse Amplify backend environments across your Amplify apps. See [Utilize Amplify backends across multiple apps](reuse-backend-environments.md) for more information\. 
+Now you can easily reuse Amplify backend environments across your Amplify apps\. For more information, see [Use Amplify backends across apps](reuse-backends.md)\.
 
 You can use the Amplify Console to continuously deploy backend resources such as GraphQL APIs and Lambda functions with your feature branch deployment\. You can use the following models to deploy your backend and frontend with the Amplify Console:
 

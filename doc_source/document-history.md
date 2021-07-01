@@ -1,11 +1,12 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Amplify\.
-+ **Latest documentation update:** June 03, 2021
++ **Latest documentation update:** June 30, 2021
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Updated Feature branch deployments chapter | Added the [Automatic build\-time generation of Amplify config](amplify-config-autogeneration.md) topic to describe how to autogenerate the aws\-exports\.js file at build\-time\. Added the [Conditional backend builds](conditional-backends.md) topic to describe how to enable conditional backend builds\. Added the [Use Amplify backends across apps](reuse-backends.md) topic to describe how to reuse existing backends when you create a new app, connect a new branch to an existing app, or update an existing frontend to point to a different backend environment\. | June 30, 2021 | 
 | Updated Security chapter | Added the [Data Protection in Amplify](data-protection.md) topic to describe how to apply the shared responsibility model and how Amplify uses encryption to protect your data at rest and in transit\. | June 3, 2021 | 
 | New support for SSR feature launch | Added the [Deploy and host server\-side rendered apps with Amplify](server-side-rendering-amplify.md) chapter to describe Amplify support for web apps that use server\-side rendering \(SSR\) and are created with Next\.js\. | May 18, 2021 | 
 | New security chapter | Added the [Security in Amplify](security.md) chapter to describe how to apply the shared responsibility model when using Amplify and how to configure Amplify to meet your security and compliance objectives\. | March 26, 2021 | 
