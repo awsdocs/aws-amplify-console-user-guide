@@ -1,6 +1,6 @@
 # Set up custom domains<a name="custom-domains"></a>
 
-You can connect a custom domain to an app that you’ve deployed in the Amplify Console\. You can purchase a custom domain through a domain registrar such as Amazon Route 53, GoDaddy, or Google Domains\. Route 53 is Amazon’s Domain Name System \(DNS\) web service\. For more information about using Route 53, see [What is Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)\.
+You can connect a custom domain to an app that you’ve deployed in the Amplify Console\. You can purchase a custom domain through a domain registrar such as Amazon Route 53 , GoDaddy, or Google Domains\. Route 53 is Amazon’s Domain Name System \(DNS\) web service\. For more information about using Route 53, see [What is Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)\.
 
 When you deploy your web app with the Amplify Console, it is hosted at:
 

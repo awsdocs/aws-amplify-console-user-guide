@@ -9,6 +9,7 @@ To learn about how Amplify supports SSR, review the following topics\.
 + [Amplify support for Next\.js SSR](#ssr-Amplify-support)
 + [Deploying a Next\.js SSR app with Amplify](#deploy-nextjs-app)
 + [Adding SSR functionality to a static Next\.js app](#redeploy-ssg-to-ssr)
++ [Updating the Next\.js version for an existing app](#update-app-nextjs-version)
 + [Troubleshooting SSR deployment issues](#troubleshooting-ssr-deployment)
 
 ## What is server\-side rendering<a name="What-is-server-side-rendering"></a>
@@ -21,7 +22,7 @@ Amplify now supports web apps with server\-side rendering \(SSR\)\. When a clien
 
 Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\.
 
-Developers can use Next\.js to combine static site generation \(SSG\) and SSR in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. In a hybrid project, developers choose which type of prerendering to use for each page\.
+Developers can use Next\.js to combine static site generation \(SSG\), SSR, and Incremental Static Regeneration \(ISR\) in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. With the addition of full support for Next\.js version 10\.*x\.x*, your Next\.js app can also use ISR\. ISR enables static\-generation on a per\-page basis, at an interval that you specify, instead of on every request like an SSR page\. ISR enables you to update static content quickly without needing a full rebuild of your site\. 
 
 Prerendering can improve performance and search engine optimization\. Because Next\.js prerenders all pages on the server, the HTML content of each page is ready when it reaches the client's browser\. This content can also load faster\. Faster load times improve the end user's experience with a website and positively impact the site's SEO ranking\. Prerendering also improves SEO by enabling search engine bots to find and crawl a website's HTML content easily\.
 
@@ -177,6 +178,31 @@ After you add a service role and update the build settings, update the app's `pa
 
 Amplify detects the change to the `package.json` file in your repo and redeploys the app with SSR functionality\.
 
+## Updating the Next\.js version for an existing app<a name="update-app-nextjs-version"></a>
+
+When you deploy a new Next\.js app with Amplify, by default Amplify uses the most recent supported version of Next\.js\. Currently, Amplify supports Next\.js version 11\.
+
+For an existing app, use the following instructions to change the version of Next\.js that Amplify uses to build the app\.
+
+**To update the Next\.js version for an existing app**
+
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
+
+1. Choose the Next\.js app that you want to update\.
+
+1. In the navigation pane, choose **App settings**, **Build settings**\.
+
+1. On the **Build settings** page, in the **Build image settings** section, choose **Edit**\.
+
+1. In the **Edit build image settings** dialog box, expand the **Add package version override** list, and choose **Next\.js version**\.
+
+1. For **Version**, do one of the following:
+   + Enter **9** for support up to Next\.js version 9\.4\.*x*\.
+   + Enter **10** for support for Next\.js versions 9\.4\.*x* to 10\.*x*\.*x*\.
+   + Enter **latest**, to always upgrade to the latest Next\.js version that Amplify supports\.
+
+1. Choose **Save**\. The next time the app builds, it can use the features supported by the Next\.js version you specified in step 6\.
+
 ## Troubleshooting SSR deployment issues<a name="troubleshooting-ssr-deployment"></a>
 
 If you experience unexpected issues when deploying an SSR app with Amplify, review the following troubleshooting topics\.
@@ -270,7 +296,11 @@ Currently, Amplify doesn't support access control for Next\.js apps that use SSR
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 
-You can deploy an app created with Next\.js version 10\. However, Amplify doesn't currently support the full feature set\. Amplify supports all features of Next\.js versions 9\.*x\.x*, except for Incremental Static Regeneration \(ISR\) and Optional Catch All Routes\. 
+Amplify currently supports all features of Next\.js version 10\.*x*\.*x*, including Incremental Static Regeneration \(ISR\), Optional Catch All Routes, and Image Optimization\. In addition, Amplify supports Next\.js version 11\. For a list and description of these new features, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\.
+
+When you deploy a new Next\.js app, Amplify uses the most recent supported version of Next\.js by default\. If you have an existing Next\.js app that you deployed to Amplify with an older version of Next\.js, you can edit the app's build settings to use a newer version\. For instructions, see [Updating the Next\.js version for an existing app](#update-app-nextjs-version)\.
+
+
 
 ### Unsupported Regions<a name="amplify-region-support"></a>
 

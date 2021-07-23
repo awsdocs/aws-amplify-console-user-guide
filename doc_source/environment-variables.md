@@ -111,6 +111,7 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_BACKEND\_PULL\_ONLY  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | true | 
 |  AMPLIFY\_BACKEND\_APP\_ID  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd123 | 
 |  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build spec and want to disable backend builds, set this environment variable to `true`\.  | true | 
+|  AMPLIFY\_MONOREPO\_APP\_ROOT  |  The path to use to specify the app root of a monorepo app, relative to the root of your repository\.  | apps/react\-app | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
 
 **Note**  

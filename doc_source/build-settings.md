@@ -1,23 +1,23 @@
 # Configuring build settings<a name="build-settings"></a>
 
-The Amplify Console automatically detects the front end framework and associated build settings by inspecting the package\.json file in your repository\. You have the following options:
-+ Save the build settings in the Amplify Console \- The Amplify Console autodetects build settings and saves it so that they can be accessed via the Amplify Console\. These settings are applied to all of your branches unless there is a YML file found in your repository\.
-+ Save the build settings in your repository \- Download the amplify\.yml file and add it to the root of your repository\.
+When you deploy an app with the Amplify Console, it automatically detects the front end framework and associated build settings by inspecting the `package.json` file in your repository\. You have the following options for storing your app's build settings:
++ Save the build settings in the Amplify Console \- The Amplify Console autodetects build settings and saves them so that they can be accessed via the Amplify Console\. Amplify applies these settings to all of your branches unless there is an `amplify.yml` file stored in your repository\.
++ Save the build settings in your repository \- Download the `amplify.yml` file and add it to the root of your repository\.
 
-You can edit these settings in the Amplify Console by choosing **App settings>Build settings**\. These build settings are applied to all the branches in your app, except for the branches that have a YML file saved in the repository\.
+You can edit an app's build settings in the Amplify Console by choosing **App settings**, **Build settings**\. The build settings are applied to all the branches in your app, except for the branches that have an `amplify.yml` file saved in the repository\.
 
 **Note**  
-**Build settings** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
+**Build settings** is visible in the Amplify Console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
-## YML specification syntax<a name="yml-specification-syntax"></a>
+## Build specification YAML syntax<a name="yml-specification-syntax"></a>
 
-The build specification YML contains a collection of build commands and related settings that the Amplify Console uses to run your build\. The YML is structured as follows:
+The build specification YAML contains a collection of build commands and related settings that the Amplify Console uses to run your build\. The YAML is structured as follows:
 
 ```
 version: 1
 env:
   variables:
-      key: value
+    key: value
 backend:
   phases:
     preBuild:
@@ -66,7 +66,7 @@ test:
     configFilePath: *location*
     baseDirectory: *location*
 ```
-+  **version** \- Represents the Amplify Console YML version number\.
++  **version** \- Represents the Amplify Console YAML version number\.
 + **appRoot** \- The path within the repository that this application resides in\. *Ignored unless multiple applications are defined\.*
 +  **env** \- Add environment variables to this section\. You can also add environment variables using the console\.
 +  **backend** \- Run Amplify CLI commands to provision a backend, update Lambda functions, or GraphQL schemas as part of continuous deployment\. Learn how to [deploy a backend with your frontend](deploy-backend.md)\.
@@ -80,124 +80,6 @@ test:
 +  **artifacts>base\-directory** \- The directory in which your build artifacts exist\.
 +  **artifacts>files** \- Specify files from your artifact you want to deploy\. *\*\*/\** is to include all files\.
 +  **cache** \- The buildspec’s cache field is used to cache build\-time depedencies such as the *node\_modules* folder, and is automatically suggested based on the package manager and framework that the customer’s app is built in\. During the first build, any paths here are cached, and on subsequent builds we re\-inflate the cache and use those cached dependencies where possible to speed up build time\.
-
-## Monorepo settings<a name="monorepo-configuration"></a>
-
-If you keep multiple projects in a single repository, called a monorepo, you can deploy those applications using Amplify without the need for multiple build configurations or branch configurations\. 
-
-Monorepos with multiple Amplify applications are declared as a list of applications:
-
-```
-version: 1
-applications:
-  - appRoot: /react-app
-    env:
-    variables:
-        key: value
-    backend:
-      phases:
-        preBuild:
-          commands:
-            - *enter command*
-        build:
-          commands:
-            - *enter command*
-        postBuild:
-            commands:
-            - *enter command*
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - *enter command*
-            - *enter command*
-        build:
-          commands:
-            - *enter command*
-      artifacts:
-        files:
-            - location
-            - location
-        discard-paths: yes
-        baseDirectory: location
-      cache:
-        paths:
-            - path
-            - path
-    test:
-      phases:
-        preTest:
-          commands:
-            - *enter command*
-        test:
-          commands:
-            - *enter command*
-        postTest:
-          commands:
-            - *enter command*
-      artifacts:
-        files:
-            - location
-            - location
-        configFilePath: *location*
-        baseDirectory: *location*
-  - appRoot: /angular-app
-    env:
-    variables:
-        key: value
-    backend:
-      phases:
-        preBuild:
-          commands:
-            - *enter command*
-        build:
-          commands:
-            - *enter command*
-        postBuild:
-            commands:
-            - *enter command*
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - *enter command*
-            - *enter command*
-        build:
-          commands:
-            - *enter command*
-      artifacts:
-        files:
-            - location
-            - location
-        discard-paths: yes
-        baseDirectory: location
-      cache:
-        paths:
-            - path
-            - path
-    test:
-      phases:
-        preTest:
-          commands:
-            - *enter command*
-        test:
-          commands:
-            - *enter command*
-        postTest:
-          commands:
-            - *enter command*
-      artifacts:
-        files:
-            - location
-            - location
-        configFilePath: *location*
-        baseDirectory: *location*
-```
-
-You must provide the following additional information for each application you declare in your build configuration:
-
-appRoot  
-The root, within the repository, that the application starts in\. This key must exist, but may have no value if the application can be automatically discovered\.
 
 ## Branch\-specific build settings<a name="branch-specific-build-settings"></a>
 
@@ -220,7 +102,7 @@ For monorepos, users want to be able to cd into a folder to run the build\. Afte
 version: 1
 env:
   variables:
-      key: value
+    key: value
 frontend:
   phases:
     preBuild:
@@ -234,13 +116,13 @@ frontend:
 
 ## Deploying the backend with the front end<a name="frontend-with-backend"></a>
 
-The amplifyPush is a helper script that helps you with backend deployments\. The build settings below automatically determine the correct backend environment to deploy for the current branch\.
+The `amplifyPush` is a helper script that helps you with backend deployments\. The build settings below automatically determine the correct backend environment to deploy for the current branch\.
 
 ```
 version: 1
 env:
   variables:
-      key: value
+    key: value
 backend:
   phases:
     build:
@@ -308,7 +190,7 @@ build:
 
 ## Key\-value storage for every build<a name="key-value-storage-for-every-build"></a>
 
-The **envCache** provides key\-value storage at build time\. Values stored in the envCache can only be modified during a build and can be re\-used at the next build\. Using the envCache, we can store information on the deployed environment and make it available to the build container in successive builds\. Unlike values stored in the envCache, changes to environment variables during a build are not persisted to future builds\.
+The `envCache` provides key\-value storage at build time\. Values stored in the `envCache` can only be modified during a build and can be re\-used at the next build\. Using the `envCache`, we can store information on the deployed environment and make it available to the build container in successive builds\. Unlike values stored in the `envCache`, changes to environment variables during a build are not persisted to future builds\.
 
 Example usage:
 
@@ -323,7 +205,7 @@ To skip an automatic build on a particular commit, include the text **\[skip\-cd
 
 ## Disable automatic builds<a name="disable-automatic-builds"></a>
 
-You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings > General** and then scroll to the **Branches** section that lists all the connected branches\. Select a branch, and then choose **Action > Disable auto build**\. Further commits to that branch will no longer trigger a new build\.
+You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings**, **General**, and then scroll to the **Branches** section that lists the connected branches\. Select a branch, and then choose **Action**, **Disable auto build**\. Further commits to that branch will no longer trigger a new build\.
 
 ## Enable or disable diff based frontend build and deploy<a name="enable-diff-deploy"></a>
 

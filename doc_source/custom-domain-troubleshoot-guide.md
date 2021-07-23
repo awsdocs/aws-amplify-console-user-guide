@@ -28,7 +28,7 @@ If you encounter issues when adding a custom domain to an app in the AWS Amplify
 
 ## My domain hosted with Amazon Route 53 is stuck in the Pending Verification state<a name="my-domain-hosted-with-amazon-route-53-is-stuck-in-the-pending-verification-state"></a>
 
-If you transferred your domain to Amazon Route 53, it is possible that your domain has different name servers than those issued by the Amplify Console when your app was created\. Perform the following steps to diagnose the cause of the error\.
+If you transferred your domain to Amazon Route 53 , it is possible that your domain has different name servers than those issued by the Amplify Console when your app was created\. Perform the following steps to diagnose the cause of the error\.
 
 1. Sign in to the [Amazon Route 53 console](https://console.aws.amazon.com/route53/home)
 

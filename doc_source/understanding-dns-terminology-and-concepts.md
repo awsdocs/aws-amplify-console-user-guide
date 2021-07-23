@@ -13,7 +13,7 @@ A Canonical Record Name \(CNAME\) is a type of DNS record that masks the domain 
 An ANAME record is like a CNAME record, but at the root level\. An ANAME points the root of your domain to an FQDN\. That FQDN points to an IP address\.
 
 **Name server**  
-A name server is a server on the internet that's specialized in handling queries regarding the location of a domain name’s various services\. If you set up your domain in Amazon Route 53, a list of name servers are already assigned to your domain\.
+A name server is a server on the internet that's specialized in handling queries regarding the location of a domain name’s various services\. If you set up your domain in Amazon Route 53 , a list of name servers are already assigned to your domain\.
 
 **NS record**  
 An NS record points to name servers that look up your domain details\.
@@ -38,7 +38,7 @@ The following list describes each step in the domain set up process in detail\.
 The AWS Amplify Console issues an SSL/TLS certificate for setting up a secure custom domain\.
 
 **SSL/TLS configuration and verification**  
-Before issuing a certificate, the Amplify Console verifies that you are the owner of the domain\. For domains managed by Amazon Route 53, Amplify automatically updates the DNS verification record\. For domains managed outside of Route 53, you need to manually add the DNS verification record displayed by the Amplify console into your domain with a third\-party DNS provider\.
+Before issuing a certificate, the Amplify Console verifies that you are the owner of the domain\. For domains managed by Amazon Route 53 , Amplify automatically updates the DNS verification record\. For domains managed outside of Route 53, you need to manually add the DNS verification record displayed by the Amplify console into your domain with a third\-party DNS provider\.
 
 **Domain activation**  
 The domain is successfully verified\. For domains managed outside of Route 53, you need to manually add the CNAME records displayed by the Amplify console into your domain with a third\-party DNS provider\.

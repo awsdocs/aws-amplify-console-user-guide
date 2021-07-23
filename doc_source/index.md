@@ -28,6 +28,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Set up automatic subdomains for a Amazon Route 53 custom domain](to-set-up-automatic-subdomains-for-a-Route-53-custom-domain.md)
    + [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)
 + [Configuring build settings](build-settings.md)
+   + [Monorepo build settings](monorepo-configuration.md)
 + [Feature branch deployments and team workflows](multi-environments.md)
    + [Team workflows with Amplify backend environments](team-workflows-with-amplify-cli-backend-environments.md)
    + [Pattern-based feature branch deployments](pattern-based-feature-branch-deployments.md)
