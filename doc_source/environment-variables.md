@@ -127,17 +127,17 @@ Environment secrets are similar to environment variables, but they are SSM param
 
 1. Sign in to the AWS Management Console and open the [AWS Systems Manager Console](https://console.aws.amazon.com/systems-manager/)\.
 
-1. In the AWS Systems Manager Console, choose Parameter Store, and then choose Create Parameter.
+1. In the AWS Systems Manager Console, choose **Parameter Store**, and then choose **Create Parameter**.
 
 1. Create a parameter name in the format `/amplify/{your_app_id}/{your_backend_environment_name}/{your_parameter_name}`
 
-1. Under type, choose Secure String for encrypted values
+1. Under type, choose **SecureString** for encrypted values
 
-1. Under KMS key source, choose my currenct account to use the default key for your account
+1. Under KMS key source, choose **My current account** to use the default key for your account
 
-1. Under Value, enter the value you want
+1. Under **Value**, enter your secret value to encrypt
 
-1. Click Create parameter
+1. Click **Create parameter**
 
 1. Repeat to add multiple secrets
 
