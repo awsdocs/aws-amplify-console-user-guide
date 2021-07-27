@@ -116,3 +116,36 @@ You can use the following environment variables that are accessible by default w
 
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
+
+# Environment secrets<a name="environment-secrets"></a>
+
+Environment secrets are similar to environment variables, but they are SSM parameter store key value pairs and can be encrypted.
+
+## Set environment secrets<a name="setting-env-secrets"></a>
+
+**To set environment secrets**
+
+1. Sign in to the AWS Management Console and open the [AWS Systems Manager Console](https://console.aws.amazon.com/systems-manager/)\.
+
+1. In the AWS Systems Manager Console, choose Parameter Store, and then choose Create Parameter.
+
+1. Create a parameter name in the format `/amplify/{your_app_id}/{your_backend_environment_name}/{your_parameter_name}`
+
+1. Under type, choose Secure String for encrypted values
+
+1. Under KMS key source, choose my currenct account to use the default key for your account
+
+1. Under Value, enter the value you want
+
+1. Click Create parameter
+
+1. Repeat to add multiple secrets
+
+**Note**  
+Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_backend_environment_name}` for the specific environment build, and the default KMS key needs to be used for Amplify to decrypt the value.
+
+
+## Access environment secrets<a name="access-env-secrets"></a>
+
+Accessing an environment secret during a build is similar to environment variables, except all environment secrets are in `process.env.secrets` as a JSON string\.
+
