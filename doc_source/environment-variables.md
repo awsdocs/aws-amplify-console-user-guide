@@ -149,3 +149,14 @@ Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_back
 
 Accessing an environment secret during a build is similar to environment variables, except all environment secrets are in `process.env.secrets` as a JSON string\.
 
+
+## Amplify Console environment secrets<a name="amplify-console-environment-secrets"></a>
+
+You can use the following environment secrets that are accessible by default within the Amplify Console\.
+
+| Variable name | Description | Example value | 
+| --- | --- | --- | 
+|  AMPLIFY\_SIWA\_CLIENT\_ID  |  The Sign in with Apple client ID  |  com.yourapp.auth  | 
+|  AMPLIFY\_SIWA\_TEAM\_ID  |  The Sign in with Apple team ID   |  ABCD123  | 
+|  AMPLIFY\_SIWA\_KEY\_ID  |  The Sign in with Apple key ID  |  ABCD123  | 
+|  AMPLIFY\_SIWA\_PRIVATE\_KEY  |  The Sign in with Apple private key  |  -----BEGIN PRIVATE KEY-----****-----END PRIVATE KEY-----  | 
