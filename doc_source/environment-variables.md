@@ -119,7 +119,7 @@ The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment va
 
 # Environment secrets<a name="environment-secrets"></a>
 
-Environment secrets are similar to environment variables, but they are SSM parameter store key value pairs and can be encrypted.
+Environment secrets are similar to environment variables, but they are SSM parameter store key value pairs and can be encrypted. Some values must be encrypted such as the Sign in with Apple private key for Amplify Console.
 
 ## Set environment secrets<a name="setting-env-secrets"></a>
 
@@ -153,6 +153,9 @@ Accessing an environment secret during a build is similar to environment variabl
 ## Amplify Console environment secrets<a name="amplify-console-environment-secrets"></a>
 
 You can use the following environment secrets that are accessible by default within the Amplify Console\.
+
+Example full SSM parameter name:
+`/amplify/{your_app_id}/{your_backend_environment_name}/AMPLIFY_SIWA_CLIENT_ID`
 
 | Variable name | Description | Example value | 
 | --- | --- | --- | 
