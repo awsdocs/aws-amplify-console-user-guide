@@ -154,7 +154,7 @@ Accessing an environment secret during a build is similar to environment variabl
 
 You can use the following environment secrets that are accessible by default within the Amplify Console\.
 
-Example full SSM parameter name:
+Your full SSM parameter name should look something like this:
 `/amplify/{your_app_id}/{your_backend_environment_name}/AMPLIFY_SIWA_CLIENT_ID`
 
 | Variable name | Description | Example value | 
