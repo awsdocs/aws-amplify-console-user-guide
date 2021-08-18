@@ -116,3 +116,50 @@ You can use the following environment variables that are accessible by default w
 
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
+
+# Environment secrets<a name="environment-secrets"></a>
+
+Environment secrets are similar to environment variables, but they are SSM parameter store key value pairs and can be encrypted. Some values must be encrypted such as the Sign in with Apple private key for Amplify Console.
+
+## Set environment secrets<a name="setting-env-secrets"></a>
+
+**To set environment secrets**
+
+1. Sign in to the AWS Management Console and open the [AWS Systems Manager Console](https://console.aws.amazon.com/systems-manager/)\.
+
+1. In the AWS Systems Manager Console, choose **Parameter Store**, and then choose **Create Parameter**.
+
+1. Create a parameter name in the format `/amplify/{your_app_id}/{your_backend_environment_name}/{your_parameter_name}`
+
+1. Under type, choose **SecureString** for encrypted values
+
+1. Under KMS key source, choose **My current account** to use the default key for your account
+
+1. Under **Value**, enter your secret value to encrypt
+
+1. Click **Create parameter**
+
+1. Repeat to add multiple secrets
+
+**Note**  
+Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_backend_environment_name}` for the specific environment build, and the default KMS key needs to be used for Amplify to decrypt the value.
+
+
+## Access environment secrets<a name="access-env-secrets"></a>
+
+Accessing an environment secret during a build is similar to environment variables, except all environment secrets are in `process.env.secrets` as a JSON string\.
+
+
+## Amplify Console environment secrets<a name="amplify-console-environment-secrets"></a>
+
+You can use the following environment secrets that are accessible by default within the Amplify Console\.
+
+Your full SSM parameter name should look something like this:
+`/amplify/{your_app_id}/{your_backend_environment_name}/AMPLIFY_SIWA_CLIENT_ID`
+
+| Variable name | Description | Example value | 
+| --- | --- | --- | 
+|  AMPLIFY\_SIWA\_CLIENT\_ID  |  The Sign in with Apple client ID  |  com.yourapp.auth  | 
+|  AMPLIFY\_SIWA\_TEAM\_ID  |  The Sign in with Apple team ID   |  ABCD123  | 
+|  AMPLIFY\_SIWA\_KEY\_ID  |  The Sign in with Apple key ID  |  ABCD123  | 
+|  AMPLIFY\_SIWA\_PRIVATE\_KEY  |  The Sign in with Apple private key  |  -----BEGIN PRIVATE KEY-----****-----END PRIVATE KEY-----  | 
