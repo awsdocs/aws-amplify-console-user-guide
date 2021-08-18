@@ -12,6 +12,7 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [Managing access using policies](#security_iam_access-manage)
 + [How Amplify works with IAM](security_iam_service-with-iam.md)
 + [Identity\-based policy examples for Amplify](security_iam_id-based-policy-examples.md)
++ [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md)
 + [Troubleshooting Amplify identity and access](security_iam_troubleshoot.md)
 + [Amplify permissions reference](security_iam_permissions-reference.md)
 

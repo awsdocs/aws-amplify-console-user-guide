@@ -9,7 +9,7 @@ Environment variables are key\-value pairs that are available at build time\. Th
 As a best practice, you can use environment variables to expose these configurations\. All environment variables that you add are encrypted to prevent rogue access, so you can use them to store secret information\.
 
 **Note**  
-**Environment variables** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
+**Environment variables** is visible in the Amplify Console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
 ## Set environment variables<a name="setting-env-vars"></a>
 
@@ -117,49 +117,51 @@ You can use the following environment variables that are accessible by default w
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
 
-# Environment secrets<a name="environment-secrets"></a>
+## Environment secrets<a name="environment-secrets"></a>
 
-Environment secrets are similar to environment variables, but they are SSM parameter store key value pairs and can be encrypted. Some values must be encrypted such as the Sign in with Apple private key for Amplify Console.
+Environment secrets are similar to environment variables, but they are AWS Systems Manager \(SSM\) Parameter Store key value pairs that can be encrypted\. Some values must be encrypted, such as the Sign in with Apple private key for Amplify Console\.
 
-## Set environment secrets<a name="setting-env-secrets"></a>
+### Set environment secrets<a name="set-environment-secrets"></a>
 
-**To set environment secrets**
+Use the following instructions to set an environment secret for an Amplify app using the AWS Systems Manager console\.
 
-1. Sign in to the AWS Management Console and open the [AWS Systems Manager Console](https://console.aws.amazon.com/systems-manager/)\.
+**To set an environment secret**
 
-1. In the AWS Systems Manager Console, choose **Parameter Store**, and then choose **Create Parameter**.
+1. Sign in to the AWS Management Console and open the [AWS Systems Manager console](https://console.aws.amazon.com/systems-manager/)\.
 
-1. Create a parameter name in the format `/amplify/{your_app_id}/{your_backend_environment_name}/{your_parameter_name}`
+1. In the navigation pane, choose **Application Management**, then choose **Parameter Store**\.
 
-1. Under type, choose **SecureString** for encrypted values
+1. On the **AWS Systems Manager Parameter Store** page, choose **Create parameter**\.
 
-1. Under KMS key source, choose **My current account** to use the default key for your account
+1. On the **Create parameter** page, in the **Parameter details** section, do the following:
 
-1. Under **Value**, enter your secret value to encrypt
+   1. For **Name**, enter a parameter in the format **/amplify/\{your\_app\_id\}/\{your\_backend\_environment\_name\}/\{your\_parameter\_name\}**\.
 
-1. Click **Create parameter**
+   1. For **Type**, choose **SecureString**\.
 
-1. Repeat to add multiple secrets
+   1. For **KMS key source**, choose **My current account** to use the default key for your account\.
+
+   1. For **Value**, enter your secret value to encrypt\.
+
+1. Choose, **Create parameter**\.
 
 **Note**  
-Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_backend_environment_name}` for the specific environment build, and the default KMS key needs to be used for Amplify to decrypt the value.
+Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_backend_environment_name}` for the specific environment build\. You must specify the default AWS KMS key to allow Amplify to decrypt the value\.
 
+### Access environment secrets<a name="access-environment-secrets"></a>
 
-## Access environment secrets<a name="access-env-secrets"></a>
+Accessing an environment secret during a build is similar to [accessing environment variables](#access-env-vars), except that environment secrets are stored in `process.env.secrets` as a JSON string\.
 
-Accessing an environment secret during a build is similar to environment variables, except all environment secrets are in `process.env.secrets` as a JSON string\.
-
-
-## Amplify Console environment secrets<a name="amplify-console-environment-secrets"></a>
+### Amplify Console environment secrets<a name="amplify-environment-secrets"></a>
 
 You can use the following environment secrets that are accessible by default within the Amplify Console\.
 
-Your full SSM parameter name should look something like this:
-`/amplify/{your_app_id}/{your_backend_environment_name}/AMPLIFY_SIWA_CLIENT_ID`
+
+****  
 
 | Variable name | Description | Example value | 
 | --- | --- | --- | 
-|  AMPLIFY\_SIWA\_CLIENT\_ID  |  The Sign in with Apple client ID  |  com.yourapp.auth  | 
-|  AMPLIFY\_SIWA\_TEAM\_ID  |  The Sign in with Apple team ID   |  ABCD123  | 
+|  AMPLIFY\_SIWA\_CLIENT\_ID  |  The Sign in with Apple client ID  |  com\.yourapp\.auth  | 
+|  AMPLIFY\_SIWA\_TEAM\_ID  |  The Sign in with Apple team ID  |  ABCD123  | 
 |  AMPLIFY\_SIWA\_KEY\_ID  |  The Sign in with Apple key ID  |  ABCD123  | 
-|  AMPLIFY\_SIWA\_PRIVATE\_KEY  |  The Sign in with Apple private key  |  -----BEGIN PRIVATE KEY-----****-----END PRIVATE KEY-----  | 
+|  AMPLIFY\_SIWA\_PRIVATE\_KEY  |  The Sign in with Apple private key  |  \-\-\-\-\-BEGIN PRIVATE KEY\-\-\-\-\- \*\*\*\*\.\.\.\.\.\. \-\-\-\-\-END PRIVATE KEY\-\-\-\-\-  | 

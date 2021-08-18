@@ -1,11 +1,12 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Amplify\.
-+ **Latest documentation update:** July 22, 2021
++ **Latest documentation update:** July 28, 2021
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| New managed policies topic | Added the [AWS managed policies for AWS Amplify ](security-iam-awsmanpol.md) topic to describe the AWS managed policies for Amplify and recent changes to those policies\. | July 28, 2021 | 
 | Updated Server side rendering chapter | Updated the [Deploy and host server\-side rendered apps with Amplify](server-side-rendering-amplify.md) chapter to describe new support for Next\.js version 10\.x\.x and Next\.js version 11\. | July 22, 2021 | 
 | Updated Configuring build settings chapter | Added the [Monorepo build settings](monorepo-configuration.md) topic to describe how to configure the build settings and the new AMPLIFY\_MONOREPO\_APP\_ROOT environment variable when deploying a monorepo app with Amplify\. | July 20, 2021 | 
 | Updated Feature branch deployments chapter | Added the [Automatic build\-time generation of Amplify config](amplify-config-autogeneration.md) topic to describe how to autogenerate the aws\-exports\.js file at build\-time\. Added the [Conditional backend builds](conditional-backends.md) topic to describe how to enable conditional backend builds\. Added the [Use Amplify backends across apps](reuse-backends.md) topic to describe how to reuse existing backends when you create a new app, connect a new branch to an existing app, or update an existing frontend to point to a different backend environment\. | June 30, 2021 | 

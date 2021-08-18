@@ -111,13 +111,13 @@ Custom headers set in the `customHttp.yml` file and deployed in the app's root d
 
 ## Migrating custom headers<a name="migrate-custom-headers"></a>
 
-Previously, custom HTTP headers were specified for an app either by editing the buildspec in the AWS Management Console or by downloading and updating the `amplify.yml` file and saving it in the project's root directory\. It is strongly recommended that you migrate your custom headers out of the buildspec and the `amplify.yml` file\.
+Previously, custom HTTP headers were specified for an app either by editing the buildspec in the AWS Management Console or by downloading and updating the `amplify.yml` file and saving it in the project 's root directory\. It is strongly recommended that you migrate your custom headers out of the buildspec and the `amplify.yml` file\.
 
 Specify your custom headers in the **Custom headers** section of the AWS Management Console or by downloading and editing the `customHttp.yml` file\.
 
 **To migrate custom headers stored in the Amplify Console**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [ Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to perform the custom header migration on\.
 

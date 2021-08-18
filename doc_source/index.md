@@ -54,6 +54,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Identity and Access Management for Amplify](security-iam.md)
       + [How Amplify works with IAM](security_iam_service-with-iam.md)
       + [Identity-based policy examples for Amplify](security_iam_id-based-policy-examples.md)
+      + [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md)
       + [Troubleshooting Amplify identity and access](security_iam_troubleshoot.md)
       + [Amplify permissions reference](security_iam_permissions-reference.md)
    + [Security event logging and monitoring in Amplify](monitoring-overview.md)
