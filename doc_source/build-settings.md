@@ -79,7 +79,7 @@ test:
   +  **postBuild** \- The post\-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory\.
 +  **artifacts>base\-directory** \- The directory in which your build artifacts exist\.
 +  **artifacts>files** \- Specify files from your artifact you want to deploy\. *\*\*/\** is to include all files\.
-+  **cache** \- The buildspec’s cache field is used to cache build\-time depedencies such as the *node\_modules* folder, and is automatically suggested based on the package manager and framework that the customer’s app is built in\. During the first build, any paths here are cached, and on subsequent builds we re\-inflate the cache and use those cached dependencies where possible to speed up build time\.
++  **cache** \- The buildspec’s cache field is used to cache build\-time dependencies such as the *node\_modules* folder, and is automatically suggested based on the package manager and framework that the customer’s app is built in\. During the first build, any paths here are cached, and on subsequent builds we re\-inflate the cache and use those cached dependencies where possible to speed up build time\.
 
 ## Branch\-specific build settings<a name="branch-specific-build-settings"></a>
 
