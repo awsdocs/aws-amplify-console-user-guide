@@ -38,6 +38,9 @@ HTTP `Cache-Control` header `max-age` and `s-maxage` directives affect the conte
 
 You can manually adjust the `s-maxage` directive to have more control over the performance and deployment availability of your app\. For example, to increase the length of time that your content stays cached at the edge, you can manually increase the time to live \(TTL\) by updating `s-maxage` to a value longer than the default 600 seconds \(10 minutes\)\.
 
+**Note**  
+When performance mode is enabled for an app, Amplify increases the maximum TTL, that you can set for the app using a custom header, from 10 minutes \(600 seconds\) to one day \(86,400 seconds\)\. Amplify caps the `s-maxage` that you can set using a custom header at one day\. For example, if you set `s-maxage` to one week \(604,800 seconds\), Amplify uses the maximum TTL of one day\.
+
 You can define custom headers for an app in the **Custom headers** section of the Amplify Console\. For more information, see [Setting custom headers](custom-headers.md#setting-custom-headers)\. To specify a custom value for `s-maxage`, use the following YAML format\. This example keeps the associated content cached at the edge for 3600 seconds \(one hour\)\.
 
 ```
