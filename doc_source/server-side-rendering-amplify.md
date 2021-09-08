@@ -20,9 +20,9 @@ Amplify now supports web apps with server\-side rendering \(SSR\)\. When a clien
 
 ## Amplify support for Next\.js SSR<a name="ssr-Amplify-support"></a>
 
-Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\.
+Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\. You can deploy apps built with Next.js 11 with features such as image and script optimization. Incremental static regeneration is currently not fully supported.
 
-Developers can use Next\.js to combine static site generation \(SSG\), SSR, and Incremental Static Regeneration \(ISR\) in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. With the addition of full support for Next\.js version 10\.*x\.x*, your Next\.js app can also use ISR\. ISR enables static\-generation on a per\-page basis, at an interval that you specify, instead of on every request like an SSR page\. ISR enables you to update static content quickly without needing a full rebuild of your site\. 
+Developers can use Next\.js to combine static site generation \(SSG\) and SSR in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. 
 
 Prerendering can improve performance and search engine optimization\. Because Next\.js prerenders all pages on the server, the HTML content of each page is ready when it reaches the client's browser\. This content can also load faster\. Faster load times improve the end user's experience with a website and positively impact the site's SEO ranking\. Prerendering also improves SEO by enabling search engine bots to find and crawl a website's HTML content easily\.
 
