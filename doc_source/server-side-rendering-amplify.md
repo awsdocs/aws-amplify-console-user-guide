@@ -20,9 +20,9 @@ Amplify now supports web apps with server\-side rendering \(SSR\)\. When a clien
 
 ## Amplify support for Next\.js SSR<a name="ssr-Amplify-support"></a>
 
-Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\.
+Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\. You can deploy apps built with Next\.js 11 with features such as image and script optimization\. Currently, Amplify doesn't fully support Incremental Static Regeneration \(ISR\)\.
 
-Developers can use Next\.js to combine static site generation \(SSG\), SSR, and Incremental Static Regeneration \(ISR\) in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. With the addition of full support for Next\.js version 10\.*x\.x*, your Next\.js app can also use ISR\. ISR enables static\-generation on a per\-page basis, at an interval that you specify, instead of on every request like an SSR page\. ISR enables you to update static content quickly without needing a full rebuild of your site\. 
+Developers can use Next\.js to combine static site generation \(SSG\), and SSR in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. 
 
 Prerendering can improve performance and search engine optimization\. Because Next\.js prerenders all pages on the server, the HTML content of each page is ready when it reaches the client's browser\. This content can also load faster\. Faster load times improve the end user's experience with a website and positively impact the site's SEO ranking\. Prerendering also improves SEO by enabling search engine bots to find and crawl a website's HTML content easily\.
 
@@ -292,11 +292,11 @@ Next\.js can serve static files from a folder named `public` that's stored in th
 
 ### Access control isn't available for your app<a name="access-control-unsupported"></a>
 
-Currently, Amplify doesn't support access control for Next\.js apps that use SSR\. If you are working with an SSR app in the Amplify console, **Access control** isn't available in the **App settings** menu in the navigation pane\.
+Amplify now supports access control for Next\.js SSR apps\. Previously, Amplify didn't support access control for Next\.js SSR apps\. If you are working with an SSR app that is already deployed in the Amplify console, you must redeploy the app to enable access control\. After you redeploy, **Access control** displays in the **App settings** menu for the app\.
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 
-Amplify currently supports all features of Next\.js version 10\.*x*\.*x*, including Incremental Static Regeneration \(ISR\), Optional Catch All Routes, and Image Optimization\. In addition, Amplify supports Next\.js version 11\. For a list and description of these new features, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\.
+Amplify currently supports Next\.js version 10\.*x*\.*x*, including Optional Catch All Routes, and Image Optimization\. Currently, Amplify doesn't fully support Incremental Static Regeneration \(ISR\)\. In addition, Amplify supports Next\.js version 11\. For a list and description of these new features, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\.
 
 When you deploy a new Next\.js app, Amplify uses the most recent supported version of Next\.js by default\. If you have an existing Next\.js app that you deployed to Amplify with an older version of Next\.js, you can edit the app's build settings to use a newer version\. For instructions, see [Updating the Next\.js version for an existing app](#update-app-nextjs-version)\.
 
