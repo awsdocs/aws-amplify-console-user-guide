@@ -80,7 +80,9 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
 
 1. Choose **Save**\.
 
-1. If you're working with an app in a monorepo or an [app that uses server\-side rendering \(SSR\)](server-side-rendering-amplify.md), you must redeploy the app to apply the new custom headers\.
+1. Redeploy the app to apply the new custom headers\.
+   + For a CI/CD app, navigate to the branch to deploy and choose **Redeploy this version**\. You can also perform a new build from your Git repository\.
+   + For a manual deploy app, deploy the app again in the Amplify Console\.
 
 **To set custom headers using the customHttp\.yml file**
 
@@ -102,7 +104,7 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
 
 1. Save the edited `customHttp.yml` file in your project's root directory\. If you are working with a monorepo, save the `customHttp.yml` file in the root of your repo\.
 
-1. Deploy your app to apply the new custom headers\.
+1. Redeploy the app to apply the new custom headers\.
    + For a CI/CD app, perform a new build from your Git repository that includes the new `customHttp.yml` file\.
    + For a manual deploy app, deploy the app again in the Amplify Console and include the new `customHttp.yml` file with the artifacts that you upload\.
 
@@ -159,7 +161,7 @@ Specify your custom headers in the **Custom headers** section of the AWS Managem
 
 1. Save the edited `customHttp.yml` file in your project's root directory\. If you are working with a monorepo, save the file in the root of your repo\.
 
-1. Deploy your app to apply the new custom headers\.
+1. Redeploy the app to apply the new custom headers\.
    + For a CI/CD app, perform a new build from your Git repository that includes the new `customHttp.yml` file\.
    + For a manual deploy app, deploy the app again in the Amplify Console and include the new `customHttp.yml` file with artifacts that you upload\.
 
@@ -168,10 +170,10 @@ Custom headers set in the `customHttp.yml` file and deployed in the app's root d
 
 ## Monorepo custom headers<a name="monorepo-custom-headers"></a>
 
-When you specify custom headers for an app in a monorepo, be aware of the following set up requirements:
+When you specify custom headers for an app in a monorepo, be aware of the following setup requirements:
 + There is a specific YAML format for a monorepo\. For the correct syntax, see [Custom header YAML format](#custom-header-YAML-format)\.
 + You can specify custom headers for an application in a monorepo using the **Custom headers** section of the AWS Management Console\. Note that you must redeploy your application to apply the new custom headers\.
-+ As an alternative to using the console, you can specify custom headers for an app in a monorepo in a `customHttp.yml` file\. You must save the `customHttp.yml` file in the root of your repo and then redeploy the application to apply the new custom headers\. Custom headers specified in the `customHttp.yml` file will override any custom headers specified using the **Custom headers** section of the AWS Management Console\.
++ As an alternative to using the console, you can specify custom headers for an app in a monorepo in a `customHttp.yml` file\. You must save the `customHttp.yml` file in the root of your repo and then redeploy the application to apply the new custom headers\. Custom headers specified in the `customHttp.yml` file override any custom headers specified using the **Custom headers** section of the AWS Management Console\.
 
 ## Security headers example<a name="example-security-headers"></a>
 

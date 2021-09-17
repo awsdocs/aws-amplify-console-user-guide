@@ -20,7 +20,7 @@ Amplify now supports web apps with server\-side rendering \(SSR\)\. When a clien
 
 ## Amplify support for Next\.js SSR<a name="ssr-Amplify-support"></a>
 
-Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\. You can deploy apps built with Next\.js 11 with features such as image and script optimization\. Currently, Amplify doesn't fully support Incremental Static Regeneration \(ISR\)\.
+Currently Amplify supports deployment and hosting for server\-side rendered \(SSR\) web apps created using Next\.js only\. Next\.js is a React framework for developing SPAs with JavaScript\. You can deploy apps built with Next\.js 11 with features such as image and script optimization, and Incremental Static Regeneration \(ISR\)\.
 
 Developers can use Next\.js to combine static site generation \(SSG\), and SSR in a single project\. SSG pages are prerendered at build time, and SSR pages are prerendered at request time\. 
 
@@ -296,7 +296,7 @@ Amplify now supports access control for Next\.js SSR apps\. Previously, Amplify 
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 
-Amplify currently supports Next\.js version 10\.*x*\.*x*, including Optional Catch All Routes, and Image Optimization\. Currently, Amplify doesn't fully support Incremental Static Regeneration \(ISR\)\. In addition, Amplify supports Next\.js version 11\. For a list and description of these new features, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\.
+Amplify currently supports Next\.js version 10\.*x*\.*x*, including Optional Catch All Routes, Image Optimization, and Incremental Static Regeneration \(ISR\)\. In addition, Amplify supports Next\.js version 11\. For a list and description of these new features, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\.
 
 When you deploy a new Next\.js app, Amplify uses the most recent supported version of Next\.js by default\. If you have an existing Next\.js app that you deployed to Amplify with an older version of Next\.js, you can edit the app's build settings to use a newer version\. For instructions, see [Updating the Next\.js version for an existing app](#update-app-nextjs-version)\.
 

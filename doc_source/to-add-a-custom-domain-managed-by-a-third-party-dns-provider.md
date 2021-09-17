@@ -1,6 +1,6 @@
 # Add a custom domain managed by a third\-party DNS provider<a name="to-add-a-custom-domain-managed-by-a-third-party-dns-provider"></a>
 
-If you are not using Amazon Route 53 to manage your domain, you can add a custom domain managed by a third\-party DNS provider to your app deployed in the Amplify Console\.
+If you are not using Amazon Route 53 to manage your domain, you can add a custom domain managed by a third\-party DNS provider to your app deployed in the Amplify Console\.
 
 If you are using GoDaddy or Google Domains, see [Add a custom domain managed by GoDaddy](to-add-a-custom-domain-managed-by-godaddy.md) or [Add a custom domain managed by Google Domains](to-add-a-custom-domain-managed-by-google-domains.md) for procedures specific to these providers\.
 
@@ -39,7 +39,7 @@ If you are using GoDaddy or Google Domains, see [Add a custom domain managed by 
 
 1. Configure a second CNAME record \(for example, **https://\*\.example\.com**\), to point your subdomains to the Amplify domain\. If you have production traffic, we recommended you update this CNAME record after your domain status shows as **AVAILABLE** in the Amplify Console\.
 
-1. Configure the ANAME/ALIAS record to point to the root domain of your amplifyapp domain \(for example **https://example\.com**\)\. An ANAME record points the root of your domain to a hostname\. If you have production traffic, we recommended that you update your ANAME record after your domain status shows as **AVAILABLE** in the console\. For DNS providers that don't have ANAME/ALIAS support, we strongly recommend migrating your DNS to Route 53\. For more information, see [Configuring Amazon Route 53 as your DNS service](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html)\.
+1. Configure the ANAME/ALIAS record to point to the root domain of your amplifyapp domain \(for example **https://example\.com**\)\. An ANAME record points the root of your domain to a hostname\. If you have production traffic, we recommended that you update your ANAME record after your domain status shows as **AVAILABLE** in the console\. For DNS providers that don't have ANAME/ALIAS support, we strongly recommend migrating your DNS to Route 53\. For more information, see [Configuring Amazon Route 53 as your DNS service](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html)\.
 
 **Note**  
  Verification of domain ownership and DNS propagation for third\-party domains can take up to 48 hours\. For help resolving errors that occur, see [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)\. 

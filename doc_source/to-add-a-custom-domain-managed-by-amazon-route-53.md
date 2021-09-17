@@ -13,7 +13,7 @@
 
 1. For **Domain**, enter your root domain, choose the domain you want to use when it appears in the list, and then choose **Configure Domain**\.
 
-   As you start typing, any root domains that you already manage in Route 53 appear in the list\. For example, if the name of your domain is **https://example\.com**, enter **example\.com** for **Domain**\.  
+   As you start typing, any root domains that you already manage in Route 53 appear in the list\. For example, if the name of your domain is **https://example\.com**, enter **example\.com** for **Domain**\.  
 ![\[Screenshot of the Domain management section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-2.png)
 
 1. By default, the Amplify console automatically creates two subdomain entries for your domain\. For example, if your domain name is **example\.com**, you will see the subdomains **https://www\.example\.com** and **https://example\.com** with a redirect set up from the root domain to the **www** subdomain\.

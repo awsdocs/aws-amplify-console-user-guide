@@ -26,7 +26,7 @@
        For example, if the validation server is **\_cjhwou20vhu2exampleuw20vuyb2ovb9\.j9s73ucn9vy\.acm\-validations\.aws **, enter **\_cjhwou20vhu2exampleuw20vuyb2ovb9\.j9s73ucn9vy\.acm\-validations\.aws** for **Points to**\.  
 ![\[Screenshot of the section for creating a CNAME record on the GoDaddy website.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-godaddy-3.png)
 
-1. This step is not required for subdomains\. GoDaddy doesn’t support ANAME/ALIAS records\. For DNS providers that do not have ANAME/ALIAS support, we strongly recommend migrating your DNS to Amazon Route 53 \. For more information, see [Configuring Amazon Route 53 as your DNS service](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html)\.
+1. This step is not required for subdomains\. GoDaddy doesn’t support ANAME/ALIAS records\. For DNS providers that do not have ANAME/ALIAS support, we strongly recommend migrating your DNS to Amazon Route 53 \. For more information, see [Configuring Amazon Route 53 as your DNS service](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html)\.
 
    If you want to keep GoDaddy as your provider and update the root domain, add **Forwarding** and set up a domain forward:
 

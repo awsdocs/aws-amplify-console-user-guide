@@ -1,12 +1,12 @@
-# Set up automatic subdomains for a Amazon Route 53 custom domain<a name="to-set-up-automatic-subdomains-for-a-Route-53-custom-domain"></a>
+# Set up automatic subdomains for a Amazon Route 53 custom domain<a name="to-set-up-automatic-subdomains-for-a-Route-53-custom-domain"></a>
 
-After an app is connected to a custom domain in Route 53, Amplify Console enables you to automatically create subdomains for newly connected branches\. For example, if you connect your **dev** branch, Amplify can automatically create **dev\.exampledomain\.com**\. When you delete a branch, any associated subdomains are automatically deleted\. 
+After an app is connected to a custom domain in Route 53, Amplify Console enables you to automatically create subdomains for newly connected branches\. For example, if you connect your **dev** branch, Amplify can automatically create **dev\.exampledomain\.com**\. When you delete a branch, any associated subdomains are automatically deleted\. 
 
 **To set up automatic subdomain creation for newly connected branches**
 
 1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
 
-1. Choose an app that is connected to a custom domain managed in Route 53\.
+1. Choose an app that is connected to a custom domain managed in Route 53\.
 
 1. In the navigation pane, choose **App Settings**, and then choose **Domain management**\.
 

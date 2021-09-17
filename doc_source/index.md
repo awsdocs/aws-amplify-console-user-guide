@@ -25,7 +25,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Add a custom domain managed by GoDaddy](to-add-a-custom-domain-managed-by-godaddy.md)
    + [Add a custom domain managed by Google Domains](to-add-a-custom-domain-managed-by-google-domains.md)
    + [Manage subdomains](to-manage-subdomains.md)
-   + [Set up automatic subdomains for a Amazon Route 53 custom domain](to-set-up-automatic-subdomains-for-a-Route-53-custom-domain.md)
+   + [Set up automatic subdomains for a Amazon Route 53 custom domain](to-set-up-automatic-subdomains-for-a-Route-53-custom-domain.md)
    + [Troubleshooting custom domains](custom-domain-troubleshoot-guide.md)
 + [Configuring build settings](build-settings.md)
    + [Monorepo build settings](monorepo-configuration.md)
