@@ -51,7 +51,8 @@ To access an environment variable during a build, edit your build settings to in
    build:
      commands:
        - npm run build:$BUILD_ENV
-       - echo "TWITCH_CLIENT_ID=$TWITCH_CLIENT_ID" >> backend/.env
+        - TWITCH_CLIENT_ID=$TWITCH_CLIENT_ID # or equivalently the line below
+        - VARIABLE_NAME_2=${VARIABLE_NAME_2} # with {} it also works
    ```
 
 Each command in your build configuration is executed inside a Bash shell\. For more information on working with environment variables in Bash, see [Shell Expansions](https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html#Shell-Expansions) in the GNU Bash Manual\. 
@@ -113,6 +114,7 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build spec and want to disable backend builds, set this environment variable to `true`\.  | true | 
 |  AMPLIFY\_MONOREPO\_APP\_ROOT  |  The path to use to specify the app root of a monorepo app, relative to the root of your repository\.  | apps/react\-app | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
+|  AWS\_PULL\_REQUEST\_ID  |  The version of auto-generated for pull request\.  | pr-1 | 
 
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
