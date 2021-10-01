@@ -264,7 +264,7 @@ To view or edit an app's rewrite and redirect rules in the Amplify console, in t
 
 ### Your app is too large to deploy<a name="app-too-large-to-deploy"></a>
 
-If you try to deploy a Next\.js SSR app to Amplify and get a `RequestEntityTooLargeException` error, your app is too large to deploy\. You can attempt to work around this issue by adding cache cleanup code to your `next.config.js` file\.
+Amplify limits the size of an SSR deployment to 50 MB\. If you try to deploy a Next\.js SSR app to Amplify and get a `RequestEntityTooLargeException` error, your app is too large to deploy\. You can attempt to work around this issue by adding cache cleanup code to your `next.config.js` file\.
 
 The following is an example of code in the `next.config.js` file that performs cache cleanup\.
 
@@ -292,7 +292,7 @@ Next\.js can serve static files from a folder named `public` that's stored in th
 
 ### Access control isn't available for your app<a name="access-control-unsupported"></a>
 
-Amplify now supports access control for Next\.js SSR apps\. Previously, Amplify didn't support access control for Next\.js SSR apps\. If you are working with an SSR app that is already deployed in the Amplify console, you must redeploy the app to enable access control\. After you redeploy, **Access control** displays in the **App settings** menu for the app\.
+Currently, Amplify doesn't support access control for Next\.js apps that use SSR\. If you are working with an SSR app in the Amplify console, **Access control** isn't available in the **App settings** menu in the navigation pane\.
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 
