@@ -92,27 +92,31 @@ You can use the following environment variables that are accessible by default w
 
 | Variable name | Description | Example value | 
 | --- | --- | --- | 
-|  AWS\_APP\_ID  |  The app ID of the current build  |  abcd123  | 
+|  AWS\_APP\_ID  |  The app ID of the current build  |  `abcd1234`  | 
 |  AWS\_BRANCH  |  The branch name of the current build  |  `main`, `develop`, `beta`, `v2.0`  | 
-|  AWS\_BRANCH\_ARN  |  The branch ARN of the current build  |  aws:arn:amplify:us\-west\-2:111122223333:appname/branch/\.\.\.  | 
-|  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   [git@github\.com](mailto:git@github.com):<user\-name>/<repo\-name>\.git  | 
-|  AWS\_COMMIT\_ID  |  The commit ID of the current build\. “HEAD” for rebuilds  |  xxxxxxxxxxxxxxxxxx  | 
-|  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  0000000001  | 
-|  \_LIVE\_UPDATES  |  The tool will be upgraded to the latest version\.  |  \[\{“name”:”Amplify CLI”,”pkg”:”@aws\-amplify/cli”,”type”:”npm”,”version”:”latest”\}\]  | 
-|  AMPLIFY\_FACEBOOK\_CLIENT\_ID  |  The Facebook client ID\.  |  123456  | 
-|  AMPLIFY\_FACEBOOK\_CLIENT\_SECRET  |  The Facebook client secret\.  |  example123456  | 
-|  AMPLIFY\_GOOGLE\_CLIENT\_ID  |  The Google client ID\.  |  123456  | 
-|  AMPLIFY\_GOOGLE\_CLIENT\_SECRET  |  The Google client secret\.  |  example123456  | 
-|  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID\.  |  123456  | 
-|  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret\.  |  example123456  | 
-|  AMPLIFY\_DIFF\_DEPLOY  |   Enable or disable diff based frontend deployment\. For more information, see [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy)\.  |  true  | 
+|  AWS\_BRANCH\_ARN  |  The branch ARN of the current build  | aws:arn:amplify:us\-west\-2:111122223333:appname/branch/\.\.\.  | 
+|  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   `git@github.com:<user-name>/<repo-name>.git`   | 
+|  AWS\_COMMIT\_ID  |  The commit ID of the current build “HEAD” for rebuilds  |  `abcd1234`  | 
+|  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  `0000000001`  | 
+|  \_LIVE\_UPDATES  |  The tool will be upgraded to the latest version\.  |  `[{“name”:”Amplify CLI”,”pkg”:”@aws-amplify/cli”,”type”:”npm”,”version”:”latest”}]`  | 
+|  AMPLIFY\_FACEBOOK\_CLIENT\_ID  |  The Facebook client ID  |  `123456`  | 
+|  AMPLIFY\_FACEBOOK\_CLIENT\_SECRET  |  The Facebook client secret  |  `example123456`  | 
+|  AMPLIFY\_GOOGLE\_CLIENT\_ID  |  The Google client ID  |  `123456`  | 
+|  AMPLIFY\_GOOGLE\_CLIENT\_SECRET  |  The Google client secret  |  `example123456`  | 
+|  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID  |  `123456`  | 
+|  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret  |  `example123456`  | 
+|  AMPLIFY\_DIFF\_DEPLOY  |  Enable or disable diff based frontend deployment\. For more information, see [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy)\.  |  true  | 
 |  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist | 
 |  AMPLIFY\_DIFF\_BACKEND  |  Enable or disable diff based backend builds\. For more information, see [Enable or disable diff based backend builds](build-settings.md#enable-diff-backend)  | true | 
 |  AMPLIFY\_BACKEND\_PULL\_ONLY  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | true | 
-|  AMPLIFY\_BACKEND\_APP\_ID  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd123 | 
+|  AMPLIFY\_BACKEND\_APP\_ID  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd1234 | 
 |  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build spec and want to disable backend builds, set this environment variable to `true`\.  | true | 
 |  AMPLIFY\_MONOREPO\_APP\_ROOT  |  The path to use to specify the app root of a monorepo app, relative to the root of your repository\.  | apps/react\-app | 
-|  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes\.  |  30  | 
+|  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes  |  `30`  | 
+|  AMPLIFY\_USERPOOL\_ID  |  The ID for the Amazon Cognito user pool imported for auth  |  `us-west-2_example`  | 
+|  AMPLIFY\_WEBCLIENT\_ID  |  The ID for the app client to be used by web applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | 123456 | 
+|  AMPLIFY\_NATIVECLIENT\_ID  |  The ID for the app client to be used by native applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | 123456 | 
+|  AMPLIFY\_IDENTITYPOOL\_ID  |  The ID for the Amazon Cognito identity pool  |  `example-identitypool-id`  | 
 
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
@@ -153,6 +157,8 @@ Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_back
 Accessing an environment secret during a build is similar to [accessing environment variables](#access-env-vars), except that environment secrets are stored in `process.env.secrets` as a JSON string\.
 
 ### Amplify Console environment secrets<a name="amplify-environment-secrets"></a>
+
+Specify an Systems Manager parameter in the format `/amplify/{your_app_id}/{your_backend_environment_name}/AMPLIFY_SIWA_CLIENT_ID`\.
 
 You can use the following environment secrets that are accessible by default within the Amplify Console\.
 

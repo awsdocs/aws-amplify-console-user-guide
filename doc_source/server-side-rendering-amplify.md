@@ -216,6 +216,7 @@ If you experience unexpected issues when deploying an SSR app with Amplify, revi
 + [Your app stores static files in a folder with a reserved path](#amplify-reserved-path)
 + [Your app has reached a CloudFront limit](#cloudfront-distribution-limit)
 + [Access control isn't available for your app](#access-control-unsupported)
++ [Environment variables are not carried through to Lambda functions](#ssr-environment-variable-support)
 + [Your Next\.js app uses unsupported features](#nextjs-version-support)
 + [Unsupported Regions](#amplify-region-support)
 
@@ -293,6 +294,28 @@ Next\.js can serve static files from a folder named `public` that's stored in th
 ### Access control isn't available for your app<a name="access-control-unsupported"></a>
 
 Currently, Amplify doesn't support access control for Next\.js apps that use SSR\. If you are working with an SSR app in the Amplify console, **Access control** isn't available in the **App settings** menu in the navigation pane\.
+
+### Environment variables are not carried through to Lambda functions<a name="ssr-environment-variable-support"></a>
+
+Environment variables that you specify in the Amplify console for an SSR app are not carried through to the app's AWS Lambda functions\. Use the following instructions to add environment variables that you can reference from your Lambda functions\.
+
+**To add environment variables to a Next\.js SSR app**
+
+1. Follow the [Set environment variables](environment-variables.md#setting-env-vars) instructions to add environment variables to your app in the Amplify console\.
+
+1. Open the `next.config.js` file for your app\. If this file doesn't exist, create it\.
+
+1. Update the `next.config.js` file with the environment variables that you added in step 1\. For example, if you created an environment variable named `MY_ENV_VAR`, add the following code to your `next.config.js` file:
+
+   ```
+   module.exports = {
+     env: {
+       MY_ENV_VAR: process.env.MY_ENV_VAR
+     }
+   };
+   ```
+
+1. Rebuild your app\. You can now reference the environment variables you added, such as `process.env.MY_ENV_VAR`, in the app's Lambda functions\.
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 
