@@ -95,7 +95,7 @@ You can use the following example code to redirect all traffic to index\.html as
 
 | Original address | Destination Address | Redirect Type | Country Code | 
 | --- | --- | --- | --- | 
-|   `<*>`   |   `/index.html`   |   `rewrite (200)`   |  | 
+|   `/<*>`   |   `/index.html`   |   `rewrite (200)`   |  | 
 
  JSON \[\{"source": "/<\*>", "status": "200", "target": "/index\.html", "condition": null\}\] 
 
