@@ -7,6 +7,7 @@ If you encounter issues when adding a custom domain to an app in the AWS Amplify
 + [My domain hosted with a third\-party is stuck in the Pending Verification state](#my-domain-hosted-with-a-third-party-is-stuck-in-the-pending-verification-state)
 + [My domain hosted with Amazon Route 53 is stuck in the Pending Verification state](#my-domain-hosted-with-amazon-route-53-is-stuck-in-the-pending-verification-state)
 + [I get a CNAMEAlreadyExistsException error](#i-get-a-cnamealreadyexistsexception-error)
++ [I get an Additional Verification Required error](#i-get-an-additionalverificationrequired-error)
 
 ## How do I verify that my CNAME resolves?<a name="how-do-i-verify-that-my-cname-resolves"></a>
 
@@ -18,7 +19,7 @@ If you encounter issues when adding a custom domain to an app in the AWS Amplify
 
 ## My domain hosted with a third\-party is stuck in the Pending Verification state<a name="my-domain-hosted-with-a-third-party-is-stuck-in-the-pending-verification-state"></a>
 
-1. If your custom domain is stuck in the **Pending Verification** state, verify that your CNAME records are resolving\. See the previous troubleshooting topic, How do I verify that my CNAME resolves, for instructions on performing this task\.
+1. If your custom domain is stuck in the **Pending Verification** state, verify that your CNAME records are resolving\. See the previous troubleshooting topic, [How do I verify that my CNAME resolves](#how-do-i-verify-that-my-cname-resolves), for instructions on performing this task\.
 
 1. If your CNAME records are not resolving, confirm that the CNAME entry exists in your DNS settings with your domain provider\.
 **Important**  
@@ -52,12 +53,19 @@ If you get a **CNAMEAlreadyExistsException** error, this means that one of the h
 
    1. Choose **Distributions** on the left navigation menu\.
 
-   1. Select the checkbox next to the name of the distribution to edit, then choose **Distribution Settings**\.
+   1. Select the name of the distribution to edit\.
 
-   1. Choose the **General** tab, and then choose **Edit**\.
+   1. Choose the **General** tab\. In the **Settings** section, choose **Edit**\.
 
-   1. Remove the domain name from **Alternate Domain Names \(CNAMEs\)**\. Then choose, **Yes, Edit** to save your change\.
+   1. Remove the domain name from **Alternate domain name \(CNAME\)**\. Then choose, **Save changes**\.
 
 1. Check to see whether this domain is connected to a different Amplify app that you own\. If so, make sure you are not trying to reuse one of the hostnames\. If you are using **www\.example\.com** for another app, you cannot use **www\.example\.com** with the app that you are currently connecting\. You can use other subdomains, such as **blog\.example\.com**\.
 
 1. If this domain was successfully connected to another app and then deleted within the last hour, try again after at least one hour has passed\. If you still see this exception after 6 hours, see [GitHub Issues](https://github.com/aws-amplify/amplify-console/issues) and open a new issue if it doesn’t already exist\.
+
+## I get an Additional Verification Required error<a name="i-get-an-additionalverificationrequired-error"></a>
+
+If you get an **Additional Verification Required** error, this means that AWS Certificate Manager \(ACM\) requires additional information to process this certificate request\. This can happen as a fraud\-protection measure, such as when the domain ranks within the [Alexa top 1000 websites](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Alexa-Top-Sites/B07QK2XWNV)\. To provide the required information, use the [Support Center](https://console.aws.amazon.com/support/home) to contact AWS Support\. If you don't have a support plan, post a new thread in the [ACM Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=206)\.
+
+**Note**  
+You cannot request a certificate for Amazon\-owned domain names such as those ending in amazonaws\.com, cloudfront\.net, or elasticbeanstalk\.com\.

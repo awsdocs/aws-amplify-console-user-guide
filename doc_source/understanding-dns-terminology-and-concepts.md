@@ -28,7 +28,7 @@ The Amplify Console uses a CNAME record to verify that you own your custom domai
 
 ## Amplify Console custom domain setup<a name="amplify-console-custom-domain-setup"></a>
 
-When you add a custom domain in the Amplify Console, there are a number of steps that need to completed before you can view your app using your custom domain\. The following graphic shows the order of the steps that the Amplify Console performs for SSL/TLS certificate creation, certificate configuration and verification, and domain activation\.
+When you add a custom domain in the Amplify Console, there are a number of steps to complete before you can view your app using your custom domain\. The following graphic shows the order of the steps that the Amplify Console performs for SSL/TLS certificate creation, certificate configuration and verification, and domain activation\.
 
 ![\[Workflow diagram of the steps in the Amplify Console domain activation process.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/1555951758569-803.png)
 

@@ -217,6 +217,7 @@ If you experience unexpected issues when deploying an SSR app with Amplify, revi
 + [Your app has reached a CloudFront limit](#cloudfront-distribution-limit)
 + [Access control isn't available for your app](#access-control-unsupported)
 + [Environment variables are not carried through to Lambda functions](#ssr-environment-variable-support)
++ [Lambda@Edge functions are created in the US East \(N\. Virginia\) Region](#nextjs-version-lambda-edge-funchtions)
 + [Your Next\.js app uses unsupported features](#nextjs-version-support)
 + [Unsupported Regions](#amplify-region-support)
 
@@ -316,6 +317,10 @@ Environment variables that you specify in the Amplify console for an SSR app are
    ```
 
 1. Rebuild your app\. You can now reference the environment variables you added, such as `process.env.MY_ENV_VAR`, in the app's Lambda functions\.
+
+### Lambda@Edge functions are created in the US East \(N\. Virginia\) Region<a name="nextjs-version-lambda-edge-funchtions"></a>
+
+When you deploy a Next\.js app, Amplify creates a Lambda@Edge function to customize the content that CloudFront delivers\. Lambda@Edge functions are created in the US East \(N\. Virginia\) Region, not the Region where your app is deployed\. This is a Lambda@Edge restriction\. For more information about Lambda@Edge functions, see [Restrictions on edge functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/edge-functions-restrictions.html) in the *Amazon CloudFront Developer Guide\.* 
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 

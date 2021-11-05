@@ -15,7 +15,7 @@ A subdomain is the part of your URL that appears before your domain name\. For e
 1. For **Domain**, enter the name of your root domain and then choose **Configure domain**\. For example, if the name of your domain is **https://example\.com**, enter **example\.com** for **Domain**\.
 
 1. Choose **Exclude root** and modify the name of the subdomain\. For example if the domain is **example\.com** you can modify it to only add the subdomain **alpha**\.  
-![\[Screenshot of the Add domain section in the Amplify Console configured to add a subdomain.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-configure-2Update.png)
+![\[Screenshot of the Add domain section in the Amplify console configured to add a subdomain.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-configure-2Update.png)
 
 ## To add a multilevel subdomain<a name="to-add-a-multi-level-subdomain"></a>
 
@@ -30,7 +30,7 @@ A subdomain is the part of your URL that appears before your domain name\. For e
 1. For **Domain**, enter the name of a domain with a subdomain, choose **Exclude root**, and modify the subdomain to add a new level\.
 
    For example, if you have a domain called **alpha\.example\.com** and you want to create a multilevel subdoman **beta\.alpha\.example\.com**, you would enter **beta** as the subdomain value, as shown in the following screenshot\.  
-![\[Screenshot of the Add domain section in the Amplify Console configured to add a multilevel subdomain.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-configure-3Update.png)
+![\[Screenshot of the Add domain section in the Amplify console configured to add a multilevel subdomain.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-configure-3Update.png)
 
 ## To add or edit a subdomain<a name="to-add-or-edit-a-subdomain"></a>
 
