@@ -10,6 +10,7 @@ This documentation helps you understand how to apply the shared responsibility m
 
 **Topics**
 + [Identity and Access Management for Amplify](security-iam.md)
++ [Cross\-service confused deputy prevention](cross-service-confused-deputy-prevention.md)
 + [Security event logging and monitoring in Amplify](monitoring-overview.md)
 + [Data Protection in Amplify](data-protection.md)
 + [Compliance Validation for AWS Amplify](Amplify-compliance.md)

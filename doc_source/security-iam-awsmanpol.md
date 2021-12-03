@@ -183,7 +183,6 @@ This policy provides access to multiple AWS services, including IAM actions\. Th
                 "lambda:ListLayerVersions",
                 "lambda:PublishLayerVersion",
                 "lambda:RemoveLayerVersionPermission",
-                "lambda:GetLayerVersionByArn",
                 "dynamodb:CreateTable",
                 "dynamodb:DeleteItem",
                 "dynamodb:DeleteTable",
@@ -229,6 +228,7 @@ This policy provides access to multiple AWS services, including IAM actions\. Th
                 "kinesis:CreateStream",
                 "kinesis:DeleteStream",
                 "kinesis:DescribeStream",
+                "kinesis:DescribeStreamSummary",
                 "kinesis:PutRecords",
                 "es:AddTags",
                 "es:CreateElasticsearchDomain",
@@ -255,6 +255,7 @@ This policy provides access to multiple AWS services, including IAM actions\. Th
                 "appsync:ListApiKeys",
                 "amplify:*",
                 "amplifybackend:*",
+                "amplifyuibuilder:*",
                 "sts:AssumeRole",
                 "mobiletargeting:*",
                 "cognito-idp:AdminAddUserToGroup",
@@ -285,6 +286,8 @@ This policy provides access to multiple AWS services, including IAM actions\. Th
                 "cognito-idp:AdminSetUserPassword",
                 "cognito-idp:ListUserPools",
                 "cognito-idp:ListUserPoolClients",
+                "cognito-idp:ListIdentityProviders",
+                "cognito-idp:GetUserPoolMfaConfig",
                 "cognito-identity:GetIdentityPoolRoles",
                 "cognito-identity:SetIdentityPoolRoles",
                 "cognito-identity:CreateIdentityPool",
@@ -298,6 +301,7 @@ This policy provides access to multiple AWS services, including IAM actions\. Th
                 "lambda:AddPermission",
                 "lambda:DeleteFunction",
                 "lambda:InvokeFunction",
+                "lambda:ListLayerVersions",
                 "iam:PutRolePolicy",
                 "iam:CreatePolicy",
                 "iam:AttachRolePolicy",
@@ -324,7 +328,7 @@ This policy provides access to multiple AWS services, including IAM actions\. Th
                 "lex:GetBot",
                 "lex:GetBuiltinIntent",
                 "lex:GetBuiltinIntents",
-                "lex:GetBuiltinSlotTypes,
+                "lex:GetBuiltinSlotTypes",
                 "cloudformation:GetTemplateSummary",
                 "codecommit:GitPull"
             ],
@@ -462,6 +466,8 @@ View details about updates to AWS managed policies for Amplify since this servic
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+|  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add a policy action to enable Amplify UI Builder actions on all resources\.  | December 2, 2021 | 
+|  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add policy actions to support the Amazon Cognito authentication feature that uses social identity providers\. Add a policy action to support Lambda layers\. Add a policy action to support the [Amplify Storage category](https://docs.amplify.aws/lib/storage/getting-started/q/platform/js/)\.  | November 8, 2021 | 
 |  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add Amazon Lex actions to support the [Amplify Interactions category](https://docs.amplify.aws/lib/interactions/getting-started/q/platform/js/#interactions-with-aws)\. Add Amazon Rekognition actions to support the [Amplify Predictions category](https://docs.amplify.aws/lib/predictions/intro/q/platform/js/#configure-your-application)\. Add an Amazon Cognito action to support MFA configuration on Amazon Cognito user pools\. Add CloudFormation actions to support AWS CloudFormation StackSets\. Add Amazon Location Service actions to support the [Amplify Geo category](https://docs.amplify.aws/lib/geo/getting-started/q/platform/js/)\. Add a Lambda action to support Lambda layers in Amplify\. Add CloudWatch Logs actions to support CloudWatch Events\. Add Amazon S3 actions to support the [Amplify Storage category](https://docs.amplify.aws/lib/storage/getting-started/q/platform/js/)\. Add policy actions to support server\-side rendered \(SSR\) apps\.  | September 27, 2021 | 
-|  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Consolidate all Amplify actions into a single `amplify:*` action\. Add an Amazon S3 action to support encrypting customer Amazon S3 buckets\. Add IAM permission boundary actions to support Amplify apps that have permission boundaries enabled\. Add Amazon SNS actions to support viewing origination phone numbers, and viewing, creating, verifying, and deleting destination phone numbers\. Amplify Admin UI: Add Amazon Cognito, AWS Lambda, IAM, and AWS CloudFormation policy actions to enable managing backends in the Amplify console and Amplify Admin UI \. Add an AWS Systems Manager \(SSM\) policy statement to manage Amplify environment secrets\. Add an AWS CloudFormation `ListResources` action to support Lambda layers for Amplify apps\.  | July 28, 2021 | 
+|  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Consolidate all Amplify actions into a single `amplify:*` action\. Add an Amazon S3 action to support encrypting customer Amazon S3 buckets\. Add IAM permission boundary actions to support Amplify apps that have permission boundaries enabled\. Add Amazon SNS actions to support viewing origination phone numbers, and viewing, creating, verifying, and deleting destination phone numbers\. Amplify Studio: Add Amazon Cognito, AWS Lambda, IAM, and AWS CloudFormation policy actions to enable managing backends in the Amplify console and Amplify Studio\. Add an AWS Systems Manager \(SSM\) policy statement to manage Amplify environment secrets\. Add an AWS CloudFormation `ListResources` action to support Lambda layers for Amplify apps\.  | July 28, 2021 | 
 |  Amplify started tracking changes  |  Amplify started tracking changes for its AWS managed policies\.  | July 28, 2021 | 

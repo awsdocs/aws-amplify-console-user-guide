@@ -21,3 +21,24 @@ If you already have an existing app, you can find the service role setting in **
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-servicerole2.png)
 
 The Amplify Console now has permissions to deploy backend resources\.
+
+## Confused deputy prevention<a name="confused-deputy-prevention"></a>
+
+The confused deputy problem is a security issue where an entity that doesn't have permission to perform an action can coerce a more\-privileged entity to perform the action\. For more information, see [Cross\-service confused deputy prevention](cross-service-confused-deputy-prevention.md)\.
+
+Currently, the default trust policy for the `Amplify-Backend Deployment` service role enforces the `aws:SourceArn` and `aws:SourceAccount` global context condition keys to prevent against confused deputy\. However, if you previously created an `Amplify-Backend Deployment` role in your account, you can update the role's trust policy to add these conditions to protect against confused deputy\.
+
+Use the following example to restrict access to apps in your account\. Replace the red italicized text in the example with your own information\.
+
+```
+"Condition": {
+      "ArnLike": {
+        "aws:SourceArn": "arn:aws:amplify:us-east-1:123456789012:apps/*"
+      },
+      "StringEquals": {
+        "aws:SourceAccount": "123456789012"
+      }
+    }
+```
+
+For instructions on editing the trust policy for a role using the AWS Management Console, see [Modifying a role \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-managingrole-editing-console.html) in the *IAM User Guide*\.

@@ -13,7 +13,7 @@ Use the following information to help you diagnose and fix common issues that yo
 
 If the AWS Management Console tells you that you're not authorized to perform an action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\.
 
-With the release of the Admin UI, deleting an app or a backend requires both `amplify` and `amplifybackend` permissions\. If an administrator has written an IAM policy that provides only `amplify` permissions, a user will get a permissions error when trying to delete an app\.
+With the release of Amplify Studio, deleting an app or a backend requires both `amplify` and `amplifybackend` permissions\. If an administrator has written an IAM policy that provides only `amplify` permissions, a user will get a permissions error when trying to delete an app\.
 
 The following example error occurs when the `mateojackson` IAM user tries to use the console to delete a fictional `example-amplify-app` resource but does not have the `amplifybackend:RemoveAllBackends` permissions\.
 

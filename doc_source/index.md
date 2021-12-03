@@ -1,4 +1,4 @@
-# AWS Amplify Console User Guide
+# AWS Amplify User Guide
 
 -----
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -14,7 +14,7 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [Welcome to the AWS Amplify Console](welcome.md)
++ [Welcome to AWS Amplify](welcome.md)
 + [Getting started with existing code](getting-started.md)
 + [Getting started with fullstack continuous deployments](deploy-backend.md)
 + [Deploy and host server-side rendered apps with Amplify](server-side-rendering-amplify.md)
@@ -57,6 +57,7 @@ Amazon's trademarks and trade dress may not be used in
       + [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md)
       + [Troubleshooting Amplify identity and access](security_iam_troubleshoot.md)
       + [Amplify permissions reference](security_iam_permissions-reference.md)
+   + [Cross-service confused deputy prevention](cross-service-confused-deputy-prevention.md)
    + [Security event logging and monitoring in Amplify](monitoring-overview.md)
    + [Data Protection in Amplify](data-protection.md)
       + [Encryption at rest](encryption-at-rest.md)

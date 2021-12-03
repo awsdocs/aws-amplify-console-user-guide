@@ -23,7 +23,7 @@ To access the AWS Amplify console, you must have a minimum set of permissions\. 
 
 You don't need to allow minimum console permissions for users that are making calls only to the AWS CLI or the AWS API\. Instead, allow access to only the actions that match the API operation that you're trying to perform\.
 
-With the release of the Admin UI, deleting an app or a backend requires both `amplify` and `amplifybackend` permissions\. If an IAM policy provides only `amplify` permissions, a user gets a permissions error when trying to delete an app\. If you are an administrator writing policies, use the [permissions reference](security_iam_permissions-reference.md#security_iam_permissions-reference.title) to determine the correct permissions to give users who need to perform delete actions\.
+With the release of Amplify Studio, deleting an app or a backend requires both `amplify` and `amplifybackend` permissions\. If an IAM policy provides only `amplify` permissions, a user gets a permissions error when trying to delete an app\. If you are an administrator writing policies, use the [permissions reference](security_iam_permissions-reference.md#security_iam_permissions-reference.title) to determine the correct permissions to give users who need to perform delete actions\.
 
 To ensure that users and roles can still use the Amplify console, also attach the Amplify `ConsoleAccess` or `ReadOnly` AWS managed policy to the entities\. For more information, see [Adding permissions to a user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) in the *IAM User Guide*\.
 

@@ -1,8 +1,5 @@
 # Restricting access<a name="access-control"></a>
 
-**Note**  
-Currently, Amplify doesn't support access control for Next\.js apps that use server\-side rendering \(SSR\)\. If you are working with an SSR app in the Amplify console, **Access control** isn't available in the **App settings** menu in the navigation pane\.
-
 If you are working on unreleased features, you can password protect feature branches that are not ready to be accessed publicly\.
 
 ![\[Video graphic of password protected sign in.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/password.gif)

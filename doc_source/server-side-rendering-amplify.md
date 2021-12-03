@@ -215,7 +215,6 @@ If you experience unexpected issues when deploying an SSR app with Amplify, revi
 + [Your app has both SSR and SSG branches](#ssr-and-ssg-branches)
 + [Your app stores static files in a folder with a reserved path](#amplify-reserved-path)
 + [Your app has reached a CloudFront limit](#cloudfront-distribution-limit)
-+ [Access control isn't available for your app](#access-control-unsupported)
 + [Environment variables are not carried through to Lambda functions](#ssr-environment-variable-support)
 + [Lambda@Edge functions are created in the US East \(N\. Virginia\) Region](#nextjs-version-lambda-edge-funchtions)
 + [Your Next\.js app uses unsupported features](#nextjs-version-support)
@@ -291,10 +290,6 @@ Next\.js can serve static files from a folder named `public` that's stored in th
 ### Your app has reached a CloudFront limit<a name="cloudfront-distribution-limit"></a>
 
 [CloudFront service quotas](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) limit your AWS account to 25 distributions with attached Lambda@Edge functions\. If you exceed this quota, you can either delete any unused CloudFront distributions from your account or request a quota increase\. For more information, see [Requesting a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) in the *Service Quotas User Guide*\. 
-
-### Access control isn't available for your app<a name="access-control-unsupported"></a>
-
-Currently, Amplify doesn't support access control for Next\.js apps that use SSR\. If you are working with an SSR app in the Amplify console, **Access control** isn't available in the **App settings** menu in the navigation pane\.
 
 ### Environment variables are not carried through to Lambda functions<a name="ssr-environment-variable-support"></a>
 
