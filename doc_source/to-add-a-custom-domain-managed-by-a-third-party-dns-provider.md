@@ -23,13 +23,13 @@ If you are using GoDaddy or Google Domains, see [Add a custom domain managed by 
    \(Optional\) You can modify the default configuration if you want to add subdomains only\. To change the default configuration, choose **Rewrites and redirects** from the navigation pane, configure your domain, and then choose **Save**\.  
 ![\[Screenshot of the Domain management section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-thirdparty-1Update.png)
 
+1. On the **Actions** menu, choose **View DNS records**\. Use the DNS records displayed in the Amplify console to update your DNS records with your third\-party domain provider\.  
+![\[Screenshot of the Update DNS records section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-thirdpartyDNS-1.png)
+
 1. Do one of the following: 
    + If you're using GoDaddy, go to [Add a custom domain managed by GoDaddy](to-add-a-custom-domain-managed-by-godaddy.md)\.
    + If you're using Google Domains, go to [Add a custom domain managed by Google Domains](to-add-a-custom-domain-managed-by-google-domains.md)\.
    + If you're using a different third\-party DNS provider, go to the next step in this procedure\. 
-
-1. On the **Actions** menu, choose **View DNS records**\. Use the DNS records displayed in the Amplify console to update your DNS records with your third\-party domain provider\.  
-![\[Screenshot of the Update DNS records section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-thirdpartyDNS-1.png)
 
 1. Go to your DNS provider's website, log in to your account, and locate the DNS management settings for your domain\.
 

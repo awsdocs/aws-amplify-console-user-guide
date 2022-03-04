@@ -47,7 +47,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Monitoring](access-logs.md)
 + [Notifications](notifications.md)
 + [Custom build images and live package updates](custom-build-image.md)
-+ [Adding a service role to the Amplify Console when you connect an app](how-to-service-role-amplify-console.md)
++ [Adding a service role to the Amplify console when you connect an app](how-to-service-role-amplify-console.md)
 + [Managing app performance](ttl.md)
 + [Logging Amplify API calls using AWS CloudTrail](logging-using-cloudtrail.md)
 + [Security in Amplify](security.md)

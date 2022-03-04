@@ -8,7 +8,7 @@
 
 1. In the navigation pane, choose **App Settings**, **Domain management**\.
 
-1.  On the **Domain management** page, choose **Add domain**\.  
+1. On the **Domain management** page, choose **Add domain**\.  
 ![\[Screenshot of the Domain management section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-1.png)
 
 1. For **Domain**, enter your root domain, choose the domain you want to use when it appears in the list, and then choose **Configure Domain**\.

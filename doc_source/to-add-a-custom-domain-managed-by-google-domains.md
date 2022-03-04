@@ -2,7 +2,7 @@
 
 **To add a custom domain managed by Google Domains**
 
-1. Follow steps one through six of the procedure [To add a custom domain managed by a third\-party DNS provider](to-add-a-custom-domain-managed-by-a-third-party-dns-provider.md)\.
+1. Follow steps one through seven of the procedure [To add a custom domain managed by a third\-party DNS provider](to-add-a-custom-domain-managed-by-a-third-party-dns-provider.md)\.
 
 1. Log in to your account at [https://domains\.google\.com](https://domains.google.com) and choose **DNS** in the left navigation pane\.
 

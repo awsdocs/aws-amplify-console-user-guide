@@ -7,9 +7,11 @@ To learn about how Amplify supports SSR, review the following topics\.
 **Topics**
 + [What is server\-side rendering](#What-is-server-side-rendering)
 + [Amplify support for Next\.js SSR](#ssr-Amplify-support)
++ [Pricing for Next\.js SSR apps](#nextjs-ssr-pricing)
 + [Deploying a Next\.js SSR app with Amplify](#deploy-nextjs-app)
 + [Adding SSR functionality to a static Next\.js app](#redeploy-ssg-to-ssr)
 + [Updating the Next\.js version for an existing app](#update-app-nextjs-version)
++ [AWS Identity and Access Management permissions for SSR apps](#ssr-IAM-permissions)
 + [Troubleshooting SSR deployment issues](#troubleshooting-ssr-deployment)
 
 ## What is server\-side rendering<a name="What-is-server-side-rendering"></a>
@@ -28,18 +30,39 @@ Prerendering can improve performance and search engine optimization\. Because Ne
 
 Next\.js provides built\-in analytics support for measuring various performance metrics, such as Time to first byte \(TTFB\) and First contentful paint \(FCP\)\. For more information about Next\.js, see [Getting started](https://nextjs.org/docs/getting-started) on the Next\.js website\.
 
-### Pricing for Next\.js SSR apps<a name="nextjs-ssr-pricing"></a>
+### Supported and unsupported Next\.js features<a name="supported-unsupported-features"></a>
+
+Amplify supports apps built with the Next\.js major versions 9, 10, and 11\. The following list describes the specific features that Amplify supports and does not support\.
+
+**Supported features**
++ Server\-side rendered pages \(SSR\)
++ Static pages
++ API routes
++ Dynamic routes
++ Catch all routes
++ SSG \(Static generation\)
++ Incremental Static Regeneration \(ISR\)
++ Internationalized \(i18n\) sub\-path routing
++ Environment variables
++ Image optimization\. The size of the image can't exceed 1 MB\. The AVIF and WebP image formats are not supported\.
+
+**Unsupported features**
++ Internationalized \(i18n\) domain routing
++ Internationalized \(i18n\) automatic locale detection
++ Middleware
+
+## Pricing for Next\.js SSR apps<a name="nextjs-ssr-pricing"></a>
 
 When deploying your Next\.js SSR app, Amplify creates additional backend resources in your AWS account, including:
 + An Amazon Simple Storage Service \(Amazon S3\) bucket that stores the resources for your app's static assets\. For information about Amazon S3 charges, see [Amazon S3 Pricing](http://aws.amazon.com/s3/pricing/)\.
 + An Amazon CloudFront distribution to serve the app\. For information about CloudFront charges, see [Amazon CloudFront Pricing](http://aws.amazon.com/cloudfront/pricing/)\.
-+ A [Lambda@Edge function](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-at-the-edge.html) to customize the content that CloudFront delivers\.
++ Four [Lambda@Edge functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-at-the-edge.html) to customize the content that CloudFront delivers\.
 
 When you use the Amplify Framework \(Libraries, CLI, UI components\), you pay only for the underlying AWS services you use\. For more information about Amplify deployment and hosting charges, see [AWS Amplify Pricing](http://aws.amazon.com/amplify/pricing/)\. 
 
 ## Deploying a Next\.js SSR app with Amplify<a name="deploy-nextjs-app"></a>
 
-To deploy a Next\.js SSR app with Amplify Console, follow the same workflow for setting up a static app with continuous deployments\. For detailed instructions, see [Getting started with existing code](getting-started.md)\. Note that you can't set up an SSR app in Amplify with [manual deploys](manual-deploys.md)\.
+To deploy a Next\.js SSR app with Amplify, follow the same workflow for setting up a static app with continuous deployments\. For detailed instructions, see [Getting started with existing code](getting-started.md)\. Note that you can't set up an SSR app in Amplify with [manual deploys](manual-deploys.md)\.
 
 ### Package\.json file settings<a name="package.json-settings"></a>
 
@@ -117,17 +140,17 @@ frontend:
 
 ## Adding SSR functionality to a static Next\.js app<a name="redeploy-ssg-to-ssr"></a>
 
-You can add SSR functionality to an existing static \(SSG\) Next\.js app deployed with Amplify Console\. This requires three steps\. First, add a service role to the app\. Next, update the output directory in the app's build settings\. Lastly, update the app's `package.json` file to indicate that the app uses SSR\.
+You can add SSR functionality to an existing static \(SSG\) Next\.js app deployed with Amplify\. This requires three steps\. First, add a service role to the app\. Next, update the output directory in the app's build settings\. Lastly, update the app's `package.json` file to indicate that the app uses SSR\.
 
 ### Add a service role<a name="add-service-role"></a>
 
-A service role is the AWS Identity and Access Management \(IAM\) role that Amplify Console assumes when calling other services on your behalf\. Follow these steps to add a service role to an SSG app that's already deployed with Amplify Console\.
+A service role is the AWS Identity and Access Management \(IAM\) role that Amplify assumes when calling other services on your behalf\. Follow these steps to add a service role to an SSG app that's already deployed with Amplify\.
 
 **To add a service role**
 
 1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
-1. If you haven't already created a service role in your Amplify account, see [create a service role](how-to-service-role-amplify-console.md) to complete this prerequisite step\.
+1. If you haven't already created a service role in your Amplify account, see [create a service role](how-to-service-role-amplify-console.md) to complete this prerequisite step\. See [AWS Identity and Access Management permissions for SSR apps](#ssr-IAM-permissions) for information about the permissions required to deploy an SSR app\.
 
 1. Choose the static Next\.js app that you want to add a service role to\.
 
@@ -199,9 +222,86 @@ For an existing app, use the following instructions to change the version of Nex
 1. For **Version**, do one of the following:
    + Enter **9** for support up to Next\.js version 9\.4\.*x*\.
    + Enter **10** for support for Next\.js versions 9\.4\.*x* to 10\.*x*\.*x*\.
+   + Enter **11** for support for Next\.js versions 11\.*x* to 11\.1\.3\.
    + Enter **latest**, to always upgrade to the latest Next\.js version that Amplify supports\.
 
 1. Choose **Save**\. The next time the app builds, it can use the features supported by the Next\.js version you specified in step 6\.
+
+## AWS Identity and Access Management permissions for SSR apps<a name="ssr-IAM-permissions"></a>
+
+Amplify requires AWS Identity and Access Management \(IAM\) permissions to deploy an SSR app\. Without the required minimum permissions, you will get an error when you try to deploy your SSR app\. To provide Amplify with the required permissions, you must create an IAM service role that Amplify assumes when calling other services on your behalf\. See [create a service role](how-to-service-role-amplify-console.md) for detailed instructions on creating an `Amplify-Backend Deployment` service role that Amplify uses to create and manage AWS resources\. IAM attaches the `AdministratorAccess-Amplify` managed policy to the `Amplify-Backend Deployment` service role\.
+
+The `AdministratorAccess-Amplify` managed policy provides access to multiple AWS services, including IAM actions\. and should be considered as powerful as the `AdministratorAccess` policy\. This policy provides more permissions than required to deploy your SSR app\. It is recommended that you follow the best practice of granting least privilege and reduce the permissions granted to the service role\.
+
+Instead of granting administrator access permissions to your service role, you can create your own customer managed IAM policy that grants only the permissions required to deploy your SSR app\. See [Creating IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html) in the *IAM User Guide* for instructions on creating a customer managed policy\. Add the following list of minimum permissions required to deploy an SSR app to the policy you create\.
+
+```
+acm:DescribeCertificate
+acm:ListCertificates
+acm:RequestCertificate
+cloudfront:CreateCloudFrontOriginAccessIdentity
+cloudfront:CreateDistribution
+cloudfront:CreateInvalidation
+cloudfront:GetDistribution
+cloudfront:GetDistributionConfig
+cloudfront:ListCloudFrontOriginAccessIdentities
+cloudfront:ListDistributions
+cloudfront:ListDistributionsByLambdaFunction
+cloudfront:ListDistributionsByWebACLId
+cloudfront:ListFieldLevelEncryptionConfigs
+cloudfront:ListFieldLevelEncryptionProfiles
+cloudfront:ListInvalidations
+cloudfront:ListPublicKeys
+cloudfront:ListStreamingDistributions
+cloudfront:UpdateDistribution
+cloudfront:TagResource
+cloudfront:UntagResource
+cloudfront:ListTagsForResource
+cloudfront:DeleteDistribution
+iam:AttachRolePolicy
+iam:CreateRole
+iam:CreateServiceLinkedRole
+iam:GetRole
+iam:PutRolePolicy
+iam:PassRole
+iam:UpdateAssumeRolePolicy
+iam:DeleteRolePolicy
+lambda:CreateFunction
+lambda:EnableReplication
+lambda:DeleteFunction
+lambda:GetFunction
+lambda:GetFunctionConfiguration
+lambda:PublishVersion
+lambda:UpdateFunctionCode
+lambda:UpdateFunctionConfiguration
+lambda:ListTags
+lambda:TagResource
+lambda:UntagResource
+lambda:ListEventSourceMappings
+lambda:CreateEventSourceMapping
+route53:ChangeResourceRecordSets
+route53:ListHostedZonesByName
+route53:ListResourceRecordSets
+s3:CreateBucket
+s3:GetAccelerateConfiguration
+s3:GetObject
+s3:ListBucket
+s3:PutAccelerateConfiguration
+s3:PutBucketPolicy
+s3:PutObject
+s3:PutBucketTagging
+s3:GetBucketTagging
+sqs:CreateQueue
+sqs:DeleteQueue
+sqs:GetQueueAttributes
+sqs:SetQueueAttributes
+amplify:GetApp
+amplify:GetBranch
+amplify:UpdateApp
+amplify:UpdateBranch
+```
+
+To reduce the scope of permissions granted to an Amplify service role in your account, edit the role to remove the `AdministratorAccess-Amplify` policy and attach your new SSR\-specific policy\.
 
 ## Troubleshooting SSR deployment issues<a name="troubleshooting-ssr-deployment"></a>
 
@@ -218,6 +318,7 @@ If you experience unexpected issues when deploying an SSR app with Amplify, revi
 + [Environment variables are not carried through to Lambda functions](#ssr-environment-variable-support)
 + [Lambda@Edge functions are created in the US East \(N\. Virginia\) Region](#nextjs-version-lambda-edge-funchtions)
 + [Your Next\.js app uses unsupported features](#nextjs-version-support)
++ [Images in your Next\.js app aren't loading](#image-size-limit)
 + [Unsupported Regions](#amplify-region-support)
 
 ### Your output directory is overridden<a name="output-directory-overridden"></a>
@@ -315,16 +416,22 @@ Environment variables that you specify in the Amplify console for an SSR app are
 
 ### Lambda@Edge functions are created in the US East \(N\. Virginia\) Region<a name="nextjs-version-lambda-edge-funchtions"></a>
 
-When you deploy a Next\.js app, Amplify creates a Lambda@Edge function to customize the content that CloudFront delivers\. Lambda@Edge functions are created in the US East \(N\. Virginia\) Region, not the Region where your app is deployed\. This is a Lambda@Edge restriction\. For more information about Lambda@Edge functions, see [Restrictions on edge functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/edge-functions-restrictions.html) in the *Amazon CloudFront Developer Guide\.* 
+When you deploy a Next\.js app, Amplify creates Lambda@Edge functions to customize the content that CloudFront delivers\. Lambda@Edge functions are created in the US East \(N\. Virginia\) Region, not the Region where your app is deployed\. This is a Lambda@Edge restriction\. For more information about Lambda@Edge functions, see [Restrictions on edge functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/edge-functions-restrictions.html) in the *Amazon CloudFront Developer Guide\.* 
 
 ### Your Next\.js app uses unsupported features<a name="nextjs-version-support"></a>
 
-Amplify currently supports Next\.js version 10\.*x*\.*x*, including Optional Catch All Routes, Image Optimization, and Incremental Static Regeneration \(ISR\)\. In addition, Amplify supports Next\.js version 11\. For a list and description of these new features, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\.
+Amplify currently supports the Next\.js major versions 9, 10, including Optional Catch All Routes, Image Optimization, and Incremental Static Regeneration \(ISR\), and 11\. For a list and description of the new features in version 11, see [Next\.js 11](https://nextjs.org/blog/next-11) on the Nextjs\.org website\. For a detailed list of the Next\.js features that are supported and unsupported by Amplify, see [Supported and unsupported Next\.js features](#supported-unsupported-features)\.
 
 When you deploy a new Next\.js app, Amplify uses the most recent supported version of Next\.js by default\. If you have an existing Next\.js app that you deployed to Amplify with an older version of Next\.js, you can edit the app's build settings to use a newer version\. For instructions, see [Updating the Next\.js version for an existing app](#update-app-nextjs-version)\.
 
 
 
+### Images in your Next\.js app aren't loading<a name="image-size-limit"></a>
+
+When you add images to your Next\.js app using the `next/image` component, the size of the image can't exceed 1 MB\. When you deploy the app to Amplify, images that are larger than 1 MB will return a 503 error\. This is caused by a Lambda@Edge limit that restricts the size of a response that is generated by a Lambda function, including headers and body, to 1 MB\.
+
+The 1 MB limit applies to other artifacts in your app, such as PDF and document files\.
+
 ### Unsupported Regions<a name="amplify-region-support"></a>
 
-Amplify doesn't support Next\.js SSR app deployment in every AWS region where Amplify Console is available\. Currently, Next\.js SSR isn't supported in the following Regions: Europe \(Milan\) eu\-south\-1, Middle East \(Bahrain\) me\-south\-1, and Asia Pacific \(Hong Kong\) ap\-east\-1\.
+Amplify doesn't support Next\.js SSR app deployment in every AWS region where Amplify is available\. Currently, Next\.js SSR isn't supported in the following Regions: Europe \(Milan\) eu\-south\-1, Middle East \(Bahrain\) me\-south\-1, and Asia Pacific \(Hong Kong\) ap\-east\-1\.

@@ -1,17 +1,17 @@
 # Configuring build settings<a name="build-settings"></a>
 
-When you deploy an app with the Amplify Console, it automatically detects the front end framework and associated build settings by inspecting the `package.json` file in your repository\. You have the following options for storing your app's build settings:
-+ Save the build settings in the Amplify Console \- The Amplify Console autodetects build settings and saves them so that they can be accessed via the Amplify Console\. Amplify applies these settings to all of your branches unless there is an `amplify.yml` file stored in your repository\.
+When you deploy an app with Amplify, it automatically detects the front end framework and associated build settings by inspecting the `package.json` file in your repository\. You have the following options for storing your app's build settings:
++ Save the build settings in the Amplify console \- The Amplify console autodetects build settings and saves them so that they can be accessed via the Amplify console\. Amplify applies these settings to all of your branches unless there is an `amplify.yml` file stored in your repository\.
 + Save the build settings in your repository \- Download the `amplify.yml` file and add it to the root of your repository\.
 
-You can edit an app's build settings in the Amplify Console by choosing **App settings**, **Build settings**\. The build settings are applied to all the branches in your app, except for the branches that have an `amplify.yml` file saved in the repository\.
+You can edit an app's build settings in the Amplify console by choosing **App settings**, **Build settings**\. The build settings are applied to all the branches in your app, except for the branches that have an `amplify.yml` file saved in the repository\.
 
 **Note**  
-**Build settings** is visible in the Amplify Console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
+**Build settings** is visible in the Amplify console's **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
 ## Build specification YAML syntax<a name="yml-specification-syntax"></a>
 
-The build specification YAML contains a collection of build commands and related settings that the Amplify Console uses to run your build\. The YAML is structured as follows:
+The build specification YAML contains a collection of build commands and related settings that Amplify uses to run your build\. The YAML is structured as follows:
 
 ```
 version: 1
@@ -66,7 +66,7 @@ test:
     configFilePath: *location*
     baseDirectory: *location*
 ```
-+  **version** \- Represents the Amplify Console YAML version number\.
++  **version** \- Represents the Amplify YAML version number\.
 + **appRoot** \- The path within the repository that this application resides in\. *Ignored unless multiple applications are defined\.*
 +  **env** \- Add environment variables to this section\. You can also add environment variables using the console\.
 +  **backend** \- Run Amplify CLI commands to provision a backend, update Lambda functions, or GraphQL schemas as part of continuous deployment\. Learn how to [deploy a backend with your frontend](deploy-backend.md)\.
@@ -96,7 +96,7 @@ frontend:
 
 ## Navigating to a subfolder<a name="navigating-to-a-subfolder"></a>
 
-For monorepos, users want to be able to cd into a folder to run the build\. After you run the cd command, it applies to all stages of your build so you don’t need to repeat the command in separate phases\.
+For monorepos, users want to be able to `cd` into a folder to run the build\. After you run the `cd` command, it applies to all stages of your build so you don’t need to repeat the command in separate phases\.
 
 ```
 version: 1
@@ -116,7 +116,7 @@ frontend:
 
 ## Deploying the backend with the front end<a name="frontend-with-backend"></a>
 
-The `amplifyPush` is a helper script that helps you with backend deployments\. The build settings below automatically determine the correct backend environment to deploy for the current branch\.
+The `amplifyPush` command is a helper script that helps you with backend deployments\. The build settings below automatically determine the correct backend environment to deploy for the current branch\.
 
 ```
 version: 1
@@ -146,7 +146,7 @@ frontend:
 
 ## Installing packages as part of a build<a name="installing-packages-as-part-of-your-build"></a>
 
-You can use npm or yarn to install packages during the build\.
+You can use the `npm` or `yarn` commands to install packages during the build\.
 
 ```
 frontend:
@@ -205,15 +205,15 @@ To skip an automatic build on a particular commit, include the text **\[skip\-cd
 
 ## Disable automatic builds<a name="disable-automatic-builds"></a>
 
-You can configure Amplify Console to disable automatic builds on every code commit\. To set up, choose **App settings**, **General**, and then scroll to the **Branches** section that lists the connected branches\. Select a branch, and then choose **Action**, **Disable auto build**\. Further commits to that branch will no longer trigger a new build\.
+You can configure Amplify to disable automatic builds on every code commit\. To set up, choose **App settings**, **General**, and then scroll to the **Branches** section that lists the connected branches\. Select a branch, and then choose **Action**, **Disable auto build**\. Further commits to that branch will no longer trigger a new build\.
 
 ## Enable or disable diff based frontend build and deploy<a name="enable-diff-deploy"></a>
 
-You can configure Amplify Console to use diff based frontend builds\. If enabled, at the start of each build Amplify Console attempts to run a diff on either your `appRoot`, or the `/src/` folder by default\. If Amplify doesn't find any differences, it skips the frontend build, test \(if configured\), and deploy steps, and does not update your hosted app\.
+You can configure Amplify to use diff based frontend builds\. If enabled, at the start of each build Amplify attempts to run a diff on either your `appRoot`, or the `/src/` folder by default\. If Amplify doesn't find any differences, it skips the frontend build, test \(if configured\), and deploy steps, and does not update your hosted app\.
 
 **To configure diff based frontend build and deploy**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to configure diff based frontend build and deploy for\.
 
@@ -237,11 +237,13 @@ Optionally, you can set the `AMPLIFY_DIFF_DEPLOY_ROOT` environment variable to o
 
 ## Enable or disable diff based backend builds<a name="enable-diff-backend"></a>
 
-You can configure Amplify to use diff based backend builds using the `AMPLIFY_DIFF_BACKEND` environment variable\. When you enable diff based backend builds, at the start of each build, Amplify attempts to run a diff on the `amplify` folder in your repository\. If Amplify doesn't find any differences, it skips the backend build step, and doesn't update your backend resources\. If your project doesn't have an `amplify` folder in your repository, Amplify ignores the value of the `AMPLIFY_DIFF_BACKEND` environment variable\.
+You can configure Amplify to use diff based backend builds using the `AMPLIFY_DIFF_BACKEND` environment variable\. When you enable diff based backend builds, at the start of each build Amplify attempts to run a diff on the `amplify` folder in your repository\. If Amplify doesn't find any differences, it skips the backend build step, and doesn't update your backend resources\. If your project doesn't have an `amplify` folder in your repository, Amplify ignores the value of the `AMPLIFY_DIFF_BACKEND` environment variable\.
+
+If you currently have custom commands specified in the build settings of your backend phase, conditional backend builds won't work\. If you want those custom commands to run, you must move them to the frontend phase of your build settings in your app's `amplify.yml` file\.
 
 **To configure diff based backend builds**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to configure diff based backend builds for\.
 

@@ -24,19 +24,15 @@ Additionally, AWS supports managed policies for job functions that span multiple
 
 
 
+Amplify attaches this policy to a service role that allows Amplify to perform actions on your behalf\. When you deploy a backend in the Amplify console, you must create an `Amplify-Backend Deployment` service role that Amplify uses to create and manage AWS resources\. IAM attaches the `AdministratorAccess-Amplify` managed policy to the `Amplify-Backend Deployment` service role\.
 
-
-You can attach `AdministratorAccess-Amplify` to your IAM entities\. Amplify also attaches this policy to a service role that allows Amplify to perform actions on your behalf\. When you deploy a backend in the Amplify console, you must create an `Amplify-Backend Deployment` service role that Amplify uses to create and manage AWS resources\. IAM attaches the `AdministratorAccess-Amplify` managed policy to the `Amplify-Backend Deployment` service role\.
-
-
-
-This policy grants account administrative permissions while explicity allowing direct access to resources that Amplify applications require to create and manage backends\.
-
-
+This policy grants account administrative permissions while explicitly allowing direct access to resources that Amplify applications require to create and manage backends\.
 
 **Permissions details**
 
 This policy provides access to multiple AWS services, including IAM actions\. These actions allow identities with this policy to use AWS Identity and Access Management to create other identities with any permissions\. This allows permissions escalation and this policy should be considered as powerful as the `AdministratorAccess` policy\.
+
+This policy grants the `iam:PassRole` action permission for all resources\. This is required to support Amazon Cognito user pools configuration\.
 
 
 

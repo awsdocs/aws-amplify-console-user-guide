@@ -1,6 +1,6 @@
 # Feature branch deployments and team workflows<a name="multi-environments"></a>
 
-The Amplify Console is designed to work with feature branch and GitFlow workflows\. The Amplify Console leverages Git branches to create new deployments every time a developer connects a new branch in their repository\. After connecting your first branch, you can create a new feature branch deployment by adding a branch as follows:
+Amplify is designed to work with feature branch and GitFlow workflows\. Amplify leverages Git branches to create new deployments every time a developer connects a new branch in their repository\. After connecting your first branch, you can create a new feature branch deployment by adding a branch as follows:
 
 1. On the branch list page, choose **Connect branch**\.
 

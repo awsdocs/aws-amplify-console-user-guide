@@ -2,7 +2,7 @@
 
 When you store multiple projects or microservices in a single repository, it is called a monorepo\. You can use Amplify to deploy applications in a monorepo without creating multiple build configurations or branch configurations\.
 
-You can save the build settings for a monorepo in the Amplify Console or you can download the `amplify.yml` file and add it to the root of your repository\. Amplify applies the settings saved in the console to all of your branches unless it finds an `amplify.yml` file in your repository\. When an `amplify.yml` file is present, its settings override any build settings saved in the Amplify Console\.
+You can save the build settings for a monorepo in the Amplify console or you can download the `amplify.yml` file and add it to the root of your repository\. Amplify applies the settings saved in the console to all of your branches unless it finds an `amplify.yml` file in your repository\. When an `amplify.yml` file is present, its settings override any build settings saved in the Amplify console\.
 
 ## Monorepo build specification YAML syntax<a name="monorepo-yml-syntax"></a>
 
@@ -140,9 +140,9 @@ When you deploy a monorepo app using the Amplify console, the console automatica
 
 The following instructions demonstrate how to deploy a monorepo app with the Amplify console\. Amplify automatically sets the `AMPLIFY_MONOREPO_APP_ROOT` environment variable using the app's root folder that you specify in the console\.
 
-**To deploy a monorepo app with AmplifyConsole**
+**To deploy a monorepo app with the Amplify console**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose **New app**, **Host web app** in the upper right corner\.
 
@@ -161,7 +161,7 @@ The following instructions demonstrate how to deploy a monorepo app with the Amp
    1. Choose **Next**\.
 
 1. On the **Configure build settings** page you can use the default settings or customize the build settings for your app\. In the following example screenshot, Amplify detects an `amplify.yml` file in the repository to use for the build settings\. In the **Environment variables** section, Amplify has set `AMPLIFY_MONOREPO_APP_ROOT` to `apps/app1`, using the path you specified in step 4d\.  
-![\[Screenshot of the Configure build settings page in the Amplify Console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-buildsettings-monorepo1.png)
+![\[Screenshot of the Configure build settings page in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-buildsettings-monorepo1.png)
 
 1. Choose **Next**\.
 
@@ -173,7 +173,7 @@ Use the following instructions to manually set the `AMPLIFY_MONOREPO_APP_ROOT` e
 
 **To set the AMPLIFY\_MONOREPO\_APP\_ROOT environment variable for an existing app**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the name of the app to set the environment variable for\.
 
