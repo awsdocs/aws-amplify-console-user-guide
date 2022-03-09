@@ -143,9 +143,9 @@ The following example uses a rewrite to proxy content from another location so t
 
 | Original address | Destination Address | Redirect Type | Country Code | 
 | --- | --- | --- | --- | 
-|   `/images`   |   `https://images.otherdomain.com`   |   `rewrite (200)`   |  | 
+|   `/images/<*>`   |   `https://images.otherdomain.com<*>`   |   `rewrite (200)`   |  | 
 
- JSON \[\{"source": "/images", "status": "200", "target": "https://images\.otherdomain\.com", "condition": null\}\] 
+ JSON \[\{"source": "/images/<\*>", "status": "200", "target": "https://images\.otherdomain\.com/<\*>", "condition": null\}\] 
 
 ## Trailing slashes and clean URLs<a name="trailing-slashes-and-clean-urls"></a>
 
