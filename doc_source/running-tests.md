@@ -10,7 +10,7 @@ Cypress is a JavaScript\-based framework that allows you to run E2E tests on a b
 
 ## Add tests to your existing Amplify app<a name="add-tests-to-your-existing-amplify-app"></a>
 
-You can use the test step to run any test commands at build time\. For E2E tests, the Amplify Console offers a deeper integration with Cypress that allows you to generate a UI report for your tests\. To add Cypress tests to an existing app, update your amplify\.yml build settings with the following values\.
+You can use the test step to run any test commands at build time\. For E2E tests, Amplify Hosting offers a deeper integration with Cypress that allows you to generate a UI report for your tests\. To add Cypress tests to an existing app, update your amplify\.yml build settings with the following values\.
 
 ```
 test:
@@ -37,7 +37,7 @@ test:
       - '**/*.png'
       - '**/*.mp4'
 ```
-+  **preTest** \- Install all the dependencies required to run Cypress tests\. Amplify Console uses [mochaawesome](https://github.com/adamgruber/mochawesome) to generate a report to view your test results and [wait\-on](https://github.com/jeffbski/wait-on) to set up the localhost server during the build\.
++  **preTest** \- Install all the dependencies required to run Cypress tests\. Amplify Hosting uses [mochaawesome](https://github.com/adamgruber/mochawesome) to generate a report to view your test results and [wait\-on](https://github.com/jeffbski/wait-on) to set up the localhost server during the build\.
 +  **test** \- Run cypress commands to execute tests using mochawesome\.
 +  **postTest** \- The mochawesome report is generated from the output JSON\.
 +  **artifacts>baseDirectory** \- The directory from which tests are run\.

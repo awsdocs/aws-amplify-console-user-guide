@@ -1,10 +1,10 @@
 # Incoming webhooks<a name="webhooks"></a>
 
-Set up an incoming webhook in the Amplify Console to trigger a build without comitting code to your Git repository\. You can use webhook triggers with headless CMS tools \(such as Contentful or GraphCMS\) to start a build whenever content changes, or to perform daily builds using services such as Zapier\.
+Set up an incoming webhook in the Amplify console to trigger a build without comitting code to your Git repository\. You can use webhook triggers with headless CMS tools \(such as Contentful or GraphCMS\) to start a build whenever content changes, or to perform daily builds using services such as Zapier\.
 
 **To create an incoming webhook**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app that you want to create a webhook for\.
 

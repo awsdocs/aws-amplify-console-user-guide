@@ -1,6 +1,6 @@
 # Configuring build settings<a name="build-settings"></a>
 
-When you deploy an app with Amplify, it automatically detects the front end framework and associated build settings by inspecting the `package.json` file in your repository\. You have the following options for storing your app's build settings:
+When you deploy an app with Amplify Hosting, it automatically detects the front end framework and associated build settings by inspecting the `package.json` file in your repository\. You have the following options for storing your app's build settings:
 + Save the build settings in the Amplify console \- The Amplify console autodetects build settings and saves them so that they can be accessed via the Amplify console\. Amplify applies these settings to all of your branches unless there is an `amplify.yml` file stored in your repository\.
 + Save the build settings in your repository \- Download the `amplify.yml` file and add it to the root of your repository\.
 
@@ -237,7 +237,7 @@ Optionally, you can set the `AMPLIFY_DIFF_DEPLOY_ROOT` environment variable to o
 
 ## Enable or disable diff based backend builds<a name="enable-diff-backend"></a>
 
-You can configure Amplify to use diff based backend builds using the `AMPLIFY_DIFF_BACKEND` environment variable\. When you enable diff based backend builds, at the start of each build Amplify attempts to run a diff on the `amplify` folder in your repository\. If Amplify doesn't find any differences, it skips the backend build step, and doesn't update your backend resources\. If your project doesn't have an `amplify` folder in your repository, Amplify ignores the value of the `AMPLIFY_DIFF_BACKEND` environment variable\.
+You can configure Amplify Hosting to use diff based backend builds using the `AMPLIFY_DIFF_BACKEND` environment variable\. When you enable diff based backend builds, at the start of each build Amplify attempts to run a diff on the `amplify` folder in your repository\. If Amplify doesn't find any differences, it skips the backend build step, and doesn't update your backend resources\. If your project doesn't have an `amplify` folder in your repository, Amplify ignores the value of the `AMPLIFY_DIFF_BACKEND` environment variable\.
 
 If you currently have custom commands specified in the build settings of your backend phase, conditional backend builds won't work\. If you want those custom commands to run, you must move them to the frontend phase of your build settings in your app's `amplify.yml` file\.
 

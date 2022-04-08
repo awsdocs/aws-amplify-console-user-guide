@@ -1,13 +1,9 @@
-# Welcome to AWS Amplify<a name="welcome"></a>
+# Welcome to AWS Amplify Hosting<a name="welcome"></a>
 
-AWS Amplify is a set of purpose\-built tools and features that enables frontend web and mobile developers to quickly and easily build full\-stack applications on AWS\. Amplify provides two services: Amplify Hosting and Amplify Studio\. Amplify Hosting provides a git\-based workflow for hosting full\-stack serverless web apps with continuous deployment\. Amplify Studio is a visual development environment that simplifies the creation of scalable, full\-stack web and mobile apps\. Use Studio to build your frontend UI with a set of ready\-to\-use UI components, create an app backend, and then connect the two together\.
+AWS Amplify is a set of purpose\-built tools and features that enables frontend web and mobile developers to quickly and easily build full\-stack applications on AWS\. Amplify provides two services: Amplify Hosting and Amplify Studio\. Amplify Hosting provides a git\-based workflow for hosting full\-stack serverless web apps with continuous deployment\. This user guide provides the information you need to get started with Amplify Hosting\.
 
- 
-
-## Amplify features<a name="amplify-console-features"></a>
-
-**Hosting**
-+ Amplify supports the common SPA frameworks, for example, React, Angular, Vue\.js, Ionic, and Ember, as well as static site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll\.
+## Amplify Hosting features<a name="amplify-console-features"></a>
++ Amplify Hosting supports the common SPA frameworks, for example, React, Angular, Vue\.js, Ionic, and Ember, as well as static site generators like Gatsby, Eleventy, Hugo, VuePress, and Jekyll\.
 + Manage production and staging environments for your frontend and backend by connecting new branches\. See, [feature branch deployments](multi-environments.md)\.
 + Connect your application to a custom domain\. See, [set up custom domains](custom-domains.md)\.
 + [Deploy and host SSR web apps](server-side-rendering-amplify.md) created using the Next\.js\. framework\.
@@ -19,7 +15,15 @@ AWS Amplify is a set of purpose\-built tools and features that enables frontend 
 + Atomic deployments eliminate maintenance windows by ensuring that the web app is updated only after the entire deployment finishes\. This eliminates scenarios where files fail to upload properly\.
 + Get screen shots of your app rendered on different mobile devices to identify layout issues\.
 
-**Studio**
+## Getting started with Amplify Hosting<a name="get-started-hosting"></a>
+
+To get started with Amplify's hosting features, see the [Getting started with existing code](getting-started.md) tutorial\. After completing the tutorial, you will be able to connect your git repository \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, you can get started with one of the [fullstack continuous deployment samples](deploy-backend.md)\.
+
+## Amplify Studio<a name="about-amplify-studio"></a>
+
+You can access Amplify Studio from the AWS Amplify console in the AWS Management Console\. Amplify Studio is a visual development environment that simplifies the creation of scalable, full\-stack web and mobile apps\. Use Studio to build your frontend UI with a set of ready\-to\-use UI components, create an app backend, and then connect the two together\. See the user guide for [Amplify Studio](https://docs.amplify.aws/console) in the *Amplify docs*\.
+
+### Amplify Studio features<a name="studio-features"></a>
 + Visual data modeling enables you to focus on your domain\-specific objects instead of cloud infrastructure\.
 + Set up authentication for your app\.
 + Powerful and easy to understand authorization\.
@@ -34,17 +38,11 @@ AWS Amplify is a set of purpose\-built tools and features that enables frontend 
 + Configure and test your UI components directly within Studio to see how they update and display data\.
 + Bind your cloud\-connected backend to your frontend UI in a few simple steps\.
 
-## Getting started with Amplify<a name="get-started"></a>
-
-### Getting started with Amplify Hosting<a name="get-started-hosting"></a>
-
-To get started with Amplify's hosting features, see the [Getting started with existing code](getting-started.md) tutorial\. After completing the tutorial, you will be able to connect your git repository \(GitHub, BitBucket Cloud, GitLab, and AWS CodeCommit\) to set up continuous deployment\. Alternatively, you can get started with one of the [fullstack continuous deployment samples](deploy-backend.md)\.
-
 ### Getting started with Amplify Studio<a name="get-started-adminui"></a>
 
 You don't need an AWS account to get started using Studio to create a backend\. Without an AWS account, you can begin modeling data for your backend locally\.
 
- With an AWS account, you have access to an expanded set of Studio features for managing your backend environment as well as the visual designer for creating frontend UI components that you can connect to your app's backend\. For more information, see [Getting started](https://docs.amplify.aws/console/adminui/start) in the *Amplify docs*\.
+With an AWS account, you have access to an expanded set of Studio features for managing your backend environment as well as the visual designer for creating frontend UI components that you can connect to your app's backend\. For more information, see [Getting started](https://docs.amplify.aws/console/adminui/start) in the *Amplify docs*\.
 
 ## Modern SPA web applications<a name="modern-web-applications"></a>
 

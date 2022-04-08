@@ -1,6 +1,6 @@
 # Monorepo build settings<a name="monorepo-configuration"></a>
 
-When you store multiple projects or microservices in a single repository, it is called a monorepo\. You can use Amplify to deploy applications in a monorepo without creating multiple build configurations or branch configurations\.
+When you store multiple projects or microservices in a single repository, it is called a monorepo\. You can use Amplify Hosting to deploy applications in a monorepo without creating multiple build configurations or branch configurations\.
 
 You can save the build settings for a monorepo in the Amplify console or you can download the `amplify.yml` file and add it to the root of your repository\. Amplify applies the settings saved in the console to all of your branches unless it finds an `amplify.yml` file in your repository\. When an `amplify.yml` file is present, its settings override any build settings saved in the Amplify console\.
 

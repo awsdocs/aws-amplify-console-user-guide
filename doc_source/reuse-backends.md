@@ -30,7 +30,7 @@ Amplify enables you to easily reuse existing backend environments across all of 
 
    1. For **Environment**, select the name of the backend environment to add\. You can use an existing environment or create a new one\.
 
-   1. Select an existing service role to give Amplify the permissions it requires to make changes to your app backend\. If you need to create a service role, choose **Create new role**\. For more information about creating a service role, see [Adding a service role to the Amplify console when you connect an app](how-to-service-role-amplify-console.md)\.
+   1. Select an existing service role to give Amplify the permissions it requires to make changes to your app backend\. If you need to create a service role, choose **Create new role**\. For more information about creating a service role, see [Adding a service role](how-to-service-role-amplify-console.md)\.
 
    1. By default, full\-stack CI/CD is enabled\. Uncheck this option to turn off full\-stack CI/CD for this backend\. Turning off full\-stack CI/CD causes the app to run in *pull only* mode\. At build time, Amplify will automatically generate the `aws-exports.js` file only, without modifying your backend environment\.
 
@@ -57,7 +57,7 @@ Amplify enables you to easily reuse existing backend environments across all of 
 
 1. For **Environment**, select the name of the backend environment to add\. You can use an existing environment or create a new one\.
 
-1. If you need to set up a service role to give Amplify the permissions it requires to make changes to your app backend, the console prompts you to perform this task\. For more information about creating a service role, see [Adding a service role to the Amplify console when you connect an app](how-to-service-role-amplify-console.md)\.
+1. If you need to set up a service role to give Amplify the permissions it requires to make changes to your app backend, the console prompts you to perform this task\. For more information about creating a service role, see [Adding a service role](how-to-service-role-amplify-console.md)\.
 
 1. By default, full\-stack CI/CD is enabled\. Uncheck this option to turn off full\-stack CI/CD for this backend\. Turning off full\-stack CI/CD causes the app to run in *pull only* mode\. At build time, Amplify will automatically generate the `aws-exports.js` file only, without modifying the backend environment\.
 

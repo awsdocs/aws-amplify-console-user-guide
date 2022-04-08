@@ -9,19 +9,19 @@ Environment variables are key\-value pairs that are available at build time\. Th
 As a best practice, you can use environment variables to expose these configurations\. All environment variables that you add are encrypted to prevent rogue access, so you can use them to store secret information\.
 
 **Note**  
-**Environment variables** is visible in the Amplify Console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
+**Environment variables** is visible in the Amplify console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
 ## Set environment variables<a name="setting-env-vars"></a>
 
 **To set environment variables**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
-1. In the Amplify Console, choose **App Settings**, and then choose **Environment variables**\.
+1. In the Amplify console, choose **App Settings**, and then choose **Environment variables**\.
 
 1. In the **Environment variables** section, choose **Manage variables**\.
 
-1. In the **Manage variables** section, under **Variable**, enter your key\. For **Value**, enter your value\. By default, the Amplify console applies the environment variables across all branches, so you don’t have to re\-enter variables when you connect a new branch\.  
+1. In the **Manage variables** section, under **Variable**, enter your key\. For **Value**, enter your value\. By default, Amplify applies the environment variables across all branches, so you don’t have to re\-enter variables when you connect a new branch\.  
 ![\[Screenshot of the Manage variables section.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/envvars.png)
 
 1. \(Optional\) To customize an environment variable specifically for a branch, add a branch override as follows: 
@@ -39,9 +39,9 @@ To access an environment variable during a build, edit your build settings to in
 
 **To edit build settings to include an environment variable**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
-1. In the Amplify Console, choose **App Settings**, then choose **Build settings**\.
+1. In the Amplify console, choose **App Settings**, then choose **Build settings**\.
 
 1. In the **App build specification** section, choose **Edit**\.
 
@@ -60,32 +60,32 @@ Each command in your build configuration is executed inside a Bash shell\. For m
 
 **To connect a branch to an app**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1.  The procedure for connecting a branch to an app varies depending on whether you are connecting a branch to a new app or an existing app\.
    + **Connecting a branch to a new app**
 
      1. When connecting a branch to a new app, in the **Configure build settings** step of the wizard, choose **Create new environment**, and enter the name of your backend environment\. The following screenshot shows the **Backend deployments** section of the Amplify console with **backend** entered for the backend environment name\.  
-![\[Screenshot of the Backend deployments section in the Amplify Console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-newenvironment-1.png)
+![\[Screenshot of the Backend deployments section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-newenvironment-1.png)
 
-     1. Expand the **Advanced settings** section in the build settings configuration wizard and add environment variables for social sign\-in keys\. For example, **AMPLIFY\_FACEBOOK\_CLIENT\_SECRET** is a valid environment variable\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables)\.
+     1. Expand the **Advanced settings** section in the build settings configuration wizard and add environment variables for social sign\-in keys\. For example, **AMPLIFY\_FACEBOOK\_CLIENT\_SECRET** is a valid environment variable\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify environment variables](#amplify-console-environment-variables)\.
    + **Connecting a branch to an existing app**
 
      1. If you are connecting a new branch to an existing app, set the social sign\-in environment variables before connecting the branch\. In the navigation pane, choose **App Settings**, **Environment variables**\.
 
      1. In the **Environment variables** section, choose **Manage variables**\.
 
-     1. In the **Manage variables** section, for **Variable** \(key\), enter your client ID\. For **Value**, enter your client secret\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify Console environment variables](#amplify-console-environment-variables)\. 
+     1. In the **Manage variables** section, for **Variable** \(key\), enter your client ID\. For **Value**, enter your client secret\. For the list of Amplify system environment variables that are available by default, see the table in [Amplify environment variables](#amplify-console-environment-variables)\. 
 
 ## Frontend framework environment variables<a name="frontend-framework-environment-variables"></a>
 
-If you are developing your app with a frontend framework that supports its own environment variables, it is important to understand that these are not the same as the environment variables you configure in the Amplify Console\. For example, React \(prefixed REACT\_APP\) and Gatsby \(prefixed GATSBY\), enable you to create runtime environment variables that those frameworks automatically bundle into your frontend production build\. To understand the effects of using these environment variables to store values, refer to the documentation for the frontend framework you are using\.
+If you are developing your app with a frontend framework that supports its own environment variables, it is important to understand that these are not the same as the environment variables you configure in the Amplify console\. For example, React \(prefixed REACT\_APP\) and Gatsby \(prefixed GATSBY\), enable you to create runtime environment variables that those frameworks automatically bundle into your frontend production build\. To understand the effects of using these environment variables to store values, refer to the documentation for the frontend framework you are using\.
 
-Storing sensitive values, such as API keys, inside these frontend framework prefixed environment variables is not a best practice and is highly discouraged\. For an example of using the Amplify Console's build time environment variables for this purpose, see [Access environment variables](#access-env-vars)\.
+Storing sensitive values, such as API keys, inside these frontend framework prefixed environment variables is not a best practice and is highly discouraged\. For an example of using Amplify's build time environment variables for this purpose, see [Access environment variables](#access-env-vars)\.
 
-## Amplify Console environment variables<a name="amplify-console-environment-variables"></a>
+## Amplify environment variables<a name="amplify-console-environment-variables"></a>
 
-You can use the following environment variables that are accessible by default within the Amplify Console\.
+You can use the following environment variables that are accessible by default within the Amplify console\.
 
 
 ****  
@@ -108,9 +108,9 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_DIFF\_DEPLOY  |  Enable or disable diff based frontend deployment\. For more information, see [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy)\.  |  true  | 
 |  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist | 
 |  AMPLIFY\_DIFF\_BACKEND  |  Enable or disable diff based backend builds\. For more information, see [Enable or disable diff based backend builds](build-settings.md#enable-diff-backend)  | true | 
-|  AMPLIFY\_BACKEND\_PULL\_ONLY  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | true | 
-|  AMPLIFY\_BACKEND\_APP\_ID  |  The Amplify Console manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd1234 | 
-|  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build spec and want to disable backend builds, set this environment variable to `true`\.  | true | 
+|  AMPLIFY\_BACKEND\_PULL\_ONLY  |  Amplify manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | true | 
+|  AMPLIFY\_BACKEND\_APP\_ID  |  Amplify manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd1234 | 
+|  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build specification and want to disable backend builds, set this environment variable to `true`\.  | true | 
 |  AMPLIFY\_MONOREPO\_APP\_ROOT  |  The path to use to specify the app root of a monorepo app, relative to the root of your repository\.  | apps/react\-app | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes  |  `30`  | 
 |  AMPLIFY\_USERPOOL\_ID  |  The ID for the Amazon Cognito user pool imported for auth  |  `us-west-2_example`  | 
@@ -123,7 +123,7 @@ The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment va
 
 ## Environment secrets<a name="environment-secrets"></a>
 
-Environment secrets are similar to environment variables, but they are AWS Systems Manager \(SSM\) Parameter Store key value pairs that can be encrypted\. Some values must be encrypted, such as the Sign in with Apple private key for Amplify Console\.
+Environment secrets are similar to environment variables, but they are AWS Systems Manager \(SSM\) Parameter Store key value pairs that can be encrypted\. Some values must be encrypted, such as the Sign in with Apple private key for Amplify\.
 
 ### Set environment secrets<a name="set-environment-secrets"></a>
 
@@ -156,11 +156,11 @@ Amplify only has access to the keys under the `/amplify/{your_app_id}/{your_back
 
 Accessing an environment secret during a build is similar to [accessing environment variables](#access-env-vars), except that environment secrets are stored in `process.env.secrets` as a JSON string\.
 
-### Amplify Console environment secrets<a name="amplify-environment-secrets"></a>
+### Amplify environment secrets<a name="amplify-environment-secrets"></a>
 
 Specify an Systems Manager parameter in the format `/amplify/{your_app_id}/{your_backend_environment_name}/AMPLIFY_SIWA_CLIENT_ID`\.
 
-You can use the following environment secrets that are accessible by default within the Amplify Console\.
+You can use the following environment secrets that are accessible by default within the Amplify console\.
 
 
 ****  

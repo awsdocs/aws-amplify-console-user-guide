@@ -4,7 +4,7 @@ A subdomain is the part of your URL that appears before your domain name\. For e
 
 ## To add a subdomain only<a name="to-add-a-subdomain-only"></a>
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose your app that you want to add a subdomain to\.
 
@@ -19,7 +19,7 @@ A subdomain is the part of your URL that appears before your domain name\. For e
 
 ## To add a multilevel subdomain<a name="to-add-a-multi-level-subdomain"></a>
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose your app that you want to add a multilevel subdomain to\.
 
@@ -36,7 +36,7 @@ A subdomain is the part of your URL that appears before your domain name\. For e
 
 After adding a custom domain to an app, you can edit an existing subdomain or add a new subdomain\.
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose your app that you want to manage subdomains for\.
 

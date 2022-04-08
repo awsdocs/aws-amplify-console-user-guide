@@ -108,7 +108,11 @@ You can use the following example code to use a rewrite to change the subdomain 
 | --- | --- | --- | --- | 
 |   `https://mydomain.com`   |   `https://www.mydomain.com`   |   `rewrite (200)`   |  | 
 
- JSON \[\{"source": "https://mydomain\.com", "status": "200", "target": "https://www\.mydomain\.com", "condition": null\}\] 
+JSON
+
+```
+[{"source": "https://mydomain.com", "status": "200", "target": "https://www.mydomain.com", "condition": null}]
+```
 
 You can use the following example code to redirect paths under a folder that can’t be found to a custom 404 page\.
 
@@ -123,7 +127,7 @@ You can use the following example code to redirect paths under a folder that can
 
 ## Redirects for single page web apps \(SPA\)<a name="redirects-for-single-page-web-apps-spa"></a>
 
-Most SPA frameworks support HTML5 history\.pushState\(\) to change browser location without triggering a server request\. This works for users who begin their journey from the root \(or */index\.html*\), but fails for users who navigate directly to any other page\. Using regular expressions, the following example sets up a 200 rewrite for all files to index\.html except for the specific file extensions specified in the regular expression\.
+Most SPA frameworks support HTML5 history\.pushState\(\) to change browser location without triggering a server request\. This works for users who begin their journey from the root \(or */index\.html*\), but fails for users who navigate directly to any other page\. Using regular expressions, the following example sets up a 200 rewrite for all files to index\.html, except for the specific file extensions specified in the regular expression\.
 
 
 ****  
@@ -136,7 +140,7 @@ Most SPA frameworks support HTML5 history\.pushState\(\) to change browser locat
 
 ## Reverse proxy rewrite<a name="reverse-proxy-rewrite"></a>
 
-The following example uses a rewrite to proxy content from another location so that it appears to user that the domain hasn’t changed:
+The following example uses a rewrite to proxy content from another location so that it appears to the user that the domain hasn’t changed:
 
 
 ****  
@@ -145,11 +149,15 @@ The following example uses a rewrite to proxy content from another location so t
 | --- | --- | --- | --- | 
 |   `/images/<*>`   |   `https://images.otherdomain.com/<*>`   |   `rewrite (200)`   |  | 
 
- JSON \[\{"source": "/images/<\*>", "status": "200", "target": "https://images\.otherdomain\.com/<\*>", "condition": null\}\] 
+JSON
+
+```
+[{"source": "/images/<*>", "status": "200", "target": "https://images.otherdomain.com/<*>", "condition": null}]
+```
 
 ## Trailing slashes and clean URLs<a name="trailing-slashes-and-clean-urls"></a>
 
-To create clean URL structures like *about* instead of *about\.html*, static site generators such as Hugo generate directories for pages with an index\.html \(*/about/index\.html*\)\. The Amplify Console automatically creates clean URLs by adding a trailing slash when required\. The table below highlights different scenarios:
+To create clean URL structures like *about* instead of *about\.html*, static site generators such as Hugo generate directories for pages with an index\.html \(*/about/index\.html*\)\. Amplify automatically creates clean URLs by adding a trailing slash when required\. The table below highlights different scenarios:
 
 
 ****  

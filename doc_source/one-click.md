@@ -1,4 +1,4 @@
-# Deploy to Amplify Console button<a name="one-click"></a>
+# Deploy to Amplify button<a name="one-click"></a>
 
 The **Deploy to Amplify Console** button enables you to share GitHub projects publicly or within your team\. The following is an image of the button:
 
@@ -10,7 +10,7 @@ Add this button to your GitHub README\.md file, blog post, or any other markup p
 
 1. An SVG image: `https://oneclick.amplifyapp.com/button.svg` 
 
-1. The Amplify Console URL with a link to your GitHub repository\. Copy your repo URL \(e\.g\. `https://github.com/username/repository`\) only or provide a deep link into a specific folder \(e\.g\. `https://github.com/username/repository/tree/branchname/folder`\)\. The Amplify Console will deploy the default branch in your repository\. Additional branches can be connected after the app is connected\.
+1. The Amplify console URL with a link to your GitHub repository\. Copy your repo URL \(e\.g\. `https://github.com/username/repository`\) only or provide a deep link into a specific folder \(e\.g\. `https://github.com/username/repository/tree/branchname/folder`\)\. Amplify hosting will deploy the default branch in your repository\. Additional branches can be connected after the app is connected\.
 
 To add the button to a markdown file \(e\.g\. your GitHub README\.md\), replace `https://github.com/username/repository` with your repository name\.
 

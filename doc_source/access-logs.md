@@ -12,7 +12,7 @@ AWS Amplify is integrated with Amazon CloudWatch, allowing you to monitor metric
 
 ### Metrics<a name="metrics"></a>
 
- Amplify supports six CloudWatch metrics in the `AWS/AmplifyHosting` namespace for monitoring traffic, errors, data transfer, and latency for your apps\. These metrics are aggregated at one minute intervals\. CloudWatch monitoring metrics are free of charge and don't count against the [CloudWatch service quotas](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html)\.
+Amplify supports six CloudWatch metrics in the `AWS/AmplifyHosting` namespace for monitoring traffic, errors, data transfer, and latency for your apps\. These metrics are aggregated at one minute intervals\. CloudWatch monitoring metrics are free of charge and don't count against the [CloudWatch service quotas](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html)\.
 
 Not all available statistics are applicable for every metric\. In the following table, the most relevant statistics are listed in the description for each metric\.
 
@@ -34,11 +34,11 @@ Amplify provides the following CloudWatch metric dimensions\.
 |  App  |  Metric data is provided by app\.  | 
 |  AWS Account  |  Metric data is provided across all apps in the AWS account\.  | 
 
-You can access CloudWatch metrics in the AWS Management Console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\. Alternatively, you can access metrics in the Amplify Console using the following procedure\.
+You can access CloudWatch metrics in the AWS Management Console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\. Alternatively, you can access metrics in the Amplify console using the following procedure\.
 
 **To access metrics in the Amplify console**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app that you want to view metrics for\.
 
@@ -58,7 +58,7 @@ Use the following procedure to create an alarm in the Amplify console\.
 
 **To create a CloudWatch alarm for an Amplify metric**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app that you want to set an alarm on\.
 
@@ -105,13 +105,13 @@ Each Amazon SNS recipient that you specify receives a confirmation email from AW
 
 ## Access logs<a name="using-access-logs"></a>
 
-Amplify stores access logs for all of the apps you host in Amplify Console\. Access logs contain information about all requests that are made to your hosted apps\. You can retrieve these access logs for any two week window that you specify\.
+Amplify stores access logs for all of the apps you host in Amplify\. Access logs contain information about all requests that are made to your hosted apps\. You can retrieve these access logs for any two week window that you specify\.
 
 Use the following procedure to retrieve access logs\.
 
 **To view access logs**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app that you want to view access logs for\.
 
@@ -127,7 +127,7 @@ Use the following procedure to retrieve access logs\.
 
 ### Analyzing access logs<a name="analyzing-access-logs"></a>
 
-To analyze access logs you can store the CSV files in an Amazon S3 bucket\. One way to analyze your access logs is to use Amazon Athena\. Athena is an interactive query service that can help you analyze data for AWS services\. You can follow the [step\-by\-step instructions here](https://docs.aws.amazon.com/athena/latest/ug/cloudfront-logs.html#create-cloudfront-table) to create a table\. Once your table has been created, you can query data as follows\.
+To analyze access logs you can store the CSV files in an Amazon S3 bucket\. One way to analyze your access logs is to use Athena\. Athena is an interactive query service that can help you analyze data for AWS services\. You can follow the [step\-by\-step instructions here](https://docs.aws.amazon.com/athena/latest/ug/cloudfront-logs.html#create-cloudfront-table) to create a table\. Once your table has been created, you can query data as follows\.
 
 ```
 SELECT SUM(bytes) AS total_bytes

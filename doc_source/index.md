@@ -1,4 +1,4 @@
-# AWS Amplify User Guide
+# AWS Amplify Hosting User Guide
 
 -----
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -14,13 +14,13 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [Welcome to AWS Amplify](welcome.md)
++ [Welcome to AWS Amplify Hosting](welcome.md)
 + [Getting started with existing code](getting-started.md)
 + [Getting started with fullstack continuous deployments](deploy-backend.md)
-+ [Deploy and host server-side rendered apps with Amplify](server-side-rendering-amplify.md)
++ [Deploy server-side rendered apps with Amplify Hosting](server-side-rendering-amplify.md)
 + [Set up custom domains](custom-domains.md)
    + [Understanding DNS terminology and concepts](understanding-dns-terminology-and-concepts.md)
-   + [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)
+   + [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)
    + [Add a custom domain managed by a third-party DNS provider](to-add-a-custom-domain-managed-by-a-third-party-dns-provider.md)
    + [Add a custom domain managed by GoDaddy](to-add-a-custom-domain-managed-by-godaddy.md)
    + [Add a custom domain managed by Google Domains](to-add-a-custom-domain-managed-by-google-domains.md)
@@ -36,8 +36,9 @@ Amazon's trademarks and trade dress may not be used in
    + [Conditional backend builds](conditional-backends.md)
    + [Use Amplify backends across apps](reuse-backends.md)
 + [Manual deploys](manual-deploys.md)
-+ [Deploy to Amplify Console button](one-click.md)
-+ [Web previews](pr-previews.md)
++ [Deploy to Amplify button](one-click.md)
++ [Setting up Amplify access to GitHub repositories](setting-up-GitHub-access.md)
++ [Web previews for pull requests](pr-previews.md)
 + [Add end-to-end tests to your Amplify app](running-tests.md)
 + [Using redirects](redirects.md)
 + [Restricting access](access-control.md)
@@ -47,7 +48,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Monitoring](access-logs.md)
 + [Notifications](notifications.md)
 + [Custom build images and live package updates](custom-build-image.md)
-+ [Adding a service role to the Amplify console when you connect an app](how-to-service-role-amplify-console.md)
++ [Adding a service role](how-to-service-role-amplify-console.md)
 + [Managing app performance](ttl.md)
 + [Logging Amplify API calls using AWS CloudTrail](logging-using-cloudtrail.md)
 + [Security in Amplify](security.md)
@@ -65,7 +66,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Encryption key management](encryption-key-management.md)
    + [Compliance Validation for AWS Amplify](Amplify-compliance.md)
    + [Infrastructure Security in AWS Amplify](infrastructure-security.md)
-+ [AWS Amplify reference](aws-amplify-reference-chapter.md)
++ [AWS Amplify Hosting reference](aws-amplify-reference-chapter.md)
    + [AWS CloudFormation support](cloudformation-support-chapter.md)
    + [AWS Command Line Interface support](aws-cli-support-chapter.md)
    + [Resource tagging support](resource-tagging-support-chapter.md)

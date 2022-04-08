@@ -1,19 +1,19 @@
 # Getting started with fullstack continuous deployments<a name="deploy-backend"></a>
 
-The Amplify Console enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit\. With the Amplify Console you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify CLI on the same commit as your frontend code\.
+Amplify Hosting enables developers building apps with the Amplify Framework to continuously deploy updates to their backend and frontend on every code commit\. With Amplify Hosting, you can deploy serverless backends with GraphQL/REST APIs, authentication, analytics, and storage created by the Amplify Command Line Interface \(CLI\) on the same commit as your frontend code\.
 
 **Important**  
-This feature only works with the Amplify CLI v4\.0\+
+This feature only works with the Amplify CLI version 4\.0 or later\.
 
 In this tutorial, we are going to create and deploy a React app which implements a basic authentication flow for signing up/signing in users as well as protected client side routing using Amplify\.
 
 ## Step 1: Deploy a fullstack sample<a name="step-1-deploy-a-fullstack-sample"></a>
 
-Log in to the [Amplify Console](https://console.aws.amazon.com/amplify/home) and choose **Get Started** under **Deploy**\. In the following screen, choose **From fullstack samples**\. Alternatively, start your own adventure by building a backend **from scratch** by installing the Amplify CLI\.
+Log in to the [Amplify console](https://console.aws.amazon.com/amplify/home) and choose **Get Started** under **Deploy**\. In the following screen, choose **From fullstack samples**\. Alternatively, start your own adventure by building a backend **from scratch** by installing the Amplify CLI\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/fullstack1.png)
 
-Choose the **Authentication Starter** and **Deploy app**\. You will be asked to connect your GitHub account\. Connecting your GitHub acccount allows the Amplify Console to create a fork of the repository in your account, deploy the AWS backend services, and build and deploy the frontend\. In order to deploy backend resources to AWS, you will need to [create a service role](how-to-service-role-amplify-console.md)\.
+Choose the **Authentication Starter** and **Deploy app**\. You will be asked to connect your GitHub account\. Connecting your GitHub acccount allows Amplify to create a fork of the repository in your account, deploy the AWS backend services, and build and deploy the frontend\. In order to deploy backend resources to AWS, you will need to [create a service role](how-to-service-role-amplify-console.md)\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/fullstack2.gif)
 
@@ -79,10 +79,10 @@ At the end of the build, you will have one frontend environment \(the main branc
    GraphQL API KEY: da2-vlthvw5qcffxzl2hibgowv3rdq
    ```
 
-1. Visit the Amplify Console to view the added API category\. Choosing the API category will allow you to navigate to the AppSync Console \(to write queries or mutations performing CRUD operations\), or the DynamoDB Console \(to view your Todo table\)\.  
+1. Visit the Amplify console to view the added API category\. Choosing the API category will allow you to navigate to the AppSync console \(to write queries or mutations performing CRUD operations\), or the DynamoDB console \(to view your Todo table\)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/fullstack5.png)
 
-1. Use the [Amplify GraphQL client](https://aws-amplify.github.io/docs/js/api#amplify-graphql-client) to write frontend code that lists and updates the todos\. To deploy the updates to your frontend, simply commit your code and a new build will be triggered in the Amplify Console\.
+1. Use the [Amplify GraphQL client](https://aws-amplify.github.io/docs/js/api#amplify-graphql-client) to write frontend code that lists and updates the todos\. To deploy the updates to your frontend, simply commit your code and a new build will be triggered in the Amplify console\.
 
 ## Next steps: Set up feature branch deployments<a name="next-steps-set-up-feature-branch-deployments"></a>
 

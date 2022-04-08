@@ -1,4 +1,4 @@
-# Deploy and host server\-side rendered apps with Amplify<a name="server-side-rendering-amplify"></a>
+# Deploy server\-side rendered apps with Amplify Hosting<a name="server-side-rendering-amplify"></a>
 
 You can use AWS Amplify to deploy and host web apps that use server\-side rendering \(SSR\)\. Currently, Amplify supports SSR apps created using the Next\.js framework\. When you deploy your app, Amplify automatically detects SSR–you do not have to perform any manual configuration in the AWS Management Console\.
 

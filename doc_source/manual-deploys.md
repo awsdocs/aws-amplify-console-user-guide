@@ -1,16 +1,16 @@
 # Manual deploys<a name="manual-deploys"></a>
 
-Manual deploys allows you to publish your web app to the Amplify Console without connecting a Git provider\. You can choose to drag and drop a folder from your desktop and host your site in seconds\. Alternatively, you can reference assets in an Amazon S3 bucket\. You can also specify a public URL to the location where your files are stored\.
+Manual deploys allows you to publish your web app with Amplify Hosting without connecting a Git provider\. You can choose to drag and drop a folder from your desktop and host your site in seconds\. Alternatively, you can reference assets in an Amazon S3 bucket\. You can also specify a public URL to the location where your files are stored\.
 
-For Amazon S3, you can also set up AWS Lambda triggers to update your site each time new assets are uploaded\. [This blog post](http://aws.amazon.com/blogs/mobile/deploy-files-s3-dropbox-amplify-console/) describes the process for setting up a Lambda trigger to automatically deploy changes to Amplify when updates are made to an Amazon S3 bucket\.
+For Amazon S3, you can also set up AWS Lambda triggers to update your site each time new assets are uploaded\. [This blog post](http://aws.amazon.com/blogs/mobile/deploy-files-s3-dropbox-amplify-console/) describes the process for setting up a Lambda trigger to automatically deploy changes to Amplify Hosting when updates are made to an Amazon S3 bucket\.
 
-Amplify does not support manual deploys for server\-side rendered \(SSR\) apps\. For more information, see [Deploy and host server\-side rendered apps with Amplify](server-side-rendering-amplify.md)\.
+Amplify Hosting does not support manual deploys for server\-side rendered \(SSR\) apps\. For more information, see [Deploy server\-side rendered apps with Amplify Hosting](server-side-rendering-amplify.md)\.
 
 ## Drag and drop<a name="drag-and-drop"></a>
 
 **To manually deploy an app using drag and drop**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. How you get to the **Host your web app** page depends on whether you are starting from the Amplify home page or the **All apps** page\.
    + From the Amplify home page
@@ -40,7 +40,7 @@ Amplify does not support manual deploys for server\-side rendered \(SSR\) apps\.
 
 **To manually deploy an app from Amazon S3 or a public URL**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. At the top of the page, choose **Get started**\.
 

@@ -62,7 +62,7 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
 
 **To set custom headers for an app in the AWS Management Console**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to set custom headers for\.
 
@@ -82,11 +82,11 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
 
 1. Redeploy the app to apply the new custom headers\.
    + For a CI/CD app, navigate to the branch to deploy and choose **Redeploy this version**\. You can also perform a new build from your Git repository\.
-   + For a manual deploy app, deploy the app again in the Amplify Console\.
+   + For a manual deploy app, deploy the app again in the Amplify console\.
 
 **To set custom headers using the customHttp\.yml file**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to set custom headers for\.
 
@@ -106,7 +106,7 @@ There are two ways to specify custom HTTP headers for an AWS Amplify app\. You c
 
 1. Redeploy the app to apply the new custom headers\.
    + For a CI/CD app, perform a new build from your Git repository that includes the new `customHttp.yml` file\.
-   + For a manual deploy app, deploy the app again in the Amplify Console and include the new `customHttp.yml` file with the artifacts that you upload\.
+   + For a manual deploy app, deploy the app again in the Amplify console and include the new `customHttp.yml` file with the artifacts that you upload\.
 
 **Note**  
 Custom headers set in the `customHttp.yml` file and deployed in the app's root directory will override custom headers defined in the **Custom headers** section in the AWS Management Console\.
@@ -117,9 +117,9 @@ Previously, custom HTTP headers were specified for an app either by editing the 
 
 Specify your custom headers in the **Custom headers** section of the AWS Management Console or by downloading and editing the `customHttp.yml` file\.
 
-**To migrate custom headers stored in the Amplify Console**
+**To migrate custom headers stored in the Amplify console**
 
-1. Sign in to the AWS Management Console and open the [ Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [ Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to perform the custom header migration on\.
 
@@ -149,7 +149,7 @@ Specify your custom headers in the **Custom headers** section of the AWS Managem
 
 1. Take note of the custom header information in the file, as you will use it later in step 8\. Delete the custom headers in the file\. Save and close the file\.
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app to set custom headers for\.
 
@@ -163,7 +163,7 @@ Specify your custom headers in the **Custom headers** section of the AWS Managem
 
 1. Redeploy the app to apply the new custom headers\.
    + For a CI/CD app, perform a new build from your Git repository that includes the new `customHttp.yml` file\.
-   + For a manual deploy app, deploy the app again in the Amplify Console and include the new `customHttp.yml` file with artifacts that you upload\.
+   + For a manual deploy app, deploy the app again in the Amplify console and include the new `customHttp.yml` file with artifacts that you upload\.
 
 **Note**  
 Custom headers set in the `customHttp.yml` file and deployed in the app's root directory will override the custom headers defined in the **Custom headers** section of the AWS Management Console\.
@@ -181,7 +181,7 @@ Custom security headers enable enforcing HTTPS, preventing XSS attacks, and defe
 
 ```
 customHeaders:
-  - pattern: '**/*'
+  - pattern: '**'
     headers:
       - key: 'Strict-Transport-Security'
         value: 'max-age=31536000; includeSubDomains'

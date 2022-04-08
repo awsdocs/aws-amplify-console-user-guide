@@ -10,7 +10,7 @@ Pattern\-based branch deployments allow you to automatically deploy branches tha
 
 1. Define patterns for automatically deploying branches\.
    + **`*`** – Deploys all branches in your repository\.
-   + **`release*`**’ – Deploys all branches that being with the word ‘release\.
+   + **`release*`**’ – Deploys all branches that begin with the word ‘release\.
    + **`release*/`** – Deploys all branches that match a ‘release /’ pattern\.
    + Specify multiple patterns in a comma\-separated list\. For example, `release*, feature*`\.
 
@@ -24,5 +24,5 @@ Pattern\-based branch deployments allow you to automatically deploy branches tha
 
 You can use pattern\-based feature branch deployments for an app connected to an Amazon Route 53 custom domain\. 
 + For instructions on setting up pattern\-based feature branch deployments, see [Set up automatic subdomains for a Amazon Route 53 custom domain](to-set-up-automatic-subdomains-for-a-Route-53-custom-domain.md)
-+ For instructions on connecting an Amplify app to a custom domain managed in Route 53, see [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)
++ For instructions on connecting an Amplify app to a custom domain managed in Route 53, see [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)
 + For more information about using Route 53, see [What is Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)\.

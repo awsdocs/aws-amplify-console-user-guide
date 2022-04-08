@@ -6,34 +6,18 @@
 
 ## Custom build images<a name="setup"></a>
 
-You can use a custom build image to provide a customized build environment for an Amplify app\. If you have specific dependencies that take a long time to install during a build using Amplify Console's default container, you can create your own Docker image and reference it during a build\. Images can be hosted on [Docker Hub](https://hub.docker.com/) or Amazon Elastic Container Registry Public\.
+You can use a custom build image to provide a customized build environment for an Amplify app\. If you have specific dependencies that take a long time to install during a build using Amplify's default container, you can create your own Docker image and reference it during a build\. Images can be hosted on Amazon Elastic Container Registry Public\.
 
 **Note**  
-**Build settings** is visible in the Amplify Console’s App settings menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
+**Build settings** is visible in the Amplify console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.
 
 ### Configuring a custom build image<a name="configuring-a-custom-build-image"></a>
-
-**To configure a custom build image**
-
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
-
-1. Choose the app that you want to configure a custom build image for\.
-
-1. In the navigation pane, choose **App Settings**, **Build settings**\.
-
-1. On the **Build settings** page, in the **Build image settings** section, choose **Edit**\.
-
-1. In the **Edit build image settings** dialog box, expand the **Build image** menu, and choose **Build image**\.
-
-1. Enter the name of your build image\. For example, if the name of your Docker Hub repo is *exampledockerrepo*, and your image name is *exampleimage* you would enter **exampledockerrepo/exampleimage:latest**\.
-
-1. Choose **Save**\.
 
 **To configure a custom build image hosted in Amazon ECR**
 
 1. See [Getting started](https://docs.aws.amazon.com/AmazonECR/latest/public/public-getting-started.html) in the *Amazon ECR Public User guide* to set up an Amazon ECR Public repository with a Docker image\.
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app that you want to configure a custom build image for\.
 
@@ -49,7 +33,7 @@ You can use a custom build image to provide a customized build environment for a
 
 ### Custom build image requirements<a name="custom-build-image-requirements"></a>
 
-For a custom build image to work as an Amplify Console build image, it must meet the following requirements:
+For a custom build image to work as an Amplify build image, it must meet the following requirements:
 
 1.  **cURL**: When we launch your custom image, we download our build runner into your container, and therefore we require cURL to be present\. If this dependency is missing, the build will instantly fail without any output as our build\-runner was unable to produce any output\.
 
@@ -61,13 +45,13 @@ For a custom build image to work as an Amplify Console build image, it must meet
 
 ## Live package updates<a name="setup-live-updates"></a>
 
-Live package updates enable you to specify versions of packages and dependencies to use in the Amplify Console default build image\. The default build image comes with several packages and dependencies pre\-installed \(e\.g\. Hugo, Amplify CLI, Yarn, etc\)\. With live package updates you can override the version of these dependencies and specify either a specific version, or ensure that the latest version is always installed\. If live package updates is enabled, before your build runs, the build runner first updates \(or downgrades\) the specified dependencies\. This increases the build time proportional to the time it takes to update the dependencies, but the benefit is that you can ensure the same version of a dependency is used to build your app\.
+Live package updates enable you to specify versions of packages and dependencies to use in the Amplify default build image\. The default build image comes with several packages and dependencies pre\-installed \(e\.g\. Hugo, Amplify CLI, Yarn, etc\)\. With live package updates you can override the version of these dependencies and specify either a specific version, or ensure that the latest version is always installed\. If live package updates is enabled, before your build runs, the build runner first updates \(or downgrades\) the specified dependencies\. This increases the build time proportional to the time it takes to update the dependencies, but the benefit is that you can ensure the same version of a dependency is used to build your app\.
 
 ### Configuring live package updates<a name="configuring-live-updates"></a>
 
 **To configure live package updates**
 
-1. Sign in to the AWS Management Console and open the [Amplify Console](https://console.aws.amazon.com/amplify/)\.
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app that you want to configure live package updates for\.
 
