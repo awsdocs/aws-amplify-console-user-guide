@@ -6,6 +6,9 @@ If you are working on unreleased features, you can password protect feature bran
 
 **To set passwords on feature branches**
 
+**Note**  
+For SSR applications, you need to trigger a deployment of your branch after enabling access control for the changes to be applied. 
+
 1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
 
 1. Choose the app you want to set feature branch passwords on\.
@@ -19,3 +22,4 @@ If you are working on unreleased features, you can password protect feature bran
    + To set a username and password that applies to all connected branches, turn on **Apply a global password**\. For example, if you have **main**, **dev**, and **feature** branches connected, you can use a global password to set the same username and password for all branches\.
    + To apply a username and password to an individual branch, turn off **Apply a global password**\. For the branch that you want to set a unique username and password for, choose **Restricted\-password required** for **Access setting** and enter a username and password\.  
 ![\[Screenshot of the Branch access section showing the options for applying passwords globally or per branch.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/accesscontrol2.png)
+
