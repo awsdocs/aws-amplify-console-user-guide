@@ -22,7 +22,7 @@ test:
         - npm install pm2
         - npm install mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
         - npx pm2 start npm -- start
-        - 'npx wait-on http://localhost:3000'
+        - 'npx wait-on --timeout 60 http://localhost:3000'
     test:
       commands:
         - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
