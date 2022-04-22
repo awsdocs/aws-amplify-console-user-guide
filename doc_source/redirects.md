@@ -8,13 +8,17 @@ There are several types of redirects that support specific scenarios\.
 
  **Permanent redirect \(301\)** 
 
-301 redirects are intended for lasting changes to the destination of a web address\. Search engine ranking history of the original address applies to the new destination address\. Redirection occurs on the client\-side, so a browser navigation bar shows the destination address after redirection\. Common reasons to use 301 redirects include:
+301 redirects are intended for lasting changes to the destination of a web address\. Search engine ranking history of the original address applies to the new destination address\. Redirection occurs on the client\-side, so a browser navigation bar shows the destination address after redirection\.
+
+Common reasons to use 301 redirects include:
 + To avoid a broken link when the address of a page changes\.
 + To avoid a broken link when a user makes a predictable typo in an address\.
 
  **Temporary redirect \(302\)** 
 
-302 redirects are intended for temporary changes to the destination of a web address\. Search engine ranking history of the original address doesn’t apply to the new destination address\. Redirection occurs on the client\-side, so a browser navigation bar shows the destination address after redirection\. Common reasons to use 302 redirects include:
+302 redirects are intended for temporary changes to the destination of a web address\. Search engine ranking history of the original address doesn’t apply to the new destination address\. Redirection occurs on the client\-side, so a browser navigation bar shows the destination address after redirection\.
+
+Common reasons to use 302 redirects include:
 + To provide a detour destination while repairs are made to an original address\.
 + To provide test pages for A/B comparison of user interface\.
 
@@ -61,6 +65,12 @@ The following order of redirects ignores the redirection of *specific\-filename\
 /docs/<*> /documents/<*>
 /docs/specific-filename.html /documents/different-filename.html 301
 ```
+
+## Query parameters<a name="query-parameters"></a>
+
+You can use query parameters for more control over your URL matches\. Amplify forwards all query parameters to the destination path for 301 and 302 redirects, with the following exceptions:
++ If the original address includes a query string set to a specific value, Amplify doesn't forward query parameters\. In this case, the redirect only applies to requests to the destination URL with the specified query value\. 
++ If the destination address for the matching rule has query parameters, query parameters aren't forwarded\. For example, if the destination address for the redirect is `https://example-target.com?q=someParam`, query parameters aren't passed through\.
 
 ## Simple redirects and rewrites<a name="simple-redirects-and-rewrites"></a>
 
@@ -192,7 +202,10 @@ You can use the following example code to redirect a path to a folder with a nam
 | --- | --- | --- | --- | 
 |   `/docs?id=<my-blog-id-value`   |   `/documents/<my-blog-post-id-value>`   |   `permanent redirect (301)`   |  | 
 
- JSON \[\{"source": "/docs?id=<my\-blog\-id\-value>", "status": "301", "target": "/documents/<my\-blog\-post\-id\-value>", "condition": null\}\] 
+ JSON \[\{"source": "/docs?id=<my\-blog\-id\-value>", "status": "301", "target": "/documents/<my\-blog\-id\-value>", "condition": null\}\] 
+
+**Note**  
+Amplify forwards all query string parameters to the destination path for 301 and 302 redirects\. However, if the original address includes a query string set to a specific value, as demonstrated in this example, Amplify doesn't forward query parameters\. In this case, the redirect applies only to requests to the destination address with the specified query value `id`\.
 
 You can use the following example code to redirect all paths that can’t be found at a given level of a folder structure to index\.html in a specified folder\.
 

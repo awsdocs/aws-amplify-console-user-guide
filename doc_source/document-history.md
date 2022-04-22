@@ -1,11 +1,12 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Amplify\.
-+ **Latest documentation update:** April 5, 2022
++ **Latest documentation update:** April 17, 2022
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Updated managed policies topic | Updated the [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md) topic to describe recent changes to the AWS managed policies for Amplify\. | April 17, 2022 | 
 | New GitHub App feature launch | Added the [Setting up Amplify access to GitHub repositories](setting-up-GitHub-access.md) topic to describe the new GitHub App for authorizing Amplify access to your GitHub repository\. | April 5, 2022 | 
 | New Amplify Studio feature launch | Updated the [Welcome to AWS Amplify Hosting](welcome.md) topic to describe the updates to Amplify Studio that provide a visual designer to create UI components that you can connect to your backend data\. | December 2, 2021 | 
 | Updated managed policies topic | Updated the [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md) topic to describe recent changes to the AWS managed policies for Amplify to support Amplify Studio\. | December 2, 2021 | 

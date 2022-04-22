@@ -94,7 +94,7 @@ You can use the following environment variables that are accessible by default w
 | --- | --- | --- | 
 |  AWS\_APP\_ID  |  The app ID of the current build  |  `abcd1234`  | 
 |  AWS\_BRANCH  |  The branch name of the current build  |  `main`, `develop`, `beta`, `v2.0`  | 
-|  AWS\_BRANCH\_ARN  |  The branch ARN of the current build  | aws:arn:amplify:us\-west\-2:111122223333:appname/branch/\.\.\.  | 
+|  AWS\_BRANCH\_ARN  |  The branch Amazon Resource Name \(ARN\) of the current build  | aws:arn:amplify:us\-west\-2:123456789012:appname/branch/\.\.\.  | 
 |  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   `git@github.com:<user-name>/<repo-name>.git`   | 
 |  AWS\_COMMIT\_ID  |  The commit ID of the current build “HEAD” for rebuilds  |  `abcd1234`  | 
 |  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  `0000000001`  | 
@@ -117,6 +117,7 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_WEBCLIENT\_ID  |  The ID for the app client to be used by web applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | 123456 | 
 |  AMPLIFY\_NATIVECLIENT\_ID  |  The ID for the app client to be used by native applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | 123456 | 
 |  AMPLIFY\_IDENTITYPOOL\_ID  |  The ID for the Amazon Cognito identity pool  |  `example-identitypool-id`  | 
+|  AMPLIFY\_PERMISSIONS\_BOUNDARY\_ARN  |  The ARN for the IAM policy to use as a permissions boundary that applies to all IAM roles created by Amplify\. For more information, see [IAM Permissions Boundary for Amplify\-generated roles](https://docs.amplify.aws/cli/project/permissions-boundary/)\.  |  `arn:aws:iam::123456789012:policy/example-policy`  | 
 
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
@@ -167,7 +168,7 @@ You can use the following environment secrets that are accessible by default wit
 
 | Variable name | Description | Example value | 
 | --- | --- | --- | 
-|  AMPLIFY\_SIWA\_CLIENT\_ID  |  The Sign in with Apple client ID  |  com\.yourapp\.auth  | 
-|  AMPLIFY\_SIWA\_TEAM\_ID  |  The Sign in with Apple team ID  |  ABCD123  | 
-|  AMPLIFY\_SIWA\_KEY\_ID  |  The Sign in with Apple key ID  |  ABCD123  | 
+|  AMPLIFY\_SIWA\_CLIENT\_ID  |  The Sign in with Apple client ID  |  `com.yourapp.auth`  | 
+|  AMPLIFY\_SIWA\_TEAM\_ID  |  The Sign in with Apple team ID  |  `ABCD123`  | 
+|  AMPLIFY\_SIWA\_KEY\_ID  |  The Sign in with Apple key ID  |  `ABCD123`  | 
 |  AMPLIFY\_SIWA\_PRIVATE\_KEY  |  The Sign in with Apple private key  |  \-\-\-\-\-BEGIN PRIVATE KEY\-\-\-\-\- \*\*\*\*\.\.\.\.\.\. \-\-\-\-\-END PRIVATE KEY\-\-\-\-\-  | 
