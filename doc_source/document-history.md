@@ -1,6 +1,6 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
-The following table describes the important changes to the documentation since the last release of AWS Amplify\.
+The following table describes the important changes to the documentation since the last release of  Amplify\.
 + **Latest documentation update:** April 17, 2022
 
 
