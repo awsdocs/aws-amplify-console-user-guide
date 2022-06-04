@@ -2,7 +2,7 @@
 
 **To add a custom domain managed by GoDaddy**
 
-1. Follow steps one through seven of the procedure [Add a custom domain managed by a third\-party DNS provider](to-add-a-custom-domain-managed-by-a-third-party-dns-provider.md)\.
+1. Follow steps one through six of the procedure [Add a custom domain managed by a third\-party DNS provider](to-add-a-custom-domain-managed-by-a-third-party-dns-provider.md)\.
 
 1. Log in to your GoDaddy account\.
 
