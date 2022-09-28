@@ -45,6 +45,40 @@ test:
 - **artifacts>configFilePath** \- The generated test report data\.
 - **artifacts>files** \- The generated artifacts \(screenshots and videos\) available for download\.
 
+## Add tests to your existing Amplify app - Next.js SSR<a name="add-tests-to-your-existing-amplify-app-nextjs-ssr"></a>
+
+You can use the test step to run any test commands at build time for your Next.js SSR app deployed on Amplify\. For E2E tests, Amplify Hosting offers a deeper integration with Cypress that allows you to generate a UI report for your tests\. To add Cypress tests to an existing app, update your amplify\.yml build settings with the following values\.
+
+```
+test:
+  phases:
+    preTest:
+      commands:
+        - npm install
+        - npm install start-server-and-test cypress mocha mochawesome mochawesome-merge mochawesome-report-generator --save-dev
+    test:
+      commands:
+        - npm run build
+        - npx start-test 'npm start' 3000 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
+    postTest:
+      commands:
+        - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
+  artifacts:
+    baseDirectory: cypress
+    configFilePath: '**/mochawesome.json'
+    files:
+      - '**/*.png'
+      - '**/*.mp4'
+```
+
+- **preTest** \- Install all the dependencies required to run Cypress tests\. Amplify Hosting uses [mochaawesome](https://github.com/adamgruber/mochawesome) to generate a report to view your test results 
+- **test** \- Amplify Hosting uses and [start-server-and-test](https://www.npmjs.com/package/start-server-and-test) to set up the localhost server during the build then runs cypress commands to execute tests using mochawesome\.
+- **postTest** \- The mochawesome report is generated from the output JSON\.
+- **artifacts>baseDirectory** \- The directory from which tests are run\.
+- **artifacts>configFilePath** \- The generated test report data\.
+- **artifacts>files** \- The generated artifacts \(screenshots and videos\) available for download\.
+
+
 ## Disabling tests<a name="disabling-tests"></a>
 
 Once the “test” config has been added to your amplify\.yml build settings, the test step will be executed for every build, on every branch\. If you would like to globally disable tests from running, or you would only like tests to run for specific branches, you can use the “USER_DISABLE_TESTS” environment variable to do so without modifying your build settings\.
