@@ -8,10 +8,10 @@ Amplify supports the automatic build\-time generation of the Amplify config `aws
 
 1. Choose the app to edit\.
 
-1. Choose the **Frontend environments** tab\.
+1. Choose the **Hosting environments** tab\.
 
 1. Locate the branch to edit and choose **Edit**\.  
-![\[The location of the Edit link for a branch in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify_edit_backend.png)
+![\[The location of the Edit link for a branch in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify_edit_backend_alternate.png)
 
 1. On the **Edit target backend** page, uncheck **Enable full\-stack continuous deployments \(CI/CD\)** to turn off full\-stack CI/CD for this backend\.  
 ![\[The location of the checkbox to turn off CI/CD in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify_turnoff_CICD.png)

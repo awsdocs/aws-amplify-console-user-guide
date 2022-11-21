@@ -4,6 +4,8 @@ Amplify now uses the GitHub Apps feature to authorize Amplify read\-only access 
 
 When you connect a new app stored in a GitHub repo, by default Amplify uses the GitHub App to access the repo\. However, existing Amplify apps that you previously connected from GitHub repos use OAuth for access\. CI/CD will continue to work for these apps, but we highly recommend that you migrate them to use the new Amplify GitHub App\.
 
+When you deploy a new app or migrate an existing app using the Amplify console, you are automatically directed to the installation location for the Amplify GitHub App\. To manually access the installation landing page for the app, open a web browser and navigate to the app by region\. Use the format `https://github.com/apps/aws-amplify-REGION`, replacing *REGION* with the region where you will deploy your Amplify app\. For example, to install the Amplify GitHub App in the US West \(Oregon\) region, navigate to https://github\.com/apps/aws\-amplify\-us\-west\-2\.
+
 **Topics**
 + [Installing and authorizing the Amplify GitHub App for a new deployment](#setting-up-github-app)
 + [Migrating an existing OAuth app to the Amplify GitHub App](#migrating-to-github-app-auth)
@@ -86,7 +88,7 @@ You can use AWS CloudFormation, the Amplify CLI, and the SDKs to deploy a new Am
 
 1. Open a web browser and navigate to the installation location for the Amplify GitHub App in the AWS Region where you will deploy your app\.
 
-   Use the format `https://github.com/apps/aws-amplify-REGION/installations/new`, replacing *REGION* with your own input\. For example, if you are installing your app in the `US WEST (Oregon)` region, specify `https://github.com/apps/aws-amplify-us-west-2/installations/new`\.
+   Use the format `https://github.com/apps/aws-amplify-REGION/installations/new`, replacing *REGION* with your own input\. For example, if you are installing your app in the US West \(Oregon\) region, specify `https://github.com/apps/aws-amplify-us-west-2/installations/new`\.
 
 1. Select the GitHub account where you want to install the Amplify GitHub app\.
 

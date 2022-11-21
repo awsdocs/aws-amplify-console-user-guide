@@ -121,7 +121,7 @@ To view examples of Amplify identity\-based policies, see [Identity\-based polic
 
 |  |  | 
 | --- |--- |
-|  Supports policy condition keys  |    Yes  | 
+|  Supports service\-specific policy condition keys  |    Yes  | 
 
 Administrators can use AWS JSON policies to specify who has access to what\. That is, which **principal** can perform **actions** on what **resources**, and under what **conditions**\.
 
@@ -158,6 +158,8 @@ Attribute\-based access control \(ABAC\) is an authorization strategy that defin
 ABAC is helpful in environments that are growing rapidly and helps with situations where policy management becomes cumbersome\.
 
 To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `aws:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\.
+
+If a service supports all three condition keys for every resource type, then the value is **Yes** for the service\. If a service supports all three condition keys for only some resource types, then the value is **Partial**\.
 
 For more information about ABAC, see [What is ABAC?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html) in the *IAM User Guide*\. To view a tutorial with steps for setting up ABAC, see [Use attribute\-based access control \(ABAC\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html) in the *IAM User Guide*\.
 

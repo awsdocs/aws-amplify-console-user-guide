@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -18,6 +18,16 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting started with existing code](getting-started.md)
 + [Getting started with fullstack continuous deployments](deploy-backend.md)
 + [Deploy server-side rendered apps with Amplify Hosting](server-side-rendering-amplify.md)
+   + [What is server-side rendering](What-is-server-side-rendering.md)
+   + [Amplify support for Next.js SSR](ssr-Amplify-support.md)
+      + [Pricing for Next.js SSR apps](nextjs-ssr-pricing.md)
+      + [Deploying a Next.js SSR app with Amplify](deploy-nextjs-app.md)
+      + [Migrating a Next.js 11 SSR app to Amplify Hosting compute](update-app-nextjs-version.md)
+      + [Adding SSR functionality to a static Next.js app](redeploy-ssg-to-ssr.md)
+      + [Making environment variables accessible to Lambdas](ssr-environment-variables.md)
+      + [Amazon CloudWatch Logs for SSR apps](ssr-CloudWatch-logs.md)
+      + [Troubleshooting SSR deployments](troubleshooting-ssr-deployment.md)
+      + [Amplify Next.js 11 SSR support](ssr-nextjs11-support.md)
 + [Set up custom domains](custom-domains.md)
    + [Understanding DNS terminology and concepts](understanding-dns-terminology-and-concepts.md)
    + [Add a custom domain managed by Amazon Route 53](to-add-a-custom-domain-managed-by-amazon-route-53.md)
@@ -39,9 +49,9 @@ Amazon's trademarks and trade dress may not be used in
 + [Deploy to Amplify button](one-click.md)
 + [Setting up Amplify access to GitHub repositories](setting-up-GitHub-access.md)
 + [Web previews for pull requests](pr-previews.md)
-+ [Add end-to-end tests to your Amplify app](running-tests.md)
++ [Add end-to-end Cypress tests to your Amplify app](running-tests.md)
 + [Using redirects](redirects.md)
-+ [Restricting access](access-control.md)
++ [Restricting access to branches](access-control.md)
 + [Environment variables](environment-variables.md)
 + [Custom headers](custom-headers.md)
 + [Incoming webhooks](webhooks.md)

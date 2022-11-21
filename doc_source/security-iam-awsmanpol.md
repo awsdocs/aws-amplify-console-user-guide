@@ -65,7 +65,7 @@ This policy grants the `iam:PassRole` action permission for all resources\. This
                 "cloudformation:UpdateStackSet"
             ],
             "Resource": [
-                "arn:aws:cloudformation:*:*:stack/amplify-*"
+                "arn:aws:cloudformation:::stack/amplify-"
             ]
         },
         {
@@ -202,6 +202,7 @@ This policy grants the `iam:PassRole` action permission for all resources\. This
                 "s3:PutBucketPolicy",
                 "s3:PutBucketWebsite",
                 "s3:PutObjectAcl",
+                "s3:PutPublicAccessBlock",
                 "cloudfront:CreateCloudFrontOriginAccessIdentity",
                 "cloudfront:CreateDistribution",
                 "cloudfront:DeleteCloudFrontOriginAccessIdentity",
@@ -251,11 +252,11 @@ This policy grants the `iam:PassRole` action permission for all resources\. This
                 "appsync:GraphQL",
                 "appsync:UpdateApiKey",
                 "appsync:ListApiKeys",
-                "amplify:*",
-                "amplifybackend:*",
-                "amplifyuibuilder:*",
+                "amplify:",
+                "amplifybackend:",
+                "amplifyuibuilder:",
                 "sts:AssumeRole",
-                "mobiletargeting:*",
+                "mobiletargeting:",
                 "cognito-idp:AdminAddUserToGroup",
                 "cognito-idp:AdminCreateUser",
                 "cognito-idp:CreateGroup",
@@ -344,13 +345,13 @@ This policy grants the `iam:PassRole` action permission for all resources\. This
                 "ssm:GetParameter",
                 "ssm:DeleteParameters"
             ],
-            "Resource": "arn:aws:ssm:*:*:parameter/amplify/*"
+            "Resource": "arn:aws:ssm:::parameter/amplify/"
         },
         {
             "Sid": "GeoPowerUser",
             "Effect": "Allow",
             "Action": [
-                "geo:*"
+                "geo:"
             ],
             "Resource": "*"
         },
@@ -378,7 +379,8 @@ This policy grants the `iam:PassRole` action permission for all resources\. This
                 "s3:PutEncryptionConfiguration",
                 "s3:PutLifecycleConfiguration",
                 "s3:PutObject",
-                "s3:PutObjectAcl"
+                "s3:PutObjectAcl",
+                "s3:PutPublicAccessBlock"
             ],
             "Resource": "*"
         },
@@ -448,6 +450,27 @@ This policy grants the `iam:PassRole` action permission for all resources\. This
                 "amplify:UpdateBranch"
             ],
             "Resource": "*"
+        },
+        {
+            "Sid": "AmplifySSRViewLogGroups",
+            "Effect": "Allow",
+            "Action": "logs:DescribeLogGroups",
+            "Resource": "arn:aws:logs:*:*:log-group:*"
+        },
+        {
+            "Sid": "AmplifySSRCreateLogGroup",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/amplify/*"
+        },
+        {
+            "Sid": "AmplifySSRPushLogs",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/amplify/*:log-stream:*"
         }
     ]
 }
@@ -468,6 +491,8 @@ View details about updates to AWS managed policies for Amplify since this servic
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+|  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add policy actions to allow the Amplify server\-side rendering feature to push application metrics to CloudWatch in a customer's AWS account\.  | August 30, 2022 | 
+|  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add policy actions to block public access to the Amplify deployment Amazon S3 bucket\.  | April 27, 2022 | 
 |  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add an action to allow customers to delete their server\-side rendered \(SSR\) apps\. This also allows the corresponding CloudFront distribution to be deleted successfully\. Add an action to allow customers to specify a different Lambda function to handle events from an existing event source using the Amplify CLI\. With these changes, AWS Lambda will be able to perform the [UpdateEventSourceMapping](https://docs.aws.amazon.com/lambda/latest/dg/API_UpdateEventSourceMapping.html) action\.  | April 17, 2022 | 
 |  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add a policy action to enable Amplify UI Builder actions on all resources\.  | December 2, 2021 | 
 |  [AdministratorAccess\-Amplify](#security-iam-awsmanpol-AdministratorAccess-Amplify) – Update to an existing policy  |  Add policy actions to support the Amazon Cognito authentication feature that uses social identity providers\. Add a policy action to support Lambda layers\. Add a policy action to support the [Amplify Storage category](https://docs.amplify.aws/lib/storage/getting-started/q/platform/js/)\.  | November 8, 2021 | 

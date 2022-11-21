@@ -1,8 +1,6 @@
-# Restricting access<a name="access-control"></a>
+# Restricting access to branches<a name="access-control"></a>
 
-If you are working on unreleased features, you can password protect feature branches that are not ready to be accessed publicly\.
-
-![\[Video graphic of password protected sign in.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/password.gif)
+If you are working on unreleased features, you can password protect feature branches that are not ready to be publicly accessed\. When access control is set on a branch, users are prompted for a user name and password when they attempt to access the URL for the branch\.
 
 **To set passwords on feature branches**
 

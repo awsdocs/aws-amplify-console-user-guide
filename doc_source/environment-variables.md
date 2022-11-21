@@ -94,7 +94,7 @@ You can use the following environment variables that are accessible by default w
 | --- | --- | --- | 
 |  AWS\_APP\_ID  |  The app ID of the current build  |  `abcd1234`  | 
 |  AWS\_BRANCH  |  The branch name of the current build  |  `main`, `develop`, `beta`, `v2.0`  | 
-|  AWS\_BRANCH\_ARN  |  The branch Amazon Resource Name \(ARN\) of the current build  | aws:arn:amplify:us\-west\-2:123456789012:appname/branch/\.\.\.  | 
+|  AWS\_BRANCH\_ARN  |  The branch Amazon Resource Name \(ARN\) of the current build  | `aws:arn:amplify:us-west-2:123456789012:appname/branch/... ` | 
 |  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   `git@github.com:<user-name>/<repo-name>.git`   | 
 |  AWS\_COMMIT\_ID  |  The commit ID of the current build “HEAD” for rebuilds  |  `abcd1234`  | 
 |  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  `0000000001`  | 
@@ -105,19 +105,20 @@ You can use the following environment variables that are accessible by default w
 |  AMPLIFY\_GOOGLE\_CLIENT\_SECRET  |  The Google client secret  |  `example123456`  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_ID  |  The Amazon client ID  |  `123456`  | 
 |  AMPLIFY\_AMAZON\_CLIENT\_SECRET  |  The Amazon client secret  |  `example123456`  | 
-|  AMPLIFY\_DIFF\_DEPLOY  |  Enable or disable diff based frontend deployment\. For more information, see [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy)\.  |  true  | 
-|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | dist | 
-|  AMPLIFY\_DIFF\_BACKEND  |  Enable or disable diff based backend builds\. For more information, see [Enable or disable diff based backend builds](build-settings.md#enable-diff-backend)  | true | 
-|  AMPLIFY\_BACKEND\_PULL\_ONLY  |  Amplify manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | true | 
-|  AMPLIFY\_BACKEND\_APP\_ID  |  Amplify manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | abcd1234 | 
-|  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build specification and want to disable backend builds, set this environment variable to `true`\.  | true | 
-|  AMPLIFY\_MONOREPO\_APP\_ROOT  |  The path to use to specify the app root of a monorepo app, relative to the root of your repository\.  | apps/react\-app | 
+|  AMPLIFY\_DIFF\_DEPLOY  |  Enable or disable diff based frontend deployment\. For more information, see [Enable or disable diff based frontend build and deploy](build-settings.md#enable-diff-deploy)\.  |  `true`  | 
+|  AMPLIFY\_DIFF\_DEPLOY\_ROOT  |  The path to use for diff based frontend deployment comparisons, relative to the root of your repository\.  | `dist` | 
+|  AMPLIFY\_DIFF\_BACKEND  |  Enable or disable diff based backend builds\. For more information, see [Enable or disable diff based backend builds](build-settings.md#enable-diff-backend)  | `true` | 
+|  AMPLIFY\_BACKEND\_PULL\_ONLY  |  Amplify manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | `true` | 
+|  AMPLIFY\_BACKEND\_APP\_ID  |  Amplify manages this environment variable\. For more information, see [Edit an existing frontend to point to a different backend](reuse-backends.md#reuse-backends-edit-existing)  | `abcd1234` | 
+|  AMPLIFY\_SKIP\_BACKEND\_BUILD  |  If you do not have a backend section in your build specification and want to disable backend builds, set this environment variable to `true`\.  | `true` | 
+|  AMPLIFY\_MONOREPO\_APP\_ROOT  |  The path to use to specify the app root of a monorepo app, relative to the root of your repository\.  | `apps/react-app` | 
 |  \_BUILD\_TIMEOUT  |  The build timeout duration in minutes  |  `30`  | 
 |  AMPLIFY\_USERPOOL\_ID  |  The ID for the Amazon Cognito user pool imported for auth  |  `us-west-2_example`  | 
-|  AMPLIFY\_WEBCLIENT\_ID  |  The ID for the app client to be used by web applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | 123456 | 
-|  AMPLIFY\_NATIVECLIENT\_ID  |  The ID for the app client to be used by native applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | 123456 | 
+|  AMPLIFY\_WEBCLIENT\_ID  |  The ID for the app client to be used by web applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | `123456` | 
+|  AMPLIFY\_NATIVECLIENT\_ID  |  The ID for the app client to be used by native applications The app client must be configured with access to the Amazon Cognito user pool specified by the AMPLIFY\_USERPOOL\_ID environment variable\.  | `123456` | 
 |  AMPLIFY\_IDENTITYPOOL\_ID  |  The ID for the Amazon Cognito identity pool  |  `example-identitypool-id`  | 
 |  AMPLIFY\_PERMISSIONS\_BOUNDARY\_ARN  |  The ARN for the IAM policy to use as a permissions boundary that applies to all IAM roles created by Amplify\. For more information, see [IAM Permissions Boundary for Amplify\-generated roles](https://docs.amplify.aws/cli/project/permissions-boundary/)\.  |  `arn:aws:iam::123456789012:policy/example-policy`  | 
+|  AMPLIFY\_DESTRUCTIVE\_UPDATES  |  Set this environment variable to true to allow a GraphQL API to be updated with schema operations that can potentially cause data loss\. For more information, see [Update schema](https://docs.amplify.aws/cli-legacy/graphql-transformer/overview/#update-schema)\.  |  `true`  | 
 
 **Note**  
 The `AMPLIFY_AMAZON_CLIENT_ID` and `AMPLIFY_AMAZON_CLIENT_SECRET` environment variables are OAuth tokens, not an AWS access key and secret key\. 
