@@ -24,7 +24,7 @@ sponsored by Amazon.
       + [Deploying a Next.js SSR app with Amplify](deploy-nextjs-app.md)
       + [Migrating a Next.js 11 SSR app to Amplify Hosting compute](update-app-nextjs-version.md)
       + [Adding SSR functionality to a static Next.js app](redeploy-ssg-to-ssr.md)
-      + [Making environment variables accessible to Lambdas](ssr-environment-variables.md)
+      + [Making environment variables accessible to server-side runtimes](ssr-environment-variables.md)
       + [Amazon CloudWatch Logs for SSR apps](ssr-CloudWatch-logs.md)
       + [Troubleshooting SSR deployments](troubleshooting-ssr-deployment.md)
       + [Amplify Next.js 11 SSR support](ssr-nextjs11-support.md)

@@ -27,63 +27,6 @@ For more information, see the [CloudTrail userIdentity element](https://docs.aws
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\. 
 
-The following example shows a CloudTrail log entry that demonstrates the Amplify Console API Reference [https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteBackendEnvironment.html](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteBackendEnvironment.html) operation\.
-
-```
-{
-    "eventVersion": "1.08",
-    "userIdentity": {
-        "type": "IAMUser",
-        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::444455556666:user/Mary_Major",
-        "accountId": "444455556666",
-        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
-        "sessionContext": {
-            "sessionIssuer": {
-                "type": "Role",
-                "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-                "arn": "arn:aws:iam::444455556666:user/Mary_Major",
-                "accountId": "444455556666",
-                "userName": "Mary_Major"
-            },
-            "webIdFederationData": {},
-            "attributes": {
-                "mfaAuthenticated": "false",
-                "creationDate": "2021-01-12T00:28:50Z"
-            }
-        },
-        "invokedBy": "apigateway.amazonaws.com"
-    },
-    "eventTime": "2021-01-12T00:31:08Z",
-    "eventSource": "amplify.amazonaws.com",
-    "eventName": "DeleteBackendEnvironment",
-    "awsRegion": "us-west-2",
-    "sourceIPAddress": "apigateway.amazonaws.com",
-    "userAgent": "apigateway.amazonaws.com",
-    "requestParameters": {
-        "environmentName": "staging",
-        "appId": "d3lap6vexample"
-    },
-    "responseElements": {
-        "backendEnvironment": {
-            "backendEnvironmentArn": "arn:aws:amplify:us-west-2:444455556666:apps/d3lap6vexample/backendenvironments/staging",
-            "createTime": 1610086829.109,
-            "deploymentArtifacts": "amplify-amplify9b7cd3example-staging-62027-deployment",
-            "environmentName": "staging",
-            "stackName": "amplify-amplify9b7cd3example-staging-62027",
-            "updateTime": 1610086829.109
-        }
-    },
-    "requestID": "1135382e-f832-45ba-ae53-f7ffbexample",
-    "eventID": "cebab152-deb6-42e1-bd1f-d05b6example",
-    "readOnly": false,
-    "eventType": "AwsApiCall",
-    "managementEvent": true,
-    "eventCategory": "Management",
-    "recipientAccountId": "444455556666"
-}
-```
-
 The following example shows a CloudTrail log entry that demonstrates the AWS Amplify Console API Reference [https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListApps.html](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListApps.html) operation\.
 
 ```

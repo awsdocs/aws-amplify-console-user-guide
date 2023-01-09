@@ -1,8 +1,8 @@
-# Making environment variables accessible to Lambdas<a name="ssr-environment-variables"></a>
+# Making environment variables accessible to server\-side runtimes<a name="ssr-environment-variables"></a>
 
-Amplify Hosting supports adding environment variables to your application's builds by setting them in the project's configuration in the Amplify console\. However, the Next\.js server component doesn't have access to those environment variables by default\. This behavior is intentional to protect any secrets stored in environment variables that your application uses during the build phase\.
+Amplify Hosting supports adding environment variables to your application's builds by setting them in the project's configuration in the Amplify console\. However, a Next\.js server component doesn't have access to those environment variables by default\. This behavior is intentional to protect any secrets stored in environment variables that your application uses during the build phase\.
 
-To make specific environment variables accessible to Next\.js server components, you can modify the Amplify build specification file to set them in the environment files that Next\.js recognizes\. Amplify needs to be able to load these environment variables before it builds the application\. The following build specification example demonstrates how to add environment variables in the build commands section\.
+To make specific environment variables accessible to Next\.js, you can modify the Amplify build specification file to set them in the environment files that Next\.js recognizes\. Amplify needs to be able to load these environment variables before it builds the application\. The following build specification example demonstrates how to add environment variables in the build commands section\.
 
 ```
 version: 1
@@ -42,7 +42,7 @@ DB_USER=myuser
 DB_PASS=mypassword
 ```
 
-The second line demonstrates how to add environment variable with a specific prefix to the the `.env.production` file\.
+The second line demonstrates how to add an environment variable with a specific prefix to the `.env.production` file\.
 
 ```
 - env | grep -e NEXT_PUBLIC_ >> .env.production

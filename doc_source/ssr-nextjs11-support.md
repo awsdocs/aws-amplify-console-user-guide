@@ -20,6 +20,7 @@ The following list describes the specific features that the Amplify Classic \(Ne
 
 **Unsupported features**
 + Image optimization
++ On\-Demand Incremental Static Regeneration \(ISR\)
 + Internationalized \(i18n\) domain routing
 + Internationalized \(i18n\) automatic locale detection
 + Middleware
@@ -119,6 +120,7 @@ If you experience unexpected issues when deploying a Classic \(Next\.js 11 only\
 + [You get a 404 error after deploying your SSR site](#404-error)
 + [Your app is missing the rewrite rule for CloudFront SSR distributions](#cloudfront-rewrite-rule-missing)
 + [Your app is too large to deploy](#app-too-large-to-deploy)
++ [Your build fails with an out of memory error](#out-of-memory)
 + [Your app has both SSR and SSG branches](#ssr-and-ssg-branches)
 + [Your app stores static files in a folder with a reserved path](#amplify-reserved-path)
 + [Your app has reached a CloudFront limit](#cloudfront-distribution-limit)
@@ -187,6 +189,16 @@ module.exports = {
 }
 ```
 
+### Your build fails with an out of memory error<a name="out-of-memory"></a>
+
+Next\.js enables you to cache build artifacts to improve performance on subsequent builds\. In addition, Amplify's AWS CodeBuild container compresses and uploads this cache to Amazon S3, on your behalf, to improve subsequent build performance\. This could cause your build to fail with an out of memory error\.
+
+Perform the following actions to prevent your app from exceeding the memory limit during the build phase\. First, remove `.next/cache/**/*` from the cache\.paths section of your build settings\. Next, remove the `NODE_OPTIONS` environment variable from your build settings file\. Instead, set the `NODE_OPTIONS` environment variable in the Amplify console to define the Node maximum memory limit\. For more information about setting environment variables using the Amplify console, see [Set environment variables](environment-variables.md#setting-env-vars)\.
+
+After making these changes, try your build again\. If it succeeds, add `.next/cache/**/*` back to the cache\.paths section of your build settings file\.
+
+For more information about Next\.js cache configuration to improve build performance, see [AWS CodeBuild](https://nextjs.org/docs/advanced-features/ci-build-caching#aws-codebuild) on the Next\.js website\.
+
 ### Your app has both SSR and SSG branches<a name="ssr-and-ssg-branches"></a>
 
 You can't deploy an app that has both SSR and SSG branches\. If you need to deploy both SSR and SSG branches, you must deploy one app that uses only SSR branches and another app that uses only SSG branches\.
@@ -201,7 +213,7 @@ Next\.js can serve static files from a folder named `public` that's stored in th
 
 ### Environment variables are not carried through to Lambda functions<a name="ssr-environment-variable-support"></a>
 
-Environment variables that you specify in the Amplify console for an SSR app are not carried through to the app's AWS Lambda functions\. See, [Making environment variables accessible to Lambdas](ssr-environment-variables.md), for detailed instructions on how to add environment variables that you can reference from your Lambda functions\.
+Environment variables that you specify in the Amplify console for an SSR app are not carried through to the app's AWS Lambda functions\. See, [Making environment variables accessible to server\-side runtimes](ssr-environment-variables.md), for detailed instructions on how to add environment variables that you can reference from your Lambda functions\.
 
 ### Lambda@Edge functions are created in the US East \(N\. Virginia\) Region<a name="nextjs-version-lambda-edge-functions"></a>
 

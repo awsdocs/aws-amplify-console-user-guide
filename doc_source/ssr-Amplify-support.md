@@ -31,6 +31,8 @@ The following list describes the specific features that the Amplify Hosting comp
 
 **Unsupported features**
 + Edge API routes
++ On\-Demand Incremental Static Regeneration \(ISR\)
++ Next\.js 13 app directory \(beta\)
 
 ### Using Next\.js image optimization<a name="image-optimization"></a>
 
