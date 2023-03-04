@@ -98,6 +98,7 @@ You can use the following environment variables that are accessible by default w
 |  AWS\_CLONE\_URL  |  The clone URL used to fetch the git repository contents  |   `git@github.com:<user-name>/<repo-name>.git`   | 
 |  AWS\_COMMIT\_ID  |  The commit ID of the current build “HEAD” for rebuilds  |  `abcd1234`  | 
 |  AWS\_JOB\_ID  |  The job ID of the current build\. This includes some padding of ‘0’ so it always has the same length\.  |  `0000000001`  | 
+|  AWS\_PULL\_REQUEST\_ID  |  The Pull Request ID, for builds in Web preview (GitHub only). For more information, see [Web previews for pull requests](pr-previews.md)\.  |  `5`  | 
 |  \_LIVE\_UPDATES  |  The tool will be upgraded to the latest version\.  |  `[{“name”:”Amplify CLI”,”pkg”:”@aws-amplify/cli”,”type”:”npm”,”version”:”latest”}]`  | 
 |  AMPLIFY\_FACEBOOK\_CLIENT\_ID  |  The Facebook client ID  |  `123456`  | 
 |  AMPLIFY\_FACEBOOK\_CLIENT\_SECRET  |  The Facebook client secret  |  `example123456`  | 
