@@ -23,9 +23,10 @@ Currently, the maximum build output size that Amplify supports for Next\.js 12 a
 If you get an error that the size of your build output exceeds the max allowed size, you might be able to reduce the size of your build output using the esbuild JavaScript bundler\. Add the following commands to the build step in your app's `amplify.yml` file\.
 
 ```
-- allfiles=$(ls -al ./.next/standalone/**/*.js)
-- npx esbuild $allfiles --minify --outdir=.next/standalone --platform=node --target=node16 --format=cjs --allow-overwrite
+- find ./.next/standalone -type f -name "*.js" | xargs npx esbuild --minify --outdir=.next/standalone --platform=node --target=node16 --format=cjs --allow-overwrite
 ```
+
+This command first runs the `find` command to search for .js files within the .next/standalone directory and its subdirectories. Then, it pipes the output of the find command to `xargs`, which takes the list of files and passes them as arguments to the `esbuild` command.
 
 ## Your build fails with an out of memory error<a name="out-of-memory"></a>
 
