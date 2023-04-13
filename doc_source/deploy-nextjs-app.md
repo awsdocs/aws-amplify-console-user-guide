@@ -87,7 +87,7 @@ frontend:
       - node_modules/**/*
 ```
 
-If Amplify detects that you are deploying an SSG app, it generates a buildspec for the app and sets `baseDirectory` to out\. If you are deploying an app where an `amplify.yml` file is present, you must manually set the `baseDirectory` to `out` in the file\.
+If Amplify detects that you are deploying an SSG app, it generates a buildspec for the app and sets `baseDirectory` to `out`\. If you are deploying an app where an `amplify.yml` file is present, you must manually set the `baseDirectory` to `out` in the file\.
 
 The following is an example of the build settings for an app where `baseDirectory` is set to `out`\. This indicates that the build artifacts are for a Next\.js app that supports only SSG pages\.
 
