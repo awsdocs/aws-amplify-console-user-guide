@@ -125,11 +125,11 @@ applications:
 When you deploy an app stored in a monorepo, the app's `AMPLIFY_MONOREPO_APP_ROOT` environment variable must have the same value as the path of the app root, relative to the root of your repository\. For example, a monorepo named `ExampleMonorepo` with a root folder named `apps`, that contains, `app1`, `app2`, and `app3` has the following directory structure:
 
 ```
-ExampleMonorepo
-  apps
-    app1
-    app2
-    app3
+-ExampleMonorepo
+   -apps
+      -app1
+      -app2
+      -app3
 ```
 
 In this example, the value of the `AMPLIFY_MONOREPO_APP_ROOT` environment variable for `app1` is `apps/app1`\.

@@ -1,11 +1,12 @@
 # Document history for AWS Amplify<a name="document-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Amplify\.
-+ **Latest documentation update: **November 17, 2022
++ **Latest documentation update: **February 24, 2023
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Updated managed policies topic | Updated the [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md) topic to describe recent changes to the AWS managed policies for Amplify\. | February 24, 2023 | 
 | Updated server\-side rendering chapter | Updated the [Deploy server\-side rendered apps with Amplify Hosting](server-side-rendering-amplify.md) chapter to describe recent changes to Amplify's support for Next\.js versions 12 and 13\. | November 17, 2022 | 
 | Updated managed policies topic | Updated the [AWS managed policies for AWS Amplify](security-iam-awsmanpol.md) topic to describe recent changes to the AWS managed policies for Amplify\. | August 30, 2022 | 
 | Updated managed policies topic | Updated the [Getting started with fullstack continuous deployments](deploy-backend.md) topic to describe how to deploy a backend using Amplify Studio\. | August 23, 2022 | 

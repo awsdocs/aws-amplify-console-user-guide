@@ -1,6 +1,6 @@
 # Monitoring<a name="access-logs"></a>
 
-AWS Amplify emits metrics through Amazon CloudWatch and provides access logs with detailed information about each request made to your app\. Use the topics in this section to learn how to use these metrics and logs to monitor your app\.
+AWS Amplify emits metrics through Amazon CloudWatch and provides access logs with detailed information about requests made to your app\. Use the topics in this section to learn how to use these metrics and logs to monitor your app\.
 
 **Topics**
 + [Monitoring with CloudWatch](#monitoring-with-cloudwatch)
@@ -105,7 +105,10 @@ Each Amazon SNS recipient that you specify receives a confirmation email from AW
 
 ## Access logs<a name="using-access-logs"></a>
 
-Amplify stores access logs for all of the apps you host in Amplify\. Access logs contain information about all requests that are made to your hosted apps\. You can retrieve these access logs for any two week window that you specify\.
+Amplify stores access logs for all of the apps you host in Amplify\. Access logs contain information about requests that are made to your hosted apps\. You can retrieve these access logs for any two week window that you specify\.
+
+**Important**  
+We recommend that you use the logs to understand the nature of the requests for your content, not as a complete accounting of all requests\. Amplify delivers access logs on a best\-effort basis\. The log entry for a particular request might be delivered long after the request was actually processed and, in rare cases, a log entry might not be delivered at all\. When a log entry is omitted from access logs, the number of entries in the access logs won't match the usage that appears in the AWS billing and usage reports\.
 
 Use the following procedure to retrieve access logs\.
 

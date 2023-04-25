@@ -167,11 +167,11 @@ If you get a 404 error after deploying your site, the issue could be caused by y
 
 ### Your app is missing the rewrite rule for CloudFront SSR distributions<a name="cloudfront-rewrite-rule-missing"></a>
 
-When you deploy an SSR app, Amplify creates a rewrite rule for your CloudFront SSR distributions\. If you can't access your app in a web browser, verify that the CloudFront rewrite rule exists in your AWS account\. If it's missing, you can either add it manually or redeploy your app\.
+When you deploy an SSR app, Amplify creates a rewrite rule for your CloudFront SSR distributions\. If you can't access your app in a web browser, verify that the CloudFront rewrite rule exists for your app in the Amplify console\. If it's missing, you can either add it manually or redeploy your app\.
 
-To view or edit an app's rewrite and redirect rules in the Amplify console, in the navigation pane, choose **App settings**, then **Rewrites and redirects**\. The following screenshot shows an example of the rewrite rules that Amplify creates for you when you deploy an SSR app\.
+To view or edit an app's rewrite and redirect rules in the Amplify console, in the navigation pane, choose **App settings**, then **Rewrites and redirects**\. The following screenshot shows an example of the rewrite rules that Amplify creates for you when you deploy an SSR app\. Notice that in this example, a CloudFront rewrite rule exists\.
 
-![\[The rewrites and redirects pane in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-ssr-troubleshooting1.png)
+![\[The Rewrites and redirects page for an SSR app.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-ssr-troubleshooting1.png)
 
 ### Your app is too large to deploy<a name="app-too-large-to-deploy"></a>
 

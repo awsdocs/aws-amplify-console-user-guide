@@ -16,18 +16,18 @@ test:
     preTest:
       commands:
         - npm ci
-        - npm install wait-on
-        - npm install pm2
-        - npm install mocha@5.2.0 mochawesome mochawesome-merge mochawesome-report-generator
-        - npx pm2 start npm -- start
-        - 'npx wait-on --timeout 60 http://localhost:3000'
+        - npm install -g pm2
+        - npm install -g wait-on
+        - npm install mocha mochawesome mochawesome-merge mochawesome-report-generator
+        - pm2 start npm -- start
+        - wait-on http://localhost:3000
     test:
       commands:
         - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:
         - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
-        - npx pm2 kill
+        - pm2 kill
   artifacts:
     baseDirectory: cypress
     configFilePath: '**/mochawesome.json'

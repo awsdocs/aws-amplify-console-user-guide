@@ -21,7 +21,7 @@ If you are using GoDaddy or Google Domains, see [Add a custom domain managed by 
 1. By default, Amplify automatically creates two subdomain entries for your domain\. For example, if your domain name is **example\.com**, you will see the subdomains **https://www\.example\.com** and **https://example\.com** with a redirect set up from the root domain to the **www** subdomain\. 
 
    \(Optional\) You can modify the default configuration if you want to add subdomains only\. To change the default configuration, choose **Rewrites and redirects** from the navigation pane, configure your domain, and then choose **Save**\.  
-![\[Screenshot of the Domain management section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-thirdparty-1Update.png)
+![\[The Add domain section on the Domain Management page showing the two subdomain entries that Amplify creates for you.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-customdomain-configureUpdate.png)
 
 1. On the **Actions** menu, choose **View DNS records**\. Use the DNS records displayed in the Amplify console to update your DNS records with your third\-party domain provider\.  
 ![\[Screenshot of the Update DNS records section in the Amplify console.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-thirdpartyDNS-1.png)

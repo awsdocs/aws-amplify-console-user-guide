@@ -16,7 +16,7 @@ In this tutorial, you will set up a fullstack CI/CD workflow with Amplify\. You 
 ## Prerequisites<a name="fullstack-sample-prerequisites"></a>
 
 Before starting this tutorial, you will need to do the following:
-+ Create an AWS account\. Open [https://portal\.aws\.amazon\.com/billing/signup\#/start/email](https://portal.aws.amazon.com/billing/signup#/start/email) to get started\.
++ Sign up for an AWS account\. Open [https://portal\.aws\.amazon\.com/billing/signup\#/start/email](https://portal.aws.amazon.com/billing/signup#/start/email) to get started\.
 + Create an account with a git repository provider, such as GitHub, Bitbucket, GitLab, or AWS CodeCommit\.
 + Install the Amplify Command Line Interface \(CLI\)\. For instructions, see [Install the Amplify CLI](https://docs.amplify.aws/cli/start/install/) in the *Amplify Framework Documentation*\.
 

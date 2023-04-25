@@ -10,12 +10,10 @@ If you are working on unreleased features, you can password protect feature bran
 
 1. In the navigation pane, choose **App settings**, and then choose **Access control**\.
 
-1. In the **Access control settings** section, choose **Manage access**\.  
-![\[Screenshot of the Access control settings section listing the branches connected to the app.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/accesscontrol1.png)
+1. In the **Access control settings** section, choose **Manage access**\.
 
 1. Do one of the following in **Access control settings**:
    + To set a username and password that applies to all connected branches, turn on **Apply a global password**\. For example, if you have **main**, **dev**, and **feature** branches connected, you can use a global password to set the same username and password for all branches\.
-   + To apply a username and password to an individual branch, turn off **Apply a global password**\. For the branch that you want to set a unique username and password for, choose **Restricted\-password required** for **Access setting** and enter a username and password\.  
-![\[Screenshot of the Branch access section showing the options for applying passwords globally or per branch.\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/accesscontrol2.png)
+   + To apply a username and password to an individual branch, turn off **Apply a global password**\. For the branch that you want to set a unique username and password for, choose **Restricted\-password required** for **Access setting** and enter a username and password\.
 
 1. If you are managing access control for a server\-side rendered \(SSR\) app, redeploy the app by performing a new build from your Git repository\. This step is required to enable Amplify to apply your access control settings\.

@@ -7,6 +7,7 @@ If you experience unexpected issues when deploying an SSR app with Amplify Hosti
 + [On\-Demand Incremental Static Regeneration isn't working for your app](#on-demand-isr-not-supported)
 + [The size of the build output is too large](#build-output-too-large)
 + [Your build fails with an out of memory error](#out-of-memory)
++ [The HTTP response size is too large](#http-response-size-too-large)
 
 ## Edge API routes cause your Next\.js build to fail<a name="nextjs-edge-API-route-not-supported"></a>
 
@@ -36,3 +37,7 @@ Perform the following actions to prevent your app from exceeding the memory limi
 After making these changes, try your build again\. If it succeeds, add `.next/cache/**/*` back to the cache\.paths section of your build settings file\.
 
 For more information about Next\.js cache configuration to improve build performance, see [AWS CodeBuild](https://nextjs.org/docs/advanced-features/ci-build-caching#aws-codebuild) on the Next\.js website\.
+
+## The HTTP response size is too large<a name="http-response-size-too-large"></a>
+
+Currently, the maximum response size that Amplify supports for Next\.js 12 and 13 apps using the Web Compute platform is 5\.72 MB\. Responses over that limit return 504 errors with no content to clients\.

@@ -1,12 +1,9 @@
 # Environment variables<a name="environment-variables"></a>
 
-Environment variables are key\-value pairs that are available at build time\. These configurations can be anything, including the following:
-+ Database connection details
-+ Third\-party API keys
-+ Different customization parameters
-+ Secrets
+Environment variables are key\-value pairs that are available at build time, and you can set them in your application's settings\. As a best practice, you can use environment variables to expose application configuration data\. All environment variables that you add are encrypted to prevent rogue access\.
 
-As a best practice, you can use environment variables to expose these configurations\. All environment variables that you add are encrypted to prevent rogue access, so you can use them to store secret information\.
+**Important**  
+Don't use environment variables to store secrets\. Store secrets in an environment secret created using the AWS Systems Manager Parameter Store\. For more information, see [Environment secrets](#environment-secrets)\.
 
 **Note**  
 **Environment variables** is visible in the Amplify console’s **App settings** menu only when an app is set up for continuous deployment and connected to a git repository\. For instructions on this type of deployment, see [Getting started with existing code](getting-started.md)\.

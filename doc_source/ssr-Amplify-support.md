@@ -24,7 +24,6 @@ The following list describes the specific features that the Amplify Hosting comp
 + Incremental Static Regeneration \(ISR\)
 + Internationalized \(i18n\) sub\-path routing
 + Internationalized \(i18n\) domain routing
-+ Internationalized \(i18n\) automatic locale detection
 + Middleware
 + Environment variables
 + Image optimization\.
@@ -32,10 +31,11 @@ The following list describes the specific features that the Amplify Hosting comp
 **Unsupported features**
 + Edge API routes
 + On\-Demand Incremental Static Regeneration \(ISR\)
++ Internationalized \(i18n\) automatic locale detection
 + Next\.js 13 app directory \(beta\)
 
 ### Using Next\.js image optimization<a name="image-optimization"></a>
 
 The Next\.js documentation advises you to install the Sharp image processing module to enable image optimization to work correctly in production\. However, this isn't necessary for Amplify deployments\. Amplify automatically deploys Sharp for you\.
 
-The maximum output size of the image can't exceed 6 MB\. You can have a larger image file stored somewhere and use the `next/image` component to resize and optimize it into a Webp or AVIF format and then serve it as a smaller size\.
+The maximum output size of the image can't exceed 4\.3 MB\. You can have a larger image file stored somewhere and use the `next/image` component to resize and optimize it into a Webp or AVIF format and then serve it as a smaller size\.

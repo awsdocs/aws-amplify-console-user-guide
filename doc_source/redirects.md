@@ -1,6 +1,6 @@
 # Using redirects<a name="redirects"></a>
 
-Redirects enable a web server to reroute navigation from one URL to another\. Common reasons for using redirects include: to customize the appearance of a URL, to avoid broken links, to move the hosting location of an app or site without changing its address, and to change a requested URL to the form needed by a web app\.
+Redirects enable a web server to reroute navigation from one URL to another\. Common reasons for using redirects include to customize the appearance of a URL, to avoid broken links, to move the hosting location of an app or site without changing its address, and to change a requested URL to the form needed by a web app\.
 
 ## Types of redirects<a name="types-of-redirects"></a>
 
@@ -20,7 +20,7 @@ Common reasons to use 301 redirects include:
 
 Common reasons to use 302 redirects include:
 + To provide a detour destination while repairs are made to an original address\.
-+ To provide test pages for A/B comparison of user interface\.
++ To provide test pages for A/B comparison of a user interface\.
 
  **Rewrite \(200\)** 
 
@@ -34,21 +34,47 @@ Common reasons to use 302 redirects include:
 + To avoid a broken link message when a user enters a bad URL\.
 + To point requests to nonexistent pages of a web app to its index\.html page for handling by a client\-side router function\.
 
-## Parts of a redirect<a name="parts-of-a-redirect"></a>
+## Creating and editing redirects<a name="parts-of-a-redirect"></a>
 
-Redirects consist of the following:
-+ An original address \- The address the user requested\.
-+ A destination address \- The address that actually serves the content that the user sees\.
-+ A redirect type \- Types include a permanent redirect \(301\), a temporary redirect \(302\), a rewrite \(200\), or not found \(404\)\.
-+ A two letter country code \(optional\) \- a value you can include to segment the user experience of your app by region\.
+You can create and edit redirects for an app in the Amplify console\. Before you get started, you will need the following information about the parts of a redirect\.
 
-To create and edit redirects, choose **Rewrites and redirects settings** in the left navigation pane\.
+**An original address**  
+The address the user requested\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-console-redirects.png)
+**A destination address**  
+The address that actually serves the content that the user sees\.
 
-To bulk edit redirects in a JSON editor, choose **Open text editor**\.
+**A redirect type**  
+Types include a permanent redirect \(301\), a temporary redirect \(302\), a rewrite \(200\), or not found \(404\)\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-console-redirects-edit.png)
+**A two letter country code \(optional\)**  
+A value you can include to segment the user experience of your app by geographical region\.
+
+**To create a redirect in the Amplify console**
+
+1. Sign in to the AWS Management Console and open the [Amplify console](https://console.aws.amazon.com/amplify/)\.
+
+1. Choose the app you want to create a redirect for\.
+
+1. In the navigation pane, choose **App settings**, and then choose **Rewrites and redirects**\.
+
+1. In the **Rewrites and redirects** section, choose **Edit**\.
+
+1. The procedure for adding a redirect varies depending on whether you want to add rules individually or do a bulk edit:
+   + To create an individual redirect, choose **Add rule**\.
+
+     1. For **Source address**, enter the original address the user requested\.
+
+     1. For **Target address**, enter the destination address that renders the content to the user\.
+
+     1. For **Type**, choose the type of redirect from the list\.
+
+     1. \(Optional\) For **Country code**, enter a two letter country code condition\.
+   + To bulk edit redirects, choose **Open text editor**\.
+
+     1. Manually add or update redirects in the **Bulk add rewrites and redirects** JSON editor\.
+
+1. Choose **Save**\.
 
 ## Order of redirects<a name="order-of-redirects"></a>
 
@@ -85,7 +111,7 @@ You can use the following example code to permanently redirect a specific page t
 | --- | --- | --- | --- | 
 |   `/original.html`   |   `/destination.html`   |   `permanent redirect (301)`   |  | 
 
- JSON: \[\{"source": "/original\.html", "status": "301", "target": "/destination\.html", "condition": null\}\] 
+JSON \[\{"source": "/original\.html", "status": "301", "target": "/destination\.html", "condition": null\}\] 
 
 You can use the following example code to redirect any path under a folder to the same path under a different folder\.
 
@@ -118,11 +144,7 @@ You can use the following example code to use a rewrite to change the subdomain 
 | --- | --- | --- | --- | 
 |   `https://mydomain.com`   |   `https://www.mydomain.com`   |   `rewrite (200)`   |  | 
 
-JSON
-
-```
-[{"source": "https://mydomain.com", "status": "200", "target": "https://www.mydomain.com", "condition": null}]
-```
+ JSON \[\{"source": "https://mydomain\.com", "status": "200", "target": "https://www\.mydomain\.com", "condition": null\}\] 
 
 You can use the following example code to redirect paths under a folder that can’t be found to a custom 404 page\.
 
@@ -137,7 +159,9 @@ You can use the following example code to redirect paths under a folder that can
 
 ## Redirects for single page web apps \(SPA\)<a name="redirects-for-single-page-web-apps-spa"></a>
 
-Most SPA frameworks support HTML5 history\.pushState\(\) to change browser location without triggering a server request\. This works for users who begin their journey from the root \(or */index\.html*\), but fails for users who navigate directly to any other page\. Using regular expressions, the following example sets up a 200 rewrite for all files to index\.html, except for the specific file extensions specified in the regular expression\.
+Most SPA frameworks support HTML5 history\.pushState\(\) to change browser location without triggering a server request\. This works for users who begin their journey from the root \(or */index\.html*\), but fails for users who navigate directly to any other page\. 
+
+The following example uses regular expressions to set up a 200 rewrite for all files to index\.html, except for the file extensions specified in the regular expression\.
 
 
 ****  
@@ -146,11 +170,11 @@ Most SPA frameworks support HTML5 history\.pushState\(\) to change browser locat
 | --- | --- | --- | --- | 
 |   `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|map\|json\|webp)$)([^.]+$)/>`   |   `/index.html`   |   `200`   |  | 
 
- JSON \[\{"source": "</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|map\|json\|webp\)$\)\(\[^\.\]\+$\)/>", "status": "200", "target": "index\.html", "condition": null\}\] 
+JSON \[\{"source": "</^\[^\.\]\+$\|\\\.\(?\!\(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|map\|json\|webp\)$\)\(\[^\.\]\+$\)/>", "status": "200", "target": "/index\.html", "condition": null\}\]
 
 ## Reverse proxy rewrite<a name="reverse-proxy-rewrite"></a>
 
-The following example uses a rewrite to proxy content from another location so that it appears to the user that the domain hasn’t changed:
+The following example uses a rewrite to proxy content from another location so that it appears to the user that the domain hasn’t changed\.
 
 
 ****  
@@ -159,11 +183,7 @@ The following example uses a rewrite to proxy content from another location so t
 | --- | --- | --- | --- | 
 |   `/images/<*>`   |   `https://images.otherdomain.com/<*>`   |   `rewrite (200)`   |  | 
 
-JSON
-
-```
-[{"source": "/images/<*>", "status": "200", "target": "https://images.otherdomain.com/<*>", "condition": null}]
-```
+JSON \[\{"source": "/images/<\*>", "status": "200", "target": "https://images\.otherdomain\.com/<\*>", "condition": null\}\]
 
 ## Trailing slashes and clean URLs<a name="trailing-slashes-and-clean-urls"></a>
 
@@ -229,4 +249,4 @@ You can use the following example code to redirect requests based on region\.
 | --- | --- | --- | --- | 
 |   `/documents`   |   `/documents/us/`   |   `302`   |   `<US>`   | 
 
- JSON \[\{"source": "/documents", "status": "302", "target": "/documents/us/", "condition": "<US>"\}\] 
+JSON \[\{"source": "/documents", "status": "302", "target": "/documents/us/", "condition": "<US>"\}\]

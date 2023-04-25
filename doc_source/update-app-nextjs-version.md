@@ -28,7 +28,7 @@ Before you migrate an app in the Amplify console, you must first update the app'
 
 When you deploy a Next\.js app, Amplify Hosting detects the settings in your app and sets the internal platform value for the app\. There are three valid platform values\. An SSG app is set to the platform value `WEB`\. An SSR app using Next\.js version 11 is set to the platform value `WEB_DYNAMIC`\. A Next\.js 12 or later SSR app is set to the platform value `WEB_COMPUTE`\.
 
-When you migrate an app using the instructions in the previous section, Amplify changes the platform value of your app from `WEB_DYNAMIC` to `WEB_COMPUTE`\. After the migration to Amplify Hosting compute is complete, you can't revert the migration in the console\. To revert the migration, you must use the AWS Command Line Interface to change the app's platform back to `WEB_DYNAMIC`\. Open a terminal window and enter the following command, updating the text in red with your unique app id and Region\.
+When you migrate an app using the instructions in the previous section, Amplify changes the platform value of your app from `WEB_DYNAMIC` to `WEB_COMPUTE`\. After the migration to Amplify Hosting compute is complete, you can't revert the migration in the console\. To revert the migration, you must use the AWS Command Line Interface to change the app's platform back to `WEB_DYNAMIC`\. Open a terminal window and enter the following command, updating the app ID and Region with your unique information\.
 
 ```
 aws amplify update-app --app-id abcd1234 --platform WEB_DYNAMIC --region us-west-2

@@ -1,11 +1,11 @@
 # Team workflows with Amplify backend environments<a name="team-workflows-with-amplify-cli-backend-environments"></a>
 
-A feature branch deployment consists of a **frontend**, and \(optionally\) a **backend** environment\. The frontend is built and deployed to a global content delivery network \(CDN\), while the backend is deployed by Amplify Studio or the Amplify CLI to AWS\. For more information about this deployment scenario, see [Getting started with fullstack continuous deployments](deploy-backend.md)\.
+A feature branch deployment consists of a **frontend**, and an optional **backend** environment\. The frontend is built and deployed to a global content delivery network \(CDN\), while the backend is deployed by Amplify Studio or the Amplify CLI to AWS\. For more information about this deployment scenario, see [Getting started with fullstack continuous deployments](deploy-backend.md)\.
 
 **Note**  
-Now you can easily reuse Amplify backend environments across your Amplify apps\. For more information, see [Use Amplify backends across apps](reuse-backends.md)\.
+You can easily reuse Amplify backend environments across your Amplify apps\. For more information, see [Use Amplify backends across apps](reuse-backends.md)\.
 
-You can use Amplify Hosting to continuously deploy backend resources such as GraphQL APIs and Lambda functions with your feature branch deployment\. You can use the following models to deploy your backend and frontend with Amplify Hosting\.
+Amplify Hosting continuously deploys backend resources such as GraphQL APIs and Lambda functions with your feature branch deployments\. You can use the following branching models to deploy your backend and frontend with Amplify Hosting\.
 
 **Topics**
 + [Feature branch workflow](#standard)
@@ -13,11 +13,12 @@ You can use Amplify Hosting to continuously deploy backend resources such as Gra
 + [Per\-developer sandbox](#sandbox)
 
 ## Feature branch workflow<a name="standard"></a>
-+ Create **prod**, **test**, and **dev** backend environments with the Amplify CLI\.
-+ Map **prod** and **test** to **main** \(formerly referred to as master\) and **develop** branches\.
-+ Teammates can use the **dev** backend environment to test against **feature** branches\.
++ Create **prod**, **test**, and **dev** backend environments with Amplify Studio or the Amplify CLI\.
++ Map the **prod** backend to the **main** branch\. 
++ Map the **test** backend to the **develop** branch\.
++ Team members can use the **dev** backend environment for testing individual **feature** branches\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-environments-2.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/FeatureBranchWorkflow.png)
 
 1. Install the Amplify CLI to initialize a new Amplify project\.
 
@@ -116,17 +117,17 @@ You can use Amplify Hosting to continuously deploy backend resources such as Gra
 
 ## GitFlow workflow<a name="gitflow"></a>
 
-GitFlow uses two branches to record the history of the project\. The *main* branch \(formerly referred to as master branch\) tracks release code only, and the *develop* branch is used as an integration branch for new features\. GitFlow simplifies parallel development by isolating new development from completed work\. New development \(such as features and non\-emergency bug fixes\) is done in *feature* branches\. When the developer is satisfied that the code is ready for release, the *feature* branch is merged back into the integration *develop* branch\. The only commits to the main branch are merges from *release* branches and *hotfix* branches \(to fix emergency bugs\)\.
+GitFlow uses two branches to record the history of the project\. The *main* branch tracks release code only, and the *develop* branch is used as an integration branch for new features\. GitFlow simplifies parallel development by isolating new development from completed work\. New development \(such as features and non\-emergency bug fixes\) is done in *feature* branches\. When the developer is satisfied that the code is ready for release, the *feature* branch is merged back into the integration *develop* branch\. The only commits to the main branch are merges from *release* branches and *hotfix* branches \(to fix emergency bugs\)\.
 
 The diagram below shows a recommended setup with GitFlow\. You can follow the same process as described in the feature branch workflow section above\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-environments-3.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/GitflowWorkflow.png)
 
 ## Per\-developer sandbox<a name="sandbox"></a>
 + Each developer in a team creates a sandbox environment in the cloud that is separate from their local computer\. This allows developers to work in isolation from each other without overwriting other team members’ changes\.
 + Each branch in Amplify has its own backend\. This ensures that the Amplify uses the Git repository as a single source of truth from which to deploy changes, rather than relying on developers on the team to manually push their backend or front end to production from their local computers\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/amplify-env-central-workflow.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/AmplifySandboxWorkflow.png)
 
 1. Install the Amplify CLI to initialize a new Amplify project\.
 
@@ -134,27 +135,26 @@ The diagram below shows a recommended setup with GitFlow\. You can follow the sa
    npm install -g @aws-amplify/cli
    ```
 
-1. Initialize a *kita* backend environment for your project\. If you don’t have a project, create one using bootstrap tools like create\-react\-app or Gatsby\.
+1. Initialize a *mary* backend environment for your project\. If you don’t have a project, create one using bootstrap tools like create\-react\-app or Gatsby\.
 
    ```
    cd next-unicorn
    amplify init
     ? Do you want to use an existing environment? (Y/n): n
-    ? Enter a name for the environment: kita
+    ? Enter a name for the environment: mary
    ...
    amplify push
    ```
 
-1. Push code to a Git repository of your choice \(in this example we’ll assume you pushed to main \(formerly referred to as master\)\.
+1. Push code to a Git repository of your choice \(in this example we’ll assume you pushed to main\.
 
    ```
-   git commit -am 'Added kita sandbox'
+   git commit -am 'Added mary sandbox'
    git push origin main
    ```
 
 1. Connect your repo > *main* to Amplify\.
 
-1. The Amplify console will detect backend environments created by the Amplify CLI\. Choose *Create new environment* from the dropdown and grant the service role to Amplify\. Choose **Save and deploy**\. After the build completes you will get a main branch deployment available at *https://main\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/amplify/latest/userguide/images/reuse-backend-3.png)
+1. The Amplify console will detect backend environments created by the Amplify CLI\. Choose *Create new environment* from the dropdown and grant the service role to Amplify\. Choose **Save and deploy**\. After the build completes you will get a main branch deployment available at *https://main\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.
 
 1. Connect *develop* branch in Amplify \(assume *develop* and *main* branch are the same at this point\) and choose *Create new environment*\. After the build completes you will get a develop branch deployment available at *https://develop\.appid\.amplifyapp\.com* with a new backend environment that is linked to the branch\.

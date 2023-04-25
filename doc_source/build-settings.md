@@ -201,7 +201,7 @@ envCache --get <key>
 
 ## Skip build for a commit<a name="skip-build-for-a-commit"></a>
 
-To skip an automatic build on a particular commit, include the text **\[skip\-cd\]** at the end of the commit message\.
+To skip an automatic build on a particular commit, include the text **\[skip\-cd\]** at the end of the commit message\. Currently, **\[skip\-cd\]** is supported only for GitHub Git repositories\.
 
 ## Disable automatic builds<a name="disable-automatic-builds"></a>
 
