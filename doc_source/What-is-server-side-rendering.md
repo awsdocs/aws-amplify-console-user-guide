@@ -1,5 +1,0 @@
-# What is server\-side rendering<a name="What-is-server-side-rendering"></a>
-
-Previously, Amplify supported the deployment and hosting of static web apps only\. These include apps created with single\-page application \(SPA\) frameworks such as React, and apps created with a static site generator \(SSG\) such as Gatsby\. Static web apps consist of a combination of files, such as HTML, CSS, and JavaScript files, that are stored on a content delivery network \(CDN\)\. When a client browser makes a request to the website, the server returns a page to the client with an HTTP response and the client browser interprets the content and displays it to the user\.
-
-Amplify now supports web apps with server\-side rendering \(SSR\)\. When a client sends a request to an SSR page, the HTML for the page is created on the server on each request\. SSR enables a developer to customize a website per request and per user\. In addition, SSR can improve performance and search engine optimization \(SEO\) for a website\.
